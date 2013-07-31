@@ -1,0 +1,27 @@
+package com.yeamanan.projecttwo.bean.people;
+
+/**
+ * Abomination class.
+ *
+ * @author Yeam Anan <yeamanan@gmail.com>
+ */
+public class Abomination extends Zombie {
+
+    /**
+     * Constructor.
+     */
+    public Abomination() {
+        super();
+    }
+
+    /**
+     * toString() method.
+     *
+     * @return the walker in string format
+     */
+    @Override
+    public String toString() {
+        return "Abomination{" + "nbAction=" + this.nbAction + '}';
+    }
+
+}

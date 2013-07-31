@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<ivy-module version="2.0">
+    <info organisation="com.yeamanan" module="sample"/>
+    <dependencies>
+        <dependency org="junit" name="junit" rev="4.11"/>
+        <dependency org="log4j" name="log4j" rev="1.2.17"/>
+    </dependencies>
+</ivy-module>
