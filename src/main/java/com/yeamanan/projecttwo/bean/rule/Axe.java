@@ -1,4 +1,4 @@
-package com.yeamanan.projecttwo.bean;
+package com.yeamanan.projecttwo.bean.rule;
 
 /**
  * Axe enum.

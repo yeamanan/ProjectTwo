@@ -10,28 +10,44 @@ public enum Level {
     /**
      * Blue level.
      */
-    BLUE(),
+    BLUE(Constants.MIN_XP_BLUE),
 
     /**
      * Yellow level.
      */
-    YELLOW(),
+    YELLOW(Constants.MIN_XP_YELLOW),
 
     /**
      * Orange level.
      */
-    ORANGE(),
+    ORANGE(Constants.MIN_XP_ORANGE),
 
     /**
      * Red level.
      */
-    RED();
+    RED(Constants.MIN_XP_RED);
 
     /**
-     * Minimum experimen
+     * Minimum experience.
      */
     private final int minXp;
 
-    public Level(final int argMinXp) {
+    /**
+     * Constructor.
+     *
+     * @param argMinXp the minimum experience to reach the level
+     */
+    Level(final int argMinXp) {
+        this.minXp = argMinXp;
     }
+
+    /**
+     * getMinXp() method.
+     *
+     * @return the minimum experience to reach the level
+     */
+    public final int getMinXp() {
+        return this.minXp;
+    }
+
 }

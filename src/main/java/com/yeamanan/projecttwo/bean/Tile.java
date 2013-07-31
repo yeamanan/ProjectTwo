@@ -1,5 +1,6 @@
 package com.yeamanan.projecttwo.bean;
 
+import com.yeamanan.projecttwo.bean.rule.Axe;
 import java.util.ArrayList;
 import java.util.List;
 
