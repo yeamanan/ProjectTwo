@@ -20,7 +20,7 @@ public class Abomination extends Zombie {
      * @return the walker in string format
      */
     @Override
-    public String toString() {
+    public final String toString() {
         return "Abomination{" + "nbAction=" + this.nbAction + '}';
     }
 

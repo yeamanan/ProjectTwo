@@ -20,7 +20,7 @@ public class Fatty extends Zombie {
      * @return the walker in string format
      */
     @Override
-    public String toString() {
+    public final String toString() {
         return "Fatty{" + "nbAction=" + this.nbAction + '}';
     }
 

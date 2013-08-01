@@ -22,7 +22,7 @@ public class Runner extends Zombie {
      * @return the walker in string format
      */
     @Override
-    public String toString() {
+    public final String toString() {
         return "Runner{" + "nbAction=" + this.nbAction + '}';
     }
 
