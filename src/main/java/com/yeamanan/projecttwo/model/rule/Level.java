@@ -1,4 +1,4 @@
-package com.yeamanan.projecttwo.bean.rule;
+package com.yeamanan.projecttwo.model.rule;
 
 /**
  * Level enumeration.

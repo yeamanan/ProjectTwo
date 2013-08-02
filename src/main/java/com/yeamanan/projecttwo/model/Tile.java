@@ -1,6 +1,7 @@
-package com.yeamanan.projecttwo.bean;
+package com.yeamanan.projecttwo.model;
 
-import com.yeamanan.projecttwo.bean.rule.Axe;
+import com.yeamanan.projecttwo.model.game.Zone;
+import com.yeamanan.projecttwo.model.rule.Axe;
 import java.util.ArrayList;
 import java.util.List;
 

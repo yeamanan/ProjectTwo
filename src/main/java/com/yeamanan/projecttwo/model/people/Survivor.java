@@ -1,7 +1,7 @@
-package com.yeamanan.projecttwo.bean.people;
+package com.yeamanan.projecttwo.model.people;
 
-import com.yeamanan.projecttwo.bean.rule.Level;
-import com.yeamanan.projecttwo.bean.rule.Constants;
+import com.yeamanan.projecttwo.model.rule.Level;
+import com.yeamanan.projecttwo.model.rule.Constants;
 
 /**
  * Survivor class.

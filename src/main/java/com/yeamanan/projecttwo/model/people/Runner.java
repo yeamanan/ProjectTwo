@@ -1,6 +1,6 @@
-package com.yeamanan.projecttwo.bean.people;
+package com.yeamanan.projecttwo.model.people;
 
-import com.yeamanan.projecttwo.bean.rule.Constants;
+import com.yeamanan.projecttwo.model.rule.Constants;
 
 /**
  * Runner class.

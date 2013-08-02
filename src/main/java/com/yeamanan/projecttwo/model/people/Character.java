@@ -1,4 +1,4 @@
-package com.yeamanan.projecttwo.bean.people;
+package com.yeamanan.projecttwo.model.people;
 
 /**
  * Character class.

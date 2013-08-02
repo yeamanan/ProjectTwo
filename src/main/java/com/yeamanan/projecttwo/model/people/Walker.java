@@ -1,16 +1,16 @@
-package com.yeamanan.projecttwo.bean.people;
+package com.yeamanan.projecttwo.model.people;
 
 /**
- * Abomination class.
+ * Walker class.
  *
  * @author Yeam Anan <yeamanan@gmail.com>
  */
-public class Abomination extends Zombie {
+public class Walker extends Zombie {
 
     /**
      * Constructor.
      */
-    public Abomination() {
+    public Walker() {
         super();
     }
 
@@ -21,7 +21,7 @@ public class Abomination extends Zombie {
      */
     @Override
     public final String toString() {
-        return "Abomination{" + "nbAction=" + this.nbAction + '}';
+        return "Walker{" + "nbAction=" + this.nbAction + '}';
     }
 
 }
