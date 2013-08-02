@@ -1,9 +1,6 @@
 package com.yeamanan.projecttwo.model;
 
-import com.yeamanan.projecttwo.model.game.Zone;
 import com.yeamanan.projecttwo.model.rule.Axe;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Tile class.
@@ -23,28 +20,22 @@ public class Tile {
     private Axe axe;
 
     /**
-     * Places of a tile.
-     */
-    private List<Zone> places;
-
-    /**
      * Constructor.
      */
     public Tile() {
-        name = "";
-        axe = Axe.NORTH;
-        places = new ArrayList<Zone>();
+        this.name = "";
+        this.axe = Axe.NORTH;
     }
 
     /**
      * Constructor.
      *
-     * @param name new name
+     * @param argName the new name of the tile
+     * @param argAxe the new axe of the tile
      */
-    public Tile(final String argName) {
-        name = argName;
-        axe = Axe.NORTH;
-        places = new ArrayList<Zone>();
+    public Tile(final String argName, final Axe argAxe) {
+        this.name = argName;
+        this.axe = argAxe;
     }
 
     /**
@@ -52,7 +43,7 @@ public class Tile {
      * @return name
      */
     public final String getName() {
-        return name;
+        return this.name;
     }
 
     /**
@@ -69,7 +60,7 @@ public class Tile {
      * @return axe
      */
     public final Axe getAxe() {
-        return axe;
+        return this.axe;
     }
 
     /**
@@ -82,21 +73,14 @@ public class Tile {
     }
 
     /**
-     * getPlaces() method.
+     * toString() method.
      *
-     * @return places
+     * @return the tile in String format
      */
-    public final List<Zone> getPlaces() {
-        return places;
-    }
-
-    /**
-     * setPlaces() method.
-     *
-     * @param argPlaces new places
-     */
-    public final void setPlaces(List<Zone> argPlaces) {
-        this.places = argPlaces;
+    @Override
+    public final String toString() {
+        return "Tile{" + "name=" + this.name + ", axe="
+                + this.axe.getShortCode() + '}';
     }
 
 }

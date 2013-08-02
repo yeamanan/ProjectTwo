@@ -2,12 +2,17 @@ package com.yeamanan.projecttwo.service;
 
 import com.yeamanan.projecttwo.ProjectTwo;
 import com.yeamanan.projecttwo.model.Mission;
+import com.yeamanan.projecttwo.model.Tile;
+import com.yeamanan.projecttwo.model.rule.Axe;
+import com.yeamanan.projecttwo.model.rule.Constants;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
+import java.util.ArrayList;
+import java.util.List;
 import org.apache.log4j.Logger;
 
 /**
@@ -18,7 +23,8 @@ import org.apache.log4j.Logger;
 public class MissionServiceImpl implements MissionService {
 
     private static final String PROPERTY_SEPARATOR = "=";
-    private static final String LIST_SEPARATOR = ";";
+    private static final String TILE_ROW_SEPARATOR = ";";
+    private static final String TILE_ORIENTATION_SEPARATOR = "-";
 
     /**
      * Logger.
@@ -63,9 +69,9 @@ public class MissionServiceImpl implements MissionService {
     public final Mission loadFile(final Reader reader) {
         final Mission mission = new Mission();
         try (final BufferedReader bReader = new BufferedReader(reader)) {
-            String currentLine;
-            while ((currentLine = bReader.readLine()) != null) {
-                treatLine(mission, currentLine);
+            String sLine;
+            while ((sLine = bReader.readLine()) != null) {
+                treatLine(mission, sLine);
             }
         } catch (IOException e) {
             LOGGER.error("Error reading mission file", e);
@@ -88,11 +94,52 @@ public class MissionServiceImpl implements MissionService {
                 mission.setName(tmp[1]);
                 break;
             case "row":
+                mission.getGrid().add(treatTileRow(tmp[1]));
                 break;
             case "objective":
                 break;
             default:
         }
+    }
+
+    /**
+     * treatTileRow() method.
+     * @param row the tiles' row to treat
+     */
+    public final List<Tile> treatTileRow(final String row) {
+        final List<Tile> tiles = new ArrayList<>();
+        final String[] sTiles = row.split(TILE_ROW_SEPARATOR);
+        for (String sTile : sTiles) {
+            final String[] tmp = sTile.split(TILE_ORIENTATION_SEPARATOR);
+            tiles.add(new Tile(tmp[0], treatAxe(tmp[1])));
+        }
+        return tiles;
+    }
+
+    /**
+     * treatAxe() method.
+     * @param sAxe the tile's axe to treat
+     */
+    public final Axe treatAxe(final String sAxe) {
+        Axe axe;
+        switch (sAxe) {
+            case Constants.NORTH_SHORT_CODE :
+                axe = Axe.NORTH;
+                break;
+            case Constants.EAST_SHORT_CODE :
+                axe = Axe.EAST;
+                break;
+            case Constants.SOUTH_SHORT_CODE :
+                axe = Axe.SOUTH;
+                break;
+            case Constants.WEST_SHORT_CODE :
+                axe = Axe.WEST;
+                break;
+            default :
+                axe = Axe.NORTH;
+                break;
+        }
+        return axe;
     }
 
 }

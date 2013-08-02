@@ -8,6 +8,12 @@ package com.yeamanan.projecttwo.model.rule;
 public abstract class Constants {
 
     /**
+     * Short codes.
+     */
+    public static final String NORTH_SHORT_CODE = "N", EAST_SHORT_CODE = "E",
+            SOUTH_SHORT_CODE = "S", WEST_SHORT_CODE = "W";
+
+    /**
      * Minimum experience to reach a level.
      */
     public static final int MIN_XP_BLUE = 0, MIN_XP_YELLOW = 7,

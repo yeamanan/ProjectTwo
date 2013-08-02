@@ -1,5 +1,8 @@
 package com.yeamanan.projecttwo.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Mission class.
  *
@@ -17,12 +20,15 @@ public class Mission {
      */
     private String name;
 
+    private List<List<Tile>> grid;
+
     /**
      * Constructor.
      */
     public Mission() {
         this.id = "";
         this.name = "";
+        this.grid = new ArrayList<>();
     }
 
     /**
@@ -62,13 +68,40 @@ public class Mission {
     }
 
     /**
+     * getGrid() method.
+     *
+     * @return the grid of tiles of the mission
+     */
+    public final List<List<Tile>> getGrid() {
+        return this.grid;
+    }
+
+    /**
+     * setGrid() method.
+     *
+     * @param argGrid the new grid of tiles of the mission
+     */
+    public final void setGrid(final List<List<Tile>> argGrid) {
+        this.grid = argGrid;
+    }
+
+    /**
      * toString() method.
      *
      * @return the mission in String format
      */
     @Override
     public final String toString() {
-        return "Mission{" + "id=" + id + ", name=" + name + '}';
+        String str = "Mission{" + "id=" + this.id + ", name=" + this.name;
+        str += ", grid=[";
+        for(List<Tile> row : grid) {
+            str += "[";
+            for(Tile tile : row) {
+                str += tile.toString();
+            }
+            str += "]";
+        }
+        return str + "]}";
     }
 
 }
