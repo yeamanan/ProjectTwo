@@ -3,6 +3,7 @@ package com.yeamanan.projecttwo.service;
 import com.yeamanan.projecttwo.model.Mission;
 import java.io.InputStream;
 import java.io.Reader;
+import java.util.List;
 
 /**
  * MissionService interface.
@@ -10,6 +11,12 @@ import java.io.Reader;
  * @author Yeam Anan (<yeamanan@gmail.com>)
  */
 public interface MissionService {
+
+    /**
+     * loadFile() method.
+     * @return a list of mission objects
+     */
+    List<Mission> loadMissionsAsRessources();
 
     /**
      * loadFile() method.

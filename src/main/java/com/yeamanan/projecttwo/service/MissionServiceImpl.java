@@ -3,8 +3,8 @@ package com.yeamanan.projecttwo.service;
 import com.yeamanan.projecttwo.ProjectTwo;
 import com.yeamanan.projecttwo.model.Mission;
 import com.yeamanan.projecttwo.model.Tile;
-import com.yeamanan.projecttwo.model.rule.Axe;
-import com.yeamanan.projecttwo.model.rule.Constants;
+import com.yeamanan.projecttwo.util.AxeUtil;
+import com.yeamanan.projecttwo.util.JarUtil;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -23,13 +23,30 @@ import org.apache.log4j.Logger;
 public class MissionServiceImpl implements MissionService {
 
     private static final String PROPERTY_SEPARATOR = "=";
-    private static final String TILE_ROW_SEPARATOR = ";";
-    private static final String TILE_ORIENTATION_SEPARATOR = "-";
+    private static final String TILE_ROW_SEPARATOR = "-";
+    private static final String TILE_ORIENTATION_SEPARATOR = ";";
+
+    private static final String MISSION_FOLDER = "Missions/";
 
     /**
      * Logger.
      */
     private static final Logger LOGGER = Logger.getLogger(ProjectTwo.class);
+
+    /**
+     * loadFile() method.
+     * @return a list of mission objects
+     */
+    @Override
+    public final List<Mission> loadMissionsAsRessources() {
+        List<Mission> missions = new ArrayList<>();
+        List<String> filePaths =
+                JarUtil.getJarFolderFileList(this.getClass(), MISSION_FOLDER);
+        for(String path : filePaths) {
+            LOGGER.info(path);
+        }
+        return missions;
+    }
 
     /**
      * loadFile() method.
@@ -43,7 +60,7 @@ public class MissionServiceImpl implements MissionService {
         try (final FileReader fReader = new FileReader(filePath)) {
             mission = loadFile(fReader);
         } catch (IOException e) {
-            LOGGER.error("Error reading mission file", e);
+            LOGGER.error("Error reading mission file : " + filePath, e);
         }
         return mission;
     }
@@ -111,35 +128,9 @@ public class MissionServiceImpl implements MissionService {
         final String[] sTiles = row.split(TILE_ROW_SEPARATOR);
         for (String sTile : sTiles) {
             final String[] tmp = sTile.split(TILE_ORIENTATION_SEPARATOR);
-            tiles.add(new Tile(tmp[0], treatAxe(tmp[1])));
+            tiles.add(new Tile(tmp[0], AxeUtil.treatAxe(tmp[1])));
         }
         return tiles;
-    }
-
-    /**
-     * treatAxe() method.
-     * @param sAxe the tile's axe to treat
-     */
-    public final Axe treatAxe(final String sAxe) {
-        Axe axe;
-        switch (sAxe) {
-            case Constants.NORTH_SHORT_CODE :
-                axe = Axe.NORTH;
-                break;
-            case Constants.EAST_SHORT_CODE :
-                axe = Axe.EAST;
-                break;
-            case Constants.SOUTH_SHORT_CODE :
-                axe = Axe.SOUTH;
-                break;
-            case Constants.WEST_SHORT_CODE :
-                axe = Axe.WEST;
-                break;
-            default :
-                axe = Axe.NORTH;
-                break;
-        }
-        return axe;
     }
 
 }

@@ -1,5 +1,5 @@
 id=07
 name=Grindhouse
-row=2B(E)
-row=1B(N)
+row=3C;E-2C;E
+row=2B;S-4C;E
 objective=

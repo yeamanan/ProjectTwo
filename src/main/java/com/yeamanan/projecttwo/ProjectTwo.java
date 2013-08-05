@@ -40,13 +40,14 @@ public class ProjectTwo {
 //        LOGGER.info(new Abomination());
 //        LOGGER.info(write());
         final MissionService missionService = new MissionServiceImpl();
-        final Class cls = Class.forName("com.yeamanan.projecttwo.ProjectTwo");
-        final InputStream input =
-                cls.getClassLoader()
-                .getResourceAsStream("Missions/00 - Tutorial.mis");
-        final Mission mission = missionService.loadFile(input);
-//        final Mission mission = missionService.loadFile("C:\\Users\\ggl\\Documents\\NetBeansProjects\\ProjectTwo\\src\\main\\resources\\Missions\\00 - Tutorial.mis");
-        LOGGER.info(mission);
+        missionService.loadMissionsAsRessources();
+//        final Class cls = Class.forName("com.yeamanan.projecttwo.ProjectTwo");
+//        final InputStream input =
+//                cls.getClassLoader()
+//                .getResourceAsStream("Missions/00 - Tutorial.mis");
+//        final Mission mission = missionService.loadFile(input);
+////        final Mission mission = missionService.loadFile("C:\\Users\\ggl\\Documents\\NetBeansProjects\\ProjectTwo\\src\\main\\resources\\Missions\\00 - Tutorial.mis");
+//        LOGGER.info(mission);
     }
 
     /**

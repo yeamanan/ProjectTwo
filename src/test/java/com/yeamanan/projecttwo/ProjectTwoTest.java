@@ -14,7 +14,8 @@ public class ProjectTwoTest {
      * test() test method.
      */
     @Test
-    public final void test() {        
-        assertEquals("This is ok", ProjectTwo.write(), "This is a sample project");
+    public final void test() {
+        assertEquals("This is ok", ProjectTwo.write(),
+                "This is a sample project");
     }
 }
