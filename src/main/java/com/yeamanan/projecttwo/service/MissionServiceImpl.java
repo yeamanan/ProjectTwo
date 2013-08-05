@@ -43,7 +43,9 @@ public class MissionServiceImpl implements MissionService {
         List<String> filePaths =
                 JarUtil.getJarFolderFileList(this.getClass(), MISSION_FOLDER);
         for(String path : filePaths) {
-            LOGGER.info(path);
+            InputStream stream =
+                    getClass().getClassLoader().getResourceAsStream(path);
+            missions.add(loadFile(stream));
         }
         return missions;
     }

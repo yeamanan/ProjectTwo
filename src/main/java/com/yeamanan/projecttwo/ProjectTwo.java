@@ -11,6 +11,7 @@ import com.yeamanan.projecttwo.model.people.Zombie;
 import com.yeamanan.projecttwo.service.MissionService;
 import com.yeamanan.projecttwo.service.MissionServiceImpl;
 import java.io.InputStream;
+import java.util.List;
 import org.apache.log4j.Logger;
 
 /**
@@ -40,7 +41,10 @@ public class ProjectTwo {
 //        LOGGER.info(new Abomination());
 //        LOGGER.info(write());
         final MissionService missionService = new MissionServiceImpl();
-        missionService.loadMissionsAsRessources();
+        List<Mission> missions = missionService.loadMissionsAsRessources();
+        for (Mission mission : missions) {
+            LOGGER.info(mission);
+        }
 //        final Class cls = Class.forName("com.yeamanan.projecttwo.ProjectTwo");
 //        final InputStream input =
 //                cls.getClassLoader()
