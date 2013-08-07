@@ -13,3 +13,6 @@ lib/
 
 # Netbeans Folder #
 nbproject/
+
+# Mac files #
+*.DS_Store
