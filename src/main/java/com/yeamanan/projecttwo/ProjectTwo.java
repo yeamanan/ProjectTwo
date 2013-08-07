@@ -1,16 +1,14 @@
 package com.yeamanan.projecttwo;
 
-import com.yeamanan.projecttwo.model.Mission;
-import com.yeamanan.projecttwo.model.people.Abomination;
-import com.yeamanan.projecttwo.model.people.Character;
-import com.yeamanan.projecttwo.model.people.Fatty;
-import com.yeamanan.projecttwo.model.people.Runner;
-import com.yeamanan.projecttwo.model.people.Survivor;
-import com.yeamanan.projecttwo.model.people.Walker;
-import com.yeamanan.projecttwo.model.people.Zombie;
-import com.yeamanan.projecttwo.service.MissionService;
-import com.yeamanan.projecttwo.service.MissionServiceImpl;
-import java.io.InputStream;
+import java.io.IOException;
+import java.net.URL;
+import java.util.Locale;
+import java.util.ResourceBundle;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 import org.apache.log4j.Logger;
 
 /**
@@ -18,7 +16,7 @@ import org.apache.log4j.Logger;
  *
  * @author Yeam Anan <yeamanan@gmail.com>
  */
-public class ProjectTwo {
+public class ProjectTwo extends Application {
 
     /**
      * Logger.
@@ -26,28 +24,34 @@ public class ProjectTwo {
     private static final Logger LOGGER = Logger.getLogger(ProjectTwo.class);
 
     /**
-     * Main() method.
+     * start() method.
+     *
+     * @param stage the stage of the application
+     */
+    @Override
+    public final void start(final Stage stage) {
+        final Locale locale = Locale.getDefault();
+        final ResourceBundle bundle =
+                ResourceBundle.getBundle("bundles.Language", locale);
+        stage.setTitle(bundle.getString("title"));
+        final URL main = getClass().getClassLoader().getResource("main.fxml");
+        try {
+            final Parent root = FXMLLoader.load(main, bundle);
+            final Scene scene = new Scene(root, 800, 600);
+            stage.setScene(scene);
+        } catch (IOException e) {
+            LOGGER.error("ERROR", e);
+        }
+        stage.show();
+    }
+
+    /**
+     * main() method.
      *
      * @param args arguments
      */
-    public static void main(final String[] args) throws Exception {
-//        LOGGER.info(new Character(0));
-//        LOGGER.info(new Survivor());
-//        LOGGER.info(new Zombie());
-//        LOGGER.info(new Walker());
-//        LOGGER.info(new Fatty());
-//        LOGGER.info(new Runner());
-//        LOGGER.info(new Abomination());
-//        LOGGER.info(write());
-        final MissionService missionService = new MissionServiceImpl();
-        missionService.loadMissionsAsRessources();
-//        final Class cls = Class.forName("com.yeamanan.projecttwo.ProjectTwo");
-//        final InputStream input =
-//                cls.getClassLoader()
-//                .getResourceAsStream("Missions/00 - Tutorial.mis");
-//        final Mission mission = missionService.loadFile(input);
-////        final Mission mission = missionService.loadFile("C:\\Users\\ggl\\Documents\\NetBeansProjects\\ProjectTwo\\src\\main\\resources\\Missions\\00 - Tutorial.mis");
-//        LOGGER.info(mission);
+    public static void main(final String[] args) {
+        launch(args);
     }
 
     /**

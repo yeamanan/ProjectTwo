@@ -26,7 +26,7 @@ public class MissionServiceImpl implements MissionService {
     private static final String TILE_ROW_SEPARATOR = "-";
     private static final String TILE_ORIENTATION_SEPARATOR = ";";
 
-    private static final String MISSION_FOLDER = "Missions/";
+    private static final String MISSION_FOLDER = "missions/";
 
     /**
      * Logger.
@@ -39,11 +39,14 @@ public class MissionServiceImpl implements MissionService {
      */
     @Override
     public final List<Mission> loadMissionsAsRessources() {
-        List<Mission> missions = new ArrayList<>();
+        final List<Mission> missions = new ArrayList<>();
+        final Class aClass = this.getClass();
         List<String> filePaths =
-                JarUtil.getJarFolderFileList(this.getClass(), MISSION_FOLDER);
+                JarUtil.getJarFolderFileList(aClass, MISSION_FOLDER);
         for(String path : filePaths) {
-            LOGGER.info(path);
+            final InputStream stream =
+                    aClass.getClassLoader().getResourceAsStream(path);
+            missions.add(loadFile(stream));
         }
         return missions;
     }

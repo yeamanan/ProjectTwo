@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<MenuBar xmlns:fx="http://javafx.com/fxml"
+         fx:controller="com.yeamanan.projecttwo.controller.MenuController">
+    <menus>
+        <Menu text="%fileMenu">
+            <items>
+                <MenuItem text="%newMenuItem" onAction="#handleExitAction"/>
+                <MenuItem text="%openMenuItem" onAction="#handleExitAction"/>
+                <MenuItem text="%saveMenuItem" onAction="#handleExitAction"/>
+                <SeparatorMenuItem/>
+                <MenuItem text="%exitMenuItem" onAction="#handleExitAction"/>
+            </items>
+        </Menu>
+        <Menu fx:id="missionsMenu" text="%missionsMenu"/>
+        <Menu fx:id="languagesMenu" text="%languagesMenu"/>
+    </menus>
+</MenuBar>

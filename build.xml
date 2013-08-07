@@ -168,6 +168,9 @@
         <delete dir="${lib.dir}"/>
         <mkdir dir="${lib.dir}"/>
         <ivy:retrieve />
+        <!-- JavaFx jar -->
+        <copy todir="${lib.dir}" file="${java.home}/lib/jfxrt.jar"/>
+        <!-- -->
     </target>
     <!-- -->
     <!-- -->
