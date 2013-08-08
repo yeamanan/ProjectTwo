@@ -11,10 +11,17 @@ import com.yeamanan.projecttwo.model.rule.Constants;
 public final class AxeUtil {
 
     /**
-     * treatAxe() method.
-     * @param sAxe the tile's axe to treat
+     * Constructor.
      */
-    public final static Axe treatAxe(final String sAxe) {
+    private AxeUtil() { }
+
+    /**
+     * convertToAxe() method.
+     *
+     * @param sAxe the tile's axe to treat
+     * @return the axe converted from the argument
+     */
+    public static Axe convertToAxe(final String sAxe) {
         Axe axe;
         switch (sAxe) {
             case Constants.NORTH_SHORT_CODE :

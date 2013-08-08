@@ -1,6 +1,9 @@
 package com.yeamanan.projecttwo.model;
 
 import com.yeamanan.projecttwo.model.rule.Axe;
+import com.yeamanan.projecttwo.model.rule.State;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Tile class.
@@ -20,11 +23,23 @@ public class Tile {
     private Axe axe;
 
     /**
+     * Zones of the tile.
+     */
+    private List<List<String>> zones;
+
+    /**
+     * States of the zones.
+     */
+    private List<List<State>> zonesStates;
+
+    /**
      * Constructor.
      */
     public Tile() {
         this.name = "";
         this.axe = Axe.NORTH;
+        this.zones = new ArrayList<>();
+        this.zonesStates = new ArrayList<>();
     }
 
     /**
@@ -36,11 +51,13 @@ public class Tile {
     public Tile(final String argName, final Axe argAxe) {
         this.name = argName;
         this.axe = argAxe;
+        this.zones = new ArrayList<>();
+        this.zonesStates = new ArrayList<>();
     }
 
     /**
      * getName() method.
-     * @return name
+     * @return the name of the tile
      */
     public final String getName() {
         return this.name;
@@ -48,7 +65,7 @@ public class Tile {
 
     /**
      * setName() method.
-     * @param argName new name
+     * @param argName the new name of the tile
      */
     public final void setName(final String argName) {
         this.name = argName;
@@ -57,7 +74,7 @@ public class Tile {
     /**
      * getAxe() method.
      *
-     * @return axe
+     * @return the axe of the tile
      */
     public final Axe getAxe() {
         return this.axe;
@@ -66,10 +83,46 @@ public class Tile {
     /**
      * setAxe() method.
      *
-     * @param argAxe new axe
+     * @param argAxe the new axe of the tile
      */
     public final void setAxe(final Axe argAxe) {
         this.axe = argAxe;
+    }
+
+    /**
+     * getZones() method.
+     *
+     * @return the zones of the tile
+     */
+    public final List<List<String>> getZones() {
+        return this.zones;
+    }
+
+    /**
+     * setZones() method.
+     *
+     * @param argAxe the new zones of the tiles
+     */
+    public final void setZones(final List<List<String>> argZones) {
+        this.zones = argZones;
+    }
+
+    /**
+     * getZonesStates() method.
+     *
+     * @return the states' zones of the tile
+     */
+    public final List<List<State>> getZonesStates() {
+        return this.zonesStates;
+    }
+
+    /**
+     * setAxe() method.
+     *
+     * @param argZonesStates the new states' zones of the tile
+     */
+    public final void setAxe(final List<List<State>> argZonesStates) {
+        this.zonesStates = argZonesStates;
     }
 
     /**

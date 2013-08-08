@@ -17,6 +17,11 @@ import java.util.jar.JarFile;
 public final class JarUtil {
 
     /**
+     * Constructor.
+     */
+    private JarUtil() { }
+
+    /**
      * getJarFolderFileList() method.
      *
      * @param aClass a class
@@ -25,14 +30,15 @@ public final class JarUtil {
      */
     public static List<String> getJarFolderFileList(final Class aClass,
             final String pathFolder) {
-        List<String> filePaths = new ArrayList<>();
-        URL url = aClass.getClassLoader().getResource(pathFolder);
-        String jarPath = url.getPath().substring(5, url.getPath().indexOf("!"));
+        final List<String> filePaths = new ArrayList<>();
+        final URL url = aClass.getClassLoader().getResource(pathFolder);
+        final String jarPath =
+                url.getPath().substring(5, url.getPath().indexOf("!"));
         try {
             JarFile jar = new JarFile(URLDecoder.decode(jarPath, "UTF-8"));
             Enumeration<JarEntry> entries = jar.entries();
             while(entries.hasMoreElements()) {
-                JarEntry entry = entries.nextElement();
+                final JarEntry entry = entries.nextElement();
                 final String filePathInJar = entry.getName();
                 if(filePathInJar.startsWith(pathFolder) && !filePathInJar.matches(pathFolder)) {
                     filePaths.add(filePathInJar);

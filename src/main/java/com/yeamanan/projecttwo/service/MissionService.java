@@ -13,30 +13,34 @@ import java.util.List;
 public interface MissionService {
 
     /**
-     * loadFile() method.
+     * loadMissions() method.
+     *
      * @return a list of mission objects
      */
-    List<Mission> loadMissionsAsRessources();
+    List<Mission> loadMissions();
 
     /**
-     * loadFile() method.
+     * loadMission() method.
+     *
      * @param filePath path of a file to load
      * @return a mission object
      */
-    Mission loadFile(final String filePath);
+    Mission loadMission(final String filePath);
 
     /**
-     * loadFile() method.
+     * loadMission() method.
+     *
      * @param inputStream input stream of a file to load
      * @return a mission object
      */
-    Mission loadFile(final InputStream inputStream);
+    Mission loadMission(final InputStream inputStream);
 
     /**
-     * loadFile() method.
+     * loadMission() method.
+     *
      * @param reader reader of a file to load
      * @return a mission object
      */
-    Mission loadFile(final Reader reader);
+    Mission loadMission(final Reader reader);
 
 }

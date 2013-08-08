@@ -1,8 +1,5 @@
 package com.yeamanan.projecttwo.model.game;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Board class.
  *
@@ -10,17 +7,33 @@ import java.util.List;
  */
 public class Board {
 
+    /**
+     * Start zone.
+     */
     private Zone startZone;
 
+    /**
+     * Constructor.
+     */
     Board() {
         this.startZone = new Zone();
     }
 
-    public Zone getStartZone() {
+    /**
+     * getStartZone() method.
+     *
+     * @return the start zone
+     */
+    public final Zone getStartZone() {
         return this.startZone;
     }
 
-    public void setStartZone(Zone argStartZone) {
+    /**
+     * setStartZone() method.
+     *
+     * @param argStartZone the new start zone
+     */
+    public final void setStartZone(final Zone argStartZone) {
         this.startZone = argStartZone;
     }
 

@@ -20,6 +20,9 @@ public class Mission {
      */
     private String name;
 
+    /**
+     * Grid of tiles of the mission.
+     */
     private List<List<Tile>> grid;
 
     /**

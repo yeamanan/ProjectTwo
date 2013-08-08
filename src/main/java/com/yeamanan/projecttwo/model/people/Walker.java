@@ -8,13 +8,6 @@ package com.yeamanan.projecttwo.model.people;
 public class Walker extends Zombie {
 
     /**
-     * Constructor.
-     */
-    public Walker() {
-        super();
-    }
-
-    /**
      * toString() method.
      *
      * @return the walker in string format

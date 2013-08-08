@@ -19,20 +19,41 @@ import javafx.scene.control.MenuItem;
  */
 public class MenuController implements Initializable {
 
-    @FXML private Menu missionsMenu;
-    @FXML private Menu languagesMenu;
+    /**
+     * TODO.
+     */
+    @FXML
+    private Menu missionsMenu;
 
+//    /**
+//     * TODO.
+//     */
+//    @FXML
+//    private Menu languagesMenu;
+
+    /**
+     * TODO.
+     *
+     * @param url TODO
+     * @param bundle TODO
+     */
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        final MissionService ms = new MissionServiceImpl();
-        final List<Mission> missions = ms.loadMissionsAsRessources();
+    public final void initialize(final URL url, final ResourceBundle bundle) {
+        final MissionService service = new MissionServiceImpl();
+        final List<Mission> missions = service.loadMissions();
         for (Mission mission : missions) {
             final String tmp = mission.getId() + " - " + mission.getName();
             missionsMenu.getItems().add(new MenuItem(tmp));
         }
     }
 
-    @FXML protected void handleExitAction(ActionEvent event) {
+    /**
+     * TODO.
+     *
+     * @param event TODO
+     */
+    @FXML
+    protected final void handleExitAction(final ActionEvent event) {
         System.exit(0);
     }
 

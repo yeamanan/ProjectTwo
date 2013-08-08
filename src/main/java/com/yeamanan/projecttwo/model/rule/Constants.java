@@ -5,13 +5,24 @@ package com.yeamanan.projecttwo.model.rule;
  *
  * @author Yeam Anan <yeamanan@gmail.com>
  */
-public abstract class Constants {
+public final class Constants {
 
     /**
-     * Short codes.
+     * Constructor.
+     */
+    private Constants() { }
+
+    /**
+     * Axe's short codes.
      */
     public static final String NORTH_SHORT_CODE = "N", EAST_SHORT_CODE = "E",
             SOUTH_SHORT_CODE = "S", WEST_SHORT_CODE = "W";
+
+    /**
+     * State's short codes.
+     */
+    public static final String OUTDOOR_SHORT_CODE = "0",
+            INDOOR_SHORT_CODE = "1";
 
     /**
      * Minimum experience to reach a level.

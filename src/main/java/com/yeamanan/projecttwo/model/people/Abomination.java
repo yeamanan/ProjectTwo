@@ -8,13 +8,6 @@ package com.yeamanan.projecttwo.model.people;
 public class Abomination extends Zombie {
 
     /**
-     * Constructor.
-     */
-    public Abomination() {
-        super();
-    }
-
-    /**
      * toString() method.
      *
      * @return the walker in string format

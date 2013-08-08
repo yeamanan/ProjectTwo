@@ -1,7 +1,7 @@
 package com.yeamanan.projecttwo.model.rule;
 
 /**
- * Axe enum.
+ * Axe enumeration.
  *
  * @author Yeam Anan <yeamanan@gmail.com>
  */

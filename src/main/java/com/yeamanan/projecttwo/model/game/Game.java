@@ -12,7 +12,7 @@ public class Game {
      */
     private Board board;
 
-    private int turn;
+//    private int turn;
 
     /**
      * Constructor.
@@ -33,10 +33,10 @@ public class Game {
     /**
      * setBoard() method.
      *
-     * @param board the new board of the game
+     * @param argBoard the new board of the game
      */
-    public final void setBoard(final Board board) {
-        this.board = board;
+    public final void setBoard(final Board argBoard) {
+        this.board = argBoard;
     }
 
 }

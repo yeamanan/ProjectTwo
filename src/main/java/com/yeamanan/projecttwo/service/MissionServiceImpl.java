@@ -1,6 +1,5 @@
 package com.yeamanan.projecttwo.service;
 
-import com.yeamanan.projecttwo.ProjectTwo;
 import com.yeamanan.projecttwo.model.Mission;
 import com.yeamanan.projecttwo.model.Tile;
 import com.yeamanan.projecttwo.util.AxeUtil;
@@ -26,42 +25,43 @@ public class MissionServiceImpl implements MissionService {
     private static final String TILE_ROW_SEPARATOR = "-";
     private static final String TILE_ORIENTATION_SEPARATOR = ";";
 
-    private static final String MISSION_FOLDER = "missions/";
+    private static final String MISSIONS_FOLDER = "missions/";
 
     /**
      * Logger.
      */
-    private static final Logger LOGGER = Logger.getLogger(ProjectTwo.class);
+    private static final Logger LOGGER = Logger.getLogger(MissionServiceImpl.class);
 
     /**
-     * loadFile() method.
+     * loadMissions() method.
+     *
      * @return a list of mission objects
      */
     @Override
-    public final List<Mission> loadMissionsAsRessources() {
+    public final List<Mission> loadMissions() {
         final List<Mission> missions = new ArrayList<>();
         final Class aClass = this.getClass();
-        List<String> filePaths =
-                JarUtil.getJarFolderFileList(aClass, MISSION_FOLDER);
+        final List<String> filePaths =
+                JarUtil.getJarFolderFileList(aClass, MISSIONS_FOLDER);
         for(String path : filePaths) {
             final InputStream stream =
                     aClass.getClassLoader().getResourceAsStream(path);
-            missions.add(loadFile(stream));
+            missions.add(loadMission(stream));
         }
         return missions;
     }
 
     /**
-     * loadFile() method.
+     * loadMission() method.
      *
      * @param filePath name of a file to load
      * @return a mission object
      */
     @Override
-    public final Mission loadFile(final String filePath) {
+    public final Mission loadMission(final String filePath) {
         Mission mission = null;
         try (final FileReader fReader = new FileReader(filePath)) {
-            mission = loadFile(fReader);
+            mission = loadMission(fReader);
         } catch (IOException e) {
             LOGGER.error("Error reading mission file : " + filePath, e);
         }
@@ -69,24 +69,24 @@ public class MissionServiceImpl implements MissionService {
     }
 
     /**
-     * loadFile() method.
+     * loadMission() method.
      *
      * @param inputStream input stream of a file to load
      * @return a mission object
      */
     @Override
-    public final Mission loadFile(final InputStream inputStream) {
-        return loadFile(new InputStreamReader(inputStream));
+    public final Mission loadMission(final InputStream inputStream) {
+        return loadMission(new InputStreamReader(inputStream));
     }
 
     /**
-     * loadFile() method.
+     * loadMission() method.
      *
      * @param reader reader of a file to load
      * @return a mission object
      */
     @Override
-    public final Mission loadFile(final Reader reader) {
+    public final Mission loadMission(final Reader reader) {
         final Mission mission = new Mission();
         try (final BufferedReader bReader = new BufferedReader(reader)) {
             String sLine;
@@ -101,10 +101,11 @@ public class MissionServiceImpl implements MissionService {
 
     /**
      * treatLine() method.
+     *
      * @param mission the mission to modify
-     * @param line the line to treat
+     * @param line a line to treat
      */
-    public final void treatLine(final Mission mission, final String line) {
+    private void treatLine(final Mission mission, final String line) {
         final String[] tmp = line.split(PROPERTY_SEPARATOR);
         switch (tmp[0]) {
             case "id":
@@ -124,14 +125,15 @@ public class MissionServiceImpl implements MissionService {
 
     /**
      * treatTileRow() method.
-     * @param row the tiles' row to treat
+     *
+     * @param row a tiles' row to treat
      */
-    public final List<Tile> treatTileRow(final String row) {
+    private List<Tile> treatTileRow(final String row) {
         final List<Tile> tiles = new ArrayList<>();
         final String[] sTiles = row.split(TILE_ROW_SEPARATOR);
         for (String sTile : sTiles) {
             final String[] tmp = sTile.split(TILE_ORIENTATION_SEPARATOR);
-            tiles.add(new Tile(tmp[0], AxeUtil.treatAxe(tmp[1])));
+            tiles.add(new Tile(tmp[0], AxeUtil.convertToAxe(tmp[1])));
         }
         return tiles;
     }

@@ -11,9 +11,19 @@ import javafx.scene.text.Text;
  */
 public class MainController {
 
-    @FXML private Text actiontarget;
+    /**
+     * TODO.
+     */
+    @FXML
+    private Text actiontarget;
 
-    @FXML protected void handleSubmitButtonAction(ActionEvent event) {
+    /**
+     * TODO.
+     *
+     * @param event TODO
+     */
+    @FXML
+    protected final void handleSubmitButtonAction(final ActionEvent event) {
         actiontarget.setText("Sign in button pressed");
     }
 

@@ -9,7 +9,12 @@ package com.yeamanan.projecttwo.model.box;
  *
  * @author Yeam Anan <yeamanan@gmail.com>
  */
-public abstract class SeasonOne {
+public final class SeasonOne {
+
+    /**
+     * Constructor.
+     */
+    private SeasonOne() { }
 
     public static final int SURVIVOR1_MINIATURES = 1;
     public static final int SURVIVOR2_MINIATURES = 1;
