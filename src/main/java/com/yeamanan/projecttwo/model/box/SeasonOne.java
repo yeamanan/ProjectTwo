@@ -16,15 +16,13 @@ public final class SeasonOne {
      */
     private SeasonOne() { }
 
-    public static final int SURVIVOR1_MINIATURES = 1;
-    public static final int SURVIVOR2_MINIATURES = 1;
-    public static final int SURVIVOR3_MINIATURES = 1;
-    public static final int SURVIVOR4_MINIATURES = 1;
-    public static final int SURVIVOR5_MINIATURES = 1;
-    public static final int SURVIVOR6_MINIATURES = 1;
-    public static final int WALKERS_MINIATURES = 40;
-    public static final int FATTIES_MINIATURES = 8;
-    public static final int RUNNERS_MINIATURES = 16;
-    public static final int ABOMINATIONS_MINIATURES = 1;
+    /**
+     * Constants.
+     */
+    public static final int SURVIVOR1_MINIATURES = 1, SURVIVOR2_MINIATURES = 1,
+            SURVIVOR3_MINIATURES = 1, SURVIVOR4_MINIATURES = 1,
+            SURVIVOR5_MINIATURES = 1, SURVIVOR6_MINIATURES = 1,
+            WALKERS_MINIATURES = 40, FATTIES_MINIATURES = 8,
+            RUNNERS_MINIATURES = 16, ABOMINATIONS_MINIATURES = 1;
 
 }

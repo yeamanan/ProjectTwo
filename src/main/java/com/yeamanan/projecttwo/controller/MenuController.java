@@ -1,16 +1,21 @@
 package com.yeamanan.projecttwo.controller;
 
+import com.yeamanan.projecttwo.ProjectTwo;
 import com.yeamanan.projecttwo.model.Mission;
 import com.yeamanan.projecttwo.service.MissionService;
 import com.yeamanan.projecttwo.service.MissionServiceImpl;
+import com.yeamanan.projecttwo.util.LanguageUtil;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.CheckMenuItem;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuItem;
+import org.apache.log4j.Logger;
 
 /**
  * MenuController class.
@@ -20,16 +25,31 @@ import javafx.scene.control.MenuItem;
 public class MenuController implements Initializable {
 
     /**
-     * TODO.
+     * Logger.
+     */
+//    private static final Logger LOGGER = Logger.getLogger(MenuController.class);
+
+    /**
+     * Menu of missions.
      */
     @FXML
     private Menu missionsMenu;
 
-//    /**
-//     * TODO.
-//     */
-//    @FXML
-//    private Menu languagesMenu;
+    /**
+     * Menu of languages.
+     */
+    @FXML
+    private Menu languagesMenu;
+
+    /**
+     * Event handler for the language menu.
+     */
+    private final EventHandler<ActionEvent> languageHandler =
+            new EventHandler<ActionEvent>() {
+                @Override public void handle(final ActionEvent evt) {
+                    changeLanguage((CheckMenuItem) evt.getSource());
+                }
+            };
 
     /**
      * TODO.
@@ -45,12 +65,36 @@ public class MenuController implements Initializable {
             final String tmp = mission.getId() + " - " + mission.getName();
             missionsMenu.getItems().add(new MenuItem(tmp));
         }
+        for (String language : LanguageUtil.getLanguages()) {
+            final CheckMenuItem item = new CheckMenuItem(language);
+            if (language.matches(LanguageUtil.getSelectedLanguage())) {
+                item.setSelected(true);
+            }
+            item.setOnAction(languageHandler);
+            languagesMenu.getItems().add(item);
+        }
     }
 
     /**
-     * TODO.
+     * changeLanguage() method.
      *
-     * @param event TODO
+     * @param cmi the check menu item clicked
+     */
+    public final void changeLanguage(final CheckMenuItem cmi) {
+        final String language = cmi.getText();
+        for (MenuItem item : cmi.getParentMenu().getItems()) {
+            final CheckMenuItem cmi2 = (CheckMenuItem) item;
+            if (!cmi.equals(cmi2)) {
+                cmi2.setSelected(false);
+            }
+        }
+        ProjectTwo.getInstance().changeLanguage(language);
+    }
+
+    /**
+     * handleExitAction() method.
+     *
+     * @param event the event
      */
     @FXML
     protected final void handleExitAction(final ActionEvent event) {

@@ -10,6 +10,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import org.apache.log4j.Logger;
 
@@ -20,9 +21,14 @@ import org.apache.log4j.Logger;
  */
 public class TileServiceImpl implements TileService {
 
-    private static final String PROPERTY_SEPARATOR = "=";
-    private static final String ZONE_SEPARATOR = ";";
+    /**
+     * Constants.
+     */
+    private static final String PROPERTY_SEPARATOR = "=", ZONE_SEPARATOR = ";";
 
+    /**
+     * Tiles folder in jar.
+     */
     private static final String TILES_FOLDER = "tiles/";
 
     /**
@@ -110,9 +116,10 @@ public class TileServiceImpl implements TileService {
     private List<String> treatZones(final String argZones) {
         final List<String> zones = new ArrayList<>();
         final String[] sZones = argZones.split(ZONE_SEPARATOR);
-        for (String sZone : sZones) {
-            zones.add(sZone);
-        }
+        Collections.addAll(zones, sZones);
+//        for (String sZone : sZones) {
+//            zones.add(sZone);
+//        }
         return zones;
     }
 

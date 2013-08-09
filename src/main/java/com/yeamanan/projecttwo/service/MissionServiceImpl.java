@@ -21,10 +21,15 @@ import org.apache.log4j.Logger;
  */
 public class MissionServiceImpl implements MissionService {
 
-    private static final String PROPERTY_SEPARATOR = "=";
-    private static final String TILE_ROW_SEPARATOR = "-";
-    private static final String TILE_ORIENTATION_SEPARATOR = ";";
+    /**
+     * Constants.
+     */
+    private static final String PROPERTY_SEPARATOR = "=",
+            TILE_ROW_SEPARATOR = "-", TILE_ORIENTATION_SEPARATOR = ";";
 
+    /**
+     * Missions folder in jar.
+     */
     private static final String MISSIONS_FOLDER = "missions/";
 
     /**
