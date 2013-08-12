@@ -16,3 +16,6 @@ nbproject/
 
 # Mac files #
 *.DS_Store
+
+# Tmp images #
+src/main/resources/images/tmp/

@@ -22,7 +22,7 @@ public final class LanguageUtil {
     /**
      * Default language.
      */
-    public final static String DEFAULT_LANGUAGE = "English";
+    private final static String DEFAULT_LANGUAGE = "English";
 
     /**
      * Selected language.
@@ -75,14 +75,14 @@ public final class LanguageUtil {
         return languages.get(language);
     }
 
-//    /**
-//     * getDefaultLanguageBundle() method
-//     *
-//     * @return the default language bundle
-//     */
-//    public static ResourceBundle getDefaultLanguageBundle() {
-//        return languages.get(DEFAULT_LANGUAGE);
-//    }
+    /**
+     * getSelectedLanguageBundle() method
+     *
+     * @return the default language bundle
+     */
+    public static ResourceBundle getSelectedLanguageBundle() {
+        return languages.get(selectedLanguage);
+    }
 
     /**
      * getSelectedLanguage() method.

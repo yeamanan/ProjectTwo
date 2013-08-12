@@ -1,11 +1,9 @@
 package com.yeamanan.projecttwo;
 
 import com.yeamanan.projecttwo.util.LanguageUtil;
-import java.io.IOException;
-import java.net.URL;
+import com.yeamanan.projecttwo.view.StartLanguageRegion;
 import java.util.ResourceBundle;
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -26,8 +24,8 @@ public class ProjectTwo extends Application {
     /**
      * Size of the box.
      */
-    private static final int width = 800, height = 600;
-    
+    private static final int WIDTH = 800, HEIGHT = 600;
+
     /**
      * Instance of the main class.
      */
@@ -48,30 +46,11 @@ public class ProjectTwo extends Application {
         this.instance = this;
         this.stage = argStage;
         LanguageUtil.loadLanguages(this.getClass());
-        changeLanguage(LanguageUtil.DEFAULT_LANGUAGE);
-        this.stage.show();
-    }
-
-    /**
-     * changeLanguage() method.
-     *
-     * @param language the language to set
-     */
-    public final void changeLanguage(final String language) {
-        LanguageUtil.setSelectedLanguage(language);
-        final ResourceBundle bundle = LanguageUtil.getLanguageBundle(language);
+        final ResourceBundle bundle = LanguageUtil.getSelectedLanguageBundle();
+        final Parent root = new StartLanguageRegion(bundle);
         this.stage.setTitle(bundle.getString("title"));
-        final URL main = getClass().getClassLoader().getResource("main.fxml");
-        try {
-            final Parent root = FXMLLoader.load(main, bundle);
-            if (this.stage.getScene() == null) {
-                this.stage.setScene(new Scene(root, width, height));
-            } else {
-                this.stage.getScene().setRoot(root);
-            }
-        } catch (IOException e) {
-            LOGGER.error("Error loading main.fxml", e);
-        }
+        this.stage.setScene(new Scene(root, WIDTH, HEIGHT));
+        this.stage.show();
     }
 
     /**
@@ -83,6 +62,14 @@ public class ProjectTwo extends Application {
         return instance;
     }
 
+    /**
+     * getStage() method.
+     *
+     * @return the stage of the application
+     */
+    public Stage getStage() {
+        return this.stage;
+    }
     /**
      * main() method.
      *
