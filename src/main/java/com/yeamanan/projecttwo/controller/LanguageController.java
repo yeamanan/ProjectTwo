@@ -15,13 +15,13 @@ import org.apache.log4j.Logger;
  *
  * @author Yeam Anan <yeamanan@gmail.com>
  */
-public class StartLanguageController {
+public class LanguageController {
 
     /**
      * Logger.
      */
     private static final Logger LOGGER =
-            Logger.getLogger(StartLanguageController.class);
+            Logger.getLogger(LanguageController.class);
 
     /**
      * handleChoiceLanguageAction() method.

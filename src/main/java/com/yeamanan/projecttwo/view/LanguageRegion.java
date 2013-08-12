@@ -8,20 +8,20 @@ import org.apache.log4j.Logger;
  *
  * @author Yeam Anan <yeamanan@gmail.com>
  */
-public class StartLanguageRegion extends AbstractRegion {
+public class LanguageRegion extends AbstractRegion {
 
     /**
      * Logger.
      */
     private static final Logger LOGGER =
-            Logger.getLogger(StartLanguageRegion.class);
+            Logger.getLogger(LanguageRegion.class);
 
     /**
      * Constructor.
      *
      * @param bundle the resource bundle to construct the FXML
      */
-    public StartLanguageRegion(final ResourceBundle bundle) {
+    public LanguageRegion(final ResourceBundle bundle) {
         super(bundle);
     }
 

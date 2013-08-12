@@ -23,7 +23,7 @@ public abstract class AbstractRegion extends Region {
     /**
      * Resource path.
      */
-    private static final  String resourcePath = "%s.fxml";
+    private static final  String RESOURCE_PATH = "%s.fxml";
 
     /**
      * Constructor.
@@ -59,7 +59,7 @@ public abstract class AbstractRegion extends Region {
      * @return the path of the view
      */
     private String getViewPath() {
-        return String.format(resourcePath, this.getClass().getSimpleName());
+        return String.format(RESOURCE_PATH, this.getClass().getSimpleName());
     }
 
     /**

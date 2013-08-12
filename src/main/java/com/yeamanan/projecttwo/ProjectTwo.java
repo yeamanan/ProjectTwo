@@ -1,7 +1,7 @@
 package com.yeamanan.projecttwo;
 
 import com.yeamanan.projecttwo.util.LanguageUtil;
-import com.yeamanan.projecttwo.view.StartLanguageRegion;
+import com.yeamanan.projecttwo.view.LanguageRegion;
 import java.util.ResourceBundle;
 import javafx.application.Application;
 import javafx.scene.Parent;
@@ -47,7 +47,7 @@ public class ProjectTwo extends Application {
         this.stage = argStage;
         LanguageUtil.loadLanguages(this.getClass());
         final ResourceBundle bundle = LanguageUtil.getSelectedLanguageBundle();
-        final Parent root = new StartLanguageRegion(bundle);
+        final Parent root = new LanguageRegion(bundle);
         this.stage.setTitle(bundle.getString("title"));
         this.stage.setScene(new Scene(root, WIDTH, HEIGHT));
         this.stage.show();
@@ -67,7 +67,7 @@ public class ProjectTwo extends Application {
      *
      * @return the stage of the application
      */
-    public Stage getStage() {
+    public final Stage getStage() {
         return this.stage;
     }
     /**

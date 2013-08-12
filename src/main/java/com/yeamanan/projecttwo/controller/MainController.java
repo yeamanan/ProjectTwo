@@ -2,7 +2,7 @@ package com.yeamanan.projecttwo.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.text.Text;
+import org.apache.log4j.Logger;
 
 /**
  * MainController class.
@@ -12,19 +12,19 @@ import javafx.scene.text.Text;
 public class MainController {
 
     /**
-     * TODO.
+     * Logger.
      */
-    @FXML
-    private Text actiontarget;
+    private static final Logger LOGGER =
+            Logger.getLogger(LanguageController.class);
 
     /**
-     * TODO.
+     * handleSubmitButtonAction() method.
      *
-     * @param event TODO
+     * @param event the event handled
      */
     @FXML
     protected final void handleSubmitButtonAction(final ActionEvent event) {
-        actiontarget.setText("Sign in button pressed");
+        LOGGER.info("Salut");
     }
 
 }
