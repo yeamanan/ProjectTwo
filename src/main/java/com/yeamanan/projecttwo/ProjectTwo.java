@@ -1,7 +1,8 @@
 package com.yeamanan.projecttwo;
 
 import com.yeamanan.projecttwo.util.LanguageUtil;
-import com.yeamanan.projecttwo.view.LanguageRegion;
+import com.yeamanan.projecttwo.view.LanguageViewFactory;
+import com.yeamanan.projecttwo.view.ViewFactoryImpl;
 import java.util.ResourceBundle;
 import javafx.application.Application;
 import javafx.scene.Parent;
@@ -47,7 +48,7 @@ public class ProjectTwo extends Application {
         this.stage = argStage;
         LanguageUtil.loadLanguages(this.getClass());
         final ResourceBundle bundle = LanguageUtil.getSelectedLanguageBundle();
-        final Parent root = new LanguageRegion(bundle);
+        final Parent root = LanguageViewFactory.getInstance().create(bundle);
         this.stage.setTitle(bundle.getString("title"));
         this.stage.setScene(new Scene(root, WIDTH, HEIGHT));
         this.stage.show();
@@ -70,6 +71,28 @@ public class ProjectTwo extends Application {
     public final Stage getStage() {
         return this.stage;
     }
+
+    /**
+     * setLanguage() method.
+     *
+     * @param language the language to set
+     */
+    public final void setLanguage(final String language) {
+        LanguageUtil.setSelectedLanguage(language);
+        final ResourceBundle bundle = LanguageUtil.getSelectedLanguageBundle();
+        this.stage.setTitle(bundle.getString("title"));
+        this.reloadView();
+    }
+
+    /**
+     * reloadView() method.
+     */
+    public final void reloadView() {
+        final ResourceBundle bundle = LanguageUtil.getSelectedLanguageBundle();
+        final Parent root = ViewFactoryImpl.getInstance().create(bundle);
+        this.stage.getScene().setRoot(root);
+    }
+
     /**
      * main() method.
      *

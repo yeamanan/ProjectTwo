@@ -2,7 +2,7 @@ package com.yeamanan.projecttwo.controller;
 
 import com.yeamanan.projecttwo.ProjectTwo;
 import com.yeamanan.projecttwo.util.LanguageUtil;
-import com.yeamanan.projecttwo.view.MainRegion;
+import com.yeamanan.projecttwo.view.MainViewFactory;
 import java.util.ResourceBundle;
 import javafx.scene.input.MouseEvent;
 import javafx.fxml.FXML;
@@ -15,13 +15,13 @@ import org.apache.log4j.Logger;
  *
  * @author Yeam Anan <yeamanan@gmail.com>
  */
-public class LanguageController {
+public class LanguageViewController {
 
     /**
      * Logger.
      */
     private static final Logger LOGGER =
-            Logger.getLogger(LanguageController.class);
+            Logger.getLogger(LanguageViewController.class);
 
     /**
      * handleChoiceLanguageAction() method.
@@ -32,10 +32,10 @@ public class LanguageController {
     protected final void handleChoiceLanguageAction(final MouseEvent event) {
         final ImageView view = (ImageView) event.getSource();
         final String language = view.getId();
-        LanguageUtil.setSelectedLanguage(language);
-        final ResourceBundle bundle = LanguageUtil.getSelectedLanguageBundle();
-        final Parent root = new MainRegion(bundle);
-        ProjectTwo.getInstance().getStage().getScene().setRoot(root);
+        ProjectTwo instance = ProjectTwo.getInstance();
+        instance.setLanguage(language);
+        MainViewFactory.setInstance();
+        instance.reloadView();
     }
 
 }

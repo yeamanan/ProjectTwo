@@ -9,13 +9,12 @@ import org.apache.log4j.Logger;
  *
  * @author Yeam Anan <yeamanan@gmail.com>
  */
-public class MainController {
+public class MainViewController {
 
     /**
      * Logger.
      */
-    private static final Logger LOGGER =
-            Logger.getLogger(LanguageController.class);
+    private static final Logger LOGGER = Logger.getLogger(MainViewController.class);
 
     /**
      * handleSubmitButtonAction() method.
