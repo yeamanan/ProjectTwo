@@ -1,12 +1,9 @@
 package com.yeamanan.projecttwo.controller;
 
 import com.yeamanan.projecttwo.ProjectTwo;
-import com.yeamanan.projecttwo.util.LanguageUtil;
-import com.yeamanan.projecttwo.view.MainViewFactory;
-import java.util.ResourceBundle;
+import com.yeamanan.projecttwo.view.ViewType;
 import javafx.scene.input.MouseEvent;
 import javafx.fxml.FXML;
-import javafx.scene.Parent;
 import javafx.scene.image.ImageView;
 import org.apache.log4j.Logger;
 
@@ -32,9 +29,9 @@ public class LanguageViewController {
     protected final void handleChoiceLanguageAction(final MouseEvent event) {
         final ImageView view = (ImageView) event.getSource();
         final String language = view.getId();
-        ProjectTwo instance = ProjectTwo.getInstance();
+        final ProjectTwo instance = ProjectTwo.getInstance();
         instance.setLanguage(language);
-        MainViewFactory.setInstance();
+        instance.setCurrentView(ViewType.MainView);
         instance.reloadView();
     }
 

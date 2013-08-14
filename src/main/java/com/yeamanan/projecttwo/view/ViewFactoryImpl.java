@@ -12,7 +12,7 @@ import org.apache.log4j.Logger;
  *
  * @author Yeam Anan <yeamanan@gmail.com>
  */
-public class ViewFactoryImpl {
+public class ViewFactoryImpl implements ViewFactory {
 
     /**
      * Logger.
@@ -21,34 +21,17 @@ public class ViewFactoryImpl {
             Logger.getLogger(ViewFactoryImpl.class);
 
     /**
-     * Instance.
-     */
-    protected static ViewFactoryImpl instance;
-
-    /**
      * Resource path.
      */
     private static final String RESOURCE_PATH = "%s.fxml";
 
     /**
-     * getInstance() method.
-     *
-     * @return instance of the FXMLFactoryImpl
-     */
-    public static ViewFactoryImpl getInstance() {
-        if (instance == null) {
-            instance = new ViewFactoryImpl();
-        }
-        return instance;
-    }
-
-    /**
-     * create() method.
+     * createView() method.
      *
      * @param bundle the resource bundle to construct the FXML
-     * @return 
+     * @return the Parent object created
      */
-    public Parent create(final ResourceBundle bundle) {
+    public final Parent createView(final ResourceBundle bundle) {
          return loadFXML(bundle);
     }
 
@@ -56,16 +39,15 @@ public class ViewFactoryImpl {
      * loadFXML() method.
      *
      * @param bundle the resource bundle to construct the FXML
+     * @return the Parent object created
      */
-    protected Parent loadFXML(final ResourceBundle bundle) {
+    private Parent loadFXML(final ResourceBundle bundle) {
         final FXMLLoader loader = new FXMLLoader();
-        //loader.setController(this);
         loader.setLocation(getViewURL());
         loader.setResources(bundle);
         Parent root = null;
         try {
             root = (Parent) loader.load();
-            //region.getChildren().add(root);
         } catch (IOException ex) {
             LOGGER.error(null, ex);
         }

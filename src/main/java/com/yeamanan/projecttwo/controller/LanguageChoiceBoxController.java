@@ -2,7 +2,6 @@ package com.yeamanan.projecttwo.controller;
 
 import com.yeamanan.projecttwo.ProjectTwo;
 import com.yeamanan.projecttwo.util.LanguageUtil;
-import com.yeamanan.projecttwo.view.MainViewFactory;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.beans.value.ChangeListener;
@@ -42,9 +41,8 @@ public class LanguageChoiceBoxController implements Initializable {
                 final int index = newValue.intValue();
                 final String language =
                         (String) languageBox.getItems().get(index);
-                ProjectTwo instance = ProjectTwo.getInstance();
+                final ProjectTwo instance = ProjectTwo.getInstance();
                 instance.setLanguage(language);
-                MainViewFactory.setInstance();
                 instance.reloadView();
             }
         };

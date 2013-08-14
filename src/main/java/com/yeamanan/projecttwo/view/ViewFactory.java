@@ -11,11 +11,11 @@ import javafx.scene.Parent;
 public interface ViewFactory {
 
     /**
-     * create() method.
+     * createView() method.
      *
      * @param bundle the resource bundle to construct the FXML
      * @return the Parent object created
      */
-    Parent create(final ResourceBundle bundle);
+    Parent createView(final ResourceBundle bundle);
 
 }

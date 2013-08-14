@@ -14,7 +14,8 @@ public class MainViewController {
     /**
      * Logger.
      */
-    private static final Logger LOGGER = Logger.getLogger(MainViewController.class);
+    private static final Logger LOGGER =
+            Logger.getLogger(MainViewController.class);
 
     /**
      * handleSubmitButtonAction() method.

@@ -1,8 +1,7 @@
 package com.yeamanan.projecttwo;
 
 import com.yeamanan.projecttwo.util.LanguageUtil;
-import com.yeamanan.projecttwo.view.LanguageViewFactory;
-import com.yeamanan.projecttwo.view.ViewFactoryImpl;
+import com.yeamanan.projecttwo.view.ViewType;
 import java.util.ResourceBundle;
 import javafx.application.Application;
 import javafx.scene.Parent;
@@ -38,6 +37,11 @@ public class ProjectTwo extends Application {
     private Stage stage;
 
     /**
+     * Current view.
+     */
+    private ViewType currentView;
+
+    /**
      * start() method.
      *
      * @param argStage the stage of the application
@@ -48,7 +52,8 @@ public class ProjectTwo extends Application {
         this.stage = argStage;
         LanguageUtil.loadLanguages(this.getClass());
         final ResourceBundle bundle = LanguageUtil.getSelectedLanguageBundle();
-        final Parent root = LanguageViewFactory.getInstance().create(bundle);
+        this.currentView = ViewType.LanguageView;
+        final Parent root = this.currentView.getFactory().createView(bundle);
         this.stage.setTitle(bundle.getString("title"));
         this.stage.setScene(new Scene(root, WIDTH, HEIGHT));
         this.stage.show();
@@ -73,6 +78,24 @@ public class ProjectTwo extends Application {
     }
 
     /**
+     * getCurrentView() method.
+     *
+     * @return the current view type
+     */
+    public final ViewType getCurrentView() {
+        return this.currentView;
+    }
+
+    /**
+     * setCurrentView() method.
+     *
+     * @param argView the view type to set
+     */
+    public final void setCurrentView(final ViewType argView) {
+        this.currentView = argView;
+    }
+
+    /**
      * setLanguage() method.
      *
      * @param language the language to set
@@ -89,7 +112,7 @@ public class ProjectTwo extends Application {
      */
     public final void reloadView() {
         final ResourceBundle bundle = LanguageUtil.getSelectedLanguageBundle();
-        final Parent root = ViewFactoryImpl.getInstance().create(bundle);
+        final Parent root = this.currentView.getFactory().createView(bundle);
         this.stage.getScene().setRoot(root);
     }
 
