@@ -8,6 +8,9 @@
 <?import javafx.scene.paint.*?>
 
 <AnchorPane xmlns:fx="http://javafx.com/fxml" fx:id="languagePane" fx:controller="com.yeamanan.projecttwo.controller.LanguageViewController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0">
+    <stylesheets>
+        <URL value="@styles/Style.css" />
+    </stylesheets>
     <children>
         <ImageView fx:id="Français" onMouseClicked="#handleChoiceLanguageAction" fitHeight="150.0" fitWidth="200.0" layoutX="250.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
             <image>
@@ -20,7 +23,4 @@
             </image>
         </ImageView>
     </children>
-    <stylesheets>
-        <URL value="@styles/Style.css" />
-    </stylesheets>
 </AnchorPane>

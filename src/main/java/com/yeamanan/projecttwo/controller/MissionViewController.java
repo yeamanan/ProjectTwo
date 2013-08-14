@@ -11,13 +11,13 @@ import org.apache.log4j.Logger;
  *
  * @author Yeam Anan <yeamanan@gmail.com>
  */
-public class MainViewController {
+public class MissionViewController {
 
     /**
      * Logger.
      */
     private static final Logger LOGGER =
-            Logger.getLogger(MainViewController.class);
+            Logger.getLogger(MissionViewController.class);
 
     /**
      * handleStartAction() method.

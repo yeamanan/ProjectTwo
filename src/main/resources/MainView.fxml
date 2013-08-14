@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.*?>
+<?import java.net.*?>
 <?import java.util.*?>
 <?import javafx.collections.*?>
 <?import javafx.scene.control.*?>
@@ -8,10 +9,13 @@
 <?import javafx.scene.paint.*?>
 
 <AnchorPane xmlns:fx="http://javafx.com/fxml" fx:id="mainPane" fx:controller="com.yeamanan.projecttwo.controller.MainViewController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0">
+    <stylesheets>
+        <URL value="@styles/Style.css" />
+    </stylesheets>
     <children>
         <fx:include source="LanguageChoiceBox.fxml"/>
         <Label layoutX="364.0" layoutY="275.0" prefHeight="50.0" prefWidth="72.0" text="%label" />
-        <Button layoutX="14.0" layoutY="244.0" mnemonicParsing="false" prefHeight="113.0" prefWidth="196.0" text="%start" />
-        <Button layoutX="605.0" layoutY="244.0" mnemonicParsing="false" prefHeight="113.0" prefWidth="181.0" text="%options" />
+        <Button onMouseClicked="#handleStartAction" layoutX="14.0" layoutY="244.0" mnemonicParsing="false" prefHeight="113.0" prefWidth="196.0" text="%start" />
+        <Button onMouseClicked="#handleOptionsAction" layoutX="605.0" layoutY="244.0" mnemonicParsing="false" prefHeight="113.0" prefWidth="181.0" text="%options" />
     </children>
 </AnchorPane>

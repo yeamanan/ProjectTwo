@@ -15,7 +15,12 @@ public enum ViewType {
     /**
      * Main view.
      */
-    MainView(new MainViewFactory());
+    MainView(new MainViewFactory()),
+
+    /**
+     * Mission view.
+     */
+    MissionView(new MissionViewFactory());
 
     /**
      * View factory.

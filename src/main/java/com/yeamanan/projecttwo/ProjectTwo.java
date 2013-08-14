@@ -1,6 +1,7 @@
 package com.yeamanan.projecttwo;
 
 import com.yeamanan.projecttwo.util.LanguageUtil;
+import com.yeamanan.projecttwo.util.PropertyUtil;
 import com.yeamanan.projecttwo.view.ViewType;
 import java.util.ResourceBundle;
 import javafx.application.Application;
@@ -32,6 +33,11 @@ public class ProjectTwo extends Application {
     private static ProjectTwo instance;
 
     /**
+     * Properties.
+     */
+    private PropertyUtil properties;
+
+    /**
      * Stage of the application.
      */
     private Stage stage;
@@ -50,9 +56,16 @@ public class ProjectTwo extends Application {
     public final void start(final Stage argStage) {
         this.instance = this;
         this.stage = argStage;
+        properties = new PropertyUtil();
+        final String language = properties.getProperty("language");
+        if (!language.isEmpty()) {
+            this.currentView = ViewType.MainView;
+            LanguageUtil.setSelectedLanguage(language);
+        } else {
+            this.currentView = ViewType.LanguageView;
+        }
         LanguageUtil.loadLanguages(this.getClass());
         final ResourceBundle bundle = LanguageUtil.getSelectedLanguageBundle();
-        this.currentView = ViewType.LanguageView;
         final Parent root = this.currentView.getFactory().createView(bundle);
         this.stage.setTitle(bundle.getString("title"));
         this.stage.setScene(new Scene(root, WIDTH, HEIGHT));
@@ -101,6 +114,7 @@ public class ProjectTwo extends Application {
      * @param language the language to set
      */
     public final void setLanguage(final String language) {
+        properties.setProperty("language", language);
         LanguageUtil.setSelectedLanguage(language);
         final ResourceBundle bundle = LanguageUtil.getSelectedLanguageBundle();
         this.stage.setTitle(bundle.getString("title"));
