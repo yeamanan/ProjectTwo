@@ -58,11 +58,11 @@ public class ProjectTwo extends Application {
         this.stage = argStage;
         properties = new PropertyUtil();
         final String language = properties.getProperty("language");
-        if (!language.isEmpty()) {
+        if(language == null || language.isEmpty()) {
+            this.currentView = ViewType.LanguageView;
+        } else {
             this.currentView = ViewType.MainView;
             LanguageUtil.setSelectedLanguage(language);
-        } else {
-            this.currentView = ViewType.LanguageView;
         }
         LanguageUtil.loadLanguages(this.getClass());
         final ResourceBundle bundle = LanguageUtil.getSelectedLanguageBundle();

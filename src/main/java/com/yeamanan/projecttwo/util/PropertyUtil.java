@@ -23,7 +23,7 @@ public final class PropertyUtil {
     /**
      * Folder name.
      */
-    private static final String folderName = "projecttwo";
+    private static final String folderName = ".projecttwo";
 
     /**
      * File name.
@@ -60,6 +60,7 @@ public final class PropertyUtil {
     public PropertyUtil() {
         properties = new Properties();
         LOGGER.info(filePath);
+        createFile();
         try (final FileInputStream stream = new FileInputStream(filePath)) {
             if(stream != null) {
                 properties.load(stream);
