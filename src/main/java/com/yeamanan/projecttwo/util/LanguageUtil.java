@@ -22,7 +22,7 @@ public final class LanguageUtil {
     /**
      * Default language.
      */
-    private final static String DEFAULT_LANGUAGE = "English";
+    private final static String DEFAULT_LANGUAGE = "en";
 
     /**
      * Selected language.
@@ -52,7 +52,7 @@ public final class LanguageUtil {
             final Locale locale = new Locale(language);
             final ResourceBundle bundle =
                 ResourceBundle.getBundle("bundles.Language", locale);
-            languages.put(bundle.getString("language"), bundle);
+            languages.put(bundle.getString("locale"), bundle);
         }
     }
 

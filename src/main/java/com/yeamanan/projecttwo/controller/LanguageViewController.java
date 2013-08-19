@@ -29,6 +29,7 @@ public class LanguageViewController {
     protected final void handleChoiceLanguageAction(final MouseEvent event) {
         final ImageView view = (ImageView) event.getSource();
         final String language = view.getId();
+        LOGGER.info(language);
         final ProjectTwo instance = ProjectTwo.getInstance();
         instance.setLanguage(language);
         instance.setCurrentView(ViewType.MainView);
