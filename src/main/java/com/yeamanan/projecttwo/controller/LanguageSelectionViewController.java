@@ -8,17 +8,17 @@ import javafx.scene.image.ImageView;
 import org.apache.log4j.Logger;
 
 /**
- * MenuController class.
+ * LanguageSelectionViewController class.
  *
  * @author Yeam Anan <yeamanan@gmail.com>
  */
-public class LanguageViewController {
+public class LanguageSelectionViewController {
 
     /**
      * Logger.
      */
     private static final Logger LOGGER =
-            Logger.getLogger(LanguageViewController.class);
+            Logger.getLogger(LanguageSelectionViewController.class);
 
     /**
      * handleChoiceLanguageAction() method.

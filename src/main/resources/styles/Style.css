@@ -1,3 +1,19 @@
 AnchorPane {
     -fx-background-color: #000;
 }
+
+.survivorPortrait {
+    /*-fx-image: url("../images/characters/p_Amy.jpg");*/
+}
+
+.zombivorPortrait {
+    /*-fx-image: url("../images/characters/p_Amy_z.jpg");*/
+}
+
+.selected {
+    -fx-opacity: 1.0;
+}
+
+.unselected {
+    -fx-opacity: 0.3;
+}

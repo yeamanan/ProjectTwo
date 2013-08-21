@@ -12,7 +12,7 @@ import javafx.scene.control.ChoiceBox;
 import org.apache.log4j.Logger;
 
 /**
- * LanguageBoxController class.
+ * LanguageChoiceBoxController class.
  *
  * @author Yeam Anan <yeamanan@gmail.com>
  */

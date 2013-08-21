@@ -59,7 +59,7 @@ public class ProjectTwo extends Application {
         properties = new PropertyUtil();
         final String language = properties.getProperty("language");
         if (language == null || language.isEmpty()) {
-            this.currentView = ViewType.LanguageView;
+            this.currentView = ViewType.LanguageSelectionView;
         } else {
             this.currentView = ViewType.MainView;
             LanguageUtil.setSelectedLanguage(language);
@@ -106,6 +106,7 @@ public class ProjectTwo extends Application {
      */
     public final void setCurrentView(final ViewType argView) {
         this.currentView = argView;
+        this.reloadView();
     }
 
     /**

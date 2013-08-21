@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:id="mainPane" fx:controller="com.yeamanan.projecttwo.controller.MissionViewController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0">
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:id="mainPane" fx:controller="com.yeamanan.projecttwo.controller.MissionSelectionViewController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0">
     <stylesheets>
         <URL value="@styles/Style.css" />
     </stylesheets>

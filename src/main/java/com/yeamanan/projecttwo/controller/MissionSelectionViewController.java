@@ -1,8 +1,10 @@
 package com.yeamanan.projecttwo.controller;
 
+import com.yeamanan.projecttwo.ProjectTwo;
 import com.yeamanan.projecttwo.model.Mission;
 import com.yeamanan.projecttwo.service.MissionService;
 import com.yeamanan.projecttwo.service.MissionServiceImpl;
+import com.yeamanan.projecttwo.view.ViewType;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -14,17 +16,17 @@ import javafx.scene.layout.AnchorPane;
 import org.apache.log4j.Logger;
 
 /**
- * MainController class.
+ * MissionSelectionViewController class.
  *
  * @author Yeam Anan <yeamanan@gmail.com>
  */
-public class MissionViewController implements Initializable {
+public class MissionSelectionViewController implements Initializable {
 
     /**
      * Logger.
      */
     private static final Logger LOGGER =
-            Logger.getLogger(MissionViewController.class);
+            Logger.getLogger(MissionSelectionViewController.class);
 
     private static final int START_X = 10, START_Y = 200, X_PADDING = 100,
             Y_PADDING = 35;
@@ -39,8 +41,8 @@ public class MissionViewController implements Initializable {
         new EventHandler<ActionEvent>() {
             @Override
             public final void handle(final ActionEvent event) {
-                final Button button = (Button) event.getSource();
-                button.setText("FUCK");
+                final ProjectTwo instance = ProjectTwo.getInstance();
+                instance.setCurrentView(ViewType.CharacterSelectionView);
             }
         };
 

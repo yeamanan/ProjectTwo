@@ -7,7 +7,7 @@ import javafx.scene.input.MouseEvent;
 import org.apache.log4j.Logger;
 
 /**
- * MainController class.
+ * MainViewController class.
  *
  * @author Yeam Anan <yeamanan@gmail.com>
  */
@@ -27,7 +27,7 @@ public class MainViewController {
     @FXML
     protected final void handleStartAction(final MouseEvent event) {
         final ProjectTwo instance = ProjectTwo.getInstance();
-        instance.setCurrentView(ViewType.MissionView);
+        instance.setCurrentView(ViewType.MissionSelectionView);
         instance.reloadView();
     }
 

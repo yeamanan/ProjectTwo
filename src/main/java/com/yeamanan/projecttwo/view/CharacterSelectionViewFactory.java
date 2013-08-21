@@ -3,16 +3,16 @@ package com.yeamanan.projecttwo.view;
 import org.apache.log4j.Logger;
 
 /**
- * LanguageViewFactory class.
+ * MissionViewFactory class.
  *
  * @author Yeam Anan <yeamanan@gmail.com>
  */
-public class LanguageViewFactory extends ViewFactoryImpl {
+public class CharacterSelectionViewFactory extends ViewFactoryImpl {
 
     /**
      * Logger.
      */
     private static final Logger LOGGER =
-            Logger.getLogger(LanguageViewFactory.class);
+            Logger.getLogger(CharacterSelectionViewFactory.class);
 
 }
