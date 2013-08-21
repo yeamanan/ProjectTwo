@@ -33,7 +33,7 @@ public class LanguageChoiceBoxController implements Initializable {
     /**
      * Change listener of the language box.
      */
-    private final ChangeListener<Number> languageListener =
+    private final ChangeListener<Number> listener =
         new ChangeListener<Number>() {
             @Override
             public void changed(final ObservableValue val, final Number value,
@@ -61,7 +61,7 @@ public class LanguageChoiceBoxController implements Initializable {
         }
         languageBox.setValue(LanguageUtil.getSelectedLanguage());
         languageBox.getSelectionModel().selectedIndexProperty()
-                .addListener(languageListener);
+                .addListener(listener);
     }
 
 }

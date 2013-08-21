@@ -13,7 +13,7 @@
         <URL value="@styles/Style.css" />
     </stylesheets>
     <children>
+        <fx:include source="Background.fxml"/>
         <fx:include source="LanguageChoiceBox.fxml"/>
-        <Label layoutX="364.0" layoutY="275.0" prefHeight="50.0" prefWidth="72.0" text="Ouech GROSSSSS" />
     </children>
 </AnchorPane>
