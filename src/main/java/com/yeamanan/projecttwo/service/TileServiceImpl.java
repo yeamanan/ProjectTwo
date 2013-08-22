@@ -1,6 +1,6 @@
 package com.yeamanan.projecttwo.service;
 
-import com.yeamanan.projecttwo.model.Tile;
+import com.yeamanan.projecttwo.model.game.Tile;
 import com.yeamanan.projecttwo.model.rule.State;
 import com.yeamanan.projecttwo.util.JarUtil;
 import com.yeamanan.projecttwo.util.StateUtil;

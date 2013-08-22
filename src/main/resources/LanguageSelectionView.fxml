@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
 
-<AnchorPane fx:id="languagePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.yeamanan.projecttwo.controller.LanguageSelectionViewController">
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:id="languagePane" fx:controller="com.yeamanan.projecttwo.controller.LanguageSelectionViewController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0">
     <children>
         <ImageView id="fr" fx:id="fr" fitHeight="150.0" fitWidth="200.0" layoutX="250.0" layoutY="225.0" onMouseClicked="#handleChoiceLanguageAction" pickOnBounds="true" preserveRatio="true">
             <image>

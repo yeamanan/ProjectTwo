@@ -1,6 +1,6 @@
 package com.yeamanan.projecttwo.service;
 
-import com.yeamanan.projecttwo.model.Mission;
+import com.yeamanan.projecttwo.model.game.Mission;
 import java.io.InputStream;
 import java.io.Reader;
 import java.util.List;
@@ -13,11 +13,19 @@ import java.util.List;
 public interface MissionService {
 
     /**
-     * loadMissions() method.
+     * getMissionsNames() method.
      *
-     * @return a list of mission objects
+     * @return a list of string representing the missions names
      */
-    List<Mission> loadMissions();
+    List<String> getMissionNames();
+
+    /**
+     * loadMissionAsResource() method.
+     *
+     * @param name name of a mission to load
+     * @return a mission object
+     */
+    Mission loadMissionFromResource(final String name);
 
     /**
      * loadMission() method.

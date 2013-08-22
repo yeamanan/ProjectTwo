@@ -1,7 +1,7 @@
 package com.yeamanan.projecttwo.service;
 
-import com.yeamanan.projecttwo.model.Mission;
-import com.yeamanan.projecttwo.model.Tile;
+import com.yeamanan.projecttwo.model.game.Mission;
+import com.yeamanan.projecttwo.model.game.Tile;
 import com.yeamanan.projecttwo.util.AxeUtil;
 import com.yeamanan.projecttwo.util.JarUtil;
 import java.io.BufferedReader;
@@ -22,6 +22,12 @@ import org.apache.log4j.Logger;
 public class MissionServiceImpl implements MissionService {
 
     /**
+     * Logger.
+     */
+    private static final Logger LOGGER =
+            Logger.getLogger(MissionServiceImpl.class);
+
+    /**
      * Constants.
      */
     private static final String PROPERTY_SEPARATOR = "=",
@@ -33,29 +39,44 @@ public class MissionServiceImpl implements MissionService {
     private static final String MISSIONS_FOLDER = "missions/";
 
     /**
-     * Logger.
+     * Mission file's extension.
      */
-    private static final Logger LOGGER = Logger.getLogger(MissionServiceImpl.class);
+    private static final String MISSION_EXTENSION = ".mis";
 
     /**
-     * loadMissions() method.
+     * getMissionsNames() method.
      *
-     * @return a list of mission objects
+     * @return a list of mission names
      */
     @Override
-    public final List<Mission> loadMissions() {
-        final List<Mission> missions = new ArrayList<>();
+    public final List<String> getMissionNames() {
+        final List<String> names = new ArrayList<>();
         final Class aClass = this.getClass();
         final List<String> filePaths =
                 JarUtil.getJarFolderFileList(aClass, MISSIONS_FOLDER);
-        for(String path : filePaths) {
-            final InputStream stream =
-                    aClass.getClassLoader().getResourceAsStream(path);
-            missions.add(loadMission(stream));
+        for (String path : filePaths) {
+            path = path.replaceAll(MISSIONS_FOLDER, "");
+            path = path.replaceAll(MISSION_EXTENSION, "");
+            names.add(path);
         }
-        return missions;
+        return names;
     }
 
+    /**
+     * loadMissionAsResource() method.
+     *
+     * @param name name of a mission to load
+     * @return a mission object
+     */
+    @Override
+    public final Mission loadMissionFromResource(final String name) {
+        final String path = MISSIONS_FOLDER + name + MISSION_EXTENSION;
+        final Class aClass = this.getClass();
+        final InputStream stream =
+                    aClass.getClassLoader().getResourceAsStream(path);
+        return loadMission(stream);
+    }
+            
     /**
      * loadMission() method.
      *

@@ -1,5 +1,9 @@
 package com.yeamanan.projecttwo.model.people;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
+
 /**
  * Character class.
  *

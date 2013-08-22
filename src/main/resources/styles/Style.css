@@ -3,6 +3,11 @@ AnchorPane {
 }
 
 .survivorPortrait {
+    -fx-background-position: center;
+    -fx-background-repeat: stretch;
+    -fx-background-size: 90px 90px;
+    -fx-position-shape: true;
+    -fx-padding: 50px;
     /*-fx-image: url("../images/characters/p_Amy.jpg");*/
 }
 

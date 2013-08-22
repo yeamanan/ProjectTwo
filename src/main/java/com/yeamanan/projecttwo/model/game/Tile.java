@@ -1,4 +1,4 @@
-package com.yeamanan.projecttwo.model;
+package com.yeamanan.projecttwo.model.game;
 
 import com.yeamanan.projecttwo.model.rule.Axe;
 import com.yeamanan.projecttwo.model.rule.State;

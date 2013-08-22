@@ -5,7 +5,6 @@ import com.yeamanan.projecttwo.util.LanguagesUtil;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Locale;
 import java.util.Map;
 import java.util.ResourceBundle;
 import javafx.beans.value.ChangeListener;
@@ -29,7 +28,7 @@ public class LanguageChoiceBoxController implements Initializable {
             Logger.getLogger(LanguageChoiceBoxController.class);
 
     /**
-     * Map.
+     * Map of language and locale translation.
      */
     private Map<String, String> locales;
 

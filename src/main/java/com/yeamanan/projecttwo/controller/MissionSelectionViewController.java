@@ -1,7 +1,7 @@
 package com.yeamanan.projecttwo.controller;
 
 import com.yeamanan.projecttwo.ProjectTwo;
-import com.yeamanan.projecttwo.model.Mission;
+import com.yeamanan.projecttwo.model.game.Mission;
 import com.yeamanan.projecttwo.service.MissionService;
 import com.yeamanan.projecttwo.service.MissionServiceImpl;
 import com.yeamanan.projecttwo.view.ViewType;
@@ -28,9 +28,15 @@ public class MissionSelectionViewController implements Initializable {
     private static final Logger LOGGER =
             Logger.getLogger(MissionSelectionViewController.class);
 
+    /**
+     * Graphic constants.
+     */
     private static final int START_X = 10, START_Y = 200, X_PADDING = 100,
             Y_PADDING = 35;
 
+    /**
+     * Main Anchor Pane.
+     */
     @FXML
     private AnchorPane mainPane;
 
@@ -41,9 +47,15 @@ public class MissionSelectionViewController implements Initializable {
         new EventHandler<ActionEvent>() {
             @Override
             public final void handle(final ActionEvent event) {
+                final Button button = (Button) event.getSource();
+                final String missionName = button.getText();
+                final MissionService service = new MissionServiceImpl();
+                final Mission mission =
+                        service.loadMissionFromResource(missionName);
                 final ProjectTwo instance = ProjectTwo.getInstance();
+                instance.getContext().getGame().setMission(mission);
                 instance.getContext()
-                        .setCurrentView(ViewType.CharacterSelectionView);
+                        .setCurrentView(ViewType.SurvivorSelectionView);
                 instance.reloadView();
             }
         };
@@ -59,10 +71,8 @@ public class MissionSelectionViewController implements Initializable {
                                 final ResourceBundle resources) {
         double xPos = START_X, yPos = START_Y;
         final MissionService service = new MissionServiceImpl();
-        for (Mission mission : service.loadMissions()) {
-            final String text = mission.getId() + " - "
-                    + mission.getName();
-            final Button button = new Button(text);
+        for (String name : service.getMissionNames()) {
+            final Button button = new Button(name);
             button.setLayoutX(xPos);
             button.setLayoutY(yPos);
             button.setOnAction(handler);

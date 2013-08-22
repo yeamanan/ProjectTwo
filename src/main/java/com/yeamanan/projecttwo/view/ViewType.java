@@ -8,7 +8,7 @@ package com.yeamanan.projecttwo.view;
 public enum ViewType {
 
     /**
-     * Languages view.
+     * Language selection view.
      */
     LanguageSelectionView(new LanguageSelectionViewFactory()),
 
@@ -18,14 +18,14 @@ public enum ViewType {
     MainView(new MainViewFactory()),
 
     /**
-     * Missions view.
+     * Mission selection view.
      */
     MissionSelectionView(new MissionSelectionViewFactory()),
 
     /**
-     * Characters view.
+     * Survivor selection view.
      */
-    CharacterSelectionView(new CharacterSelectionViewFactory());
+    SurvivorSelectionView(new SurvivorSelectionViewFactory());
 
     /**
      * View factory.

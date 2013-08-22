@@ -7,12 +7,12 @@ import org.apache.log4j.Logger;
  *
  * @author Yeam Anan <yeamanan@gmail.com>
  */
-public class CharacterSelectionViewFactory extends ViewFactoryImpl {
+public class SurvivorSelectionViewFactory extends ViewFactoryImpl {
 
     /**
      * Logger.
      */
     private static final Logger LOGGER =
-            Logger.getLogger(CharacterSelectionViewFactory.class);
+            Logger.getLogger(SurvivorSelectionViewFactory.class);
 
 }

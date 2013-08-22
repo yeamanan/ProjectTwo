@@ -1,10 +1,15 @@
 package com.yeamanan.projecttwo;
 
+import com.yeamanan.projecttwo.model.game.Game;
 import com.yeamanan.projecttwo.util.LanguagesUtil;
 import com.yeamanan.projecttwo.util.PropertiesUtil;
+import com.yeamanan.projecttwo.view.ViewFactory;
 import com.yeamanan.projecttwo.view.ViewType;
 import java.util.Properties;
 import java.util.ResourceBundle;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 import org.apache.log4j.Logger;
 
 /**
@@ -35,6 +40,11 @@ public class Context {
     private ViewType currentView;
 
     /**
+     * Game of the application.
+     */
+    private Game game;
+
+    /**
      * Constructor.
      */
     public Context() {
@@ -47,6 +57,7 @@ public class Context {
             this.language = LanguagesUtil.loadLanguage(sLanguage);
             this.currentView = ViewType.MainView;
         }
+        this.game = new Game();
     }
 
     /**
@@ -74,6 +85,8 @@ public class Context {
      */
     public final void setLanguage(final ResourceBundle argLanguage) {
         this.language = argLanguage;
+        this.properties.setProperty("language",
+                this.language.getString("locale"));
     }
 
     /**
@@ -95,14 +108,21 @@ public class Context {
     }
 
     /**
-     * finalize() method.
+     * getGame() method.
      *
-     * @throws Throwable something throwable
+     * @return the game of the application
      */
-    @Override
-    protected final void finalize() throws Throwable {
-        PropertiesUtil.saveProperties(this.properties);
-        super.finalize();
+    public final Game getGame() {
+        return this.game;
     }
+
+    /**
+     * setGame() method.
+     *
+     * @param argGame the new game of the application
+     */
+//    public final void setGame(final Game argGame) {
+//        this.game = argGame;
+//    }
 
 }

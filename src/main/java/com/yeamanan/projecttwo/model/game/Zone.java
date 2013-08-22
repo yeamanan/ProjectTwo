@@ -1,6 +1,6 @@
 package com.yeamanan.projecttwo.model.game;
 
-import com.yeamanan.projecttwo.model.Token;
+import com.yeamanan.projecttwo.model.rule.Token;
 import com.yeamanan.projecttwo.model.people.Character;
 import java.util.ArrayList;
 import java.util.List;

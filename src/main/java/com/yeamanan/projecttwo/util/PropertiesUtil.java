@@ -78,7 +78,9 @@ public final class PropertiesUtil {
      * @param properties the properties to save
      */
     public static boolean saveProperties(final Properties properties) {
-        createFile();
+        if (!createFile()) {
+            return false;
+        }
         try (final FileOutputStream stream = new FileOutputStream(filePath)) {
             properties.store(stream, null);
         } catch (IOException ex) {
@@ -90,10 +92,12 @@ public final class PropertiesUtil {
     /**
      * createFile() method.
      */
-    private static void createFile() {
+    private static boolean createFile() {
         if(!pathExists(folderPath)) {
             File file = new File(folderPath);
-            file.mkdir();
+            if (!file.mkdirs()) {
+                return false;
+            }
         }
         if(!pathExists(filePath)) {
             File file = new File(filePath);
@@ -103,6 +107,7 @@ public final class PropertiesUtil {
                 LOGGER.error("Error creating config file", ex);
             }
         }
+        return true;
     }
 
     /**

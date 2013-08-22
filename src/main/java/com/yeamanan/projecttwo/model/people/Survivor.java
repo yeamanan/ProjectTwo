@@ -2,27 +2,40 @@ package com.yeamanan.projecttwo.model.people;
 
 import com.yeamanan.projecttwo.model.rule.Level;
 import com.yeamanan.projecttwo.model.rule.Constants;
+import java.util.Objects;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Survivor class.
  *
  * @author Yeam Anan <yeamanan@gmail.com>
  */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "", propOrder = { "name" })
+@XmlRootElement(name = "Survivor")
 public class Survivor extends Character {
 
     /**
      * Name of the character.
      */
+    @XmlElement(name = "Name", required = true)
     private String name;
 
     /**
      * Experience of the survivor.
      */
+    @XmlTransient
     private int experience;
 
     /**
      * Level of the survivor.
      */
+    @XmlTransient
     private Level level;
 
     /**
@@ -99,6 +112,47 @@ public class Survivor extends Character {
      */
     public final void setLevel(final Level argLevel) {
         this.level = argLevel;
+    }
+
+    /**
+     * equals() methods.
+     *
+     * @param obj the object to compare to
+     * @return the boolean
+     */
+    @Override
+    public final boolean equals(final Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Survivor other = (Survivor) obj;
+        if (!Objects.equals(this.name, other.name)) {
+            return false;
+        }
+        if (this.experience != other.experience) {
+            return false;
+        }
+        if (this.level != other.level) {
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * hashCode() method.
+     *
+     * @return the hash code of the object
+     */
+    @Override
+    public final int hashCode() {
+        int hash = 5;
+        hash = 83 * hash + Objects.hashCode(this.name);
+        hash = 83 * hash + this.experience;
+        hash = 83 * hash + Objects.hashCode(this.level);
+        return hash;
     }
 
     /**

@@ -1,4 +1,4 @@
-package com.yeamanan.projecttwo.model;
+package com.yeamanan.projecttwo.model.game;
 
 import java.util.ArrayList;
 import java.util.List;
