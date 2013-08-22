@@ -13,7 +13,7 @@ import javax.xml.bind.annotation.XmlType;
 /**
  * Survivor class.
  *
- * @author Yeam Anan <yeamanan@gmail.com>
+ * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = { "name" })

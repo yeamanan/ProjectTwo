@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * SurvivorService interface.
  *
- * @author Yeam Anan (<yeamanan@gmail.com>)
+ * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
 public interface SurvivorService {
 

@@ -5,7 +5,7 @@ import com.yeamanan.projecttwo.model.rule.Constants;
 /**
  * Zombie class.
  *
- * @author Yeam Anan <yeamanan@gmail.com>
+ * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
 public class Zombie extends Character {
 

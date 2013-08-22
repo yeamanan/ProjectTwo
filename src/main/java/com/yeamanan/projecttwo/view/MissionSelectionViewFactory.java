@@ -5,7 +5,7 @@ import org.apache.log4j.Logger;
 /**
  * MissionViewFactory class.
  *
- * @author Yeam Anan <yeamanan@gmail.com>
+ * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
 public class MissionSelectionViewFactory extends ViewFactoryImpl {
 

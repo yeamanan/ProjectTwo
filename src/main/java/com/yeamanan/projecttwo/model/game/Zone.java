@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * Zone class.
  *
- * @author Yeam Anan <yeamanan@gmail.com>
+ * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
 public class Zone {
 

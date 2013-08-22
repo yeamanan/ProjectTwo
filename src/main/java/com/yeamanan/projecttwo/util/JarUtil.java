@@ -12,7 +12,7 @@ import java.util.jar.JarFile;
 /**
  * JarUtil class.
  *
- * @author Yeam Anan (<yeamanan@gmail.com>)
+ * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
 public final class JarUtil {
 

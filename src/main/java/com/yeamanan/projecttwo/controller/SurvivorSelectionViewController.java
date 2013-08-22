@@ -4,22 +4,21 @@ import com.yeamanan.projecttwo.ProjectTwo;
 import com.yeamanan.projecttwo.model.people.Survivor;
 import com.yeamanan.projecttwo.service.SurvivorService;
 import com.yeamanan.projecttwo.service.SurvivorServiceImpl;
+import com.yeamanan.projecttwo.view.ViewType;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Region;
-//import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.TilePane;
 import org.apache.log4j.Logger;
 
 /**
  * CharacterSelectionViewController class.
  *
- * @author Yeam Anan <yeamanan@gmail.com>
+ * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
 public class SurvivorSelectionViewController implements Initializable {
 
@@ -111,6 +110,18 @@ public class SurvivorSelectionViewController implements Initializable {
             portrait.setOnMouseExited(exitHandler);
             survivorPane.getChildren().add(portrait);
         }
+    }
+
+    /**
+     * handleGoAction() method.
+     *
+     * @param event the event handled
+     */
+    @FXML
+    protected final void handleGoAction(final MouseEvent event) {
+        final ProjectTwo instance = ProjectTwo.getInstance();
+        instance.getContext().setCurrentView(ViewType.GameView);
+        instance.reloadView();
     }
 
 }

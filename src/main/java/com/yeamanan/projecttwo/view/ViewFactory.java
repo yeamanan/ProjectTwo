@@ -6,7 +6,7 @@ import javafx.scene.Parent;
 /**
  * ViewFactory interface.
  *
- * @author Yeam Anan <yeamanan@gmail.com>
+ * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
 public interface ViewFactory {
 

@@ -7,7 +7,7 @@ package com.yeamanan.projecttwo.model.box;
 /**
  * SeasonOne class.
  *
- * @author Yeam Anan <yeamanan@gmail.com>
+ * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
 public final class SeasonOne {
 

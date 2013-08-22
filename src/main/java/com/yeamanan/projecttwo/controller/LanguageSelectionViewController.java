@@ -7,12 +7,13 @@ import java.util.ResourceBundle;
 import javafx.scene.input.MouseEvent;
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
 import org.apache.log4j.Logger;
 
 /**
  * LanguageSelectionViewController class.
  *
- * @author Yeam Anan <yeamanan@gmail.com>
+ * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
 public class LanguageSelectionViewController {
 

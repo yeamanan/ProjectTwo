@@ -10,7 +10,7 @@ import org.apache.log4j.Logger;
 /**
  * ViewFactoryImpl class.
  *
- * @author Yeam Anan <yeamanan@gmail.com>
+ * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
 public class ViewFactoryImpl implements ViewFactory {
 

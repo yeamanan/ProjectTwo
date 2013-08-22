@@ -6,7 +6,7 @@ import org.junit.Test;
 /**
  * SampleTest class.
  *
- * @author Yeam Anan (<yeamanan@gmail.com>)
+ * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
 public class ProjectTwoTest {
 

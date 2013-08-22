@@ -3,7 +3,7 @@ package com.yeamanan.projecttwo.view;
 /**
  * ViewType enum.
  *
- * @author Yeam Anan <yeamanan@gmail.com>
+ * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
 public enum ViewType {
 
@@ -25,7 +25,12 @@ public enum ViewType {
     /**
      * Survivor selection view.
      */
-    SurvivorSelectionView(new SurvivorSelectionViewFactory());
+    SurvivorSelectionView(new SurvivorSelectionViewFactory()),
+
+    /**
+     * Game view.
+     */
+    GameView(new GameViewFactory());
 
     /**
      * View factory.

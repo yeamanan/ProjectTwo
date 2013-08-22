@@ -17,7 +17,7 @@ import org.apache.log4j.Logger;
 /**
  * MissionServiceImpl class.
  *
- * @author Yeam Anan (<yeamanan@gmail.com>)
+ * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
 public class MissionServiceImpl implements MissionService {
 

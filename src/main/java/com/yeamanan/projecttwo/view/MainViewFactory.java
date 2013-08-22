@@ -5,7 +5,7 @@ import org.apache.log4j.Logger;
 /**
  * MainViewFactory class.
  *
- * @author Yeam Anan <yeamanan@gmail.com>
+ * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
 public class MainViewFactory extends ViewFactoryImpl {
 

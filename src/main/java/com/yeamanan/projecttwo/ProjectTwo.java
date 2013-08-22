@@ -11,7 +11,7 @@ import org.apache.log4j.Logger;
 /**
  * ProjectTwo class.
  *
- * @author Yeam Anan (<yeamanan@gmail.com>)
+ * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
 public class ProjectTwo extends Application {
 
@@ -61,17 +61,18 @@ public class ProjectTwo extends Application {
     /**
      * start() method.
      *
-     * @param argStage the stage of the application
+     * @param primaryStage the stage of the application
      */
     @Override
-    public final void start(final Stage argStage) {
+    public final void start(final Stage primaryStage) {
         instance = this;
         this.context = new Context();
-        this.stage = argStage;
+        this.stage = primaryStage;
         this.stage.setTitle(this.context.getLanguage().getString("title"));
         final ViewFactory factory = this.context.getCurrentView().getFactory();
         final Parent root = factory.createView(this.context.getLanguage());
         this.stage.setScene(new Scene(root, SCENE_WIDTH, SCENE_HEIGHT));
+        this.stage.setResizable(false);
         this.stage.show();
     }
 

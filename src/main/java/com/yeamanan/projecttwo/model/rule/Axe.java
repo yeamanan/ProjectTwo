@@ -3,7 +3,7 @@ package com.yeamanan.projecttwo.model.rule;
 /**
  * Axe enumeration.
  *
- * @author Yeam Anan <yeamanan@gmail.com>
+ * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
 public enum Axe {
 
