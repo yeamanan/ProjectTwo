@@ -1,8 +1,12 @@
 package com.yeamanan.projecttwo.controller;
 
 import com.yeamanan.projecttwo.ProjectTwo;
-import com.yeamanan.projecttwo.util.LanguageUtil;
+import com.yeamanan.projecttwo.util.LanguagesUtil;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Locale;
+import java.util.Map;
 import java.util.ResourceBundle;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -25,6 +29,11 @@ public class LanguageChoiceBoxController implements Initializable {
             Logger.getLogger(LanguageChoiceBoxController.class);
 
     /**
+     * Map.
+     */
+    private Map<String, String> locales;
+
+    /**
      * Language choice box.
      */
     @FXML
@@ -39,10 +48,13 @@ public class LanguageChoiceBoxController implements Initializable {
             public void changed(final ObservableValue val, final Number value,
                                 final Number newValue) {
                 final int index = newValue.intValue();
-                final String language =
+                final String sLanguage =
                         (String) languageBox.getItems().get(index);
                 final ProjectTwo instance = ProjectTwo.getInstance();
-                instance.setLanguage(language);
+                final String sLocale = locales.get(sLanguage);
+                final ResourceBundle language =
+                        LanguagesUtil.loadLanguage(sLocale);
+                instance.getContext().setLanguage(language);
                 instance.reloadView();
             }
         };
@@ -56,10 +68,17 @@ public class LanguageChoiceBoxController implements Initializable {
     @Override
     public final void initialize(final URL location,
                                 final ResourceBundle resources) {
-        for (String language : LanguageUtil.getLanguages()) {
-            languageBox.getItems().add(language);
+        locales = new HashMap<>();
+        final List<ResourceBundle> languages =
+                LanguagesUtil.loadLanguages(this.getClass());
+        for (ResourceBundle language : languages) {
+            final String sLanguage = language.getString("language");
+            languageBox.getItems().add(sLanguage);
+            locales.put(sLanguage, language.getString("locale"));
         }
-        languageBox.setValue(LanguageUtil.getSelectedLanguage());
+        final ProjectTwo instance = ProjectTwo.getInstance();
+        final ResourceBundle language = instance.getContext().getLanguage();
+        languageBox.setValue(language.getString("language"));
         languageBox.getSelectionModel().selectedIndexProperty()
                 .addListener(listener);
     }

@@ -1,9 +1,6 @@
 package com.yeamanan.projecttwo;
 
-import com.yeamanan.projecttwo.util.LanguageUtil;
-import com.yeamanan.projecttwo.util.PropertyUtil;
-import com.yeamanan.projecttwo.view.ViewType;
-import java.util.ResourceBundle;
+import com.yeamanan.projecttwo.view.ViewFactory;
 import javafx.application.Application;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -33,19 +30,14 @@ public class ProjectTwo extends Application {
     private static ProjectTwo instance;
 
     /**
-     * Properties.
-     */
-    private PropertyUtil properties;
-
-    /**
      * Stage of the application.
      */
     private Stage stage;
 
     /**
-     * Current view.
+     * Context.
      */
-    private ViewType currentView;
+    private Context context;
 
     /**
      * start() method.
@@ -56,18 +48,11 @@ public class ProjectTwo extends Application {
     public final void start(final Stage argStage) {
         this.instance = this;
         this.stage = argStage;
-        properties = new PropertyUtil();
-        final String language = properties.getProperty("language");
-        if (language == null || language.isEmpty()) {
-            this.currentView = ViewType.LanguageSelectionView;
-        } else {
-            this.currentView = ViewType.MainView;
-            LanguageUtil.setSelectedLanguage(language);
-        }
-        LanguageUtil.loadLanguages(this.getClass());
-        final ResourceBundle bundle = LanguageUtil.getSelectedLanguageBundle();
-        final Parent root = this.currentView.getFactory().createView(bundle);
-        this.stage.setTitle(bundle.getString("title"));
+        this.context = new Context();
+        this.context.getCurrentView().getFactory();
+        final ViewFactory factory = this.context.getCurrentView().getFactory();
+        final Parent root = factory.createView(this.context.getLanguage());
+        this.stage.setTitle(this.context.getLanguage().getString("title"));
         this.stage.setScene(new Scene(root, WIDTH, HEIGHT));
         this.stage.show();
     }
@@ -91,43 +76,21 @@ public class ProjectTwo extends Application {
     }
 
     /**
-     * getCurrentView() method.
+     * getContext() method.
      *
-     * @return the current view type
+     * @return the context of the application
      */
-    public final ViewType getCurrentView() {
-        return this.currentView;
-    }
-
-    /**
-     * setCurrentView() method.
-     *
-     * @param argView the view type to set
-     */
-    public final void setCurrentView(final ViewType argView) {
-        this.currentView = argView;
-        this.reloadView();
-    }
-
-    /**
-     * setLanguage() method.
-     *
-     * @param language the language to set
-     */
-    public final void setLanguage(final String language) {
-        properties.setProperty("language", language);
-        LanguageUtil.setSelectedLanguage(language);
-        final ResourceBundle bundle = LanguageUtil.getSelectedLanguageBundle();
-        this.stage.setTitle(bundle.getString("title"));
-        this.reloadView();
+    public final Context getContext() {
+        return this.context;
     }
 
     /**
      * reloadView() method.
      */
     public final void reloadView() {
-        final ResourceBundle bundle = LanguageUtil.getSelectedLanguageBundle();
-        final Parent root = this.currentView.getFactory().createView(bundle);
+        final ViewFactory factory = this.context.getCurrentView().getFactory();
+        final Parent root = factory.createView(this.context.getLanguage());
+        this.stage.setTitle(this.context.getLanguage().getString("title"));
         this.stage.getScene().setRoot(root);
     }
 

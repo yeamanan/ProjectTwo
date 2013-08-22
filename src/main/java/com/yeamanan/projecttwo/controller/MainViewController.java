@@ -27,7 +27,7 @@ public class MainViewController {
     @FXML
     protected final void handleStartAction(final MouseEvent event) {
         final ProjectTwo instance = ProjectTwo.getInstance();
-        instance.setCurrentView(ViewType.MissionSelectionView);
+        instance.getContext().setCurrentView(ViewType.MissionSelectionView);
         instance.reloadView();
     }
 

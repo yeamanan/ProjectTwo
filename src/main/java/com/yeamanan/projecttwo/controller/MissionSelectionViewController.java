@@ -42,7 +42,9 @@ public class MissionSelectionViewController implements Initializable {
             @Override
             public final void handle(final ActionEvent event) {
                 final ProjectTwo instance = ProjectTwo.getInstance();
-                instance.setCurrentView(ViewType.CharacterSelectionView);
+                instance.getContext()
+                        .setCurrentView(ViewType.CharacterSelectionView);
+                instance.reloadView();
             }
         };
 
