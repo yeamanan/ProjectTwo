@@ -3,13 +3,9 @@ package com.yeamanan.projecttwo;
 import com.yeamanan.projecttwo.model.game.Game;
 import com.yeamanan.projecttwo.util.LanguagesUtil;
 import com.yeamanan.projecttwo.util.PropertiesUtil;
-import com.yeamanan.projecttwo.view.ViewFactory;
 import com.yeamanan.projecttwo.view.ViewType;
 import java.util.Properties;
 import java.util.ResourceBundle;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
 import org.apache.log4j.Logger;
 
 /**
@@ -42,7 +38,7 @@ public class Context {
     /**
      * Game of the application.
      */
-    private Game game;
+    private final Game game;
 
     /**
      * Constructor.
