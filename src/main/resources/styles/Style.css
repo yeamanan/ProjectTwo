@@ -2,23 +2,35 @@ AnchorPane {
     -fx-background-color: #000;
 }
 
-.survivorPortrait {
+.menuPane {
+    -fx-background-image: url("../images/bg0.jpg");
     -fx-background-position: center;
-    -fx-background-repeat: stretch;
-    -fx-background-size: 90px 90px;
-    -fx-position-shape: true;
-    -fx-padding: 50px;
-    /*-fx-image: url("../images/characters/p_Amy.jpg");*/
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: stretch;
 }
 
-.zombivorPortrait {
-    /*-fx-image: url("../images/characters/p_Amy_z.jpg");*/
+.survivorPortrait {
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 80 80;
+    -fx-background-radius: 100;
+    -fx-border-width: 2 2 2 2;
+    -fx-border-color: white;
+    /*-fx-image: url("../images/Amy_p.jpg");*/
+    /*-fx-image: url("../images/Amy_pz.jpg");*/
 }
 
 .selected {
-    -fx-opacity: 1.0;
+    -fx-border-color: red;
 }
 
-.unselected {
-    -fx-opacity: 0.3;
-}
+/*#survivors {
+    -fx-border-width: 1;
+    -fx-border-color: blue;
+}*/
+
+/*.survivorDescription {
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: stretch;
+}*/

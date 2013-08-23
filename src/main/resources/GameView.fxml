@@ -10,12 +10,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:id="mainPane" fx:controller="com.yeamanan.projecttwo.controller.MainViewController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0">
+<AnchorPane fx:id="GamePane" prefHeight="768.0" prefWidth="1024.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.yeamanan.projecttwo.controller.GameViewController">
     <children>
-        <fx:include source="Background.fxml" />
-        <fx:include source="LanguageChoiceBox.fxml" />
-        <Button layoutX="325.0" layoutY="259.0" mnemonicParsing="false" onMouseClicked="#handleStartAction" prefHeight="50.0" prefWidth="150.0" text="%start" />
-        <Button layoutX="325.0" layoutY="326.0" mnemonicParsing="false" onMouseClicked="#handleOptionsAction" prefHeight="50.0" prefWidth="150.0" text="%options" />
+        
     </children>
     <stylesheets>
         <URL value="@styles/Style.css" />

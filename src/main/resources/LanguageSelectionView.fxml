@@ -7,16 +7,31 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:id="languagePane" fx:controller="com.yeamanan.projecttwo.controller.LanguageSelectionViewController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0">
+<AnchorPane fx:id="languageSelectionPane" prefHeight="768.0" prefWidth="1024.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.yeamanan.projecttwo.controller.LanguageSelectionViewController">
     <children>
-        <ImageView id="fr" fx:id="fr" fitHeight="150.0" fitWidth="200.0" layoutX="250.0" layoutY="225.0" onMouseClicked="#handleChoiceLanguageAction" pickOnBounds="true" preserveRatio="true">
+        <ImageView fx:id="fr" fitHeight="150.0" fitWidth="200.0" layoutX="437.0" layoutY="309.0" onMouseClicked="#handleChoiceLanguageAction" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@images/fr.png" preserveRatio="false" smooth="false" />
             </image>
         </ImageView>
-        <ImageView id="en" fx:id="en" fitHeight="150.0" fitWidth="200.0" layoutX="400.0" layoutY="225.0" onMouseClicked="#handleChoiceLanguageAction" pickOnBounds="true" preserveRatio="true">
+        <ImageView fx:id="en" fitHeight="150.0" fitWidth="200.0" layoutX="137.0" layoutY="309.0" onMouseClicked="#handleChoiceLanguageAction" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@images/en.png" preserveRatio="false" smooth="false" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="es" fitHeight="150.0" fitWidth="200.0" layoutX="287.0" layoutY="309.0" onMouseClicked="#handleChoiceLanguageAction" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/es.png" preserveRatio="false" smooth="false" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="pt" fitHeight="150.0" fitWidth="200.0" layoutX="737.0" layoutY="309.0" onMouseClicked="#handleChoiceLanguageAction" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/pt.png" preserveRatio="false" smooth="false" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="it" fitHeight="150.0" fitWidth="200.0" layoutX="587.0" layoutY="309.0" onMouseClicked="#handleChoiceLanguageAction" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/it.png" preserveRatio="false" smooth="false" />
             </image>
         </ImageView>
     </children>

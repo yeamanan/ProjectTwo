@@ -23,7 +23,7 @@ public class ProjectTwo extends Application {
     /**
      * Size of the box.
      */
-    private static final int SCENE_WIDTH = 800, SCENE_HEIGHT = 600;
+    private static final int SCENE_WIDTH = 1024, SCENE_HEIGHT = 768;
 
     /**
      * Instance of the main class.

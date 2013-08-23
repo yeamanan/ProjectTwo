@@ -6,12 +6,13 @@ import com.yeamanan.projecttwo.service.SurvivorService;
 import com.yeamanan.projecttwo.service.SurvivorServiceImpl;
 import com.yeamanan.projecttwo.view.ViewType;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.Region;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.TilePane;
 import org.apache.log4j.Logger;
 
@@ -29,10 +30,16 @@ public class SurvivorSelectionViewController implements Initializable {
             Logger.getLogger(SurvivorSelectionViewController.class);
 
     /**
-     * Main Anchor Pane.
+     * Survivors Tile Pane.
      */
     @FXML
-    private TilePane survivorPane;
+    private TilePane survivors;
+
+    /**
+     * Description Tile Pane.
+     */
+//    @FXML
+//    private Pane description;
 
     /**
      * Click event handler of all character image.
@@ -41,20 +48,23 @@ public class SurvivorSelectionViewController implements Initializable {
         new EventHandler<MouseEvent>() {
             @Override
             public final void handle(final MouseEvent event) {
-                final Region view = (Region) event.getSource();
-                final SurvivorService service = new SurvivorServiceImpl();
-                final Survivor survivor = service.loadSurvivor(view.getId());
                 final ProjectTwo instance = ProjectTwo.getInstance();
-                if (view.getStyleClass().contains("selected")) {
-                    view.getStyleClass().remove("selected");
-                    view.getStyleClass().add("unselected");
+                final int nbSurvivors = 
+                        instance.getContext().getGame().getSurvivors().size();
+                final Pane pane = (Pane) event.getSource();
+                final SurvivorService service = new SurvivorServiceImpl();
+                final Survivor survivor =
+                        service.loadSurvivor(pane.getId());
+                if (pane.getStyleClass().contains("selected")) {
+                    pane.getStyleClass().remove("selected");
                     instance.getContext().getGame().getSurvivors()
                             .remove(survivor);
                 } else {
-                    view.getStyleClass().remove("unselected");
-                    view.getStyleClass().add("selected");
-                    instance.getContext().getGame().getSurvivors()
-                            .add(survivor);
+                    if ( nbSurvivors < 6) {
+                        pane.getStyleClass().add("selected");
+                        instance.getContext().getGame().getSurvivors()
+                                .add(survivor);
+                    }
                 }
             }
         };
@@ -66,10 +76,10 @@ public class SurvivorSelectionViewController implements Initializable {
         new EventHandler<MouseEvent>() {
             @Override
             public final void handle(final MouseEvent event) {
-                final Region view = (Region) event.getSource();
-                final String sName = view.getId();
-                final String sPath = "images/survivors/p_" + sName + "_z.jpg";
-                view.setStyle("-fx-background-image: url(\"" + sPath + "\")");
+                final Pane pane = (Pane) event.getSource();
+                final String sName = pane.getId();
+                final String sPath = "images/" + sName + "_pz.jpg";
+                pane.setStyle("-fx-background-image: url(\"" + sPath + "\")");
             }
         };
 
@@ -80,10 +90,10 @@ public class SurvivorSelectionViewController implements Initializable {
         new EventHandler<MouseEvent>() {
             @Override
             public final void handle(final MouseEvent event) {
-                final Region view = (Region) event.getSource();
-                final String sName = view.getId();
-                final String sPath = "images/survivors/p_" + sName + ".jpg";
-                view.setStyle("-fx-background-image: url(\"" + sPath + "\")");
+                final Pane pane = (Pane) event.getSource();
+                final String sName = pane.getId();
+                final String sPath = "images/" + sName + "_p.jpg";
+                pane.setStyle("-fx-background-image: url(\"" + sPath + "\")");
             }
         };
 
@@ -97,19 +107,22 @@ public class SurvivorSelectionViewController implements Initializable {
     public final void initialize(final URL location,
                                 final ResourceBundle resources) {
         final SurvivorService service = new SurvivorServiceImpl();
-        for (String sName : service.getSurvivorNames()) {
-            final Region portrait = new Region();
-            portrait.setId(sName);
-            portrait.setPrefSize(90, 90);
-            final String sPath = "images/survivors/p_" + sName + ".jpg";
-            portrait.setStyle("-fx-background-image: url(\"" + sPath + "\")");
-            portrait.getStyleClass().add("survivorPortrait");
-            portrait.getStyleClass().add("unselected");
-            portrait.setOnMouseClicked(clickHandler);
-            portrait.setOnMouseEntered(enterHandler);
-            portrait.setOnMouseExited(exitHandler);
-            survivorPane.getChildren().add(portrait);
+        final List<String> sNames = service.getSurvivorNames();
+        for (String sName : sNames) {
+            final Pane pane = new Pane();
+            pane.setId(sName);
+            pane.setPrefSize(90, 90);
+            final String sPath = "images/" + sName + "_p.jpg";
+            pane.setStyle("-fx-background-image: url(\"" + sPath + "\")");
+            pane.getStyleClass().add("survivorPortrait");
+            pane.setOnMouseClicked(clickHandler);
+            //pane.setOnMouseEntered(enterHandler);
+            //pane.setOnMouseExited(exitHandler);
+            survivors.getChildren().add(pane);
         }
+//        final String sPath = "images/" + sNames.get(0) + "_f.jpg";
+//        description.setStyle("-fx-background-image: url(\"" + sPath + "\")");
+//        description.getStyleClass().add("survivorDescription");
     }
 
     /**

@@ -8,13 +8,12 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:id="mainPane" fx:controller="com.yeamanan.projecttwo.controller.SurvivorSelectionViewController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0">
-    <children>
-        <fx:include source="Background.fxml" layoutX="21.0" />
-        <TilePane fx:id="survivorPane" alignment="CENTER" layoutY="200.0" prefHeight="400.0" prefWidth="800.0" tileAlignment="BASELINE_CENTER" />
-        <Button layoutX="325.0" layoutY="459.0" mnemonicParsing="false" onMouseClicked="#handleGoAction" prefHeight="30.0" prefWidth="100.0" text="%go" />
-    </children>
-    <stylesheets>
-        <URL value="@styles/Style.css" />
-    </stylesheets>
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" styleClass="menuPane" xmlns:fx="http://javafx.com/fxml" fx:controller="com.yeamanan.projecttwo.controller.SurvivorSelectionViewController">
+  <children>
+    <TilePane fx:id="survivors" alignment="CENTER" layoutX="331.0" layoutY="225.0" prefHeight="485.0" prefWidth="362.0" />
+    <Button layoutX="462.0" layoutY="724.0" mnemonicParsing="false" onMouseClicked="#handleGoAction" prefHeight="30.0" prefWidth="100.0" text="%go" />
+  </children>
+  <stylesheets>
+    <URL value="@styles/Style.css" />
+  </stylesheets>
 </AnchorPane>
