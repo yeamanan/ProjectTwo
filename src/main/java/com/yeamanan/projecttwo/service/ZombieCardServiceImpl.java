@@ -34,7 +34,7 @@ public class ZombieCardServiceImpl implements ZombieCardService {
     /**
      * Zombie cards file's extension.
      */
-    private static final String CARDS_EXTENSION = ".zcxml";
+    private static final String ZOMBIE_CARD_EXTENSION = ".zcxml";
 
     /**
      * getIds() method.
@@ -49,7 +49,7 @@ public class ZombieCardServiceImpl implements ZombieCardService {
                 JarUtil.getJarFolderFileList(aClass, CARDS_FOLDER);
         for (String sPath : sPaths) {
             final String sId = sPath.replaceFirst(CARDS_FOLDER, "")
-                    .replaceFirst(CARDS_EXTENSION, "");
+                    .replaceFirst(ZOMBIE_CARD_EXTENSION, "");
             sIds.add(sId);
         }
         return sIds;
@@ -63,7 +63,7 @@ public class ZombieCardServiceImpl implements ZombieCardService {
      */
     @Override
     public final ZombieCard load(final String argId) {
-        final String sPath = CARDS_FOLDER + argId + CARDS_EXTENSION;
+        final String sPath = CARDS_FOLDER + argId + ZOMBIE_CARD_EXTENSION;
         final Class aClass = this.getClass();
         final InputStream stream =
                     aClass.getClassLoader().getResourceAsStream(sPath);
@@ -100,8 +100,7 @@ public class ZombieCardServiceImpl implements ZombieCardService {
     @Override
     public final void save(final ZombieCard argCard) {
         final String sPath = System.getProperty("user.home") + "/"
-                + argCard.getId() + CARDS_EXTENSION;
-
+                + argCard.getId() + ZOMBIE_CARD_EXTENSION;
         final File file = new File(sPath);
         if (!file.exists()) {
             try {

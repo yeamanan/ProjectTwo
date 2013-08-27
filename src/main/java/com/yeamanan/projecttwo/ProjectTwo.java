@@ -1,8 +1,12 @@
 package com.yeamanan.projecttwo;
 
-import com.yeamanan.projecttwo.model.ZombieCard;
-import com.yeamanan.projecttwo.service.ZombieCardService;
-import com.yeamanan.projecttwo.service.ZombieCardServiceImpl;
+//import com.yeamanan.projecttwo.model.Skill;
+//import com.yeamanan.projecttwo.model.Survivor;
+//import com.yeamanan.projecttwo.model.ZombieCard;
+//import com.yeamanan.projecttwo.service.SurvivorService;
+//import com.yeamanan.projecttwo.service.SurvivorServiceImpl;
+//import com.yeamanan.projecttwo.service.ZombieCardService;
+//import com.yeamanan.projecttwo.service.ZombieCardServiceImpl;
 import com.yeamanan.projecttwo.util.PropertiesUtil;
 import com.yeamanan.projecttwo.view.ViewFactory;
 import javafx.application.Application;
@@ -114,16 +118,26 @@ public class ProjectTwo extends Application {
      * @param args arguments
      */
     public static void main(final String[] args) {
-        final ZombieCard card = new ZombieCard();
-        card.setId("#test");
-        card.setSewerCard(true);
-        card.setRedLevel("1F");
-        card.setOrangeLevel("4R");
-        card.setYellowLevel("4W");
-        card.setBlueLevel("2W");
-        final ZombieCardService service = new ZombieCardServiceImpl();
-        service.save(card);
-        LOGGER.info(service.loadAll().size());
+//        final ZombieCard card = new ZombieCard();
+//        card.setId("#test");
+//        card.setSewerCard(true);
+//        card.setRedLevel("1F");
+//        card.setOrangeLevel("4R");
+//        card.setYellowLevel("4W");
+//        card.setBlueLevel("2W");
+//        final ZombieCardService service = new ZombieCardServiceImpl();
+//        service.save(card);
+//        LOGGER.info(service.loadAll().size());
+//        final Survivor sChaz = new Survivor("Chaz");
+//        sChaz.getBlueSkills().add(Skill.SLIPPERY);
+//        sChaz.getYellowSkills().add(Skill.PLUS_ONE_ACTION);
+//        sChaz.getOrangeSkills().add(Skill.PLUS_ONE_FREE_COMBAT_ACTION);
+//        sChaz.getOrangeSkills().add(Skill.MATCHING_SET);
+//        sChaz.getRedSkills().add(Skill.HOARD);
+//        sChaz.getRedSkills().add(Skill.IS_THAT_ALL_YOUVE_GOT);
+//        sChaz.getRedSkills().add(Skill.ONE_REROLL_PER_TURN);
+//        final SurvivorService service = new SurvivorServiceImpl();
+//        service.save(sChaz);
         launch(args);
     }
 

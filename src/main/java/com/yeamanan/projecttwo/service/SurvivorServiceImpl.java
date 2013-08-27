@@ -2,11 +2,14 @@ package com.yeamanan.projecttwo.service;
 
 import com.yeamanan.projecttwo.model.Survivor;
 import com.yeamanan.projecttwo.util.JarUtil;
+import java.io.File;
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 import org.apache.log4j.Logger;
 
@@ -73,6 +76,34 @@ public class SurvivorServiceImpl implements SurvivorService {
             LOGGER.error("Error loading survivor file", ex);
         }
         return survivor;
+    }
+
+    /**
+     * save() method.
+     *
+     * @param argSurvivor a survivor object to save
+     */
+    @Override
+    public final void save(final Survivor argSurvivor) {
+        final String sPath = System.getProperty("user.home") + "/"
+                + argSurvivor.getName() + SURVIVOR_EXTENSION;
+        final File file = new File(sPath);
+        if (!file.exists()) {
+            try {
+                file.createNewFile();
+            } catch (IOException ex) {
+                LOGGER.error("Error saving survivor file", ex);
+            }
+        }
+        try {
+            final JAXBContext context =
+                    JAXBContext.newInstance(Survivor.class);
+            final Marshaller marshaller = context.createMarshaller();
+            marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+            marshaller.marshal(argSurvivor, new File(sPath));
+        } catch (JAXBException ex) {
+            LOGGER.error("Error saving survivor file", ex);
+        }
     }
 
 }

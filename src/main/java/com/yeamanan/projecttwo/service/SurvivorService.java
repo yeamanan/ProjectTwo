@@ -1,6 +1,7 @@
 package com.yeamanan.projecttwo.service;
 
 import com.yeamanan.projecttwo.model.Survivor;
+import com.yeamanan.projecttwo.model.ZombieCard;
 import java.util.List;
 
 /**
@@ -24,5 +25,12 @@ public interface SurvivorService {
      * @return a survivor object
      */
     Survivor load(final String argName);
+
+    /**
+     * save() method.
+     *
+     * @param argSurvivor a survivor object to save
+     */
+    void save(Survivor argSurvivor);
 
 }

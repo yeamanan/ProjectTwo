@@ -1,5 +1,7 @@
 package com.yeamanan.projecttwo.model;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -14,7 +16,8 @@ import javax.xml.bind.annotation.XmlType;
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = { "name" })
+@XmlType(name = "", propOrder = { "name", "blueSkills", "yellowSkills",
+    "orangeSkills", "redSkills" })
 @XmlRootElement(name = "Survivor")
 public class Survivor extends Character {
 
@@ -37,6 +40,36 @@ public class Survivor extends Character {
     private Level level;
 
     /**
+     * List of the skill in blue danger level.
+     */
+    @XmlElement(name = "BlueSkills", required = true)
+    private List<Skill> blueSkills;
+
+    /**
+     * List of the skill in yellow danger level.
+     */
+    @XmlElement(name = "YellowSkills", required = true)
+    private List<Skill> yellowSkills;
+
+    /**
+     * List of the skill in orange danger level.
+     */
+    @XmlElement(name = "OrangeSkills", required = true)
+    private List<Skill> orangeSkills;
+
+    /**
+     * List of the skill in red danger level.
+     */
+    @XmlElement(name = "RedSkills", required = true)
+    private List<Skill> redSkills;
+
+    /**
+     * Skills of the survivor.
+     */
+    @XmlTransient
+    private List<Skill> skills;
+
+    /**
      * Constructor.
      */
     public Survivor() {
@@ -44,6 +77,11 @@ public class Survivor extends Character {
         this.name = "";
         this.experience = 0;
         this.level = Level.BLUE;
+        this.blueSkills = new ArrayList<>();
+        this.yellowSkills = new ArrayList<>();
+        this.orangeSkills = new ArrayList<>();
+        this.redSkills = new ArrayList<>();
+        this.skills = new ArrayList<>();
     }
 
     /**
@@ -56,6 +94,11 @@ public class Survivor extends Character {
         this.name = argName;
         this.experience = 0;
         this.level = Level.BLUE;
+        this.blueSkills = new ArrayList<>();
+        this.yellowSkills = new ArrayList<>();
+        this.orangeSkills = new ArrayList<>();
+        this.redSkills = new ArrayList<>();
+        this.skills = new ArrayList<>();
     }
 
     /**
@@ -110,6 +153,96 @@ public class Survivor extends Character {
      */
     public final void setLevel(final Level argLevel) {
         this.level = argLevel;
+    }
+
+    /**
+     * getBlueSkills() method.
+     *
+     * @return the blue danger level list of skills
+     */
+    public List<Skill> getBlueSkills() {
+        return this.blueSkills;
+    }
+
+    /**
+     * setBlueSkills() method.
+     *
+     * @param argBlueSkills the new blue danger level list of skills
+     */
+    public void setBlueSkills(final List<Skill> argBlueSkills) {
+        this.blueSkills = argBlueSkills;
+    }
+
+    /**
+     * getYellowSkills() method.
+     *
+     * @return the yellow danger level list of skills
+     */
+    public final List<Skill> getYellowSkills() {
+        return this.yellowSkills;
+    }
+
+    /**
+     * setYellowSkills() method.
+     *
+     * @param argYellowSkills the new yellow danger level list of skills
+     */
+    public final void setYellowSkills(final List<Skill> argYellowSkills) {
+        this.yellowSkills = argYellowSkills;
+    }
+
+    /**
+     * getOrangeSkills() method.
+     *
+     * @return the orange danger level list of skills
+     */
+    public final List<Skill> getOrangeSkills() {
+        return this.orangeSkills;
+    }
+
+    /**
+     * setOrangeSkills() method.
+     *
+     * @param argOrangeSkills the new orange danger level list of skills
+     */
+    public final void setOrangeSkills(final List<Skill> argOrangeSkills) {
+        this.orangeSkills = argOrangeSkills;
+    }
+
+    /**
+     * getRedSkills() method.
+     *
+     * @return the red danger level list of skills
+     */
+    public final List<Skill> getRedSkills() {
+        return this.redSkills;
+    }
+
+    /**
+     * setRedSkills() method.
+     *
+     * @param argRedSkills the new red danger level list of skills
+     */
+    public final void setRedSkills(final List<Skill> argRedSkills) {
+        this.redSkills = argRedSkills;
+    }
+
+    /**
+     * getSkills() method.
+     *
+     * @return the list of skills
+     */
+    public final List<Skill> getSkills() {
+        return this.skills;
+    }
+
+    /**
+     * setSkills() method.
+     *
+     * @param argSkills the new list of skills
+     */
+    public final void setSkills(final List<Skill> argSkills) {
+        this.skills = argSkills;
     }
 
     /**

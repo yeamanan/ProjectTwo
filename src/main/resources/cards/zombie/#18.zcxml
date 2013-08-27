@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ZombieCard>
     <Id>#18</Id>
-    <Label>C'EST L'HEURE DE LA RACLÉE !</Label>
     <Turn>false</Turn>
     <Sewer>false</Sewer>
     <Red>7W</Red>
-    <RedLabel>AAAAAH !</RedLabel>
     <Orange>3R</Orange>
-    <OrangeLabel>HO-HO !</OrangeLabel>
     <Yellow>1W</Yellow>
-    <YellowLabel>ENCORE PIRE !</YellowLabel>
     <Blue>1W</Blue>
-    <BlueLabel>PAS BON ÇA</BlueLabel>
 </ZombieCard>

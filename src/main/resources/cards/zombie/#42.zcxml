@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ZombieCard>
     <Id>#42</Id>
-    <Label>LES ÉGOUTS CRACHENT SUR CHAQUE DALLE OÙ SE TROUVE AU MOINS UN SURVIVANT :</Label>
     <Turn>false</Turn>
     <Sewer>true</Sewer>
     <Red>1F</Red>
-    <RedLabel>NON !</RedLabel>
     <Orange>2W</Orange>
-    <OrangeLabel>PITIÉ !</OrangeLabel>
     <Yellow>1R</Yellow>
-    <YellowLabel>ARGH !</YellowLabel>
     <Blue>1W</Blue>
-    <BlueLabel>OH !</BlueLabel>
 </ZombieCard>
