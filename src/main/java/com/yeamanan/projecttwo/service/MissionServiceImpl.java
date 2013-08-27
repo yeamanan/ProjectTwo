@@ -1,7 +1,7 @@
 package com.yeamanan.projecttwo.service;
 
-import com.yeamanan.projecttwo.model.game.Mission;
-import com.yeamanan.projecttwo.model.game.Tile;
+import com.yeamanan.projecttwo.model.Mission;
+import com.yeamanan.projecttwo.model.Tile;
 import com.yeamanan.projecttwo.util.AxeUtil;
 import com.yeamanan.projecttwo.util.JarUtil;
 import java.io.BufferedReader;

@@ -1,5 +1,8 @@
 package com.yeamanan.projecttwo;
 
+import com.yeamanan.projecttwo.model.ZombieCard;
+import com.yeamanan.projecttwo.service.ZombieCardService;
+import com.yeamanan.projecttwo.service.ZombieCardServiceImpl;
 import com.yeamanan.projecttwo.util.PropertiesUtil;
 import com.yeamanan.projecttwo.view.ViewFactory;
 import javafx.application.Application;
@@ -111,6 +114,16 @@ public class ProjectTwo extends Application {
      * @param args arguments
      */
     public static void main(final String[] args) {
+        final ZombieCard card = new ZombieCard();
+        card.setId("#test");
+        card.setSewerCard(true);
+        card.setRedLevel("1F");
+        card.setOrangeLevel("4R");
+        card.setYellowLevel("4W");
+        card.setBlueLevel("2W");
+        final ZombieCardService service = new ZombieCardServiceImpl();
+        service.save(card);
+        LOGGER.info(service.loadAll().size());
         launch(args);
     }
 

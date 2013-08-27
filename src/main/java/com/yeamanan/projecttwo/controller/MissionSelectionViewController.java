@@ -1,7 +1,7 @@
 package com.yeamanan.projecttwo.controller;
 
 import com.yeamanan.projecttwo.ProjectTwo;
-import com.yeamanan.projecttwo.model.game.Mission;
+import com.yeamanan.projecttwo.model.Mission;
 import com.yeamanan.projecttwo.service.MissionService;
 import com.yeamanan.projecttwo.service.MissionServiceImpl;
 import com.yeamanan.projecttwo.view.ViewType;

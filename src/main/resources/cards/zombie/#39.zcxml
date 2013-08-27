@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ZombieCard>
+    <Id>#39</Id>
+    <Label>ET VOUS PENSIEZ QUE ÇA POUVAIT PAS ÊTRE PIRE !</Label>
+    <Turn>true</Turn>
+    <Sewer>false</Sewer>
+    <Red>F</Red>
+    <RedLabel>TOUS LES FATTIES : +1 TOUR</RedLabel>
+    <Orange>F</Orange>
+    <OrangeLabel>TOUS LES FATTIES : +1 TOUR</OrangeLabel>
+    <Yellow>F</Yellow>
+    <YellowLabel>TOUS LES FATTIES : +1 TOUR</YellowLabel>
+    <Blue></Blue>
+    <BlueLabel>C'EST COOL</BlueLabel>
+</ZombieCard>

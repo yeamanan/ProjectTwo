@@ -1,6 +1,6 @@
 package com.yeamanan.projecttwo.service;
 
-import com.yeamanan.projecttwo.model.people.Survivor;
+import com.yeamanan.projecttwo.model.Survivor;
 import java.util.List;
 
 /**
@@ -11,18 +11,18 @@ import java.util.List;
 public interface SurvivorService {
 
     /**
-     * getSurvivorNames() method.
+     * getNames() method.
      *
      * @return a list of survivor names
      */
-    List<String> getSurvivorNames();
+    List<String> getNames();
 
     /**
-     * loadSurvivor() method.
+     * load() method.
      *
      * @param argName the name of a survivor to load
      * @return a survivor object
      */
-    Survivor loadSurvivor(final String argName);
+    Survivor load(final String argName);
 
 }

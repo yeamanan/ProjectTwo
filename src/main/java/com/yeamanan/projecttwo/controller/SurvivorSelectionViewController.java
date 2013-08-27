@@ -1,7 +1,7 @@
 package com.yeamanan.projecttwo.controller;
 
 import com.yeamanan.projecttwo.ProjectTwo;
-import com.yeamanan.projecttwo.model.people.Survivor;
+import com.yeamanan.projecttwo.model.Survivor;
 import com.yeamanan.projecttwo.service.SurvivorService;
 import com.yeamanan.projecttwo.service.SurvivorServiceImpl;
 import com.yeamanan.projecttwo.view.ViewType;
@@ -54,7 +54,7 @@ public class SurvivorSelectionViewController implements Initializable {
                 final Pane pane = (Pane) event.getSource();
                 final SurvivorService service = new SurvivorServiceImpl();
                 final Survivor survivor =
-                        service.loadSurvivor(pane.getId());
+                        service.load(pane.getId());
                 if (pane.getStyleClass().contains("selected")) {
                     pane.getStyleClass().remove("selected");
                     instance.getContext().getGame().getSurvivors()
@@ -107,7 +107,7 @@ public class SurvivorSelectionViewController implements Initializable {
     public final void initialize(final URL location,
                                 final ResourceBundle resources) {
         final SurvivorService service = new SurvivorServiceImpl();
-        final List<String> sNames = service.getSurvivorNames();
+        final List<String> sNames = service.getNames();
         for (String sName : sNames) {
             final Pane pane = new Pane();
             pane.setId(sName);

@@ -1,6 +1,6 @@
 package com.yeamanan.projecttwo.service;
 
-import com.yeamanan.projecttwo.model.game.Mission;
+import com.yeamanan.projecttwo.model.Mission;
 import java.io.InputStream;
 import java.io.Reader;
 import java.util.List;

@@ -1,17 +1,13 @@
 package com.yeamanan.projecttwo.service;
 
-import com.yeamanan.projecttwo.model.people.Survivor;
+import com.yeamanan.projecttwo.model.Survivor;
 import com.yeamanan.projecttwo.util.JarUtil;
 import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBElement;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
-import javax.xml.transform.stream.StreamSource;
 import org.apache.log4j.Logger;
 
 /**
@@ -38,12 +34,12 @@ public class SurvivorServiceImpl implements SurvivorService {
     private static final String SURVIVOR_EXTENSION = ".sxml";
 
     /**
-     * getSurvivorNames() method.
+     * getNames() method.
      *
      * @return a list of survivor names
      */
     @Override
-    public final List<String> getSurvivorNames() {
+    public final List<String> getNames() {
         final List<String> sNames = new ArrayList<>();
         final Class aClass = this.getClass();
         final List<String> sPaths =
@@ -57,13 +53,13 @@ public class SurvivorServiceImpl implements SurvivorService {
     }
 
     /**
-     * loadSurvivor() method.
+     * load() method.
      *
      * @param argName the name of a survivor to load
      * @return a survivor object
      */
     @Override
-    public final Survivor loadSurvivor(final String argName) {
+    public final Survivor load(final String argName) {
         final String sPath = SURVIVORS_FOLDER + argName + SURVIVOR_EXTENSION;
         final Class aClass = this.getClass();
         final InputStream stream =

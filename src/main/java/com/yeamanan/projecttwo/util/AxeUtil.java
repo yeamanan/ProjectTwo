@@ -1,7 +1,7 @@
 package com.yeamanan.projecttwo.util;
 
-import com.yeamanan.projecttwo.model.rule.Axe;
-import com.yeamanan.projecttwo.model.rule.Constants;
+import com.yeamanan.projecttwo.model.Axe;
+import com.yeamanan.projecttwo.model.Constants;
 
 /**
  * AxeUtil class.

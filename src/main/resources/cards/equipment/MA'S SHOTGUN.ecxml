@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EquipmentCard>
+    <Id>MA'S SHOTGUN</Id>
+    <Reload>true</Reload>
+    <LameSoundz>false</LameSoundz>
+    <FusilSoundz>true</FusilSoundz>
+    <LameUse>0</LameUse>
+    <FusilUse>1</FusilUse>
+    <LameDice>1</LameDice>
+    <FusilDice>2</FusilDice>
+    <SuccessResult>3</SuccessResult>
+    <Damage>2</Damage>
+</EquipmentCard>

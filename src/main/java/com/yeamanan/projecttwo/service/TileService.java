@@ -1,6 +1,6 @@
 package com.yeamanan.projecttwo.service;
 
-import com.yeamanan.projecttwo.model.game.Tile;
+import com.yeamanan.projecttwo.model.Tile;
 import java.io.InputStream;
 import java.io.Reader;
 import java.util.List;

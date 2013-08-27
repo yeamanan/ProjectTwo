@@ -1,7 +1,7 @@
 package com.yeamanan.projecttwo.util;
 
-import com.yeamanan.projecttwo.model.rule.Constants;
-import com.yeamanan.projecttwo.model.rule.State;
+import com.yeamanan.projecttwo.model.Constants;
+import com.yeamanan.projecttwo.model.State;
 
 /**
  * StateUtil class.

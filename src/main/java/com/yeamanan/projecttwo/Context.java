@@ -1,6 +1,6 @@
 package com.yeamanan.projecttwo;
 
-import com.yeamanan.projecttwo.model.game.Game;
+import com.yeamanan.projecttwo.model.Game;
 import com.yeamanan.projecttwo.util.LanguagesUtil;
 import com.yeamanan.projecttwo.util.PropertiesUtil;
 import com.yeamanan.projecttwo.view.ViewType;

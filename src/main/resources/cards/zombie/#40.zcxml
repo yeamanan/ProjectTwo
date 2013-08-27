@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ZombieCard>
+    <Id>#40</Id>
+    <Label>ET VOUS PENSIEZ QUE ÇA POUVAIT PAS ÊTRE PIRE !</Label>
+    <Turn>true</Turn>
+    <Sewer>false</Sewer>
+    <Red>R</Red>
+    <RedLabel>TOUS LES RUNNERS : +1 TOUR</RedLabel>
+    <Orange>R</Orange>
+    <OrangeLabel>TOUS LES RUNNERS : +1 TOUR</OrangeLabel>
+    <Yellow>R</Yellow>
+    <YellowLabel>TOUS LES RUNNERS : +1 TOUR</YellowLabel>
+    <Blue></Blue>
+    <BlueLabel>C'EST COOL</BlueLabel>
+</ZombieCard>
