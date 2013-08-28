@@ -1,6 +1,6 @@
 package com.yeamanan.projecttwo.model;
 
-import com.yeamanan.projecttwo.model.card.InventoryCard;
+import com.yeamanan.projecttwo.model.card.InventoryElement;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -74,13 +74,13 @@ public class Survivor extends Character {
      * Equipments in inventory.
      */
     @XmlTransient
-    private List<InventoryCard> inventory;
+    private List<InventoryElement> inventory;
 
     /**
      * Equipments in hands.
      */
     @XmlTransient
-    private List<InventoryCard> hands;
+    private List<InventoryElement> hands;
 
     /**
      * Constructor.
@@ -257,7 +257,7 @@ public class Survivor extends Character {
      *
      * @return the list of equipment for the inventory
      */
-    public List<InventoryCard> getInventory() {
+    public List<InventoryElement> getInventory() {
         return inventory;
     }
 
@@ -266,7 +266,7 @@ public class Survivor extends Character {
      *
      * @param inventory the new list of equipment in the inventory
      */
-    public void setInventory(List<InventoryCard> inventory) {
+    public void setInventory(List<InventoryElement> inventory) {
         this.inventory = inventory;
     }
 
@@ -275,7 +275,7 @@ public class Survivor extends Character {
      *
      * @return the list of equipment in the hands
      */
-    public List<InventoryCard> getHands() {
+    public List<InventoryElement> getHands() {
         return hands;
     }
 
@@ -284,7 +284,7 @@ public class Survivor extends Character {
      *
      * @param hands the new list of equipment in the hands
      */
-    public void setHands(List<InventoryCard> hands) {
+    public void setHands(List<InventoryElement> hands) {
         this.hands = hands;
     }
 

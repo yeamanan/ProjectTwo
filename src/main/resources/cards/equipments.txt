@@ -1,0 +1,26 @@
+2 - Sub MG - Pistolet mitrailleur - Dual - Noisy Attack - 0-1 - 3 - 5+ - 1
+2 - Rifle - Carabine - Noisy Attack - 1-3 - 1 - 3+ - 1
+2 - Katana - Silent Attack - 0 - 2 - 4+ - 1
+1 - Evil Twins - Noisy Attack - 0-1 - 2 - 4+ - 1
+1 - Ma's Shotgun - Lame Silent Attack - Reload - Lame 0 - Lame 1 dice - Fusil 0-1 - Fusil Noisy Attack - Fusil 2 dice - 3+ - 2
+2 - Chainsaw - Tronçonneuse - Noisy Open - Noisy Attack - 0 - 5 - 5+ - 2
+4 - Machete - Machette - Dual - Silent Attack - 0 - 1 - 4+ - 2
+2 - Baseball Bat - Batte de baseball - Silent Attack - 0 - 1 - 3+ - 1
+3 - Cans - Conserves
+3 - Rice Bag - Sac de riz
+3 - Water - Eau
+2 - Crowbar - Pied-de-biche - Sielnt Open - Silent Attack - 0 - 1 - 4+ - 1
+3 - Gun - Pistolet - Dual - Noisy Attack  - 0-1 - 1 - 4+ - 1
+2 - Fire Axe - Hâche - Noisy Open - N-Silent Attack - 0 - 1 - 4+ - 2
+2 - Shotgun - Noisy Attack - 0-1 - 2 - 4+ - 2
+4 - Sawed Off - Fusil à canon scié - Reload - Noisy Attack - 0_1 - 2 - 3+ - 1
+3 - Pan - Silent Attack - 0 - 1 - 6+ - 1
+3 - Plenty Of Ammo 1 - Munitions en pagaille
+3 - Plenty Of Ammo 2 - Munitions en pagaille
+2 - Molotov - Molotov - Noisy Attack - 0-1 - 0 - 0 - All
+4 - AAAHH! - AAAHH!
+2 - Scope - Viseur
+2 - Bottle - Bouteille
+2 - Gasoline - Carburant
+1 - Goalie Mask - Masque de Hockey
+2 - Flashlight - Lampe-Torche

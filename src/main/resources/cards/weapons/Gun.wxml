@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Weapon>
+    <Name>Gun</Name>
+    <NumberOfDice>1</NumberOfDice>
+    <MaximumRange>1</MaximumRange>
+    <MaximumRange>3</MaximumRange>
+    <Accuracy>3</Accuracy>
+    <Damage>2</Damage>
+    <CombatNoise>true</CombatNoise>
+</Weapon>
