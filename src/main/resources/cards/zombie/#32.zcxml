@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ZombieCard>
-    <Id>#32</Id>
+    <Name>#32</Name>
     <Turn>false</Turn>
     <Sewer>false</Sewer>
     <Red>5W</Red>

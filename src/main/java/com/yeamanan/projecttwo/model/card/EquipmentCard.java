@@ -1,4 +1,4 @@
-package com.yeamanan.projecttwo.model;
+package com.yeamanan.projecttwo.model.card;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -13,12 +13,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "EquipmentCard")
 public class EquipmentCard extends InventoryCard {
-
-    /**
-     * Name of the equipment.
-     */
-    @XmlElement(name = "Name", required = true)
-    private String name;
 
     /**
      * Is the equipment a weapon ?
@@ -84,8 +78,16 @@ public class EquipmentCard extends InventoryCard {
      * Constructor.
      */
     public EquipmentCard() {
-        super();
-        this.name = "";
+        this("");
+    }
+
+    /**
+     * Constructor.
+     *
+     * @param argName the name of the equipment card
+     */
+    public EquipmentCard(final String argName) {
+        super(argName);
         this.weapon = false;
         this.dual = false;
         this.minRange = 0;
@@ -96,24 +98,6 @@ public class EquipmentCard extends InventoryCard {
         this.openDoor = false;
         this.doorNoise = false;
         this.combatNoise = false;
-    }
-
-    /**
-     * getName() method.
-     *
-     * @return the name of the card
-     */
-    public final String getName() {
-        return this.name;
-    }
-
-    /**
-     * setName() method.
-     *
-     * @param argName the new name of the card
-     */
-    public final void setName(final String argName) {
-        this.name = argName;
     }
 
     /**

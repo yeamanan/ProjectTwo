@@ -1,6 +1,8 @@
-package com.yeamanan.projecttwo.service;
+package com.yeamanan.projecttwo.service.card;
 
-import com.yeamanan.projecttwo.model.EquipmentCard;
+import com.yeamanan.projecttwo.model.card.EquipmentCard;
+import com.yeamanan.projecttwo.service.GenericService;
+import com.yeamanan.projecttwo.service.GenericServiceImpl;
 import java.util.List;
 import org.apache.log4j.Logger;
 

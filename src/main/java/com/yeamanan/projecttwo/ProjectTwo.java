@@ -1,13 +1,17 @@
 package com.yeamanan.projecttwo;
 
-import com.yeamanan.projecttwo.service.EquipmentCardService;
-import com.yeamanan.projecttwo.service.EquipmentCardServiceImpl;
+import com.yeamanan.projecttwo.model.Survivor;
+import com.yeamanan.projecttwo.model.card.EquipmentCard;
+import com.yeamanan.projecttwo.model.card.ZombieCard;
+import com.yeamanan.projecttwo.service.card.EquipmentCardService;
+import com.yeamanan.projecttwo.service.card.EquipmentCardServiceImpl;
 import com.yeamanan.projecttwo.service.SurvivorService;
 import com.yeamanan.projecttwo.service.SurvivorServiceImpl;
-import com.yeamanan.projecttwo.service.ZombieCardService;
-import com.yeamanan.projecttwo.service.ZombieCardServiceImpl;
+import com.yeamanan.projecttwo.service.card.ZombieCardService;
+import com.yeamanan.projecttwo.service.card.ZombieCardServiceImpl;
 import com.yeamanan.projecttwo.util.PropertiesUtil;
 import com.yeamanan.projecttwo.view.ViewFactory;
+import java.util.List;
 import javafx.application.Application;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -117,13 +121,26 @@ public class ProjectTwo extends Application {
      * @param args arguments
      */
     public static void main(final String[] args) {
-        final SurvivorService sService = new SurvivorServiceImpl();
-        LOGGER.info(sService.loadAll().size());
-        final ZombieCardService zcService = new ZombieCardServiceImpl();
-        LOGGER.info(zcService.loadAll().size());
-        final EquipmentCardService service = new EquipmentCardServiceImpl();
-        LOGGER.info(service.loadAll().size());
+        test();
+        
         launch(args);
     }
 
+    /**
+     * Test.
+     */
+    public static void test() {
+        final SurvivorService sService = new SurvivorServiceImpl();
+        final List<Survivor> survivors = sService.loadAll();
+        LOGGER.info(survivors.size() + " survivors loaded :");
+        for (Survivor survivor : survivors) LOGGER.info("\t" + survivor);
+        final ZombieCardService zcService = new ZombieCardServiceImpl();
+        final List<ZombieCard> zCards = zcService.loadAll();
+        LOGGER.info(zCards.size() + " zombie cards loaded :");
+        for (ZombieCard zCard : zCards) LOGGER.info("\t" + zCard.getName());
+        final EquipmentCardService ecService = new EquipmentCardServiceImpl();
+        final List<EquipmentCard> eCards = ecService.loadAll();
+        LOGGER.info(eCards.size() + " equipment cards loaded :");
+        for (EquipmentCard eCard : eCards) LOGGER.info("\t" + eCard.getName());
+    }
 }

@@ -1,5 +1,6 @@
 package com.yeamanan.projecttwo.model;
 
+import com.yeamanan.projecttwo.model.card.InventoryCard;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;

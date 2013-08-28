@@ -1,6 +1,6 @@
-package com.yeamanan.projecttwo.service;
+package com.yeamanan.projecttwo.service.card;
 
-import com.yeamanan.projecttwo.model.EquipmentCard;
+import com.yeamanan.projecttwo.model.card.EquipmentCard;
 import java.util.List;
 
 /**

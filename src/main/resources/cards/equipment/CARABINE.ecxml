@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EquipmentCard>
-    <Id>CARABINE</Id>
+    <Name>CARABINE</Name>
     <Weapon>true</Weapon>
     <NumberOfDice>1</NumberOfDice>
     <MaximumRange>1</MaximumRange>

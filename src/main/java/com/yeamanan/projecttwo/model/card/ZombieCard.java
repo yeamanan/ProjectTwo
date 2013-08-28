@@ -1,4 +1,4 @@
-package com.yeamanan.projecttwo.model;
+package com.yeamanan.projecttwo.model.card;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -13,12 +13,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "ZombieCard")
 public class ZombieCard extends Card {
-
-    /**
-     * Id of the zombie card.
-     */
-    @XmlElement(name = "Id", required = true)
-    private String id;
 
     /**
      * Is the card a turn zombie card.
@@ -55,24 +49,6 @@ public class ZombieCard extends Card {
      */
     @XmlElement(name = "Blue", required = true)
     private String blueLevel;
-
-    /**
-     * getId() method.
-     *
-     * @return the id of the zombie card
-     */
-    public final String getId() {
-        return this.id;
-    }
-
-    /**
-     * setId() method.
-     *
-     * @param argId the new id of the zombie card
-     */
-    public final void setId(final String argId) {
-        this.id = argId;
-    }
 
     /**
      * isTurnCard() method.

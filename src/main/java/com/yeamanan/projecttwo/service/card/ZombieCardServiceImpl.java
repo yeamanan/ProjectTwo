@@ -1,7 +1,9 @@
-package com.yeamanan.projecttwo.service;
+package com.yeamanan.projecttwo.service.card;
 
 import com.yeamanan.projecttwo.model.Survivor;
-import com.yeamanan.projecttwo.model.ZombieCard;
+import com.yeamanan.projecttwo.model.card.ZombieCard;
+import com.yeamanan.projecttwo.service.GenericService;
+import com.yeamanan.projecttwo.service.GenericServiceImpl;
 import com.yeamanan.projecttwo.util.JarUtil;
 import java.io.File;
 import java.io.IOException;
@@ -84,7 +86,7 @@ public class ZombieCardServiceImpl implements ZombieCardService {
      */
     @Override
     public final void save(final ZombieCard argZombieCard) {
-        this.service.save(argZombieCard, argZombieCard.getId());
+        this.service.save(argZombieCard, argZombieCard.getName());
     }
 
 }

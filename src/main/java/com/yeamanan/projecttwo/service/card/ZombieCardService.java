@@ -1,6 +1,6 @@
-package com.yeamanan.projecttwo.service;
+package com.yeamanan.projecttwo.service.card;
 
-import com.yeamanan.projecttwo.model.ZombieCard;
+import com.yeamanan.projecttwo.model.card.ZombieCard;
 import java.util.List;
 
 /**
