@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Survivor>
-    <Name>Wanda</Name>
+    <Name>Raoul</Name>
+    <BlueSkills>WEBBING</BlueSkills>
+    <YellowSkills>PLUS_ONE_ACTION</YellowSkills>
+    <OrangeSkills>HOARD</OrangeSkills>
+    <OrangeSkills>MEDIC</OrangeSkills>
+    <RedSkills>PLUS_ONE_FREE_MELEE_ACTION</RedSkills>
+    <RedSkills>PLUS_ONE_FREE_RANGED_ACTION</RedSkills>
+    <RedSkills>PLUS_ONE_TO_DICE_ROLL_RANGED</RedSkills>
 </Survivor>

@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Survivor>
-    <Name>Wanda</Name>
+    <Name>Derek</Name>
+    <BlueSkills>PLUS_ONE_MAX_RANGE</BlueSkills>
+    <YellowSkills>PLUS_ONE_ACTION</YellowSkills>
+    <OrangeSkills>PLUS_ONE_FREE_MELEE_ACTION</OrangeSkills>
+    <OrangeSkills>TOXIC_IMMUNITY</OrangeSkills>
+    <RedSkills>PLUS_ONE_FREE_MOVE_ACTION</RedSkills>
+    <RedSkills>PLUS_ONE_TO_DICE_ROLL_COMBAT</RedSkills>
+    <RedSkills>SLIPPERY</RedSkills>
 </Survivor>

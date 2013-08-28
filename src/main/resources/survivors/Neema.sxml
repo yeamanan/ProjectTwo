@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Survivor>
-    <Name>Wanda</Name>
+    <Name>Neema</Name>
+    <BlueSkills>BORN_LEADER</BlueSkills>
+    <YellowSkills>PLUS_ONE_ACTION</YellowSkills>
+    <OrangeSkills>PLUS_ONE_FREE_COMBAT_ACTION</OrangeSkills>
+    <OrangeSkills>IS_THAT_ALL_YOUVE_GOT</OrangeSkills>
+    <RedSkills>PLUS_ONE_FREE_MELEE_ACTION</RedSkills>
+    <RedSkills>PLUS_ONE_FREE_RANGED_ACTION</RedSkills>
+    <RedSkills>TOUGH</RedSkills>
 </Survivor>

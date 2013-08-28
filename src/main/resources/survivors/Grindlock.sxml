@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Survivor>
-    <Name>Wanda</Name>
+    <Name>Grindlock</Name>
+    <BlueSkills>TAUNT</BlueSkills>
+    <YellowSkills>PLUS_ONE_ACTION</YellowSkills>
+    <OrangeSkills>PLUS_ONE_FREE_MELEE_ACTION</OrangeSkills>
+    <OrangeSkills>SLIPPERY</OrangeSkills>
+    <RedSkills>PLUS_ONE_DAMAGE_MELEE</RedSkills>
+    <RedSkills>IS_THAT_ALL_YOUVE_GOT</RedSkills>
+    <RedSkills>ROLL_SIX_PLUS_ONE_DIE_COMBAT</RedSkills>
 </Survivor>

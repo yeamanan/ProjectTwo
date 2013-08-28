@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Survivor>
     <Name>Amy</Name>
+    <BlueSkills>PLUS_ONE_FREE_MOVE_ACTION</BlueSkills>
+    <YellowSkills>PLUS_ONE_ACTION</YellowSkills>
+    <OrangeSkills>PLUS_ONE_FREE_COMBAT_ACTION</OrangeSkills>
+    <OrangeSkills>PLUS_ONE_FREE_MOVE_ACTION</OrangeSkills>
+    <RedSkills>PLUS_ONE_DIE_COMBAT</RedSkills>
+    <RedSkills>PLUS_ONE_TO_DICE_ROLL_COMBAT</RedSkills>
+    <RedSkills>MEDIC</RedSkills>
 </Survivor>
