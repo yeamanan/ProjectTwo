@@ -49,7 +49,7 @@ public class ViewFactoryImpl implements ViewFactory {
         try {
             root = (Parent) loader.load();
         } catch (IOException ex) {
-            LOGGER.error(null, ex);
+            LOGGER.error("Error loadind fxml file", ex);
         }
         return root;
     }

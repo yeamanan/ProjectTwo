@@ -11,19 +11,19 @@ import java.util.List;
 public interface ZombieCardService {
 
     /**
-     * getIds() method.
+     * getFileNames() method.
      *
-     * @return a list of zombie card ids
+     * @return a list of zombie card file names
      */
-    List<String> getIds();
+    List<String> getFileNames();
 
     /**
      * load() method.
      *
-     * @param argId the id of a zombie card to load
+     * @param argFileName the file name of a zombie card to load
      * @return a zombie card object
      */
-    ZombieCard load(final String argId);
+    ZombieCard load(final String argFileName);
 
     /**
      * loadAll() method.
@@ -35,8 +35,8 @@ public interface ZombieCardService {
     /**
      * save() method.
      *
-     * @param argCard a zombie card object to save
+     * @param argZombieCard a zombie card object to save
      */
-    void save(ZombieCard argCard);
+    void save(final ZombieCard argZombieCard);
 
 }

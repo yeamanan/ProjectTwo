@@ -23,7 +23,7 @@ public class Context {
     /**
      * Properties.
      */
-    private final Properties properties;
+    private final transient Properties properties;
 
     /**
      * Language.
@@ -38,7 +38,7 @@ public class Context {
     /**
      * Game of the application.
      */
-    private final Game game;
+    private final transient Game game;
 
     /**
      * Constructor.

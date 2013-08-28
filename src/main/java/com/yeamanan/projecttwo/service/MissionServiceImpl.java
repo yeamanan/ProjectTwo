@@ -76,7 +76,7 @@ public class MissionServiceImpl implements MissionService {
                     aClass.getClassLoader().getResourceAsStream(path);
         return loadMission(stream);
     }
-            
+
     /**
      * loadMission() method.
      *

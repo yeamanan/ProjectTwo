@@ -1,7 +1,6 @@
 package com.yeamanan.projecttwo.service;
 
 import com.yeamanan.projecttwo.model.Survivor;
-import com.yeamanan.projecttwo.model.ZombieCard;
 import java.util.List;
 
 /**
@@ -12,25 +11,32 @@ import java.util.List;
 public interface SurvivorService {
 
     /**
-     * getNames() method.
+     * getFileNames() method.
      *
-     * @return a list of survivor names
+     * @return a list of survivor file names
      */
-    List<String> getNames();
+    List<String> getFileNames();
 
     /**
      * load() method.
      *
-     * @param argName the name of a survivor to load
+     * @param argFileName the file name of a survivor to load
      * @return a survivor object
      */
-    Survivor load(final String argName);
+    Survivor load(final String argFileName);
+
+    /**
+     * loadAll() method.
+     *
+     * @return a list of survivor objects
+     */
+    List<Survivor> loadAll();
 
     /**
      * save() method.
      *
      * @param argSurvivor a survivor object to save
      */
-    void save(Survivor argSurvivor);
+    void save(final Survivor argSurvivor);
 
 }

@@ -4,168 +4,179 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
 
 /**
- * Card class.
+ * ZombieCard class.
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = { "id", "turnCard", "sewerCard", "redLevel",
-    "orangeLevel", "yellowLevel", "blueLevel" })
 @XmlRootElement(name = "ZombieCard")
-public class ZombieCard {
+public class ZombieCard extends Card {
 
     /**
-     * .
+     * Id of the zombie card.
      */
     @XmlElement(name = "Id", required = true)
     private String id;
 
     /**
-     * .
+     * Is the card a turn zombie card.
      */
     @XmlElement(name = "Turn", required = true)
     private boolean turnCard;
 
     /**
-     * .
+     * Is the case a sewer zombie card.
      */
     @XmlElement(name = "Sewer", required = true)
     private boolean sewerCard;
 
     /**
-     * .
+     * Red level invasion.
      */
     @XmlElement(name = "Red", required = true)
     private String redLevel;
 
     /**
-     * .
+     * Orange level invasion.
      */
     @XmlElement(name = "Orange", required = true)
     private String orangeLevel;
 
     /**
-     * .
+     * Yellow level invasion.
      */
     @XmlElement(name = "Yellow", required = true)
     private String yellowLevel;
 
     /**
-     * .
+     * Blue level invasion.
      */
     @XmlElement(name = "Blue", required = true)
     private String blueLevel;
 
     /**
-     * .
-     * @return a
+     * getId() method.
+     *
+     * @return the id of the zombie card
      */
     public final String getId() {
         return this.id;
     }
 
     /**
-     * .
-     * @param argId a
+     * setId() method.
+     *
+     * @param argId the new id of the zombie card
      */
     public final void setId(final String argId) {
         this.id = argId;
     }
 
     /**
-     * .
-     * @return a
+     * isTurnCard() method.
+     *
+     * @return a boolean
      */
     public final boolean isTurnCard() {
         return this.turnCard;
     }
 
     /**
-     * .
-     * @param argTurnCard a
+     * setTurnCard() method.
+     *
+     * @param argTurnCard the new value
      */
     public final void setTurnCard(final boolean argTurnCard) {
         this.turnCard = argTurnCard;
     }
 
     /**
-     * .
-     * @return a
+     * isSewerCard() method.
+     *
+     * @return a boolean
      */
     public final boolean isSewerCard() {
         return this.sewerCard;
     }
 
     /**
-     * .
-     * @param argSewerCard a
+     * setSewerCard() method.
+     *
+     * @param argSewerCard the new value
      */
     public final void setSewerCard(final boolean argSewerCard) {
         this.sewerCard = argSewerCard;
     }
 
     /**
-     * .
-     * @return a
+     * getRedLevel() method.
+     *
+     * @return the red level invasion
      */
     public final String getRedLevel() {
         return this.redLevel;
     }
 
     /**
-     * .
-     * @param argRedLevel a
+     * setRedLevel() method.
+     *
+     * @param argRedLevel the new red level invasion
      */
     public final void setRedLevel(final String argRedLevel) {
         this.redLevel = argRedLevel;
     }
 
     /**
-     * .
-     * @return a
+     * getOrangeLevel() method.
+     *
+     * @return the orange level invasion
      */
     public final String getOrangeLevel() {
         return this.orangeLevel;
     }
 
     /**
-     * .
-     * @param argOrangeLevel a
+     * setOrangeLevel() method.
+     *
+     * @param argOrangeLevel the new orange level invasion
      */
     public final void setOrangeLevel(final String argOrangeLevel) {
         this.orangeLevel = argOrangeLevel;
     }
 
     /**
-     * .
-     * @return a
+     * getYellowLevel method().
+     *
+     * @return the yellow level invasion
      */
     public final String getYellowLevel() {
         return this.yellowLevel;
     }
 
     /**
-     * .
-     * @param argYellowLevel a
+     * setYellowLevel() method.
+     *
+     * @param argYellowLevel the new yellow level invasion
      */
     public final void setYellowLevel(final String argYellowLevel) {
         this.yellowLevel = argYellowLevel;
     }
 
     /**
-     * .
-     * @return a
+     * getBlueLevel() method.
+     *
+     * @return the blue level invasion
      */
     public final String getBlueLevel() {
         return this.blueLevel;
     }
 
     /**
-     * .
-     * @param argBlueLevel a
+     * setBlueLevel() method.
+     *
+     * @param argBlueLevel the new blue level invasion
      */
     public final void setBlueLevel(final String argBlueLevel) {
         this.blueLevel = argBlueLevel;

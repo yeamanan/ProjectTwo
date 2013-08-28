@@ -38,12 +38,12 @@ public class MissionSelectionViewController implements Initializable {
      * Main Anchor Pane.
      */
     @FXML
-    private AnchorPane mainPane;
+    private transient AnchorPane mainPane;
 
     /**
      * Event handler of all mission button.
      */
-    private final EventHandler<ActionEvent> handler =
+    private final transient EventHandler<ActionEvent> handler =
         new EventHandler<ActionEvent>() {
             @Override
             public final void handle(final ActionEvent event) {

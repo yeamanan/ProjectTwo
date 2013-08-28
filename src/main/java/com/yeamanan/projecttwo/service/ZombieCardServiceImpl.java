@@ -1,5 +1,6 @@
 package com.yeamanan.projecttwo.service;
 
+import com.yeamanan.projecttwo.model.Survivor;
 import com.yeamanan.projecttwo.model.ZombieCard;
 import com.yeamanan.projecttwo.util.JarUtil;
 import java.io.File;
@@ -27,55 +28,43 @@ public class ZombieCardServiceImpl implements ZombieCardService {
             Logger.getLogger(ZombieCardServiceImpl.class);
 
     /**
-     * Zombie cards folder in jar.
+     * Zombie cards file folder in jar.
      */
-    private static final String CARDS_FOLDER = "cards/zombie/";
+    private static final String FOLDER = "cards/zombie/";
 
     /**
      * Zombie cards file's extension.
      */
-    private static final String ZOMBIE_CARD_EXTENSION = ".zcxml";
+    private static final String EXTENSION = ".zcxml";
 
     /**
-     * getIds() method.
+     * Generic service.
+     */
+    private GenericService<ZombieCard> service;
+
+    public ZombieCardServiceImpl() {
+        this.service = new GenericServiceImpl<>(FOLDER, EXTENSION, ZombieCard.class);
+    }
+
+    /**
+     * getFileNames() method.
      *
-     * @return a list of zombie card ids
+     * @return a list of zombie card file names
      */
     @Override
-    public final List<String> getIds() {
-        final List<String> sIds = new ArrayList<>();
-        final Class aClass = this.getClass();
-        final List<String> sPaths =
-                JarUtil.getJarFolderFileList(aClass, CARDS_FOLDER);
-        for (String sPath : sPaths) {
-            final String sId = sPath.replaceFirst(CARDS_FOLDER, "")
-                    .replaceFirst(ZOMBIE_CARD_EXTENSION, "");
-            sIds.add(sId);
-        }
-        return sIds;
+    public final List<String> getFileNames() {
+        return this.service.getFileNames();
     }
 
     /**
      * load() method.
      *
-     * @param argId the id of a zombie card to load
+     * @param argFileName the file name of a zombie card to load
      * @return a zombie card object
      */
     @Override
-    public final ZombieCard load(final String argId) {
-        final String sPath = CARDS_FOLDER + argId + ZOMBIE_CARD_EXTENSION;
-        final Class aClass = this.getClass();
-        final InputStream stream =
-                    aClass.getClassLoader().getResourceAsStream(sPath);
-        ZombieCard card = null;
-        try {
-            final JAXBContext context = JAXBContext.newInstance(ZombieCard.class);
-            final Unmarshaller unmarshaller = context.createUnmarshaller();
-            card = (ZombieCard) unmarshaller.unmarshal(stream);
-        } catch (JAXBException ex) {
-            LOGGER.error("Error loading zombie card file", ex);
-        }
-        return card;
+    public final ZombieCard load(final String argFileName) {
+        return this.service.load(argFileName);
     }
 
     /**
@@ -85,11 +74,7 @@ public class ZombieCardServiceImpl implements ZombieCardService {
      */
     @Override
     public final List<ZombieCard> loadAll() {
-        final List<ZombieCard> cards = new ArrayList<>();
-        for (String sId : getIds()) {
-            cards.add(load(sId));
-        }
-        return cards;
+        return this.service.loadAll();
     }
 
     /**
@@ -98,26 +83,8 @@ public class ZombieCardServiceImpl implements ZombieCardService {
      * @param argCard a zombie card object to save
      */
     @Override
-    public final void save(final ZombieCard argCard) {
-        final String sPath = System.getProperty("user.home") + "/"
-                + argCard.getId() + ZOMBIE_CARD_EXTENSION;
-        final File file = new File(sPath);
-        if (!file.exists()) {
-            try {
-                file.createNewFile();
-            } catch (IOException ex) {
-                LOGGER.error("Error saving zombie card file", ex);
-            }
-        }
-        try {
-            final JAXBContext context =
-                    JAXBContext.newInstance(ZombieCard.class);
-            final Marshaller marshaller = context.createMarshaller();
-            marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-            marshaller.marshal(argCard, new File(sPath));
-        } catch (JAXBException ex) {
-            LOGGER.error("Error saving zombie card file", ex);
-        }
+    public final void save(final ZombieCard argZombieCard) {
+        this.service.save(argZombieCard, argZombieCard.getId());
     }
 
 }

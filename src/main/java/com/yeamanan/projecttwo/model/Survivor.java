@@ -70,18 +70,22 @@ public class Survivor extends Character {
     private List<Skill> skills;
 
     /**
+     * Equipments in inventory.
+     */
+    @XmlTransient
+    private List<InventoryCard> inventory;
+
+    /**
+     * Equipments in hands.
+     */
+    @XmlTransient
+    private List<InventoryCard> hands;
+
+    /**
      * Constructor.
      */
     public Survivor() {
-        super(Constants.SURVIVOR_ACTION);
-        this.name = "";
-        this.experience = 0;
-        this.level = Level.BLUE;
-        this.blueSkills = new ArrayList<>();
-        this.yellowSkills = new ArrayList<>();
-        this.orangeSkills = new ArrayList<>();
-        this.redSkills = new ArrayList<>();
-        this.skills = new ArrayList<>();
+        this("");
     }
 
     /**
@@ -99,6 +103,8 @@ public class Survivor extends Character {
         this.orangeSkills = new ArrayList<>();
         this.redSkills = new ArrayList<>();
         this.skills = new ArrayList<>();
+        this.inventory = new ArrayList<>();
+        this.hands = new ArrayList<>();
     }
 
     /**
@@ -243,6 +249,42 @@ public class Survivor extends Character {
      */
     public final void setSkills(final List<Skill> argSkills) {
         this.skills = argSkills;
+    }
+
+    /**
+     * getInventory() method.
+     *
+     * @return the list of equipment for the inventory
+     */
+    public List<InventoryCard> getInventory() {
+        return inventory;
+    }
+
+    /**
+     * setInventory() method.
+     *
+     * @param inventory the new list of equipment in the inventory
+     */
+    public void setInventory(List<InventoryCard> inventory) {
+        this.inventory = inventory;
+    }
+
+    /**
+     * getHands() method.
+     *
+     * @return the list of equipment in the hands
+     */
+    public List<InventoryCard> getHands() {
+        return hands;
+    }
+
+    /**
+     * setHands() method.
+     *
+     * @param hands the new list of equipment in the hands
+     */
+    public void setHands(List<InventoryCard> hands) {
+        this.hands = hands;
     }
 
     /**

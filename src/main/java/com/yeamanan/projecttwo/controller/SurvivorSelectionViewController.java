@@ -1,7 +1,6 @@
 package com.yeamanan.projecttwo.controller;
 
 import com.yeamanan.projecttwo.ProjectTwo;
-import com.yeamanan.projecttwo.model.Survivor;
 import com.yeamanan.projecttwo.service.SurvivorService;
 import com.yeamanan.projecttwo.service.SurvivorServiceImpl;
 import com.yeamanan.projecttwo.view.ViewType;
@@ -33,7 +32,7 @@ public class SurvivorSelectionViewController implements Initializable {
      * Survivors Tile Pane.
      */
     @FXML
-    private TilePane survivors;
+    private transient TilePane survivors;
 
     /**
      * Description Tile Pane.
@@ -44,26 +43,26 @@ public class SurvivorSelectionViewController implements Initializable {
     /**
      * Click event handler of all character image.
      */
-    private final EventHandler<MouseEvent> clickHandler =
+    private final transient EventHandler<MouseEvent> clickHandler =
         new EventHandler<MouseEvent>() {
             @Override
             public final void handle(final MouseEvent event) {
                 final ProjectTwo instance = ProjectTwo.getInstance();
-                final int nbSurvivors = 
-                        instance.getContext().getGame().getSurvivors().size();
                 final Pane pane = (Pane) event.getSource();
-                final SurvivorService service = new SurvivorServiceImpl();
-                final Survivor survivor =
-                        service.load(pane.getId());
                 if (pane.getStyleClass().contains("selected")) {
+                    final SurvivorService service = new SurvivorServiceImpl();
                     pane.getStyleClass().remove("selected");
                     instance.getContext().getGame().getSurvivors()
-                            .remove(survivor);
+                            .remove(service.load(pane.getId()));
                 } else {
-                    if ( nbSurvivors < 6) {
+                    final int nbSurvivors =
+                        instance.getContext().getGame().getSurvivors().size();
+                    if (nbSurvivors < 6) {
+                        final SurvivorService service =
+                                new SurvivorServiceImpl();
                         pane.getStyleClass().add("selected");
                         instance.getContext().getGame().getSurvivors()
-                                .add(survivor);
+                                .add(service.load(pane.getId()));
                     }
                 }
             }
@@ -107,7 +106,7 @@ public class SurvivorSelectionViewController implements Initializable {
     public final void initialize(final URL location,
                                 final ResourceBundle resources) {
         final SurvivorService service = new SurvivorServiceImpl();
-        final List<String> sNames = service.getNames();
+        final List<String> sNames = service.getFileNames();
         for (String sName : sNames) {
             final Pane pane = new Pane();
             pane.setId(sName);

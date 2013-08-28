@@ -1,8 +1,8 @@
 package com.yeamanan.projecttwo.model;
 
 /**
- * Card class.
+ * InventoryCard class.
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
-public class Card { }
+public class InventoryCard extends Card { }
