@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Weapon>
     <Name>Sawed Off</Name>
-    <NumberOfDice>1</NumberOfDice>
+    <ReloadWeapon>true</ReloadWeapon>
+    <NoisyAttacker>true</NoisyAttacker>
+    <MinimumRange>0</MinimumRange>
     <MaximumRange>1</MaximumRange>
-    <MaximumRange>3</MaximumRange>
+    <NumberOfDice>2</NumberOfDice>
     <Accuracy>3</Accuracy>
-    <Damage>2</Damage>
-    <CombatNoise>true</CombatNoise>
+    <Damage>1</Damage>
 </Weapon>

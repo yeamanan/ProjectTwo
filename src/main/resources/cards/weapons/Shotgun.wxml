@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Weapon>
     <Name>Shotgun</Name>
-    <NumberOfDice>1</NumberOfDice>
+    <NoisyAttacker>true</NoisyAttacker>
+    <MinimumRange>0</MinimumRange>
     <MaximumRange>1</MaximumRange>
-    <MaximumRange>3</MaximumRange>
-    <Accuracy>3</Accuracy>
+    <NumberOfDice>2</NumberOfDice>
+    <Accuracy>4</Accuracy>
     <Damage>2</Damage>
-    <CombatNoise>true</CombatNoise>
 </Weapon>

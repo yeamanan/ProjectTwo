@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Weapon>
-    <Name>Machete</Name>
-    <DualWeapon>true</DualWeapon>
+    <Name>Ma's Shotgun - Gun</Name>
     <MinimumRange>0</MinimumRange>
     <MaximumRange>0</MaximumRange>
     <NumberOfDice>1</NumberOfDice>
-    <Accuracy>4</Accuracy>
+    <Accuracy>3</Accuracy>
     <Damage>2</Damage>
 </Weapon>

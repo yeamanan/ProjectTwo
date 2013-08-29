@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Weapon>
     <Name>Molotov</Name>
-    <NumberOfDice>1</NumberOfDice>
+    <NoisyAttacker>true</NoisyAttacker>
+    <MinimumRange>0</MinimumRange>
     <MaximumRange>1</MaximumRange>
-    <MaximumRange>3</MaximumRange>
-    <Accuracy>3</Accuracy>
-    <Damage>2</Damage>
-    <CombatNoise>true</CombatNoise>
+    <NumberOfDice>0</NumberOfDice>
+    <Accuracy>0</Accuracy>
+    <Damage>-1</Damage>
 </Weapon>

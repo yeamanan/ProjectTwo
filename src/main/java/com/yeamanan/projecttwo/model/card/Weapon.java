@@ -15,10 +15,34 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class Weapon extends InventoryElement {
 
     /**
-     * Is the equipment a dual weapon ?
+     * Can this weapon open door ?
      */
-    @XmlElement(name = "Dual", required = false)
-    private boolean dual;
+    @XmlElement(name = "DoorOpener", required = false)
+    private boolean doorOpener;
+
+    /**
+     * Is the weapon dual ?
+     */
+    @XmlElement(name = "DualWeapon", required = false)
+    private boolean dualWeapon;
+
+    /**
+     * Is the weapon need to be reloaded after use ?
+     */
+    @XmlElement(name = "ReloadWeapon", required = false)
+    private boolean reloadWeapon;
+
+    /**
+     * Is the weapon noisy when open a door ?
+     */
+    @XmlElement(name = "NoisyOpener", required = false)
+    private boolean noisyOpener;
+
+    /**
+     * Is the weapon noisy when attack a zombie ?
+     */
+    @XmlElement(name = "NoisyAttacker", required = false)
+    private boolean noisyAttacker;
 
     /**
      * Minimum range of the weapon.
@@ -51,24 +75,6 @@ public class Weapon extends InventoryElement {
     private int damage;
 
     /**
-     * Can this weapon open door ?
-     */
-    @XmlElement(name = "OpenDoor", required = false)
-    private boolean openDoor;
-
-    /**
-     * Do this weapon produce noise when open door ?
-     */
-    @XmlElement(name = "DoorNoise", required = false)
-    private boolean doorNoise;
-
-    /**
-     * Do this weapon produce noise when use to attack ?
-     */
-    @XmlElement(name = "CombatNoise", required = false)
-    private boolean combatNoise;
-
-    /**
      * Constructor.
      */
     public Weapon() {
@@ -82,33 +88,106 @@ public class Weapon extends InventoryElement {
      */
     public Weapon(final String argName) {
         super(argName);
-        this.dual = false;
+        this.doorOpener = false;
+        this.dualWeapon = false;
+        this.reloadWeapon = false;
+        this.noisyOpener = false;
+        this.noisyAttacker = false;
         this.minRange = 0;
         this.maxRange = 0;
         this.numberOfDice = 0;
         this.accuracy = 0;
         this.damage = 0;
-        this.openDoor = false;
-        this.doorNoise = false;
-        this.combatNoise = false;
     }
 
     /**
-     * isDual() method.
+     * isDoorOpener() method.
      *
      * @return a boolean
      */
-    public final boolean isDual() {
-        return dual;
+    public final boolean isDoorOpener() {
+        return this.doorOpener;
     }
 
     /**
-     * setDual() method.
+     * setDoorOpener() method.
      *
-     * @param argDual the new dual value
+     * @param argDoorOpener the new door opener value
      */
-    public final void setDual(final boolean argDual) {
-        this.dual = argDual;
+    public final void setDoorOpener(final boolean argDoorOpener) {
+        this.doorOpener = argDoorOpener;
+    }
+
+    /**
+     * isDualWeapon() method.
+     *
+     * @return a boolean
+     */
+    public final boolean isDualWeapon() {
+        return this.dualWeapon;
+    }
+
+    /**
+     * setDualWeapon() method.
+     *
+     * @param argDualWeapon the new dual weapon value
+     */
+    public final void setDualWeapon(final boolean argDualWeapon) {
+        this.dualWeapon = argDualWeapon;
+    }
+
+    /**
+     * isReloadWeapon() method.
+     *
+     * @return a boolean
+     */
+    public final boolean isReloadWeapon() {
+        return reloadWeapon;
+    }
+
+    /**
+     * setReloadWeapon() method.
+     *
+     * @param argReloadWeapon the new reload weapon value
+     */
+    public final void setReloadWeapon(final boolean argReloadWeapon) {
+        this.reloadWeapon = argReloadWeapon;
+    }
+
+    /**
+     * isNoisyOpener() method.
+     *
+     * @return a boolean
+     */
+    public final boolean isNoisyOpener() {
+        return noisyOpener;
+    }
+
+    /**
+     * setNoisyOpener() method.
+     *
+     * @param argNoisyOpener the new noisy opener value
+     */
+    public final void setNoisyOpener(final boolean argNoisyOpener) {
+        this.noisyOpener = argNoisyOpener;
+    }
+
+    /**
+     * isNoisyAttacker() method.
+     *
+     * @return a boolean
+     */
+    public final boolean isNoisyAttacker() {
+        return noisyAttacker;
+    }
+
+    /**
+     * isNoisyAttacker() method.
+     *
+     * @param argNoisyAttacker the new noisy attacker value
+     */
+    public final void isNoisyAttacker(final boolean argNoisyAttacker) {
+        this.noisyAttacker = argNoisyAttacker;
     }
 
     /**
@@ -117,7 +196,7 @@ public class Weapon extends InventoryElement {
      * @return the minimum range of the weapon
      */
     public final int getMinRange() {
-        return minRange;
+        return this.minRange;
     }
 
     /**
@@ -135,13 +214,13 @@ public class Weapon extends InventoryElement {
      * @return the maximum range of the weapon
      */
     public final int getMaxRange() {
-        return maxRange;
+        return this.maxRange;
     }
 
     /**
      * setMaxRange() method.
      *
-     * @param argMaxRange the maximum range of the weapon
+     * @param argMaxRange the new maximum range of the weapon
      */
     public final void setMaxRange(final int argMaxRange) {
         this.maxRange = argMaxRange;
@@ -150,16 +229,16 @@ public class Weapon extends InventoryElement {
     /**
      * getNumberOfDice() method.
      *
-     * @return the number of dice to roll
+     * @return the number of dice to roll when using the weapon
      */
     public final int getNumberOfDice() {
-        return numberOfDice;
+        return this.numberOfDice;
     }
 
     /**
      * setNumberOfDice() method.
      *
-     * @param argNumberOfDice the new number of dice
+     * @param argNumberOfDice the new number of dice when using the weapon
      */
     public final void setNumberOfDice(final int argNumberOfDice) {
         this.numberOfDice = argNumberOfDice;
@@ -171,7 +250,7 @@ public class Weapon extends InventoryElement {
      * @return the accuracy needed for the weapon
      */
     public final int getAccuracy() {
-        return accuracy;
+        return this.accuracy;
     }
 
     /**
@@ -189,7 +268,7 @@ public class Weapon extends InventoryElement {
      * @return the damage of the weapon
      */
     public final int getDamage() {
-        return damage;
+        return this.damage;
     }
 
     /**
@@ -199,60 +278,6 @@ public class Weapon extends InventoryElement {
      */
     public final void setDamage(final int argDamage) {
         this.damage = argDamage;
-    }
-
-    /**
-     * isOpenDoor() method.
-     *
-     * @return a boolean
-     */
-    public final boolean isOpenDoor() {
-        return openDoor;
-    }
-
-    /**
-     * setOpenDoor() method.
-     *
-     * @param argOpenDoor the new value
-     */
-    public final void setOpenDoor(final boolean argOpenDoor) {
-        this.openDoor = argOpenDoor;
-    }
-
-    /**
-     * isDoorNoise() method.
-     *
-     * @return a boolean
-     */
-    public final boolean isDoorNoise() {
-        return doorNoise;
-    }
-
-    /**
-     * setDoorNoise() method.
-     *
-     * @param argDoorNoise the new value
-     */
-    public final void setDoorNoise(final boolean argDoorNoise) {
-        this.doorNoise = argDoorNoise;
-    }
-
-    /**
-     * isCombatNoise() method.
-     *
-     * @return a boolean
-     */
-    public final boolean isCombatNoise() {
-        return combatNoise;
-    }
-
-    /**
-     * setCombatNoise() method.
-     *
-     * @param argCombatNoise the new value
-     */
-    public final void setCombatNoise(final boolean argCombatNoise) {
-        this.combatNoise = argCombatNoise;
     }
 
 }
