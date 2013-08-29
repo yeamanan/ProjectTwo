@@ -7,11 +7,13 @@ package com.yeamanan.projecttwo.model.card;
  */
 public class Wounded extends Card {
 
+    private static String NAME = "Wounded";
+    
     /**
      * Constructor.
      */
     public Wounded() {
-        super("Wounded");
+        super(NAME);
     }
 
 }

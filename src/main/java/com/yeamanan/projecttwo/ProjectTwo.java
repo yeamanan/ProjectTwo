@@ -18,6 +18,7 @@ import java.util.List;
 import javafx.application.Application;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import org.apache.log4j.Logger;
 
@@ -86,6 +87,9 @@ public class ProjectTwo extends Application {
         final Parent root = factory.createView(this.context.getLanguage());
         this.stage.setScene(new Scene(root, SCENE_WIDTH, SCENE_HEIGHT));
         this.stage.setResizable(false);
+        final ClassLoader loader = this.getClass().getClassLoader();
+        final Image image = new Image(loader.getResourceAsStream("images/Dice.png"));
+        this.stage.getIcons().add(image);
         this.stage.show();
     }
 
