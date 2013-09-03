@@ -2,8 +2,12 @@ package com.yeamanan.projecttwo.controller;
 
 import com.yeamanan.projecttwo.ProjectTwo;
 import com.yeamanan.projecttwo.view.ViewType;
+import com.yeamanan.projecttwo.view.stage.SurvivorEditorStage;
+import java.util.ResourceBundle;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Window;
 import org.apache.log4j.Logger;
 
 /**
@@ -41,6 +45,21 @@ public class MainViewController {
         final ProjectTwo instance = ProjectTwo.getInstance();
         //instance.setCurrentView(ViewType.OptionsView);
         instance.reloadView();
+    }
+
+    /**
+     * handleSurvivorEditorAction() method.
+     *
+     * @param event the event handled
+     */
+    @FXML
+    protected final void handleSurvivorEditorAction(final MouseEvent argEvent) {
+        final Button button = (Button) argEvent.getSource();
+        final Window window = button.getScene().getWindow();
+        final ProjectTwo instance = ProjectTwo.getInstance();
+        final ResourceBundle bundle = instance.getContext().getLanguage();
+        final SurvivorEditorStage stage =
+                new SurvivorEditorStage(window, bundle);
     }
 
 }
