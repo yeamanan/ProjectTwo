@@ -1,5 +1,7 @@
 package com.yeamanan.projecttwo.model;
 
+import com.yeamanan.projecttwo.model.stuff.Zone;
+
 /**
  * Board class.
  *

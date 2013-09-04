@@ -1,0 +1,21 @@
+<Mission>
+    <Id>05</Id>
+    <Name>Big W</Name>
+    <Board>
+        <Row>
+            <Tile name="5D" direction="NORTH"/>
+            <Tile name="2C" direction="SOUTH"/>
+            <Tile name="1C" direction="EAST"/>
+        </Row>
+        <Row>
+            <Tile name="7B" direction="NORTH"/>
+            <Tile name="5C" direction="EAST"/>
+            <Tile name="6B" direction="EAST"/>
+        </Row>
+        <Row>
+            <Tile name="5E" direction="WEST"/>
+            <Tile name="1B" direction="WEST"/>
+            <Tile name="4B" direction="WEST"/>
+        </Row>
+    </Board>
+</Mission>

@@ -1,0 +1,14 @@
+<Mission>
+    <Id>07</Id>
+    <Name>Grindhouse</Name>
+    <Board>
+        <Row>
+            <Tile name="3C" direction="EAST"/>
+            <Tile name="2C" direction="EAST"/>
+        </Row>
+        <Row>
+            <Tile name="2B" direction="SOUTH"/>
+            <Tile name="4C" direction="EAST"/>
+        </Row>
+    </Board>
+</Mission>

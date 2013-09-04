@@ -1,9 +1,9 @@
 package com.yeamanan.projecttwo.controller;
 
 import com.yeamanan.projecttwo.ProjectTwo;
-import com.yeamanan.projecttwo.model.Mission;
-import com.yeamanan.projecttwo.service.MissionService;
-import com.yeamanan.projecttwo.service.MissionServiceImpl;
+import com.yeamanan.projecttwo.model.stuff.Mission;
+import com.yeamanan.projecttwo.service.stuff.MissionService;
+import com.yeamanan.projecttwo.service.stuff.MissionServiceImpl;
 import com.yeamanan.projecttwo.view.ViewType;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -51,7 +51,7 @@ public class MissionSelectionViewController implements Initializable {
                 final String missionName = button.getText();
                 final MissionService service = new MissionServiceImpl();
                 final Mission mission =
-                        service.loadMissionFromResource(missionName);
+                        service.load(missionName);
                 final ProjectTwo instance = ProjectTwo.getInstance();
                 instance.getContext().getGame().setMission(mission);
                 instance.getContext()
@@ -71,7 +71,7 @@ public class MissionSelectionViewController implements Initializable {
                                 final ResourceBundle resources) {
         double xPos = START_X, yPos = START_Y;
         final MissionService service = new MissionServiceImpl();
-        for (String name : service.getMissionNames()) {
+        for (String name : service.getFileNames()) {
             final Button button = new Button(name);
             button.setLayoutX(xPos);
             button.setLayoutY(yPos);

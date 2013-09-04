@@ -1,0 +1,21 @@
+<Mission>
+    <Id>03</Id>
+    <Name>The 24hrs Race Of Zombicity</Name>
+    <Board>
+        <Row>
+            <Tile name="2C" direction="NORTH"/>
+            <Tile name="4D" direction="EAST"/>
+            <Tile name="2B" direction="EAST"/>
+        </Row>
+        <Row>
+            <Tile name="5C" direction="EAST"/>
+            <Tile name="3C" direction="WEST"/>
+            <Tile name="4E" direction="WEST"/>
+        </Row>
+        <Row>
+            <Tile name="1B" direction="WEST"/>
+            <Tile name="3C" direction="WEST"/>
+            <Tile name="4E" direction="WEST"/>
+        </Row>
+    </Board>
+</Mission>

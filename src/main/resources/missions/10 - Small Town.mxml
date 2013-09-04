@@ -1,0 +1,14 @@
+<Mission>
+    <Id>10</Id>
+    <Name>Small Town</Name>
+    <Board>
+        <Row>
+            <Tile name="7B" direction="WEST"/>
+            <Tile name="2B" direction="EAST"/>
+        </Row>
+        <Row>
+            <Tile name="5B" direction="NORTH"/>
+            <Tile name="5C" direction="EAST"/>
+        </Row>
+    </Board>
+</Mission>

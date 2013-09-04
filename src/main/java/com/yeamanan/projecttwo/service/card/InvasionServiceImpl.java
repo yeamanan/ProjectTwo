@@ -34,6 +34,9 @@ public class InvasionServiceImpl implements InvasionService {
      */
     private GenericService<Invasion> service;
 
+    /**
+     * Constructor.
+     */
     public InvasionServiceImpl() {
         this.service = new GenericServiceImpl<>(FOLDER, EXTENSION, Invasion.class);
     }

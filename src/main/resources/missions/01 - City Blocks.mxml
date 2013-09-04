@@ -1,0 +1,21 @@
+<Mission>
+    <Id>01</Id>
+    <Name>City Blocks</Name>
+    <Board>
+        <Row>
+            <Tile name="2C" direction="EAST"/>
+            <Tile name="1C" direction="SOUTH"/>
+            <Tile name="4B" direction="EAST"/>
+        </Row>
+        <Row>
+            <Tile name="5C" direction="WEST"/>
+            <Tile name="7D" direction="NORTH"/>
+            <Tile name="4B" direction="EAST"/>
+        </Row>
+        <Row>
+            <Tile name="6B" direction="EAST"/>
+            <Tile name="5E" direction="NORTH"/>
+            <Tile name="1B" direction="WEST"/>
+        </Row>
+    </Board>
+</Mission>

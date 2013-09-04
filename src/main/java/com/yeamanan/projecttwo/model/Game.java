@@ -1,5 +1,7 @@
 package com.yeamanan.projecttwo.model;
 
+import com.yeamanan.projecttwo.model.stuff.Mission;
+import com.yeamanan.projecttwo.model.people.Survivor;
 import java.util.ArrayList;
 import java.util.List;
 

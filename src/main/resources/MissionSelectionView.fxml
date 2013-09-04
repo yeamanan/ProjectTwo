@@ -10,6 +10,6 @@
 
 <AnchorPane fx:id="mainPane" prefHeight="768.0" prefWidth="1024.0" styleClass="menuPane" xmlns:fx="http://javafx.com/fxml" fx:controller="com.yeamanan.projecttwo.controller.MissionSelectionViewController">
     <stylesheets>
-        <URL value="@styles/Style.css" />
+        <URL value="@styles/Style.css"/>
     </stylesheets>
 </AnchorPane>

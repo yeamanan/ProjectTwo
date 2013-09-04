@@ -1,8 +1,8 @@
 package com.yeamanan.projecttwo.controller;
 
 import com.yeamanan.projecttwo.ProjectTwo;
-import com.yeamanan.projecttwo.service.SurvivorService;
-import com.yeamanan.projecttwo.service.SurvivorServiceImpl;
+import com.yeamanan.projecttwo.service.people.SurvivorService;
+import com.yeamanan.projecttwo.service.people.SurvivorServiceImpl;
 import com.yeamanan.projecttwo.view.ViewType;
 import java.net.URL;
 import java.util.List;

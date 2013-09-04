@@ -10,11 +10,30 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
 
-<AnchorPane fx:id="GamePane" prefHeight="768.0" prefWidth="1024.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.yeamanan.projecttwo.controller.GameViewController">
-    <children>
-        
-    </children>
-    <stylesheets>
-        <URL value="@styles/Style.css" />
-    </stylesheets>
+<AnchorPane fx:id="SurvivorEditorPane" prefHeight="619.0" prefWidth="600.0002558593624" xmlns:fx="http://javafx.com/fxml" fx:controller="com.yeamanan.projecttwo.controller.stage.SurvivorEditorController">
+  <children>
+    <ChoiceBox fx:id="cbSurvivors" layoutX="112.0" layoutY="14.0"/>
+    <Button fx:id="AddSurvivorButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="add surviror"/>
+    <TextField fx:id="tfName" layoutX="200.0" layoutY="49.0" prefWidth="200.0"/>
+    <TreeView fx:id="tvSkills" onDragDetected="#handleDragDetectedAction" layoutX="14.0" layoutY="85.0" prefHeight="512.0" prefWidth="268.0">
+        <root>
+            <TreeItem fx:id="tiSkills" value="Skills" expanded="true"/>
+        </root>
+    </TreeView>
+    <TreeView fx:id="tvSelectedSkills" onDragOver="#handleDragOverAction" onDragDropped="#handleDragDroppedAction" layoutX="318.0" layoutY="85.0" prefHeight="512.0" prefWidth="268.0">
+        <root>
+            <TreeItem fx:id="tiSelectedSkills" value="Selected Skills" expanded="true">
+                <children>
+                    <TreeItem fx:id="tiBlueLevelSkills" value="Blue Level Skills"/>
+                    <TreeItem fx:id="tiYellowLevelSkills" value="Yellow Level Skills"/>
+                    <TreeItem fx:id="tiOrangeLevelSkills" value="Orange Level Skills"/>
+                    <TreeItem fx:id="tiRedLevelSkills" value="Red Level Skills"/>
+                </children>
+            </TreeItem>
+        </root>
+    </TreeView>
+  </children>
+  <stylesheets>
+    <URL value="@styles/Style.css"/>
+  </stylesheets>
 </AnchorPane>

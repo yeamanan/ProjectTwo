@@ -1,0 +1,10 @@
+<Mission>
+    <Id>00</Id>
+    <Name>Tutorial</Name>
+    <Board>
+        <Row>
+            <Tile name="2B" direction="EAST"/>
+            <Tile name="1B" direction="NORTH"/>
+        </Row>
+    </Board>
+</Mission>

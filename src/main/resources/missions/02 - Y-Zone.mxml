@@ -1,0 +1,21 @@
+<Mission>
+    <Id>02</Id>
+    <Name>Y-Zone</Name>
+    <Board>
+        <Row>
+            <Tile name="4B" direction="EAST"/>
+            <Tile name="4E" direction="EAST"/>
+            <Tile name="1B" direction="EAST"/>
+        </Row>
+        <Row>
+            <Tile name="7B" direction="NORTH"/>
+            <Tile name="5D" direction="EAST"/>
+            <Tile name="6B" direction="WEST"/>
+        </Row>
+        <Row>
+            <Tile name="3C" direction="WEST"/>
+            <Tile name="4C" direction="EAST"/>
+            <Tile name="2C" direction="NORTH"/>
+        </Row>
+    </Board>
+</Mission>
