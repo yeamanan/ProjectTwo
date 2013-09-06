@@ -1,0 +1,19 @@
+<Tile name="1B">
+    <Zones>
+        <Row>
+            <Zone id="1" outdoor="true"/>
+            <Zone id="2" outdoor="true"/>
+            <Zone id="3" outdoor="true"/>
+        </Row>
+        <Row>
+            <Zone id="4" outdoor="false"/>
+            <Zone id="4" outdoor="false"/>
+            <Zone id="5" outdoor="true"/>
+        </Row>
+        <Row>
+            <Zone id="6" outdoor="false"/>
+            <Zone id="7" outdoor="false"/>
+            <Zone id="8" outdoor="true"/>
+        </Row>  
+    </Zones>
+</Tile>

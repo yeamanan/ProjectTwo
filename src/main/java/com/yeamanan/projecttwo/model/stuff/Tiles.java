@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.yeamanan.projecttwo.model.stuff;
 
 import java.util.ArrayList;
@@ -10,25 +6,25 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * Board class.
+ * Tiles class.
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
 @XmlType(name="")
-public class Board {
+public class Tiles {
 
-    private List<Row> rows;
+    private List<TileRow> rows;
 
-    public Board() {
+    public Tiles() {
         this.rows = new ArrayList<>();
     }
 
     @XmlElement(name = "Row", required = true)
-    public List<Row> getRows(){
+    public List<TileRow> getRows(){
         return this.rows;
     }
 
-    public void setRows(List<Row> rows){
+    public void setRows(List<TileRow> rows){
         this.rows = rows;
     }
 

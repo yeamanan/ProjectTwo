@@ -1,7 +1,7 @@
 <Mission>
     <Id>04</Id>
     <Name>Drive-By Shooting</Name>
-    <Board>
+    <Tiles>
         <Row>
             <Tile name="2C" direction="EAST"/>
             <Tile name="4D" direction="EAST"/>
@@ -14,5 +14,5 @@
             <Tile name="2B" direction="WEST"/>
             <Tile name="5C" direction="SOUTH"/>
         </Row>
-    </Board>
+    </Tiles>
 </Mission>

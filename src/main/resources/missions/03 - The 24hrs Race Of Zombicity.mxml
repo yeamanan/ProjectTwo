@@ -1,7 +1,7 @@
 <Mission>
     <Id>03</Id>
     <Name>The 24hrs Race Of Zombicity</Name>
-    <Board>
+    <Tiles>
         <Row>
             <Tile name="2C" direction="NORTH"/>
             <Tile name="4D" direction="EAST"/>
@@ -17,5 +17,5 @@
             <Tile name="3C" direction="WEST"/>
             <Tile name="4E" direction="WEST"/>
         </Row>
-    </Board>
+    </Tiles>
 </Mission>

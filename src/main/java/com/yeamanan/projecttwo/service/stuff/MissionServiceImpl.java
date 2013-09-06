@@ -3,9 +3,6 @@ package com.yeamanan.projecttwo.service.stuff;
 import com.yeamanan.projecttwo.model.stuff.Mission;
 import com.yeamanan.projecttwo.service.GenericService;
 import com.yeamanan.projecttwo.service.GenericServiceImpl;
-//import com.yeamanan.projecttwo.model.Tile;
-//import com.yeamanan.projecttwo.util.AxeUtil;
-//import java.util.ArrayList;
 import java.util.List;
 import org.apache.log4j.Logger;
 

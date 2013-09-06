@@ -6,16 +6,16 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * BoardRow class.
+ * TileRow class.
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
 @XmlType(name="")
-public class Row {
+public class TileRow {
 
     private List<Tile> tiles;
 
-    public Row() {
+    public TileRow() {
         this.tiles = new ArrayList<>();
     }
 

@@ -1,7 +1,7 @@
 <Mission>
     <Id>09</Id>
     <Name>Might Makes Right</Name>
-    <Board>
+    <Tiles>
         <Row>
             <Tile name="1B" direction="EAST"/>
             <Tile name="2B" direction="EAST"/>
@@ -10,5 +10,5 @@
             <Tile name="2C" direction="NORTH"/>
             <Tile name="7B" direction="NORTH"/>
         </Row>
-    </Board>
+    </Tiles>
 </Mission>

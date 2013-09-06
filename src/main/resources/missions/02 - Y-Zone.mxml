@@ -1,7 +1,7 @@
 <Mission>
     <Id>02</Id>
     <Name>Y-Zone</Name>
-    <Board>
+    <Tiles>
         <Row>
             <Tile name="4B" direction="EAST"/>
             <Tile name="4E" direction="EAST"/>
@@ -17,5 +17,5 @@
             <Tile name="4C" direction="EAST"/>
             <Tile name="2C" direction="NORTH"/>
         </Row>
-    </Board>
+    </Tiles>
 </Mission>

@@ -1,7 +1,7 @@
 <Mission>
     <Id>06</Id>
     <Name>The Escape</Name>
-    <Board>
+    <Tiles>
         <Row>
             <Tile name="4C" direction="EAST"/>
             <Tile name="2C" direction="NORTH"/>
@@ -12,5 +12,5 @@
             <Tile name="1B" direction="EAST"/>
             <Tile name="5D" direction="SOUTH"/>
         </Row>
-    </Board>
+    </Tiles>
 </Mission>

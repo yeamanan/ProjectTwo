@@ -1,7 +1,7 @@
 <Mission>
     <Id>08</Id>
     <Name>Zombie Police</Name>
-    <Board>
+    <Tiles>
         <Row>
             <Tile name="2C" direction="EAST"/>
             <Tile name="7B" direction="NORTH"/>
@@ -12,5 +12,5 @@
             <Tile name="5C" direction="SOUTH"/>
             <Tile name="3C" direction="SOUTH"/>
         </Row>
-    </Board>
+    </Tiles>
 </Mission>

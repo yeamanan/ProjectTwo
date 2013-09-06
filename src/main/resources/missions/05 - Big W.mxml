@@ -1,7 +1,7 @@
 <Mission>
     <Id>05</Id>
     <Name>Big W</Name>
-    <Board>
+    <Tiles>
         <Row>
             <Tile name="5D" direction="NORTH"/>
             <Tile name="2C" direction="SOUTH"/>
@@ -17,5 +17,5 @@
             <Tile name="1B" direction="WEST"/>
             <Tile name="4B" direction="WEST"/>
         </Row>
-    </Board>
+    </Tiles>
 </Mission>

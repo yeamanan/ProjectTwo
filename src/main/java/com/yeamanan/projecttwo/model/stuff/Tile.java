@@ -1,13 +1,11 @@
 package com.yeamanan.projecttwo.model.stuff;
 
 import com.yeamanan.projecttwo.model.Axe;
-import java.util.ArrayList;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.XmlType;
 
 /**
@@ -35,8 +33,8 @@ public class Tile {
     /**
      * Zones of the tile.
      */
-    @XmlTransient
-    private List<Zone> zones;
+    @XmlElement(name = "Zones", required = false)
+    private Zones zones;
 
     /**
      * Constructor.
@@ -44,7 +42,7 @@ public class Tile {
     public Tile() {
         this.name = "";
         this.axe = Axe.NORTH;
-        this.zones = new ArrayList<>();
+        this.zones = new Zones();
     }
 
     /**
@@ -56,7 +54,7 @@ public class Tile {
     public Tile(final String argName, final Axe argAxe) {
         this.name = argName;
         this.axe = argAxe;
-        this.zones = new ArrayList<>();
+        this.zones = new Zones();
     }
 
     /**
@@ -98,7 +96,7 @@ public class Tile {
      *
      * @return the zones of the tile
      */
-    public final List<Zone> getZones() {
+    public final Zones getZones() {
         return this.zones;
     }
 
@@ -107,7 +105,7 @@ public class Tile {
      *
      * @param argZones the new zones of the tiles
      */
-    public final void setZones(final List<Zone> argZones) {
+    public final void setZones(final Zones argZones) {
         this.zones = argZones;
     }
 

@@ -1,7 +1,7 @@
 <Mission>
     <Id>10</Id>
     <Name>Small Town</Name>
-    <Board>
+    <Tiles>
         <Row>
             <Tile name="7B" direction="WEST"/>
             <Tile name="2B" direction="EAST"/>
@@ -10,5 +10,5 @@
             <Tile name="5B" direction="NORTH"/>
             <Tile name="5C" direction="EAST"/>
         </Row>
-    </Board>
+    </Tiles>
 </Mission>

@@ -1,7 +1,7 @@
 <Mission>
     <Id>01</Id>
     <Name>City Blocks</Name>
-    <Board>
+    <Tiles>
         <Row>
             <Tile name="2C" direction="EAST"/>
             <Tile name="1C" direction="SOUTH"/>
@@ -17,5 +17,5 @@
             <Tile name="5E" direction="NORTH"/>
             <Tile name="1B" direction="WEST"/>
         </Row>
-    </Board>
+    </Tiles>
 </Mission>

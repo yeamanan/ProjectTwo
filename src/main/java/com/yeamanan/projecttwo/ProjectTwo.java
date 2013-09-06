@@ -1,13 +1,10 @@
 package com.yeamanan.projecttwo;
 
-import com.yeamanan.projecttwo.model.Axe;
 import com.yeamanan.projecttwo.model.people.Survivor;
 import com.yeamanan.projecttwo.model.card.Equipment;
 import com.yeamanan.projecttwo.model.card.Invasion;
 import com.yeamanan.projecttwo.model.card.Weapon;
-import com.yeamanan.projecttwo.model.stuff.Board;
 import com.yeamanan.projecttwo.model.stuff.Mission;
-import com.yeamanan.projecttwo.model.stuff.Row;
 import com.yeamanan.projecttwo.model.stuff.Tile;
 import com.yeamanan.projecttwo.service.card.EquipmentService;
 import com.yeamanan.projecttwo.service.card.EquipmentServiceImpl;
@@ -17,7 +14,10 @@ import com.yeamanan.projecttwo.service.card.InvasionService;
 import com.yeamanan.projecttwo.service.card.InvasionServiceImpl;
 import com.yeamanan.projecttwo.service.card.WeaponService;
 import com.yeamanan.projecttwo.service.card.WeaponServiceImpl;
+import com.yeamanan.projecttwo.service.stuff.MissionService;
 import com.yeamanan.projecttwo.service.stuff.MissionServiceImpl;
+import com.yeamanan.projecttwo.service.stuff.TileService;
+import com.yeamanan.projecttwo.service.stuff.TileServiceImpl;
 import com.yeamanan.projecttwo.util.PropertiesUtil;
 import com.yeamanan.projecttwo.view.ViewFactory;
 import java.util.List;
@@ -143,51 +143,42 @@ public class ProjectTwo extends Application {
      * Test.
      */
     public static void test() {
-//        final SurvivorService sService = new SurvivorServiceImpl();
-//        final List<Survivor> survivors = sService.loadAll();
-//        LOGGER.info(survivors.size() + " survivors loaded :");
-//        for (Survivor survivor : survivors) {
-//            LOGGER.info("\t" + survivor);
-//        }
-//        final InvasionService iService = new InvasionServiceImpl();
-//        final List<Invasion> iCards = iService.loadAll();
-//        LOGGER.info(iCards.size() + " zombie cards loaded :");
-//        for (Invasion iCard : iCards) {
-//            LOGGER.info("\t" + iCard.getName());
-//        }
-//        final EquipmentService eService = new EquipmentServiceImpl();
-//        final List<Equipment> eCards = eService.loadAll();
-//        LOGGER.info(eCards.size() + " equipment cards loaded :");
-//        for (Equipment eCard : eCards) {
-//            LOGGER.info("\t" + eCard.getName());
-//        }
-//        final WeaponService wService = new WeaponServiceImpl();
-//        final List<Weapon> wCards = wService.loadAll();
-//        LOGGER.info(wCards.size() + " weapon cards loaded :");
-//        for (Weapon wCard : wCards) {
-//            LOGGER.info("\t" + wCard.getName());
-//        }
-        final Mission mission = new Mission();
-        mission.setId("00");
-        mission.setName("Tutoriel");
-        final Board board = new Board();
-        board.getRows();
-        final Row row1 = new Row();
-        row1.getTiles().add(new Tile("T1", Axe.EAST));
-        row1.getTiles().add(new Tile("T2", Axe.EAST));
-        final Row row2 = new Row();
-        row2.getTiles().add(new Tile("T3", Axe.EAST));
-        row2.getTiles().add(new Tile("T4", Axe.EAST));
-        row2.getTiles().add(new Tile("T5", Axe.EAST));
-        final Row row3 = new Row();
-        row3.getTiles().add(new Tile("T6", Axe.EAST));
-        row3.getTiles().add(new Tile("T7", Axe.EAST));
-        row3.getTiles().add(new Tile("T8", Axe.EAST));
-        board.getRows().add(row1);
-        board.getRows().add(row2);
-        board.getRows().add(row3);
-        mission.setBoard(board);
-        new MissionServiceImpl().save(mission);
+        final SurvivorService sService = new SurvivorServiceImpl();
+        final List<Survivor> survivors = sService.loadAll();
+        LOGGER.info(survivors.size() + " survivors loaded :");
+        for (Survivor survivor : survivors) {
+            LOGGER.info("\t" + survivor);
+        }
+        final InvasionService iService = new InvasionServiceImpl();
+        final List<Invasion> iCards = iService.loadAll();
+        LOGGER.info(iCards.size() + " zombie cards loaded :");
+        for (Invasion iCard : iCards) {
+            LOGGER.info("\t" + iCard.getName());
+        }
+        final EquipmentService eService = new EquipmentServiceImpl();
+        final List<Equipment> eCards = eService.loadAll();
+        LOGGER.info(eCards.size() + " equipment cards loaded :");
+        for (Equipment eCard : eCards) {
+            LOGGER.info("\t" + eCard.getName());
+        }
+        final WeaponService wService = new WeaponServiceImpl();
+        final List<Weapon> wCards = wService.loadAll();
+        LOGGER.info(wCards.size() + " weapon cards loaded :");
+        for (Weapon wCard : wCards) {
+            LOGGER.info("\t" + wCard.getName());
+        }
+        final MissionService mService = new MissionServiceImpl();
+        final List<Mission> missions = mService.loadAll();
+        LOGGER.info(missions.size() + " missions loaded :");
+        for (Mission mission : missions) {
+            LOGGER.info("\t" + mission.getName());
+        }
+        final TileService tService = new TileServiceImpl();
+        final List<Tile> tiles = tService.loadAll();
+        LOGGER.info(tiles.size() + " tiles loaded :");
+        for (Tile tile : tiles) {
+            LOGGER.info("\t" + tile.getName());
+        }
     }
 
 }

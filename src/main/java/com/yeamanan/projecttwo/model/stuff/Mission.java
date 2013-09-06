@@ -29,8 +29,8 @@ public class Mission {
     /**
      * Board of the mission.
      */
-    @XmlElement(name = "Board", required = true)
-    private Board board;
+    @XmlElement(name = "Tiles", required = true)
+    private Tiles board;
 
     /**
      * Constructor.
@@ -38,7 +38,7 @@ public class Mission {
     public Mission() {
         this.id = "";
         this.name = "";
-        this.board = new Board();
+        this.board = new Tiles();
     }
 
     /**
@@ -82,7 +82,7 @@ public class Mission {
      *
      * @return the board of the mission
      */
-    public final Board getBoard() {
+    public final Tiles getBoard() {
         return this.board;
     }
 
@@ -91,7 +91,7 @@ public class Mission {
      *
      * @param argBoard the new board of the mission
      */
-    public final void setBoard(final Board argBoard) {
+    public final void setBoard(final Tiles argBoard) {
         this.board = argBoard;
     }
 
@@ -104,7 +104,7 @@ public class Mission {
     public final String toString() {
         String str = "Mission{" + "id=" + this.id + ", name=" + this.name;
         str += ", board=[";
-        for(Row row : board.getRows()) {
+        for(TileRow row : board.getRows()) {
             str += "[";
             for(Tile tile : row.getTiles()) {
                 str += tile.toString();
