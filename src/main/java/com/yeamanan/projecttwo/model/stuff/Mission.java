@@ -30,7 +30,7 @@ public class Mission {
      * Board of the mission.
      */
     @XmlElement(name = "Tiles", required = true)
-    private Tiles board;
+    private Tiles tiles;
 
     /**
      * Constructor.
@@ -38,7 +38,7 @@ public class Mission {
     public Mission() {
         this.id = "";
         this.name = "";
-        this.board = new Tiles();
+        this.tiles = new Tiles();
     }
 
     /**
@@ -78,21 +78,21 @@ public class Mission {
     }
 
     /**
-     * getBoard() method.
+     * getTiles() method.
      *
-     * @return the board of the mission
+     * @return the tiles of the mission
      */
-    public final Tiles getBoard() {
-        return this.board;
+    public final Tiles getTiles() {
+        return this.tiles;
     }
 
     /**
-     * setBoard() method.
+     * setTiles() method.
      *
-     * @param argBoard the new board of the mission
+     * @param argTiles the new tiles of the mission
      */
-    public final void setBoard(final Tiles argBoard) {
-        this.board = argBoard;
+    public final void setTiles(final Tiles argTiles) {
+        this.tiles = argTiles;
     }
 
     /**
@@ -104,7 +104,7 @@ public class Mission {
     public final String toString() {
         String str = "Mission{" + "id=" + this.id + ", name=" + this.name;
         str += ", board=[";
-        for(TileRow row : board.getRows()) {
+        for(TileRow row : tiles.getRows()) {
             str += "[";
             for(Tile tile : row.getTiles()) {
                 str += tile.toString();
