@@ -32,7 +32,7 @@ public class Zombie extends Character {
      */
     @Override
     public String toString() {
-        return "Zombie{" + "nbAction=" + this.nbAction + '}';
+        return "Zombie{" + "nbAction=" + this.getNbAction() + '}';
     }
 
 }

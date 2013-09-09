@@ -18,7 +18,7 @@ public class Character extends Element {
      * Number of action of the character.
      */
     @XmlTransient
-    protected int nbAction;
+    private int nbAction;
 
     /**
      * Constructor.

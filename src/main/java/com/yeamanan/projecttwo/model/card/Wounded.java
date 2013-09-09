@@ -7,8 +7,11 @@ package com.yeamanan.projecttwo.model.card;
  */
 public class Wounded extends Card {
 
-    private static String NAME = "Wounded";
-    
+    /**
+     * Name of a wounded card.
+     */
+    private static final String NAME = "Wounded";
+
     /**
      * Constructor.
      */

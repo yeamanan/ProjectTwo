@@ -1,6 +1,6 @@
 package com.yeamanan.projecttwo.view;
 
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 
 /**
  * MissionViewFactory class.
@@ -12,7 +12,7 @@ public class MissionSelectionViewFactory extends ViewFactoryImpl {
     /**
      * Logger.
      */
-    private static final Logger LOGGER =
-            Logger.getLogger(MissionSelectionViewFactory.class);
+//    private static final Logger LOG =
+//            Logger.getLogger(MissionSelectionViewFactory.class);
 
 }

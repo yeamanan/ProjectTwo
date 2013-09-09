@@ -11,7 +11,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.TilePane;
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 
 /**
  * GameViewController class.
@@ -23,8 +23,8 @@ public class GameViewController  implements Initializable {
     /**
      * Logger.
      */
-    private static final Logger LOG =
-            Logger.getLogger(GameViewController.class);
+//    private static final Logger LOG =
+//            Logger.getLogger(GameViewController.class);
 
     /**
      * Board Tile Pane.
@@ -53,14 +53,16 @@ public class GameViewController  implements Initializable {
                 pane.setStyle("-fx-background-image: url(\"" + tPath + "\")");
                 pane.setId(tile.getName());
                 switch (tile.getAxe()) {
-                    case EAST :
+                    case EAST:
                         pane.setRotate(90.0);
                         break;
-                    case SOUTH :
+                    case SOUTH:
                         pane.setRotate(180.0);
                         break;
-                    case WEST :
+                    case WEST:
                         pane.setRotate(270.0);
+                        break;
+                    default:
                         break;
                 }
                 board.getChildren().add(pane);

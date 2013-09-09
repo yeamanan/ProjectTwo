@@ -8,7 +8,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Window;
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 
 /**
  * MainViewController class.
@@ -20,8 +20,8 @@ public class MainViewController {
     /**
      * Logger.
      */
-    private static final Logger LOGGER =
-            Logger.getLogger(MainViewController.class);
+//    private static final Logger LOG =
+//            Logger.getLogger(MainViewController.class);
 
     /**
      * handleStartAction() method.
@@ -50,7 +50,7 @@ public class MainViewController {
     /**
      * handleSurvivorEditorAction() method.
      *
-     * @param event the event handled
+     * @param argEvent the event handled
      */
     @FXML
     protected final void handleSurvivorEditorAction(final MouseEvent argEvent) {
@@ -60,6 +60,7 @@ public class MainViewController {
         final ResourceBundle bundle = instance.getContext().getLanguage();
         final SurvivorEditorStage stage =
                 new SurvivorEditorStage(window, bundle);
+        stage.show();
     }
 
 }

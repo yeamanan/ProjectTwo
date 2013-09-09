@@ -2,7 +2,7 @@ package com.yeamanan.projecttwo.view.stage;
 
 import java.util.ResourceBundle;
 import javafx.stage.Window;
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 
 /**
  * ModalStage class.
@@ -14,8 +14,8 @@ public class SurvivorEditorStage extends ModalStage {
     /**
      * Log.
      */
-    private static final Logger LOG =
-            Logger.getLogger(SurvivorEditorStage.class);
+//    private static final Logger LOG =
+//            Logger.getLogger(SurvivorEditorStage.class);
 
     /**
      * Size of the box.

@@ -1,6 +1,6 @@
 package com.yeamanan.projecttwo.view;
 
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 
 /**
  * LanguageViewFactory class.
@@ -12,7 +12,7 @@ public class LanguageSelectionViewFactory extends ViewFactoryImpl {
     /**
      * Logger.
      */
-    private static final Logger LOGGER =
-            Logger.getLogger(LanguageSelectionViewFactory.class);
+//    private static final Logger LOG =
+//            Logger.getLogger(LanguageSelectionViewFactory.class);
 
 }

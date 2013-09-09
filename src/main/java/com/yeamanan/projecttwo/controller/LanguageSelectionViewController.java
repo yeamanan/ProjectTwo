@@ -7,7 +7,7 @@ import java.util.ResourceBundle;
 import javafx.scene.input.MouseEvent;
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 
 /**
  * LanguageSelectionViewController class.
@@ -19,8 +19,8 @@ public class LanguageSelectionViewController {
     /**
      * Logger.
      */
-    private static final Logger LOGGER =
-            Logger.getLogger(LanguageSelectionViewController.class);
+//    private static final Logger LOG =
+//            Logger.getLogger(LanguageSelectionViewController.class);
 
     /**
      * handleChoiceLanguageAction() method.

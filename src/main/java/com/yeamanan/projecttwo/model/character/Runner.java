@@ -1,7 +1,6 @@
 package com.yeamanan.projecttwo.model.character;
 
 import com.yeamanan.projecttwo.model.Constants;
-import com.yeamanan.projecttwo.model.character.Zombie;
 
 /**
  * Runner class.
@@ -24,7 +23,7 @@ public class Runner extends Zombie {
      */
     @Override
     public final String toString() {
-        return "Runner{" + "nbAction=" + this.nbAction + '}';
+        return "Runner{" + "nbAction=" + this.getNbAction() + '}';
     }
 
 }

@@ -14,7 +14,7 @@ public class Abomination extends Zombie {
      */
     @Override
     public final String toString() {
-        return "Abomination{" + "nbAction=" + this.nbAction + '}';
+        return "Abomination{" + "nbAction=" + this.getNbAction() + '}';
     }
 
 }

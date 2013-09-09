@@ -14,7 +14,7 @@ public class Walker extends Zombie {
      */
     @Override
     public final String toString() {
-        return "Walker{" + "nbAction=" + this.nbAction + '}';
+        return "Walker{" + "nbAction=" + this.getNbAction() + '}';
     }
 
 }

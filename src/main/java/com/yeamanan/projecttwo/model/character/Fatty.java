@@ -14,7 +14,7 @@ public class Fatty extends Zombie {
      */
     @Override
     public final String toString() {
-        return "Fatty{" + "nbAction=" + this.nbAction + '}';
+        return "Fatty{" + "nbAction=" + this.getNbAction() + '}';
     }
 
 }

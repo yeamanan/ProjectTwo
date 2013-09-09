@@ -8,16 +8,16 @@ import com.yeamanan.projecttwo.model.mission.Mission;
 import com.yeamanan.projecttwo.model.mission.Tile;
 import com.yeamanan.projecttwo.service.card.EquipmentService;
 import com.yeamanan.projecttwo.service.card.EquipmentServiceImpl;
-import com.yeamanan.projecttwo.service.people.SurvivorService;
-import com.yeamanan.projecttwo.service.people.SurvivorServiceImpl;
+import com.yeamanan.projecttwo.service.character.SurvivorService;
+import com.yeamanan.projecttwo.service.character.SurvivorServiceImpl;
 import com.yeamanan.projecttwo.service.card.InvasionService;
 import com.yeamanan.projecttwo.service.card.InvasionServiceImpl;
 import com.yeamanan.projecttwo.service.card.WeaponService;
 import com.yeamanan.projecttwo.service.card.WeaponServiceImpl;
-import com.yeamanan.projecttwo.service.stuff.MissionService;
-import com.yeamanan.projecttwo.service.stuff.MissionServiceImpl;
-import com.yeamanan.projecttwo.service.stuff.TileService;
-import com.yeamanan.projecttwo.service.stuff.TileServiceImpl;
+import com.yeamanan.projecttwo.service.mission.MissionService;
+import com.yeamanan.projecttwo.service.mission.MissionServiceImpl;
+import com.yeamanan.projecttwo.service.mission.TileService;
+import com.yeamanan.projecttwo.service.mission.TileServiceImpl;
 import com.yeamanan.projecttwo.util.PropertiesUtil;
 import com.yeamanan.projecttwo.view.ViewFactory;
 import java.util.List;
@@ -94,7 +94,8 @@ public class ProjectTwo extends Application {
         this.stage.setScene(new Scene(root, SCENE_WIDTH, SCENE_HEIGHT));
         this.stage.setResizable(false);
         final ClassLoader loader = this.getClass().getClassLoader();
-        final Image image = new Image(loader.getResourceAsStream("images/Dice.png"));
+        final Image image =
+                new Image(loader.getResourceAsStream("images/Dice.png"));
         this.stage.getIcons().add(image);
         this.stage.show();
     }
@@ -134,15 +135,14 @@ public class ProjectTwo extends Application {
      * @param args arguments
      */
     public static void main(final String[] args) {
-        test();
-        
+        check();
         launch(args);
     }
 
     /**
-     * Test.
+     * Check.
      */
-    public static void test() {
+    public static void check() {
         final SurvivorService sService = new SurvivorServiceImpl();
         final List<Survivor> survivors = sService.loadAll();
         LOGGER.info(survivors.size() + " survivors loaded :");

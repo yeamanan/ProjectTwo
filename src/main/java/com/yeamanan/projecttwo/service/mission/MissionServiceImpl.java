@@ -1,4 +1,4 @@
-package com.yeamanan.projecttwo.service.stuff;
+package com.yeamanan.projecttwo.service.mission;
 
 import com.yeamanan.projecttwo.model.mission.Mission;
 import com.yeamanan.projecttwo.service.GenericService;

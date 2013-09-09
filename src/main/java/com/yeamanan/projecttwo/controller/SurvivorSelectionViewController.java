@@ -2,10 +2,11 @@ package com.yeamanan.projecttwo.controller;
 
 import com.yeamanan.projecttwo.ProjectTwo;
 import com.yeamanan.projecttwo.model.Element;
+import com.yeamanan.projecttwo.model.character.Survivor;
 import com.yeamanan.projecttwo.model.mission.Zone;
 import com.yeamanan.projecttwo.model.token.Start;
-import com.yeamanan.projecttwo.service.people.SurvivorService;
-import com.yeamanan.projecttwo.service.people.SurvivorServiceImpl;
+import com.yeamanan.projecttwo.service.character.SurvivorService;
+import com.yeamanan.projecttwo.service.character.SurvivorServiceImpl;
 import com.yeamanan.projecttwo.view.ViewType;
 import java.net.URL;
 import java.util.List;
@@ -16,7 +17,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.TilePane;
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 
 /**
  * CharacterSelectionViewController class.
@@ -28,8 +29,8 @@ public class SurvivorSelectionViewController implements Initializable {
     /**
      * Logger.
      */
-    private static final Logger LOGGER =
-            Logger.getLogger(SurvivorSelectionViewController.class);
+//    private static final Logger LOG =
+//            Logger.getLogger(SurvivorSelectionViewController.class);
 
     /**
      * Survivors Tile Pane.
@@ -69,8 +70,10 @@ public class SurvivorSelectionViewController implements Initializable {
                         final SurvivorService service =
                                 new SurvivorServiceImpl();
                         pane.getStyleClass().add("selected");
+                        final Survivor survivor = service.load(pane.getId());
                         instance.getContext().getGame().getSurvivors()
-                                .add(service.load(pane.getId()));
+                                .add(survivor);
+                        startZone.getElements().add(survivor);
                     }
                 }
             }
@@ -79,30 +82,30 @@ public class SurvivorSelectionViewController implements Initializable {
     /**
      * Enter event handler of all character image.
      */
-    private final EventHandler<MouseEvent> enterHandler =
-        new EventHandler<MouseEvent>() {
-            @Override
-            public final void handle(final MouseEvent event) {
-                final Pane pane = (Pane) event.getSource();
-                final String sName = pane.getId();
-                final String sPath = "images/" + sName + "_pz.jpg";
-                pane.setStyle("-fx-background-image: url(\"" + sPath + "\")");
-            }
-        };
+//    private final EventHandler<MouseEvent> enterHandler =
+//        new EventHandler<MouseEvent>() {
+//            @Override
+//            public final void handle(final MouseEvent event) {
+//                final Pane pane = (Pane) event.getSource();
+//                final String sName = pane.getId();
+//                final String sPath = "images/" + sName + "_pz.jpg";
+//                pane.setStyle("-fx-background-image: url(\"" + sPath + "\")");
+//            }
+//        };
 
     /**
      * Exit event handler of all character image.
      */
-    private final EventHandler<MouseEvent> exitHandler =
-        new EventHandler<MouseEvent>() {
-            @Override
-            public final void handle(final MouseEvent event) {
-                final Pane pane = (Pane) event.getSource();
-                final String sName = pane.getId();
-                final String sPath = "images/" + sName + "_p.jpg";
-                pane.setStyle("-fx-background-image: url(\"" + sPath + "\")");
-            }
-        };
+//    private final EventHandler<MouseEvent> exitHandler =
+//        new EventHandler<MouseEvent>() {
+//            @Override
+//            public final void handle(final MouseEvent event) {
+//                final Pane pane = (Pane) event.getSource();
+//                final String sName = pane.getId();
+//                final String sPath = "images/" + sName + "_p.jpg";
+//                pane.setStyle("-fx-background-image: url(\"" + sPath + "\")");
+//            }
+//        };
 
     /**
      * initialize() method.
@@ -134,7 +137,7 @@ public class SurvivorSelectionViewController implements Initializable {
         final List<Zone> board =
                 instance.getContext().getGame().getMission().getBoard();
         for (Zone zone : board) {
-            for(Element element : zone.getElements()) {
+            for (Element element : zone.getElements()) {
                 if (element.getClass().equals(Start.class)) {
                     this.startZone = zone;
                 }

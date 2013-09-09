@@ -8,6 +8,7 @@ import java.util.Enumeration;
 import java.util.List;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
+import org.apache.log4j.Logger;
 
 /**
  * JarUtil class.
@@ -15,6 +16,12 @@ import java.util.jar.JarFile;
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
 public final class JarUtil {
+
+    /**
+     * Logger.
+     */
+    private static final Logger LOG =
+            Logger.getLogger(JarUtil.class);
 
     /**
      * Constructor.
@@ -45,7 +52,7 @@ public final class JarUtil {
                 }
             }
         } catch (IOException e) {
-            System.out.printf("Error reading mission file" + e);
+            LOG.error("Error reading file names in jar", e);
         }
         return filePaths;
     }

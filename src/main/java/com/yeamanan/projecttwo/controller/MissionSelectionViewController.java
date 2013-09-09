@@ -2,8 +2,8 @@ package com.yeamanan.projecttwo.controller;
 
 import com.yeamanan.projecttwo.ProjectTwo;
 import com.yeamanan.projecttwo.model.mission.Mission;
-import com.yeamanan.projecttwo.service.stuff.MissionService;
-import com.yeamanan.projecttwo.service.stuff.MissionServiceImpl;
+import com.yeamanan.projecttwo.service.mission.MissionService;
+import com.yeamanan.projecttwo.service.mission.MissionServiceImpl;
 import com.yeamanan.projecttwo.view.ViewType;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -13,7 +13,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 
 /**
  * MissionSelectionViewController class.
@@ -25,8 +25,8 @@ public class MissionSelectionViewController implements Initializable {
     /**
      * Logger.
      */
-    private static final Logger LOGGER =
-            Logger.getLogger(MissionSelectionViewController.class);
+//    private static final Logger LOG =
+//            Logger.getLogger(MissionSelectionViewController.class);
 
     /**
      * Graphic constants.

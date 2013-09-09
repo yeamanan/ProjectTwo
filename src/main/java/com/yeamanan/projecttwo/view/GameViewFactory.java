@@ -1,6 +1,6 @@
 package com.yeamanan.projecttwo.view;
 
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 
 /**
  * GameViewFactory class.
@@ -12,7 +12,7 @@ public class GameViewFactory extends ViewFactoryImpl {
     /**
      * Logger.
      */
-    private static final Logger LOGGER =
-            Logger.getLogger(GameViewFactory.class);
+//    private static final Logger LOG =
+//            Logger.getLogger(GameViewFactory.class);
 
 }

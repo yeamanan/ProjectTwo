@@ -50,7 +50,6 @@ public class ModalStage extends Stage {
            LOG.error("Can't load fxml file", ex);
         }
         this.setScene(new Scene(root, argWidth, argHeight));
-        this.show();
     }
 
     /**

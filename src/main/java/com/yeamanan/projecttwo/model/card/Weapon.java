@@ -184,11 +184,11 @@ public class Weapon extends InventoryElement {
     }
 
     /**
-     * isNoisyAttacker() method.
+     * setNoisyAttacker() method.
      *
      * @param argNoisyAttacker the new noisy attacker value
      */
-    public final void isNoisyAttacker(final boolean argNoisyAttacker) {
+    public final void setNoisyAttacker(final boolean argNoisyAttacker) {
         this.noisyAttacker = argNoisyAttacker;
     }
 

@@ -1,4 +1,4 @@
-package com.yeamanan.projecttwo.service.people;
+package com.yeamanan.projecttwo.service.character;
 
 import com.yeamanan.projecttwo.model.character.Survivor;
 import com.yeamanan.projecttwo.service.GenericService;
@@ -34,6 +34,9 @@ public class SurvivorServiceImpl implements SurvivorService {
      */
     private GenericService<Survivor> service;
 
+    /**
+     * Constructor.
+     */
     public SurvivorServiceImpl() {
         this.service = new GenericServiceImpl<>(FOLDER, EXTENSION, Survivor.class);
     }

@@ -2,8 +2,8 @@ package com.yeamanan.projecttwo.controller.stage;
 
 import com.yeamanan.projecttwo.model.Skill;
 import com.yeamanan.projecttwo.model.character.Survivor;
-import com.yeamanan.projecttwo.service.people.SurvivorService;
-import com.yeamanan.projecttwo.service.people.SurvivorServiceImpl;
+import com.yeamanan.projecttwo.service.character.SurvivorService;
+import com.yeamanan.projecttwo.service.character.SurvivorServiceImpl;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -69,7 +69,7 @@ public class SurvivorEditorController implements Initializable {
      */
     @FXML
     protected TreeView tvSelectedSkills;
-    
+
     /**
      * Tree items of selected skills.
      */

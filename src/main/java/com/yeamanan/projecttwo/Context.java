@@ -6,7 +6,7 @@ import com.yeamanan.projecttwo.util.PropertiesUtil;
 import com.yeamanan.projecttwo.view.ViewType;
 import java.util.Properties;
 import java.util.ResourceBundle;
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 
 /**
  * Context class.
@@ -18,7 +18,7 @@ public class Context {
     /**
      * Logger.
      */
-    private static final Logger LOGGER = Logger.getLogger(Context.class);
+//    private static final Logger LOG = Logger.getLogger(Context.class);
 
     /**
      * Properties.

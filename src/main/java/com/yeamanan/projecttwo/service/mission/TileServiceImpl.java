@@ -1,4 +1,4 @@
-package com.yeamanan.projecttwo.service.stuff;
+package com.yeamanan.projecttwo.service.mission;
 
 import com.yeamanan.projecttwo.model.mission.Tile;
 import com.yeamanan.projecttwo.service.GenericService;
@@ -31,7 +31,7 @@ public class TileServiceImpl implements TileService {
     /**
      * Generic service.
      */
-    private GenericService<Tile> service;
+    private final transient GenericService<Tile> service;
 
     /**
      * Constructor.

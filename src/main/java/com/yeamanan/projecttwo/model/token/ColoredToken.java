@@ -15,7 +15,7 @@ import javax.xml.bind.annotation.XmlTransient;
 public class ColoredToken extends Token {
 
     /**
-     * Color Objective
+     * Color of token.
      */
     @XmlAttribute(name = "color", required = false)
     private Color color;
@@ -49,7 +49,7 @@ public class ColoredToken extends Token {
     /**
      * setColor() method.
      *
-     * @param argColor the new color of the token 
+     * @param argColor the new color of the token
      */
     public final void setColor(final Color argColor) {
         this.color = argColor;
