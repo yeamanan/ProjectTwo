@@ -16,29 +16,30 @@ import org.apache.log4j.Logger;
  * GenericServiceImpl class.
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
+ * @param <T> a type of object for the service
  */
 public class GenericServiceImpl<T> implements GenericService<T> {
 
     /**
      * Logger.
      */
-    private static final Logger LOGGER =
+    private static final Logger LOG =
             Logger.getLogger(GenericServiceImpl.class);
 
     /**
      * Object folder in jar.
      */
-    private final String folder;
+    private final transient String folder;
 
     /**
      * XML file's extension.
      */
-    private final String extension;
+    private final transient String extension;
 
     /**
      * Type of generic.
      */
-    private Class gClass;
+    private final transient Class gClass;
 
     /**
      * Constructor.
@@ -60,7 +61,7 @@ public class GenericServiceImpl<T> implements GenericService<T> {
      */
     @Override
     public final List<String> getFileNames() {
-        final List<String> sFileNames = new ArrayList<>();
+        final List<String> sFileNames = new ArrayList();
         final Class aClass = this.getClass();
         final List<String> sPaths =
                 JarUtil.getJarFolderFileList(aClass, this.folder);
@@ -90,7 +91,7 @@ public class GenericServiceImpl<T> implements GenericService<T> {
             final Unmarshaller unmarshaller = context.createUnmarshaller();
             object = (T) unmarshaller.unmarshal(stream);
         } catch (JAXBException ex) {
-            LOGGER.error("Error loading " + this.gClass + " file", ex);
+            LOG.error("Error loading " + this.gClass + " file", ex);
         }
         return object;
     }
@@ -102,7 +103,7 @@ public class GenericServiceImpl<T> implements GenericService<T> {
      */
     @Override
     public final List<T> loadAll() {
-        final List<T> objects = new ArrayList<>();
+        final List<T> objects = new ArrayList();
         for (String sName : getFileNames()) {
             objects.add(load(sName));
         }
@@ -113,6 +114,7 @@ public class GenericServiceImpl<T> implements GenericService<T> {
      * save() method.
      *
      * @param argObject an object to save
+     * @param argFileName the file name of the object
      */
     @Override
     public final void save(final T argObject, final String argFileName) {
@@ -123,7 +125,7 @@ public class GenericServiceImpl<T> implements GenericService<T> {
             try {
                 file.createNewFile();
             } catch (IOException ex) {
-                LOGGER.error("Error saving " + this.gClass + " file", ex);
+                LOG.error("Error saving " + this.gClass + " file", ex);
             }
         }
         try {
@@ -132,7 +134,7 @@ public class GenericServiceImpl<T> implements GenericService<T> {
             marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
             marshaller.marshal(argObject, new File(sPath));
         } catch (JAXBException ex) {
-            LOGGER.error("Error saving " + this.gClass + " file", ex);
+            LOG.error("Error saving " + this.gClass + " file", ex);
         }
     }
 

@@ -38,7 +38,7 @@ public class ProjectTwo extends Application {
     /**
      * Logger.
      */
-    private static final Logger LOGGER = Logger.getLogger(ProjectTwo.class);
+    private static final Logger LOG = Logger.getLogger(ProjectTwo.class);
 
     /**
      * Size of the box.
@@ -106,7 +106,7 @@ public class ProjectTwo extends Application {
     @Override
     public final void stop() {
         if (!PropertiesUtil.saveProperties(this.context.getProperties())) {
-            LOGGER.error("Error saving config file");
+            LOG.error("Error saving config file");
         }
     }
 
@@ -145,39 +145,39 @@ public class ProjectTwo extends Application {
     public static void check() {
         final SurvivorService sService = new SurvivorServiceImpl();
         final List<Survivor> survivors = sService.loadAll();
-        LOGGER.info(survivors.size() + " survivors loaded :");
+        LOG.info(survivors.size() + " survivors loaded :");
         for (Survivor survivor : survivors) {
-            LOGGER.info("\t" + survivor);
+            LOG.info("\t" + survivor);
         }
         final InvasionService iService = new InvasionServiceImpl();
         final List<Invasion> iCards = iService.loadAll();
-        LOGGER.info(iCards.size() + " zombie cards loaded :");
+        LOG.info(iCards.size() + " zombie cards loaded :");
         for (Invasion iCard : iCards) {
-            LOGGER.info("\t" + iCard.getName());
+            LOG.info("\t" + iCard.getName());
         }
         final EquipmentService eService = new EquipmentServiceImpl();
         final List<Equipment> eCards = eService.loadAll();
-        LOGGER.info(eCards.size() + " equipment cards loaded :");
+        LOG.info(eCards.size() + " equipment cards loaded :");
         for (Equipment eCard : eCards) {
-            LOGGER.info("\t" + eCard.getName());
+            LOG.info("\t" + eCard.getName());
         }
         final WeaponService wService = new WeaponServiceImpl();
         final List<Weapon> wCards = wService.loadAll();
-        LOGGER.info(wCards.size() + " weapon cards loaded :");
+        LOG.info(wCards.size() + " weapon cards loaded :");
         for (Weapon wCard : wCards) {
-            LOGGER.info("\t" + wCard.getName());
+            LOG.info("\t" + wCard.getName());
         }
         final MissionService mService = new MissionServiceImpl();
         final List<Mission> missions = mService.loadAll();
-        LOGGER.info(missions.size() + " missions loaded :");
+        LOG.info(missions.size() + " missions loaded :");
         for (Mission mission : missions) {
-            LOGGER.info("\t" + mission.getName());
+            LOG.info("\t" + mission.getName());
         }
         final TileService tService = new TileServiceImpl();
         final List<Tile> tiles = tService.loadAll();
-        LOGGER.info(tiles.size() + " tiles loaded :");
+        LOG.info(tiles.size() + " tiles loaded :");
         for (Tile tile : tiles) {
-            LOGGER.info("\t" + tile.getName());
+            LOG.info("\t" + tile.getName());
         }
     }
 

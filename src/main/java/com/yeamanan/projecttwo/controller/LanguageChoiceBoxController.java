@@ -12,7 +12,7 @@ import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 
 /**
  * LanguageChoiceBoxController class.
@@ -24,28 +24,28 @@ public class LanguageChoiceBoxController implements Initializable {
     /**
      * Logger.
      */
-    private static final Logger LOGGER =
-            Logger.getLogger(LanguageChoiceBoxController.class);
+//    private static final Logger LOG =
+//            Logger.getLogger(LanguageChoiceBoxController.class);
 
     /**
      * Map of language and locale translation.
      */
-    private Map<String, String> locales;
+    private transient Map<String, String> locales;
 
     /**
      * Language choice box.
      */
     @FXML
-    private ChoiceBox languageBox;
+    private transient ChoiceBox languageBox;
 
     /**
      * Change listener of the language box.
      */
-    private final ChangeListener<Number> listener =
+    private final transient ChangeListener<Number> listener =
         new ChangeListener<Number>() {
             @Override
-            public void changed(final ObservableValue val, final Number value,
-                                final Number newValue) {
+            public void changed(final ObservableValue observable,
+                    final Number value, final Number newValue) {
                 final int index = newValue.intValue();
                 final String sLanguage =
                         (String) languageBox.getItems().get(index);
@@ -61,13 +61,13 @@ public class LanguageChoiceBoxController implements Initializable {
     /**
      * initialize() method.
      *
-     * @param location the location which to init
-     * @param resources the resource bundle which to init
+     * @param argLocation the location which to init
+     * @param argBundle the resource bundle which to init
      */
     @Override
-    public final void initialize(final URL location,
-                                final ResourceBundle resources) {
-        locales = new HashMap<>();
+    public final void initialize(final URL argLocation,
+            final ResourceBundle argBundle) {
+        locales = new HashMap();
         final List<ResourceBundle> languages =
                 LanguagesUtil.loadLanguages(this.getClass());
         for (ResourceBundle language : languages) {

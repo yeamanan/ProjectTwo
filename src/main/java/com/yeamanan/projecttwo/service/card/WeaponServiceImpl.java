@@ -4,7 +4,7 @@ import com.yeamanan.projecttwo.model.card.Weapon;
 import com.yeamanan.projecttwo.service.GenericService;
 import com.yeamanan.projecttwo.service.GenericServiceImpl;
 import java.util.List;
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 
 /**
  * WeaponServiceImpl class.
@@ -16,8 +16,8 @@ public class WeaponServiceImpl implements WeaponService {
     /**
      * Logger.
      */
-    private static final Logger LOGGER =
-            Logger.getLogger(WeaponServiceImpl.class);
+//    private static final Logger LOG =
+//            Logger.getLogger(WeaponServiceImpl.class);
 
     /**
      * Equipment cards folder in jar.
@@ -32,10 +32,13 @@ public class WeaponServiceImpl implements WeaponService {
     /**
      * Generic service.
      */
-    private GenericService<Weapon> service;
+    private final transient GenericService<Weapon> service;
 
+    /**
+     * Constructor.
+     */
     public WeaponServiceImpl() {
-        this.service = new GenericServiceImpl<>(FOLDER, EXTENSION, Weapon.class);
+        this.service = new GenericServiceImpl(FOLDER, EXTENSION, Weapon.class);
     }
 
     /**

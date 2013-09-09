@@ -10,22 +10,38 @@ import javax.xml.bind.annotation.XmlType;
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
-@XmlType(name="")
+@XmlType(name = "")
 public class Tiles {
 
+    /**
+     * Rows.
+     */
     private List<TileRow> rows;
 
+    /**
+     * Constructor.
+     */
     public Tiles() {
-        this.rows = new ArrayList<>();
+        this.rows = new ArrayList();
     }
 
+    /**
+     * getRows() method.
+     *
+     * @return a list of tile rows
+     */
     @XmlElement(name = "Row", required = true)
-    public List<TileRow> getRows(){
+    public final List<TileRow> getRows() {
         return this.rows;
     }
 
-    public void setRows(List<TileRow> rows){
-        this.rows = rows;
+    /**
+     * setRows() method.
+     *
+     * @param argRows the new list of tile rows
+     */
+    public final void setRows(final List<TileRow> argRows) {
+        this.rows = argRows;
     }
 
 }

@@ -1,6 +1,6 @@
 package com.yeamanan.projecttwo;
 
-import com.yeamanan.projecttwo.model.Game;
+import com.yeamanan.projecttwo.model.mission.Mission;
 import com.yeamanan.projecttwo.util.LanguagesUtil;
 import com.yeamanan.projecttwo.util.PropertiesUtil;
 import com.yeamanan.projecttwo.view.ViewType;
@@ -36,9 +36,9 @@ public class Context {
     private ViewType currentView;
 
     /**
-     * Game of the application.
+     * Mission played.
      */
-    private final transient Game game;
+    private Mission mission;
 
     /**
      * Constructor.
@@ -53,7 +53,7 @@ public class Context {
             this.language = LanguagesUtil.loadLanguage(sLanguage);
             this.currentView = ViewType.MainView;
         }
-        this.game = new Game();
+        this.mission = new Mission();
     }
 
     /**
@@ -104,21 +104,21 @@ public class Context {
     }
 
     /**
-     * getGame() method.
+     * getMission() method.
      *
-     * @return the game of the application
+     * @return the mission played
      */
-    public final Game getGame() {
-        return this.game;
+    public final Mission getMission() {
+        return this.mission;
     }
 
     /**
-     * setGame() method.
+     * setMission() method.
      *
-     * @param argGame the new game of the application
+     * @param argMission the new mission played
      */
-//    public final void setGame(final Game argGame) {
-//        this.game = argGame;
-//    }
+    public final void setMission(final Mission argMission) {
+        this.mission = argMission;
+    }
 
 }

@@ -35,15 +35,15 @@ public class GameViewController  implements Initializable {
     /**
      * initialize() method.
      *
-     * @param location the location which to init
-     * @param resources the resource bundle which to init
+     * @param argLocation the location which to init
+     * @param argBundle the resource bundle which to init
      */
     @Override
-    public final void initialize(final URL location,
-                                final ResourceBundle resources) {
+    public final void initialize(final URL argLocation,
+                                final ResourceBundle argBundle) {
         final ProjectTwo instance = ProjectTwo.getInstance();
         final Context context = instance.getContext();
-        final Mission mission = context.getGame().getMission();
+        final Mission mission = context.getMission();
         int maxRowSize = 0;
         for (TileRow row : mission.getTiles().getRows()) {
             for (Tile tile : row.getTiles()) {

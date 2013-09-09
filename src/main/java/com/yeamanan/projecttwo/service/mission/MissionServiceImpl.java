@@ -4,7 +4,7 @@ import com.yeamanan.projecttwo.model.mission.Mission;
 import com.yeamanan.projecttwo.service.GenericService;
 import com.yeamanan.projecttwo.service.GenericServiceImpl;
 import java.util.List;
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 
 /**
  * MissionServiceImpl class.
@@ -16,8 +16,8 @@ public class MissionServiceImpl implements MissionService {
     /**
      * Logger.
      */
-    private static final Logger LOG =
-            Logger.getLogger(MissionServiceImpl.class);
+//    private static final Logger LOG =
+//            Logger.getLogger(MissionServiceImpl.class);
 
     /**
      * Missions folder in jar.
@@ -32,14 +32,14 @@ public class MissionServiceImpl implements MissionService {
     /**
      * Generic service.
      */
-    private GenericService<Mission> service;
+    private final transient GenericService<Mission> service;
 
     /**
      * Constructor.
      */
     public MissionServiceImpl() {
         this.service =
-                new GenericServiceImpl<>(FOLDER, EXTENSION, Mission.class);
+                new GenericServiceImpl(FOLDER, EXTENSION, Mission.class);
     }
 
     /**

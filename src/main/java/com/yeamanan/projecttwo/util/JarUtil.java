@@ -37,17 +37,19 @@ public final class JarUtil {
      */
     public static List<String> getJarFolderFileList(final Class aClass,
             final String pathFolder) {
-        final List<String> filePaths = new ArrayList<>();
+        final List<String> filePaths = new ArrayList();
         final URL url = aClass.getClassLoader().getResource(pathFolder);
         final String jarPath =
                 url.getPath().substring(5, url.getPath().indexOf("!"));
         try {
-            JarFile jar = new JarFile(URLDecoder.decode(jarPath, "UTF-8"));
-            Enumeration<JarEntry> entries = jar.entries();
-            while(entries.hasMoreElements()) {
+            final JarFile jar =
+                    new JarFile(URLDecoder.decode(jarPath, "UTF-8"));
+            final Enumeration<JarEntry> entries = jar.entries();
+            while (entries.hasMoreElements()) {
                 final JarEntry entry = entries.nextElement();
                 final String filePathInJar = entry.getName();
-                if(filePathInJar.startsWith(pathFolder) && !filePathInJar.matches(pathFolder)) {
+                if (filePathInJar.startsWith(pathFolder)
+                        && !filePathInJar.matches(pathFolder)) {
                     filePaths.add(filePathInJar);
                 }
             }

@@ -55,7 +55,7 @@ public class Mission {
         this.id = "";
         this.name = "";
         this.tiles = new Tiles();
-        this.board = new ArrayList<>();
+        this.board = new ArrayList();
     }
 
     /**
@@ -139,9 +139,9 @@ public class Mission {
     public final String toString() {
         String str = "Mission{" + "id=" + this.id + ", name=" + this.name;
         str += ", board=[";
-        for(TileRow row : tiles.getRows()) {
+        for (TileRow row : tiles.getRows()) {
             str += "[";
-            for(Tile tile : row.getTiles()) {
+            for (Tile tile : row.getTiles()) {
                 str += tile.toString();
             }
             str += "]";

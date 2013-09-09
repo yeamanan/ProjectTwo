@@ -17,7 +17,7 @@ public class ViewFactoryImpl implements ViewFactory {
     /**
      * Logger.
      */
-    private static final Logger LOGGER =
+    private static final Logger LOG =
             Logger.getLogger(ViewFactoryImpl.class);
 
     /**
@@ -49,7 +49,7 @@ public class ViewFactoryImpl implements ViewFactory {
         try {
             root = (Parent) loader.load();
         } catch (IOException ex) {
-            LOGGER.error("Error loadind fxml file", ex);
+            LOG.error("Error loadind fxml file", ex);
         }
         return root;
     }

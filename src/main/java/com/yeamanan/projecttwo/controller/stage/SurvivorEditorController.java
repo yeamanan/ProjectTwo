@@ -44,46 +44,46 @@ public class SurvivorEditorController implements Initializable {
      * A choice box.
      */
     @FXML
-    protected ChoiceBox cbSurvivors;
+    private transient ChoiceBox cbSurvivors;
 
     /**
      * Text field of the name.
      */
     @FXML
-    protected TextField tfName;
+    private transient TextField tfName;
 
     /**
      * Tree view of skills.
      */
-    @FXML
-    protected TreeView tvSkills;
+//    @FXML
+//    private transient TreeView tvSkills;
 
     /**
      * Tree items of skills.
      */
     @FXML
-    protected TreeItem tiSkills;
+    private transient TreeItem tiSkills;
 
     /**
-     * Tree view of the selected skills
+     * Tree view of the selected skills.
      */
-    @FXML
-    protected TreeView tvSelectedSkills;
+//    @FXML
+//    private transient TreeView tvSelectedSkills;
 
     /**
      * Tree items of selected skills.
      */
-    @FXML
-    protected TreeItem tiSelectedSkills;
+//    @FXML
+//    private transient TreeItem tiSelectedSkills;
 
     /**
      * Change listener of the survivor choice box.
      */
-    private ChangeListener<String> changeListener =
+    private final transient ChangeListener<String> changeListener =
         new ChangeListener<String>() {
             @Override
-            public void changed(ObservableValue<? extends String> observable,
-                    String oldValue, String newValue) {
+            public void changed(final ObservableValue<? extends String> obs,
+                    final String oldValue, final String newValue) {
                 final int index = survivors.indexOf(new Survivor(newValue));
                 final Survivor survivor = survivors.get(index);
                 tfName.setText(survivor.getName());
@@ -93,11 +93,12 @@ public class SurvivorEditorController implements Initializable {
     /**
      * initialize() method.
      *
-     * @param url an url
-     * @param rb a resource bundle
+     * @param argUrl an url
+     * @param argBundle a resource bundle
      */
     @Override
-    public final void initialize(final URL url, final ResourceBundle rb) {
+    public final void initialize(final URL argUrl,
+            final ResourceBundle argBundle) {
         final SurvivorService sService = new SurvivorServiceImpl();
         survivors = sService.loadAll();
         for (Survivor survivor : survivors) {
@@ -106,8 +107,8 @@ public class SurvivorEditorController implements Initializable {
         cbSurvivors.valueProperty().addListener(changeListener);
 
         for (int i = 1; i < Skill.values().length; i++) {
-            TreeItem<String> tiSkill =
-                    new TreeItem<> (Skill.values()[i].name());
+            final TreeItem<String> tiSkill =
+                    new TreeItem(Skill.values()[i].name());
             tiSkills.getChildren().add(tiSkill);
         }
     }
@@ -115,55 +116,56 @@ public class SurvivorEditorController implements Initializable {
     /**
      * handleDragDetectedAction() method.
      *
-     * @param event the event handled
+     * @param argEvent the event handled
      */
     @FXML
-    protected final void handleDragDetectedAction(final MouseEvent event) {
-        TreeView source = (TreeView) event.getSource();
-        TreeItem<String> item = (TreeItem<String>) source.getSelectionModel().getSelectedItem();
+    protected final void handleDragDetectedAction(final MouseEvent argEvent) {
+        final TreeView source = (TreeView) argEvent.getSource();
+        final TreeItem<String> item =
+                (TreeItem<String>) source.getSelectionModel().getSelectedItem();
         if (item != null) {
-            Dragboard db = source.startDragAndDrop(TransferMode.ANY);
-            ClipboardContent content = new ClipboardContent();
+            final Dragboard board = source.startDragAndDrop(TransferMode.ANY);
+            final ClipboardContent content = new ClipboardContent();
             content.putString(item.getValue());
-            db.setContent(content);
+            board.setContent(content);
         }
-        event.consume();
+        argEvent.consume();
         LOG.info("Drag detected");
     }
 
     /**
      * handleDragOverAction() method.
      *
-     * @param event the event handled
+     * @param argEvent the event handled
      */
     @FXML
-    protected final void handleDragOverAction(final DragEvent event) {
-        final TreeView target = (TreeView) event.getSource();
-        if (event.getGestureSource() != target
-                && event.getDragboard().hasString()) {
-            event.acceptTransferModes(TransferMode.COPY_OR_MOVE);
+    protected final void handleDragOverAction(final DragEvent argEvent) {
+        final TreeView target = (TreeView) argEvent.getSource();
+        if (argEvent.getGestureSource() != target
+                && argEvent.getDragboard().hasString()) {
+            argEvent.acceptTransferModes(TransferMode.COPY_OR_MOVE);
         }
-        event.consume();
+        argEvent.consume();
         LOG.info("Drag hover");
     }
 
     /**
      * handleDragDroppedAction() method.
      *
-     * @param event the event handled
+     * @param argEvent the event handled
      */
     @FXML
-    protected final void handleDragDroppedAction(final DragEvent event) {
-        final TreeView target = (TreeView) event.getSource();
-        final Dragboard db = event.getDragboard();
+    protected final void handleDragDroppedAction(final DragEvent argEvent) {
+        final Dragboard board = argEvent.getDragboard();
         boolean success = false;
-        if (db.hasString()) {
-            final TreeItem<String> tmp = new TreeItem<>(db.getString());
+        if (board.hasString()) {
+            final TreeView target = (TreeView) argEvent.getSource();
+            final TreeItem<String> tmp = new TreeItem(board.getString());
             target.getRoot().getChildren().add(tmp);
             success = true;
         }
-        event.setDropCompleted(success);
-        event.consume();
+        argEvent.setDropCompleted(success);
+        argEvent.consume();
         LOG.info("Drag dropped");
     }
 

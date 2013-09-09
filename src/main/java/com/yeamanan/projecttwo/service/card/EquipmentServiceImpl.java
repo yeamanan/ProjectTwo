@@ -4,7 +4,7 @@ import com.yeamanan.projecttwo.model.card.Equipment;
 import com.yeamanan.projecttwo.service.GenericService;
 import com.yeamanan.projecttwo.service.GenericServiceImpl;
 import java.util.List;
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 
 /**
  * EquipmentServiceImpl class.
@@ -16,8 +16,8 @@ public class EquipmentServiceImpl implements EquipmentService {
     /**
      * Logger.
      */
-    private static final Logger LOGGER =
-            Logger.getLogger(EquipmentServiceImpl.class);
+//    private static final Logger LOG =
+//            Logger.getLogger(EquipmentServiceImpl.class);
 
     /**
      * Equipment cards folder in jar.
@@ -32,10 +32,14 @@ public class EquipmentServiceImpl implements EquipmentService {
     /**
      * Generic service.
      */
-    private GenericService<Equipment> service;
+    private final transient GenericService<Equipment> service;
 
+    /**
+     * Constructor.
+     */
     public EquipmentServiceImpl() {
-        this.service = new GenericServiceImpl<>(FOLDER, EXTENSION, Equipment.class);
+        this.service =
+                new GenericServiceImpl(FOLDER, EXTENSION, Equipment.class);
     }
 
     /**

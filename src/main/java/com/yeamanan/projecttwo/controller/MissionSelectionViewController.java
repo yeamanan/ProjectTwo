@@ -1,5 +1,6 @@
 package com.yeamanan.projecttwo.controller;
 
+import com.yeamanan.projecttwo.Context;
 import com.yeamanan.projecttwo.ProjectTwo;
 import com.yeamanan.projecttwo.model.mission.Mission;
 import com.yeamanan.projecttwo.service.mission.MissionService;
@@ -46,16 +47,16 @@ public class MissionSelectionViewController implements Initializable {
     private final transient EventHandler<ActionEvent> handler =
         new EventHandler<ActionEvent>() {
             @Override
-            public final void handle(final ActionEvent event) {
-                final Button button = (Button) event.getSource();
+            public final void handle(final ActionEvent argEvent) {
+                final Button button = (Button) argEvent.getSource();
                 final String missionName = button.getText();
                 final MissionService service = new MissionServiceImpl();
                 final Mission mission =
                         service.load(missionName);
                 final ProjectTwo instance = ProjectTwo.getInstance();
-                instance.getContext().getGame().setMission(mission);
-                instance.getContext()
-                        .setCurrentView(ViewType.SurvivorSelectionView);
+                final Context context = instance.getContext();
+                context.setMission(mission);
+                context.setCurrentView(ViewType.SurvivorSelectionView);
                 instance.reloadView();
             }
         };
@@ -63,12 +64,12 @@ public class MissionSelectionViewController implements Initializable {
     /**
      * initialize() method.
      *
-     * @param location the location which to init
-     * @param resources the resource bundle which to init
+     * @param argLocation the location which to init
+     * @param argBundle the resource bundle which to init
      */
     @Override
-    public final void initialize(final URL location,
-                                final ResourceBundle resources) {
+    public final void initialize(final URL argLocation,
+                                final ResourceBundle argBundle) {
         double xPos = START_X, yPos = START_Y;
         final MissionService service = new MissionServiceImpl();
         for (String name : service.getFileNames()) {

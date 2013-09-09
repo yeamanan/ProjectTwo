@@ -65,7 +65,7 @@ public class Zone {
      */
     public Zone() {
         this.id = 0;
-        this.elements = new ArrayList<>();
+        this.elements = new ArrayList();
     }
 
     /**
@@ -73,7 +73,7 @@ public class Zone {
      *
      * @return the id of the zone
      */
-    public int getId() {
+    public final int getId() {
         return id;
     }
 
@@ -82,7 +82,7 @@ public class Zone {
      *
      * @param argId the new id of the zone
      */
-    public void setId(int argId) {
+    public final void setId(final int argId) {
         this.id = argId;
     }
 

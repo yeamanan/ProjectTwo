@@ -4,7 +4,7 @@ import com.yeamanan.projecttwo.model.card.Invasion;
 import com.yeamanan.projecttwo.service.GenericService;
 import com.yeamanan.projecttwo.service.GenericServiceImpl;
 import java.util.List;
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 
 /**
  * InvasionServiceImpl class.
@@ -16,8 +16,8 @@ public class InvasionServiceImpl implements InvasionService {
     /**
      * Logger.
      */
-    private static final Logger LOGGER =
-            Logger.getLogger(InvasionServiceImpl.class);
+//    private static final Logger LOG =
+//            Logger.getLogger(InvasionServiceImpl.class);
 
     /**
      * Zombie cards file folder in jar.
@@ -32,13 +32,14 @@ public class InvasionServiceImpl implements InvasionService {
     /**
      * Generic service.
      */
-    private GenericService<Invasion> service;
+    private final transient GenericService<Invasion> service;
 
     /**
      * Constructor.
      */
     public InvasionServiceImpl() {
-        this.service = new GenericServiceImpl<>(FOLDER, EXTENSION, Invasion.class);
+        this.service =
+                new GenericServiceImpl(FOLDER, EXTENSION, Invasion.class);
     }
 
     /**
@@ -65,7 +66,7 @@ public class InvasionServiceImpl implements InvasionService {
     /**
      * loadAll() method.
      *
-     * @return a list of zombie card objects
+     * @return a list of invasion card objects
      */
     @Override
     public final List<Invasion> loadAll() {
@@ -75,11 +76,11 @@ public class InvasionServiceImpl implements InvasionService {
     /**
      * save() method.
      *
-     * @param argCard a zombie card object to save
+     * @param argInvasion an invasion card object to save
      */
     @Override
-    public final void save(final Invasion argZombieCard) {
-        this.service.save(argZombieCard, argZombieCard.getName());
+    public final void save(final Invasion argInvasion) {
+        this.service.save(argInvasion, argInvasion.getName());
     }
 
 }

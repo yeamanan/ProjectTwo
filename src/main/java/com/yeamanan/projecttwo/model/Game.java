@@ -27,14 +27,12 @@ public class Game {
      */
     private Board board;
 
-//    private int turn;
-
     /**
      * Constructor.
      */
     public Game() {
         this.mission = new Mission();
-        this.survivors = new ArrayList<>();
+        this.survivors = new ArrayList();
         this.board = new Board();
     }
 

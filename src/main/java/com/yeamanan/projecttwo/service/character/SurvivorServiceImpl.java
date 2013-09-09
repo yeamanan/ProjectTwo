@@ -4,7 +4,7 @@ import com.yeamanan.projecttwo.model.character.Survivor;
 import com.yeamanan.projecttwo.service.GenericService;
 import com.yeamanan.projecttwo.service.GenericServiceImpl;
 import java.util.List;
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 
 /**
  * SurvivorServiceImpl class.
@@ -16,8 +16,8 @@ public class SurvivorServiceImpl implements SurvivorService {
     /**
      * Logger.
      */
-    private static final Logger LOGGER =
-            Logger.getLogger(SurvivorServiceImpl.class);
+//    private static final Logger LOG =
+//            Logger.getLogger(SurvivorServiceImpl.class);
 
     /**
      * Survivor file folder in jar.
@@ -32,13 +32,14 @@ public class SurvivorServiceImpl implements SurvivorService {
     /**
      * Generic service.
      */
-    private GenericService<Survivor> service;
+    private final transient GenericService<Survivor> service;
 
     /**
      * Constructor.
      */
     public SurvivorServiceImpl() {
-        this.service = new GenericServiceImpl<>(FOLDER, EXTENSION, Survivor.class);
+        this.service =
+                new GenericServiceImpl(FOLDER, EXTENSION, Survivor.class);
     }
 
     /**

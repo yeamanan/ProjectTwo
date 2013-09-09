@@ -26,10 +26,10 @@ public class MainViewController {
     /**
      * handleStartAction() method.
      *
-     * @param event the event handled
+     * @param argEvent the event handled
      */
     @FXML
-    protected final void handleStartAction(final MouseEvent event) {
+    protected final void handleStartAction(final MouseEvent argEvent) {
         final ProjectTwo instance = ProjectTwo.getInstance();
         instance.getContext().setCurrentView(ViewType.MissionSelectionView);
         instance.reloadView();
@@ -38,10 +38,10 @@ public class MainViewController {
     /**
      * handleOptionsAction() method.
      *
-     * @param event the event handled
+     * @param argEvent the event handled
      */
     @FXML
-    protected final void handleOptionsAction(final MouseEvent event) {
+    protected final void handleOptionsAction(final MouseEvent argEvent) {
         final ProjectTwo instance = ProjectTwo.getInstance();
         //instance.setCurrentView(ViewType.OptionsView);
         instance.reloadView();

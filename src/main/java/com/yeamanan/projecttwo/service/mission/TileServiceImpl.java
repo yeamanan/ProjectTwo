@@ -4,7 +4,7 @@ import com.yeamanan.projecttwo.model.mission.Tile;
 import com.yeamanan.projecttwo.service.GenericService;
 import com.yeamanan.projecttwo.service.GenericServiceImpl;
 import java.util.List;
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 
 /**
  * TileServiceImpl class.
@@ -16,7 +16,7 @@ public class TileServiceImpl implements TileService {
     /**
      * Logger.
      */
-    private static final Logger LOG = Logger.getLogger(TileServiceImpl.class);
+//    private static final Logger LOG = Logger.getLogger(TileServiceImpl.class);
 
     /**
      * Tiles folder in jar.
@@ -37,7 +37,7 @@ public class TileServiceImpl implements TileService {
      * Constructor.
      */
     public TileServiceImpl() {
-        this.service = new GenericServiceImpl<>(FOLDER, EXTENSION, Tile.class);
+        this.service = new GenericServiceImpl(FOLDER, EXTENSION, Tile.class);
     }
 
     /**

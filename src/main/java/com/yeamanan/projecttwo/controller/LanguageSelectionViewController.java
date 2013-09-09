@@ -25,11 +25,11 @@ public class LanguageSelectionViewController {
     /**
      * handleChoiceLanguageAction() method.
      *
-     * @param event the event
+     * @param argEvent the event handled
      */
     @FXML
-    protected final void handleChoiceLanguageAction(final MouseEvent event) {
-        final ImageView view = (ImageView) event.getSource();
+    protected final void handleChoiceLanguageAction(final MouseEvent argEvent) {
+        final ImageView view = (ImageView) argEvent.getSource();
         final String sLanguage = view.getId();
         final ResourceBundle language = LanguagesUtil.loadLanguage(sLanguage);
         final ProjectTwo instance = ProjectTwo.getInstance();

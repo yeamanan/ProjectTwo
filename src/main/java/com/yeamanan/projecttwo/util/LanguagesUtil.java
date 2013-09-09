@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.ResourceBundle;
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 
 /**
  * LanguagesUtil class.
@@ -16,12 +16,12 @@ public final class LanguagesUtil {
     /**
      * Logger.
      */
-    private static final Logger LOGGER = Logger.getLogger(LanguagesUtil.class);
+//    private static final Logger LOG = Logger.getLogger(LanguagesUtil.class);
 
     /**
      * Bundles folder in jar.
      */
-    private final static String BUNDLES_FOLDER = "bundles/";
+    private static final String BUNDLES_FOLDER = "bundles/";
 
     /**
      * Constructor.
@@ -30,6 +30,8 @@ public final class LanguagesUtil {
 
     /**
      * loadDefaultLanguage() method.
+     *
+     * @return the resource bundle of the default language
      */
     public static ResourceBundle loadDefaultLanguage() {
         return ResourceBundle.getBundle("bundles.Language");
@@ -38,10 +40,11 @@ public final class LanguagesUtil {
     /**
      * loadLanguage() method.
      *
-     * @param language the language to load
+     * @param argLanguage the language to load
+     * @return the resource bundle of the loaded language
      */
-    public static ResourceBundle loadLanguage(final String language) {
-        final Locale locale = new Locale(language);
+    public static ResourceBundle loadLanguage(final String argLanguage) {
+        final Locale locale = new Locale(argLanguage);
         return ResourceBundle.getBundle("bundles.Language", locale);
     }
 
@@ -49,9 +52,10 @@ public final class LanguagesUtil {
      * getAvailableLanguages() method.
      *
      * @param aClass a class to load the languages
+     * @return a list of language resource bundles
      */
     public static List<ResourceBundle> loadLanguages(final Class aClass) {
-        final List<ResourceBundle> languages = new ArrayList<>();
+        final List<ResourceBundle> languages = new ArrayList();
         final List<String> files =
             JarUtil.getJarFolderFileList(aClass, BUNDLES_FOLDER);
         for (String file : files) {

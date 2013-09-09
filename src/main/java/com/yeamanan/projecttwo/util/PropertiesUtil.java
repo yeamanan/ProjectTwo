@@ -17,7 +17,7 @@ public final class PropertiesUtil {
     /**
      * Logger.
      */
-    private static final Logger LOGGER = Logger.getLogger(PropertiesUtil.class);
+    private static final Logger LOG = Logger.getLogger(PropertiesUtil.class);
 
     /**
      * Folder name.
@@ -62,11 +62,11 @@ public final class PropertiesUtil {
         final Properties properties = new Properties();
         if (pathExists(filePath)) {
             try (final FileInputStream stream = new FileInputStream(filePath)) {
-                if(stream != null) {
+                if (stream != null) {
                     properties.load(stream);
                 }
             } catch (IOException ex) {
-                LOGGER.error("Error reading config file", ex);
+                LOG.error("Error reading config file", ex);
             }
         }
         return properties;
@@ -84,7 +84,7 @@ public final class PropertiesUtil {
         try (final FileOutputStream stream = new FileOutputStream(filePath)) {
             properties.store(stream, null);
         } catch (IOException ex) {
-            LOGGER.error("Error writing config file", ex);
+            LOG.error("Error writing config file", ex);
         }
         return true;
     }
@@ -104,7 +104,7 @@ public final class PropertiesUtil {
             try {
                 file.createNewFile();
             } catch (IOException ex) {
-                LOGGER.error("Error creating config file", ex);
+                LOG.error("Error creating config file", ex);
             }
         }
         return true;

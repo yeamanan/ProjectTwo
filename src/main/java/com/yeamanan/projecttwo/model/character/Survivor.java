@@ -106,13 +106,13 @@ public class Survivor extends Character {
         this.name = argName;
         this.experience = 0;
         this.level = Level.BLUE;
-        this.blueSkills = new ArrayList<>();
-        this.yellowSkills = new ArrayList<>();
-        this.orangeSkills = new ArrayList<>();
-        this.redSkills = new ArrayList<>();
-        this.skills = new ArrayList<>();
-        this.inventory = new ArrayList<>();
-        this.hands = new ArrayList<>();
+        this.blueSkills = new ArrayList();
+        this.yellowSkills = new ArrayList();
+        this.orangeSkills = new ArrayList();
+        this.redSkills = new ArrayList();
+        this.skills = new ArrayList();
+        this.inventory = new ArrayList();
+        this.hands = new ArrayList();
     }
 
     /**
@@ -174,7 +174,7 @@ public class Survivor extends Character {
      *
      * @return the blue danger level list of skills
      */
-    public List<Skill> getBlueSkills() {
+    public final List<Skill> getBlueSkills() {
         return this.blueSkills;
     }
 
@@ -183,7 +183,7 @@ public class Survivor extends Character {
      *
      * @param argBlueSkills the new blue danger level list of skills
      */
-    public void setBlueSkills(final List<Skill> argBlueSkills) {
+    public final void setBlueSkills(final List<Skill> argBlueSkills) {
         this.blueSkills = argBlueSkills;
     }
 
@@ -264,17 +264,17 @@ public class Survivor extends Character {
      *
      * @return the list of equipment for the inventory
      */
-    public List<InventoryElement> getInventory() {
+    public final List<InventoryElement> getInventory() {
         return inventory;
     }
 
     /**
      * setInventory() method.
      *
-     * @param inventory the new list of equipment in the inventory
+     * @param argInventory the new list of equipment in the inventory
      */
-    public void setInventory(List<InventoryElement> inventory) {
-        this.inventory = inventory;
+    public final void setInventory(final List<InventoryElement> argInventory) {
+        this.inventory = argInventory;
     }
 
     /**
@@ -282,17 +282,17 @@ public class Survivor extends Character {
      *
      * @return the list of equipment in the hands
      */
-    public List<InventoryElement> getHands() {
+    public final List<InventoryElement> getHands() {
         return hands;
     }
 
     /**
      * setHands() method.
      *
-     * @param hands the new list of equipment in the hands
+     * @param argHands the new list of equipment in the hands
      */
-    public void setHands(List<InventoryElement> hands) {
-        this.hands = hands;
+    public final void setHands(final List<InventoryElement> argHands) {
+        this.hands = argHands;
     }
 
     /**
@@ -336,9 +336,19 @@ public class Survivor extends Character {
         return hash;
     }
 
+    /**
+     * toString() method.
+     *
+     * @return the survivor in string format
+     */
     @Override
-    public String toString() {
-        return "Survivor{" + "name=" + name + ", experience=" + experience + ", level=" + level + ", blueSkills=" + blueSkills + ", yellowSkills=" + yellowSkills + ", orangeSkills=" + orangeSkills + ", redSkills=" + redSkills + ", skills=" + skills + ", inventory=" + inventory + ", hands=" + hands + '}';
+    public final String toString() {
+        return "Survivor{" + "name=" + name + ", experience=" + experience
+                + ", level=" + level + ", blueSkills=" + blueSkills
+                + ", yellowSkills=" + yellowSkills + ", orangeSkills="
+                + orangeSkills + ", redSkills=" + redSkills + ", skills="
+                + skills + ", inventory=" + inventory + ", hands=" + hands
+                + '}';
     }
 
     /**
