@@ -1,17 +1,23 @@
-package com.yeamanan.projecttwo.model.stuff;
+package com.yeamanan.projecttwo.model.mission;
 
+import java.util.ArrayList;
+import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlElements;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Mission class.
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
-@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "Mission")
 @XmlRootElement(name = "Mission")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Mission {
 
     /**
@@ -27,10 +33,20 @@ public class Mission {
     private String name;
 
     /**
-     * Board of the mission.
+     * Tiles of the mission.
      */
     @XmlElement(name = "Tiles", required = true)
     private Tiles tiles;
+
+    /**
+     * Board of the mission.
+     */
+    @XmlElementWrapper(name = "Board", required = false)
+    @XmlElements({
+        @XmlElement(name = "Street", type = Street.class),
+        @XmlElement(name = "Building", type = Building.class)
+    })
+    private List<Zone> board;
 
     /**
      * Constructor.
@@ -39,6 +55,7 @@ public class Mission {
         this.id = "";
         this.name = "";
         this.tiles = new Tiles();
+        this.board = new ArrayList<>();
     }
 
     /**
@@ -93,6 +110,24 @@ public class Mission {
      */
     public final void setTiles(final Tiles argTiles) {
         this.tiles = argTiles;
+    }
+
+    /**
+     * getBoard() method.
+     *
+     * @return a list of zone representing the board
+     */
+    public final List<Zone> getBoard() {
+        return board;
+    }
+
+    /**
+     * setBoard() method.
+     *
+     * @param argBoard a new list of zone representing the board
+     */
+    public final void setBoard(final List<Zone> argBoard) {
+        this.board = argBoard;
     }
 
     /**

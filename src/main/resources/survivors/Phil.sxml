@@ -3,9 +3,6 @@
     <Name>Phil</Name>
     <BlueSkills>STARTS_WITH_A_PISTOL</BlueSkills>
     <YellowSkills>PLUS_ONE_ACTION</YellowSkills>
-    <OrangeSkills>PLUS_ONE_FREE_SEARCH_ACTION</OrangeSkills>
-    <OrangeSkills>PLUS_ONE_TO_DICE_ROLL_RANGED</OrangeSkills>
-    <RedSkills>PLUS_ONE_DIE_RANGED</RedSkills>
-    <RedSkills>BORN_LEADER</RedSkills>
-    <RedSkills>SNIPER</RedSkills>
+    <OrangeSkills>PLUS_ONE_FREE_SEARCH_ACTION PLUS_ONE_TO_DICE_ROLL_RANGED</OrangeSkills>
+    <RedSkills>PLUS_ONE_DIE_RANGED BORN_LEADER SNIPER</RedSkills>
 </Survivor>

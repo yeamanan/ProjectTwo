@@ -3,9 +3,6 @@
     <Name>Kim</Name>
     <BlueSkills>LUCKY</BlueSkills>
     <YellowSkills>PLUS_ONE_ACTION</YellowSkills>
-    <OrangeSkills>ROLL_SIX_PLUS_ONE_DIE_RANGED</OrangeSkills>
-    <OrangeSkills>WEBBING</OrangeSkills>
-    <RedSkills>PLUS_ONE_FREE_COMBAT_ACTION</RedSkills>
-    <RedSkills>PLUS_ONE_TO_DICE_ROLL_COMBAT</RedSkills>
-    <RedSkills>ROLL_SIX_PLUS_ONE_DIE_MELEE</RedSkills>
+    <OrangeSkills>ROLL_SIX_PLUS_ONE_DIE_RANGED WEBBING</OrangeSkills>
+    <RedSkills>PLUS_ONE_FREE_COMBAT_ACTION PLUS_ONE_TO_DICE_ROLL_COMBAT ROLL_SIX_PLUS_ONE_DIE_MELEE</RedSkills>
 </Survivor>

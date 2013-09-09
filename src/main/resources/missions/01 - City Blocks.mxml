@@ -9,8 +9,8 @@
         </Row>
         <Row>
             <Tile name="5C" direction="WEST"/>
-            <Tile name="7D" direction="NORTH"/>
-            <Tile name="4B" direction="EAST"/>
+            <Tile name="7B" direction="NORTH"/>
+            <Tile name="5D" direction="EAST"/>
         </Row>
         <Row>
             <Tile name="6B" direction="EAST"/>

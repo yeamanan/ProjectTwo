@@ -3,10 +3,10 @@
     <Name>Drive-By Shooting</Name>
     <Tiles>
         <Row>
-            <Tile name="2C" direction="EAST"/>
+            <Tile name="3C" direction="EAST"/>
             <Tile name="4D" direction="EAST"/>
             <Tile name="2C" direction="EAST"/>
-            <Tile name="5E" direction="SOUTH"/>
+            <Tile name="5F" direction="SOUTH"/>
         </Row>
         <Row>
             <Tile name="4E" direction="WEST"/>

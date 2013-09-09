@@ -1,10 +1,27 @@
-package com.yeamanan.projecttwo.model.stuff;
+package com.yeamanan.projecttwo.model.mission;
 
 import com.yeamanan.projecttwo.model.Axe;
+import com.yeamanan.projecttwo.model.Element;
+import com.yeamanan.projecttwo.model.character.Abomination;
+import com.yeamanan.projecttwo.model.character.Fatty;
+import com.yeamanan.projecttwo.model.character.Runner;
+import com.yeamanan.projecttwo.model.character.Walker;
+import com.yeamanan.projecttwo.model.token.Door;
+import com.yeamanan.projecttwo.model.token.Exit;
+import com.yeamanan.projecttwo.model.token.Noise;
+import com.yeamanan.projecttwo.model.token.Objective;
+import com.yeamanan.projecttwo.model.token.Pimpmobile;
+import com.yeamanan.projecttwo.model.token.PoliceCar;
+import com.yeamanan.projecttwo.model.token.Start;
+import com.yeamanan.projecttwo.model.token.ZombieSpawn;
+import java.util.ArrayList;
+import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlElements;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
@@ -13,9 +30,9 @@ import javax.xml.bind.annotation.XmlType;
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name="")
+@XmlType(name = "Tile")
 @XmlRootElement(name = "Tile")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Tile {
 
     /**
@@ -31,18 +48,10 @@ public class Tile {
     private Axe axe;
 
     /**
-     * Zones of the tile.
-     */
-    @XmlElement(name = "Zones", required = false)
-    private Zones zones;
-
-    /**
      * Constructor.
      */
     public Tile() {
-        this.name = "";
-        this.axe = Axe.NORTH;
-        this.zones = new Zones();
+        this("", Axe.NORTH);
     }
 
     /**
@@ -54,7 +63,6 @@ public class Tile {
     public Tile(final String argName, final Axe argAxe) {
         this.name = argName;
         this.axe = argAxe;
-        this.zones = new Zones();
     }
 
     /**
@@ -92,32 +100,13 @@ public class Tile {
     }
 
     /**
-     * getZones() method.
-     *
-     * @return the zones of the tile
-     */
-    public final Zones getZones() {
-        return this.zones;
-    }
-
-    /**
-     * setZones() method.
-     *
-     * @param argZones the new zones of the tiles
-     */
-    public final void setZones(final Zones argZones) {
-        this.zones = argZones;
-    }
-
-    /**
      * toString() method.
      *
      * @return the tile in String format
      */
     @Override
     public final String toString() {
-        return "Tile{" + "name=" + this.name + ", axe="
-                + this.axe.getShortCode() + '}';
+        return "Tile{" + "name=" + this.name + ", axe=" + this.axe + '}';
     }
 
 }

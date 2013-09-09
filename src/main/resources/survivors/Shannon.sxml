@@ -3,9 +3,6 @@
     <Name>Shannon</Name>
     <BlueSkills>POINT_BLANK</BlueSkills>
     <YellowSkills>PLUS_ONE_ACTION</YellowSkills>
-    <OrangeSkills>PLUS_ONE_FREE_RANGED_ACTION</OrangeSkills>
-    <OrangeSkills>LUCKY</OrangeSkills>
-    <RedSkills>PLUS_ONE_DIE_COMBAT</RedSkills>
-    <RedSkills>PLUS_ONE_FREE_COMBAT_ACTION</RedSkills>
-    <RedSkills>SLIPPERY</RedSkills>
+    <OrangeSkills>PLUS_ONE_FREE_RANGED_ACTION LUCKY</OrangeSkills>
+    <RedSkills>PLUS_ONE_DIE_COMBAT PLUS_ONE_FREE_COMBAT_ACTION SLIPPERY</RedSkills>
 </Survivor>

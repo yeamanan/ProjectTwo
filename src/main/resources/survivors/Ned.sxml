@@ -3,9 +3,6 @@
     <Name>Ned</Name>
     <BlueSkills>PLUS_ONE_FREE_SEARCH_ACTION</BlueSkills>
     <YellowSkills>PLUS_ONE_ACTION</YellowSkills>
-    <OrangeSkills>PLUS_ONE_DIE_RANGED</OrangeSkills>
-    <OrangeSkills>PLUS_ONE_FREE_COMBAT_ACTION</OrangeSkills>
-    <RedSkills>PLUS_ONE_DIE_COMBAT</RedSkills>
-    <RedSkills>PLUS_ONE_TO_DICE_ROLL_COMBAT</RedSkills>
-    <RedSkills>TOUGH</RedSkills>
+    <OrangeSkills>PLUS_ONE_DIE_RANGED PLUS_ONE_FREE_COMBAT_ACTION</OrangeSkills>
+    <RedSkills>PLUS_ONE_DIE_COMBAT PLUS_ONE_TO_DICE_ROLL_COMBAT TOUGH</RedSkills>
 </Survivor>

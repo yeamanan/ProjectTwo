@@ -3,9 +3,6 @@
     <Name>Josh</Name>
     <BlueSkills>SLIPPERY</BlueSkills>
     <YellowSkills>PLUS_ONE_ACTION</YellowSkills>
-    <OrangeSkills>PLUS_ONE_DIE_MELEE</OrangeSkills>
-    <OrangeSkills>ONE_REROLL_PER_TURN</OrangeSkills>
-    <RedSkills>PLUS_ONE_FREE_MOVE_ACTION</RedSkills>
-    <RedSkills>PLUS_ONE_TO_DICE_ROLL_COMBAT</RedSkills>
-    <RedSkills>LUCKY</RedSkills>
+    <OrangeSkills>PLUS_ONE_DIE_MELEE ONE_REROLL_PER_TURN</OrangeSkills>
+    <RedSkills>PLUS_ONE_FREE_MOVE_ACTION PLUS_ONE_TO_DICE_ROLL_COMBAT LUCKY</RedSkills>
 </Survivor>

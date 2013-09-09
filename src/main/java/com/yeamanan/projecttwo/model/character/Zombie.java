@@ -1,4 +1,4 @@
-package com.yeamanan.projecttwo.model.people;
+package com.yeamanan.projecttwo.model.character;
 
 import com.yeamanan.projecttwo.model.Constants;
 

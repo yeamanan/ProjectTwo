@@ -4,7 +4,82 @@
     <Tiles>
         <Row>
             <Tile name="2B" direction="EAST"/>
+        </Row>
+        <Row>
             <Tile name="1B" direction="NORTH"/>
         </Row>
     </Tiles>
+    <Board>
+        <Street id="1">
+            <Elements>
+                <ZombieSpawn/>
+            </Elements>
+        </Street>
+        <Building id="2">
+            <Elements>
+                <Door toZone="3" open="true"/>
+                <Door toZone="5" open="true"/>
+            </Elements>
+        </Building>
+        <Building id="3">
+            <Elements>
+                <Door toZone="2" open="true"/>
+                <Door toZone="6" open="true"/>
+            </Elements>
+        </Building>
+        <Street id="4">
+            <Elements>
+                <Walker/>
+            </Elements>
+        </Street>
+        <Building id="5">
+            <Elements>
+                <Door toZone="2" open="true"/>
+                <Door toZone="6" open="true"/>
+                <Door toZone="8" open="false"/>
+            </Elements>
+        </Building>
+        <Building id="6">
+            <Elements>
+                <Door toZone="3" open="true"/>
+                <Door toZone="5" open="true"/>
+            </Elements>
+        </Building>
+        <Street id="7"/>
+        <Street id="8">
+            <Elements>
+                <Door toZone="5" open="false"/>
+            </Elements>
+        </Street>
+        <Street id="9"/>
+        <Building id="10">
+            <Elements>
+                <Door toZone="12" open="true"/>
+                <Door toZone="13" open="true"/>
+            </Elements>
+        </Building>
+        <Street id="11">
+            <Elements>
+                <Walker/>
+            </Elements>
+        </Street>
+        <Zone id="12">
+            <Elements>
+                <Door toZone="10" open="true"/>
+                <Door toZone="13" open="true"/>
+            </Elements>
+        </Zone>
+        <Zone id="13">
+            <Elements>
+                <Door toZone="10" open="true"/>
+                <Door toZone="12" open="true"/>
+                <Door toZone="14" open="false"/>
+            </Elements>
+        </Zone>
+        <Street id="14">
+            <Elements>
+                <Door toZone="13" open="false"/>
+            </Elements>
+        </Street>
+    </Board>
 </Mission>

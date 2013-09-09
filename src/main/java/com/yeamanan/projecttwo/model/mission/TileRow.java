@@ -1,4 +1,4 @@
-package com.yeamanan.projecttwo.model.stuff;
+package com.yeamanan.projecttwo.model.mission;
 
 import java.util.ArrayList;
 import java.util.List;

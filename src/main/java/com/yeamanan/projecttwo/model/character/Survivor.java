@@ -1,4 +1,4 @@
-package com.yeamanan.projecttwo.model.people;
+package com.yeamanan.projecttwo.model.character;
 
 import com.yeamanan.projecttwo.model.Constants;
 import com.yeamanan.projecttwo.model.Level;
@@ -10,6 +10,7 @@ import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlList;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.XmlType;
@@ -19,10 +20,9 @@ import javax.xml.bind.annotation.XmlType;
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = { "name", "blueSkills", "yellowSkills",
-    "orangeSkills", "redSkills" })
+@XmlType(name = "Survivor")
 @XmlRootElement(name = "Survivor")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Survivor extends Character {
 
     /**
@@ -47,24 +47,28 @@ public class Survivor extends Character {
      * List of the skill in blue danger level.
      */
     @XmlElement(name = "BlueSkills", required = true)
+    @XmlList
     private List<Skill> blueSkills;
 
     /**
      * List of the skill in yellow danger level.
      */
     @XmlElement(name = "YellowSkills", required = true)
+    @XmlList
     private List<Skill> yellowSkills;
 
     /**
      * List of the skill in orange danger level.
      */
     @XmlElement(name = "OrangeSkills", required = true)
+    @XmlList
     private List<Skill> orangeSkills;
 
     /**
      * List of the skill in red danger level.
      */
     @XmlElement(name = "RedSkills", required = true)
+    @XmlList
     private List<Skill> redSkills;
 
     /**
@@ -332,16 +336,21 @@ public class Survivor extends Character {
         return hash;
     }
 
+    @Override
+    public String toString() {
+        return "Survivor{" + "name=" + name + ", experience=" + experience + ", level=" + level + ", blueSkills=" + blueSkills + ", yellowSkills=" + yellowSkills + ", orangeSkills=" + orangeSkills + ", redSkills=" + redSkills + ", skills=" + skills + ", inventory=" + inventory + ", hands=" + hands + '}';
+    }
+
     /**
      * toString() method.
      *
      * @return the survivor in string format
      */
-    @Override
-    public final String toString() {
-        return "Survivor{" + "nbAction=" + this.nbAction +  ", name="
-                + this.name + ", experience=" + this.experience + ", level="
-                + this.level + '}';
-    }
+//    @Override
+//    public final String toString() {
+//        return "Survivor{" + "nbAction=" + this.nbAction +  ", name="
+//                + this.name + ", experience=" + this.experience + ", level="
+//                + this.level + '}';
+//    }
 
 }

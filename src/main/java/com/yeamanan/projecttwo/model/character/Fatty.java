@@ -1,11 +1,11 @@
-package com.yeamanan.projecttwo.model.people;
+package com.yeamanan.projecttwo.model.character;
 
 /**
- * Walker class.
+ * Fatty class.
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
-public class Walker extends Zombie {
+public class Fatty extends Zombie {
 
     /**
      * toString() method.
@@ -14,7 +14,7 @@ public class Walker extends Zombie {
      */
     @Override
     public final String toString() {
-        return "Walker{" + "nbAction=" + this.nbAction + '}';
+        return "Fatty{" + "nbAction=" + this.nbAction + '}';
     }
 
 }

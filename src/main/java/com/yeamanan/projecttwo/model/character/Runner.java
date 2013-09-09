@@ -1,7 +1,7 @@
-package com.yeamanan.projecttwo.model.people;
+package com.yeamanan.projecttwo.model.character;
 
 import com.yeamanan.projecttwo.model.Constants;
-import com.yeamanan.projecttwo.model.people.Zombie;
+import com.yeamanan.projecttwo.model.character.Zombie;
 
 /**
  * Runner class.

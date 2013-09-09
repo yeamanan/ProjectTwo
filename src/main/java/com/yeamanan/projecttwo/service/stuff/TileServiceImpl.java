@@ -1,6 +1,6 @@
 package com.yeamanan.projecttwo.service.stuff;
 
-import com.yeamanan.projecttwo.model.stuff.Tile;
+import com.yeamanan.projecttwo.model.mission.Tile;
 import com.yeamanan.projecttwo.service.GenericService;
 import com.yeamanan.projecttwo.service.GenericServiceImpl;
 import java.util.List;

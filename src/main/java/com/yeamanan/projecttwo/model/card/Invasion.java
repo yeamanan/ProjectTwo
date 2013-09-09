@@ -4,14 +4,16 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * InvasionCard class.
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
-@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "Invasion")
 @XmlRootElement(name = "Invasion")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Invasion extends Card {
 
     /**

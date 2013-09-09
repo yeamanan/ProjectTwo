@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Survivor>
     <Name>Doug</Name>
-    <BlueSkills>MATCHING_SET</BlueSkills>
+<BlueSkills>MATCHING_SET</BlueSkills>
     <YellowSkills>PLUS_ONE_ACTION</YellowSkills>
-    <OrangeSkills>PLUS_ONE_DIE_RANGED</OrangeSkills>
-    <OrangeSkills>PLUS_ONE_FREE_COMBAT_ACTION</OrangeSkills>
-    <RedSkills>PLUS_ONE_TO_DICE_ROLL_COMBAT</RedSkills>
-    <RedSkills>AMBIDEXTROUS</RedSkills>
-    <RedSkills>SLIPPERY</RedSkills>
+    <OrangeSkills>PLUS_ONE_DIE_RANGED PLUS_ONE_FREE_COMBAT_ACTION</OrangeSkills>
+    <RedSkills>PLUS_ONE_TO_DICE_ROLL_COMBAT AMBIDEXTROUS SLIPPERY</RedSkills>
 </Survivor>

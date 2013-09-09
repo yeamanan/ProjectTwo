@@ -3,9 +3,6 @@
     <Name>Wanda</Name>
     <BlueSkills>TWO_ZONES_PER_MOVE_ACTION</BlueSkills>
     <YellowSkills>PLUS_ONE_ACTION</YellowSkills>
-    <OrangeSkills>PLUS_ONE_TO_DICE_ROLL_MELEE</OrangeSkills>
-    <OrangeSkills>SLIPPERY</OrangeSkills>
-    <RedSkills>PLUS_ONE_DIE_COMBAT</RedSkills>
-    <RedSkills>PLUS_ONE_FREE_MOVE_ACTION</RedSkills>
-    <RedSkills>PLUS_ONE_ZONE_PER_MOVE</RedSkills>
+    <OrangeSkills>PLUS_ONE_TO_DICE_ROLL_MELEE SLIPPERY</OrangeSkills>
+    <RedSkills>PLUS_ONE_DIE_COMBAT PLUS_ONE_FREE_MOVE_ACTION PLUS_ONE_ZONE_PER_MOVE</RedSkills>
 </Survivor>

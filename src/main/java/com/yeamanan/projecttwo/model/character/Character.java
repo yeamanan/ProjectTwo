@@ -1,18 +1,18 @@
-package com.yeamanan.projecttwo.model.people;
+package com.yeamanan.projecttwo.model.character;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
+import com.yeamanan.projecttwo.model.Element;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Character class.
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
-@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "Character")
 @XmlRootElement(name = "Character")
-public class Character {
+public class Character extends Element {
 
     /**
      * Number of action of the character.
@@ -24,7 +24,7 @@ public class Character {
      * Constructor.
      */
     public Character() {
-        this.nbAction = 0;
+        this(0);
     }
 
     /**
@@ -33,6 +33,7 @@ public class Character {
      * @param argNbAction the new number of action that can do the character
      */
     public Character(final int argNbAction) {
+        super();
         this.nbAction = argNbAction;
     }
 

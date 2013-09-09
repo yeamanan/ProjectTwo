@@ -1,6 +1,6 @@
 package com.yeamanan.projecttwo.service.people;
 
-import com.yeamanan.projecttwo.model.people.Survivor;
+import com.yeamanan.projecttwo.model.character.Survivor;
 import java.util.List;
 
 /**

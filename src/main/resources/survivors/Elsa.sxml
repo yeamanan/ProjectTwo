@@ -3,9 +3,6 @@
     <Name>Elsa</Name>
     <BlueSkills>BREAK_IN</BlueSkills>
     <YellowSkills>PLUS_ONE_ACTION</YellowSkills>
-    <OrangeSkills>PLUS_ONE_FREE_RANGED_ACTION</OrangeSkills>
-    <OrangeSkills>SLIPPERY</OrangeSkills>
-    <RedSkills>PLUS_ONE_FREE_COMBAT_ACTION</RedSkills>
-    <RedSkills>PLUS_ONE_FREE_MOVE_ACTION</RedSkills>
-    <RedSkills>TWO_ZONES_PER_MOVE_ACTION</RedSkills>
+    <OrangeSkills>PLUS_ONE_FREE_RANGED_ACTION SLIPPERY</OrangeSkills>
+    <RedSkills>PLUS_ONE_FREE_COMBAT_ACTION PLUS_ONE_FREE_MOVE_ACTION TWO_ZONES_PER_MOVE_ACTION</RedSkills>
 </Survivor>

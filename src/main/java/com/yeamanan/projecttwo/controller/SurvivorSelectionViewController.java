@@ -1,6 +1,9 @@
 package com.yeamanan.projecttwo.controller;
 
 import com.yeamanan.projecttwo.ProjectTwo;
+import com.yeamanan.projecttwo.model.Element;
+import com.yeamanan.projecttwo.model.mission.Zone;
+import com.yeamanan.projecttwo.model.token.Start;
 import com.yeamanan.projecttwo.service.people.SurvivorService;
 import com.yeamanan.projecttwo.service.people.SurvivorServiceImpl;
 import com.yeamanan.projecttwo.view.ViewType;
@@ -33,6 +36,11 @@ public class SurvivorSelectionViewController implements Initializable {
      */
     @FXML
     private transient TilePane survivors;
+
+    /**
+     * The start zone of the game.
+     */
+    private transient Zone startZone;
 
     /**
      * Description Tile Pane.
@@ -122,6 +130,16 @@ public class SurvivorSelectionViewController implements Initializable {
 //        final String sPath = "images/" + sNames.get(0) + "_f.jpg";
 //        description.setStyle("-fx-background-image: url(\"" + sPath + "\")");
 //        description.getStyleClass().add("survivorDescription");
+        final ProjectTwo instance = ProjectTwo.getInstance();
+        final List<Zone> board =
+                instance.getContext().getGame().getMission().getBoard();
+        for (Zone zone : board) {
+            for(Element element : zone.getElements()) {
+                if (element.getClass().equals(Start.class)) {
+                    this.startZone = zone;
+                }
+            }
+        }
     }
 
     /**

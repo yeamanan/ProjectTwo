@@ -3,9 +3,6 @@
     <Name>Joshua</Name>
     <BlueSkills>LIFESAVER</BlueSkills>
     <YellowSkills>PLUS_ONE_ACTION</YellowSkills>
-    <OrangeSkills>PLUS_ONE_FREE_RANGED_ACTION</OrangeSkills>
-    <OrangeSkills>PLUS_ONE_TO_DICE_ROLL_MELEE</OrangeSkills>
-    <RedSkills>PLUS_ONE_FREE_COMBAT_ACTION</RedSkills>
-    <RedSkills>PLUS_ONE_DICE_TO_ROLL_RANGED</RedSkills>
-    <RedSkills>BORN_LEADER</RedSkills>
+    <OrangeSkills>PLUS_ONE_FREE_RANGED_ACTION PLUS_ONE_TO_DICE_ROLL_MELEE</OrangeSkills>
+    <RedSkills>PLUS_ONE_FREE_COMBAT_ACTION PLUS_ONE_DICE_TO_ROLL_RANGED BORN_LEADER</RedSkills>
 </Survivor>

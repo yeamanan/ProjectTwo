@@ -1,6 +1,6 @@
 package com.yeamanan.projecttwo.service.stuff;
 
-import com.yeamanan.projecttwo.model.stuff.Mission;
+import com.yeamanan.projecttwo.model.mission.Mission;
 import java.util.List;
 
 /**

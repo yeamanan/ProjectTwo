@@ -1,11 +1,11 @@
 package com.yeamanan.projecttwo;
 
-import com.yeamanan.projecttwo.model.people.Survivor;
+import com.yeamanan.projecttwo.model.character.Survivor;
 import com.yeamanan.projecttwo.model.card.Equipment;
 import com.yeamanan.projecttwo.model.card.Invasion;
 import com.yeamanan.projecttwo.model.card.Weapon;
-import com.yeamanan.projecttwo.model.stuff.Mission;
-import com.yeamanan.projecttwo.model.stuff.Tile;
+import com.yeamanan.projecttwo.model.mission.Mission;
+import com.yeamanan.projecttwo.model.mission.Tile;
 import com.yeamanan.projecttwo.service.card.EquipmentService;
 import com.yeamanan.projecttwo.service.card.EquipmentServiceImpl;
 import com.yeamanan.projecttwo.service.people.SurvivorService;

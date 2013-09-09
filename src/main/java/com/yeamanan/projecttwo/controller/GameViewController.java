@@ -2,13 +2,10 @@ package com.yeamanan.projecttwo.controller;
 
 import com.yeamanan.projecttwo.Context;
 import com.yeamanan.projecttwo.ProjectTwo;
-import com.yeamanan.projecttwo.model.stuff.Mission;
-import com.yeamanan.projecttwo.model.stuff.Tile;
-import com.yeamanan.projecttwo.model.stuff.TileRow;
-import com.yeamanan.projecttwo.service.people.SurvivorService;
-import com.yeamanan.projecttwo.service.people.SurvivorServiceImpl;
+import com.yeamanan.projecttwo.model.mission.Mission;
+import com.yeamanan.projecttwo.model.mission.Tile;
+import com.yeamanan.projecttwo.model.mission.TileRow;
 import java.net.URL;
-import java.util.List;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -26,7 +23,7 @@ public class GameViewController  implements Initializable {
     /**
      * Logger.
      */
-    private static final Logger LOGGER =
+    private static final Logger LOG =
             Logger.getLogger(GameViewController.class);
 
     /**
@@ -47,6 +44,7 @@ public class GameViewController  implements Initializable {
         final ProjectTwo instance = ProjectTwo.getInstance();
         final Context context = instance.getContext();
         final Mission mission = context.getGame().getMission();
+        int maxRowSize = 0;
         for (TileRow row : mission.getTiles().getRows()) {
             for (Tile tile : row.getTiles()) {
                 final String tPath = "images/" + tile.getName() + ".jpg";
@@ -57,13 +55,22 @@ public class GameViewController  implements Initializable {
                 switch (tile.getAxe()) {
                     case EAST :
                         pane.setRotate(90.0);
+                        break;
                     case SOUTH :
                         pane.setRotate(180.0);
+                        break;
                     case WEST :
                         pane.setRotate(270.0);
+                        break;
                 }
                 board.getChildren().add(pane);
             }
+            if (maxRowSize < row.getTiles().size()) {
+                maxRowSize = row.getTiles().size();
+            }
         }
+        board.setPrefColumns(maxRowSize);
+        board.setPrefRows(mission.getTiles().getRows().size());
     }
+
 }

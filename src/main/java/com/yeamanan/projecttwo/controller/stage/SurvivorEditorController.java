@@ -1,7 +1,7 @@
 package com.yeamanan.projecttwo.controller.stage;
 
 import com.yeamanan.projecttwo.model.Skill;
-import com.yeamanan.projecttwo.model.people.Survivor;
+import com.yeamanan.projecttwo.model.character.Survivor;
 import com.yeamanan.projecttwo.service.people.SurvivorService;
 import com.yeamanan.projecttwo.service.people.SurvivorServiceImpl;
 import java.net.URL;
