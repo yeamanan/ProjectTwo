@@ -10,73 +10,40 @@
         </Row>
     </Tiles>
     <Board>
-        <Street id="1">
+        <Street id="1" x="0.0" y="0.0" width="75.0" height="75.0">
             <Elements>
                 <ZombieSpawn/>
             </Elements>
         </Street>
-        <Building id="2">
-            <Elements>
-                <Door toZone="3" open="true"/>
-                <Door toZone="5" open="true"/>
-            </Elements>
-        </Building>
-        <Building id="3">
-            <Elements>
-                <Door toZone="2" open="true"/>
-                <Door toZone="6" open="true"/>
-            </Elements>
-        </Building>
-        <Street id="4">
+        <Building id="2" x="75.0" y="0.0" width="87.5" height="87.5"/>
+        <Building id="3" x="162.5" y="0.0" width="87.5" height="87.5"/>
+        <Street id="4"  x="0" y="75.0" width="75.0" height="100.0">
             <Elements>
                 <Walker/>
             </Elements>
         </Street>
-        <Building id="5">
-            <Elements>
-                <Door toZone="2" open="true"/>
-                <Door toZone="6" open="true"/>
-                <Door toZone="8" open="false"/>
-            </Elements>
-        </Building>
-        <Building id="6">
-            <Elements>
-                <Door toZone="3" open="true"/>
-                <Door toZone="5" open="true"/>
-            </Elements>
-        </Building>
-        <Street id="7"/>
-        <Street id="8">
+        <Building id="5" x="75.0" y="87.5" width="87.5" height="87.5"/>
+        <Building id="6" x="162.5" y="87.5" width="87.5" height="87.5"/>
+        <Street id="7" x="0.0" y="175.0" width="75.0" height="150.0"/>
+        <Street id="8" x="75.0" y="175.0" width="100.0" height="150.0">
             <Elements>
                 <Door toZone="5" open="false"/>
             </Elements>
         </Street>
-        <Street id="9"/>
-        <Building id="10">
-            <Elements>
-                <Door toZone="12" open="true"/>
-                <Door toZone="13" open="true"/>
-            </Elements>
-        </Building>
-        <Street id="11">
+        <Street id="9" x="175.0" y="175.0" width="75.0" height="150.0"/>
+        <Building id="10" x="0.0" y="325.0" width="175.0" height="87.5"/>
+        <Street id="11" x="175.0" y="325.0" width="75.0" height="100.0">
             <Elements>
                 <Walker/>
             </Elements>
         </Street>
-        <Zone id="12">
+        <Building id="12" x="0.0" y="412.5" width="87.5" height="87.5">
             <Elements>
-                <Door toZone="10" open="true"/>
-                <Door toZone="13" open="true"/>
+                <Start/>
             </Elements>
-        </Zone>
-        <Zone id="13">
-            <Elements>
-                <Door toZone="10" open="true"/>
-                <Door toZone="12" open="true"/>
-                <Door toZone="14" open="false"/>
-            </Elements>
-        </Zone>
-        <Street id="14">
+        </Building>
+        <Building id="13" x="87.5" y="412.5" width="87.5" height="87.5"/>
+        <Street id="14" x="175.0" y="425.0" width="75.0" height="75.0">
             <Elements>
                 <Door toZone="13" open="false"/>
             </Elements>

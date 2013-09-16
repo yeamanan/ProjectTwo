@@ -15,6 +15,10 @@ import com.yeamanan.projecttwo.model.token.Start;
 import com.yeamanan.projecttwo.model.token.ZombieSpawn;
 import java.util.ArrayList;
 import java.util.List;
+import javafx.scene.Group;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Line;
+import javafx.scene.shape.Rectangle;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -41,6 +45,30 @@ public class Zone {
     private int id;
 
     /**
+     * X.
+     */
+    @XmlAttribute(name = "x", required = true)
+    private double x;
+
+    /**
+     * Y.
+     */
+    @XmlAttribute(name = "y", required = true)
+    private double y;
+
+    /**
+     * Width.
+     */
+    @XmlAttribute(name = "width", required = true)
+    private double width;
+
+    /**
+     * Height.
+     */
+    @XmlAttribute(name = "height", required = true)
+    private double height;
+
+    /**
      * List of elements in the zone.
      */
     @XmlElementWrapper(name = "Elements", required = false)
@@ -65,6 +93,10 @@ public class Zone {
      */
     public Zone() {
         this.id = 0;
+        this.x = 0.0d;
+        this.y = 0.0d;
+        this.width = 0.0d;
+        this.height = 0.0d;
         this.elements = new ArrayList();
     }
 
@@ -74,7 +106,7 @@ public class Zone {
      * @return the id of the zone
      */
     public final int getId() {
-        return id;
+        return this.id;
     }
 
     /**
@@ -84,6 +116,78 @@ public class Zone {
      */
     public final void setId(final int argId) {
         this.id = argId;
+    }
+
+    /**
+     * getX() method.
+     *
+     * @return the x position of the zone
+     */
+    public final double getX() {
+        return this.x;
+    }
+
+    /**
+     * setX() method.
+     *
+     * @param argX the new x position of the zone
+     */
+    public final void setX(final double argX) {
+        this.x = argX;
+    }
+
+    /**
+     * getY() method.
+     *
+     * @return the y position of the zone
+     */
+    public final double getY() {
+        return this.y;
+    }
+
+    /**
+     * setY() method.
+     *
+     * @param argY the new y position of the zone
+     */
+    public final void setY(final double argY) {
+        this.y = argY;
+    }
+
+    /**
+     * getWidth() method.
+     *
+     * @return the width of the zone
+     */
+    public final double getWidth() {
+        return this.width;
+    }
+
+    /**
+     * setWidth() method.
+     *
+     * @param argWidth the new width of the zone
+     */
+    public void setWidth(final double argWidth) {
+        this.width = argWidth;
+    }
+
+    /**
+     * getHeight() method.
+     *
+     * @return the height of the zone
+     */
+    public final double getHeight() {
+        return this.height;
+    }
+
+    /**
+     * setHeight() method.
+     *
+     * @param argHeight the new height of the zone
+     */
+    public void setHeight(final double argHeight) {
+        this.height = argHeight;
     }
 
     /**
@@ -102,6 +206,24 @@ public class Zone {
      */
     public final void setElements(final List<Element> argElements) {
         this.elements = argElements;
+    }
+
+    public final Group getRectangle() {
+        final Group group = new Group();
+        final Line top = new Line(this.x, this.y, (this.x + this.width)-1, this.y);
+        final Line right = new Line((this.x + this.width)-1, this.y, (this.x + this.width)-1, (this.y + this.height)-1);
+        final Line bottom = new Line((this.x + this.width)-1, (this.y + this.height)-1, this.x, (this.y + this.height)-1);
+        final Line left = new Line(this.x, (this.y + this.height)-1, this.x, this.y);
+        final Rectangle rectangle =
+                new Rectangle(this.x, this.y, this.width, this.height);
+        rectangle.setFill(Color.TRANSPARENT);
+        group.getChildren().add(top);
+        group.getChildren().add(right);
+        group.getChildren().add(bottom);
+        group.getChildren().add(left);
+        group.getChildren().add(rectangle);
+        group.setUserData(this);
+        return group;
     }
 
 }

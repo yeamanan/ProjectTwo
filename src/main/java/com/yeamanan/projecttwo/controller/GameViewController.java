@@ -5,12 +5,13 @@ import com.yeamanan.projecttwo.ProjectTwo;
 import com.yeamanan.projecttwo.model.mission.Mission;
 import com.yeamanan.projecttwo.model.mission.Tile;
 import com.yeamanan.projecttwo.model.mission.TileRow;
+import com.yeamanan.projecttwo.model.mission.Zone;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
-import javafx.scene.layout.TilePane;
 //import org.apache.log4j.Logger;
 
 /**
@@ -30,7 +31,7 @@ public class GameViewController  implements Initializable {
      * Board Tile Pane.
      */
     @FXML
-    private transient TilePane board;
+    private transient AnchorPane board;
 
     /**
      * initialize() method.
@@ -45,34 +46,31 @@ public class GameViewController  implements Initializable {
         final Context context = instance.getContext();
         final Mission mission = context.getMission();
         int maxRowSize = 0;
+        int y = 0;
         for (TileRow row : mission.getTiles().getRows()) {
+            int x = 0;
             for (Tile tile : row.getTiles()) {
                 final String tPath = "images/" + tile.getName() + ".jpg";
                 final Pane pane = new Pane();
-                pane.setPrefSize(250, 250);
+                pane.setLayoutX(x);
+                pane.setLayoutY(y);
+                pane.setPrefSize(250.0d, 250.0d);
                 pane.setStyle("-fx-background-image: url(\"" + tPath + "\")");
                 pane.setId(tile.getName());
-                switch (tile.getAxe()) {
-                    case EAST:
-                        pane.setRotate(90.0);
-                        break;
-                    case SOUTH:
-                        pane.setRotate(180.0);
-                        break;
-                    case WEST:
-                        pane.setRotate(270.0);
-                        break;
-                    default:
-                        break;
-                }
+                pane.setRotate(tile.getAxe().getAngle());
                 board.getChildren().add(pane);
+                x += 250;
             }
-            if (maxRowSize < row.getTiles().size()) {
-                maxRowSize = row.getTiles().size();
-            }
+            y += 250;
+//            if (maxRowSize < row.getTiles().size()) {
+//                maxRowSize = row.getTiles().size();
+//            }
         }
-        board.setPrefColumns(maxRowSize);
-        board.setPrefRows(mission.getTiles().getRows().size());
+        //board.setPrefColumns(maxRowSize);
+        //board.setPrefRows(mission.getTiles().getRows().size());
+        for (Zone zone : mission.getBoard()) {
+            board.getChildren().add(zone.getRectangle());
+        }
     }
 
 }
