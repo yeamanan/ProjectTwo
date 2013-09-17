@@ -15,10 +15,6 @@ import com.yeamanan.projecttwo.model.token.Start;
 import com.yeamanan.projecttwo.model.token.ZombieSpawn;
 import java.util.ArrayList;
 import java.util.List;
-import javafx.scene.Group;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Line;
-import javafx.scene.shape.Rectangle;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -206,24 +202,6 @@ public class Zone {
      */
     public final void setElements(final List<Element> argElements) {
         this.elements = argElements;
-    }
-
-    public final Group getRectangle() {
-        final Group group = new Group();
-        final Line top = new Line(this.x, this.y, (this.x + this.width)-1, this.y);
-        final Line right = new Line((this.x + this.width)-1, this.y, (this.x + this.width)-1, (this.y + this.height)-1);
-        final Line bottom = new Line((this.x + this.width)-1, (this.y + this.height)-1, this.x, (this.y + this.height)-1);
-        final Line left = new Line(this.x, (this.y + this.height)-1, this.x, this.y);
-        final Rectangle rectangle =
-                new Rectangle(this.x, this.y, this.width, this.height);
-        rectangle.setFill(Color.TRANSPARENT);
-        group.getChildren().add(top);
-        group.getChildren().add(right);
-        group.getChildren().add(bottom);
-        group.getChildren().add(left);
-        group.getChildren().add(rectangle);
-        group.setUserData(this);
-        return group;
     }
 
 }

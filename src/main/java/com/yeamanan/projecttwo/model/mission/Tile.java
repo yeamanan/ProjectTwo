@@ -24,6 +24,18 @@ public class Tile {
     private String name;
 
     /**
+     * Name of a tile.
+     */
+    @XmlAttribute(name = "x", required = true)
+    private int x;
+
+    /**
+     * Name of a tile.
+     */
+    @XmlAttribute(name = "y", required = true)
+    private int y;
+
+    /**
      * Axe of a tile.
      */
     @XmlAttribute(name = "direction", required = false)
@@ -33,18 +45,10 @@ public class Tile {
      * Constructor.
      */
     public Tile() {
-        this("", Axe.NORTH);
-    }
-
-    /**
-     * Constructor.
-     *
-     * @param argName the new name of the tile
-     * @param argAxe the new axe of the tile
-     */
-    public Tile(final String argName, final Axe argAxe) {
-        this.name = argName;
-        this.axe = argAxe;
+        this.name = "";
+        this.x = 0;
+        this.y = 0;
+        this.axe = Axe.NORTH;
     }
 
     /**
@@ -61,6 +65,22 @@ public class Tile {
      */
     public final void setName(final String argName) {
         this.name = argName;
+    }
+
+    public final int getX() {
+        return x;
+    }
+
+    public final void setX(final int argX) {
+        this.x = argX;
+    }
+
+    public final int getY() {
+        return y;
+    }
+
+    public final void setY(final int argY) {
+        this.y = argY;
     }
 
     /**

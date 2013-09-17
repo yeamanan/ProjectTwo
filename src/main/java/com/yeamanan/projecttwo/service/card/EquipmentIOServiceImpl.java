@@ -1,8 +1,8 @@
 package com.yeamanan.projecttwo.service.card;
 
 import com.yeamanan.projecttwo.model.card.Equipment;
-import com.yeamanan.projecttwo.service.GenericService;
-import com.yeamanan.projecttwo.service.GenericServiceImpl;
+import com.yeamanan.projecttwo.service.GenericIOService;
+import com.yeamanan.projecttwo.service.GenericIOServiceImpl;
 import java.util.List;
 //import org.apache.log4j.Logger;
 
@@ -11,7 +11,7 @@ import java.util.List;
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
-public class EquipmentServiceImpl implements EquipmentService {
+public class EquipmentIOServiceImpl implements EquipmentIOService {
 
     /**
      * Logger.
@@ -32,14 +32,14 @@ public class EquipmentServiceImpl implements EquipmentService {
     /**
      * Generic service.
      */
-    private final transient GenericService<Equipment> service;
+    private final transient GenericIOService<Equipment> service;
 
     /**
      * Constructor.
      */
-    public EquipmentServiceImpl() {
+    public EquipmentIOServiceImpl() {
         this.service =
-                new GenericServiceImpl(FOLDER, EXTENSION, Equipment.class);
+                new GenericIOServiceImpl(FOLDER, EXTENSION, Equipment.class);
     }
 
     /**

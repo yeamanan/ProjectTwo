@@ -2,14 +2,10 @@
     <Id>00</Id>
     <Name>Tutorial</Name>
     <Tiles>
-        <Row>
-            <Tile name="2B" direction="EAST"/>
-        </Row>
-        <Row>
-            <Tile name="1B" direction="NORTH"/>
-        </Row>
+        <Tile name="2B" x="0" y="0" direction="EAST"/>
+        <Tile name="1B" x="0" y="1" direction="NORTH"/>
     </Tiles>
-    <Board>
+    <Zones>
         <Street id="1" x="0.0" y="0.0" width="75.0" height="75.0">
             <Elements>
                 <ZombieSpawn/>
@@ -48,5 +44,5 @@
                 <Door toZone="13" open="false"/>
             </Elements>
         </Street>
-    </Board>
+    </Zones>
 </Mission>

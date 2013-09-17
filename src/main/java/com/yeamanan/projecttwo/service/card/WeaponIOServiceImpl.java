@@ -1,8 +1,8 @@
 package com.yeamanan.projecttwo.service.card;
 
 import com.yeamanan.projecttwo.model.card.Weapon;
-import com.yeamanan.projecttwo.service.GenericService;
-import com.yeamanan.projecttwo.service.GenericServiceImpl;
+import com.yeamanan.projecttwo.service.GenericIOService;
+import com.yeamanan.projecttwo.service.GenericIOServiceImpl;
 import java.util.List;
 //import org.apache.log4j.Logger;
 
@@ -11,7 +11,7 @@ import java.util.List;
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
-public class WeaponServiceImpl implements WeaponService {
+public class WeaponIOServiceImpl implements WeaponIOService {
 
     /**
      * Logger.
@@ -32,13 +32,13 @@ public class WeaponServiceImpl implements WeaponService {
     /**
      * Generic service.
      */
-    private final transient GenericService<Weapon> service;
+    private final transient GenericIOService<Weapon> service;
 
     /**
      * Constructor.
      */
-    public WeaponServiceImpl() {
-        this.service = new GenericServiceImpl(FOLDER, EXTENSION, Weapon.class);
+    public WeaponIOServiceImpl() {
+        this.service = new GenericIOServiceImpl(FOLDER, EXTENSION, Weapon.class);
     }
 
     /**

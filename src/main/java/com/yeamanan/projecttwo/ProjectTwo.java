@@ -6,18 +6,18 @@ import com.yeamanan.projecttwo.model.card.Invasion;
 import com.yeamanan.projecttwo.model.card.Weapon;
 import com.yeamanan.projecttwo.model.mission.Mission;
 import com.yeamanan.projecttwo.model.mission.Tile;
-import com.yeamanan.projecttwo.service.card.EquipmentService;
-import com.yeamanan.projecttwo.service.card.EquipmentServiceImpl;
-import com.yeamanan.projecttwo.service.character.SurvivorService;
-import com.yeamanan.projecttwo.service.character.SurvivorServiceImpl;
-import com.yeamanan.projecttwo.service.card.InvasionService;
-import com.yeamanan.projecttwo.service.card.InvasionServiceImpl;
-import com.yeamanan.projecttwo.service.card.WeaponService;
-import com.yeamanan.projecttwo.service.card.WeaponServiceImpl;
-import com.yeamanan.projecttwo.service.mission.MissionService;
-import com.yeamanan.projecttwo.service.mission.MissionServiceImpl;
-import com.yeamanan.projecttwo.service.mission.TileService;
-import com.yeamanan.projecttwo.service.mission.TileServiceImpl;
+import com.yeamanan.projecttwo.service.card.EquipmentIOService;
+import com.yeamanan.projecttwo.service.card.EquipmentIOServiceImpl;
+import com.yeamanan.projecttwo.service.character.SurvivorIOService;
+import com.yeamanan.projecttwo.service.character.SurvivorIOServiceImpl;
+import com.yeamanan.projecttwo.service.card.InvasionIOService;
+import com.yeamanan.projecttwo.service.card.InvasionIOServiceImpl;
+import com.yeamanan.projecttwo.service.card.WeaponIOService;
+import com.yeamanan.projecttwo.service.card.WeaponIOServiceImpl;
+import com.yeamanan.projecttwo.service.mission.MissionIOService;
+import com.yeamanan.projecttwo.service.mission.MissionIOServiceImpl;
+import com.yeamanan.projecttwo.service.mission.TileIOService;
+import com.yeamanan.projecttwo.service.mission.TileIOServiceImpl;
 import com.yeamanan.projecttwo.util.PropertiesUtil;
 import com.yeamanan.projecttwo.view.ViewFactory;
 import java.util.List;
@@ -143,37 +143,37 @@ public class ProjectTwo extends Application {
      * Check.
      */
     public static void check() {
-        final SurvivorService sService = new SurvivorServiceImpl();
+        final SurvivorIOService sService = new SurvivorIOServiceImpl();
         final List<Survivor> survivors = sService.loadAll();
         LOG.info(survivors.size() + " survivors loaded :");
         for (Survivor survivor : survivors) {
             LOG.info("\t" + survivor);
         }
-        final InvasionService iService = new InvasionServiceImpl();
+        final InvasionIOService iService = new InvasionIOServiceImpl();
         final List<Invasion> iCards = iService.loadAll();
         LOG.info(iCards.size() + " zombie cards loaded :");
         for (Invasion iCard : iCards) {
             LOG.info("\t" + iCard.getName());
         }
-        final EquipmentService eService = new EquipmentServiceImpl();
+        final EquipmentIOService eService = new EquipmentIOServiceImpl();
         final List<Equipment> eCards = eService.loadAll();
         LOG.info(eCards.size() + " equipment cards loaded :");
         for (Equipment eCard : eCards) {
             LOG.info("\t" + eCard.getName());
         }
-        final WeaponService wService = new WeaponServiceImpl();
+        final WeaponIOService wService = new WeaponIOServiceImpl();
         final List<Weapon> wCards = wService.loadAll();
         LOG.info(wCards.size() + " weapon cards loaded :");
         for (Weapon wCard : wCards) {
             LOG.info("\t" + wCard.getName());
         }
-        final MissionService mService = new MissionServiceImpl();
+        final MissionIOService mService = new MissionIOServiceImpl();
         final List<Mission> missions = mService.loadAll();
         LOG.info(missions.size() + " missions loaded :");
         for (Mission mission : missions) {
             LOG.info("\t" + mission.getName());
         }
-        final TileService tService = new TileServiceImpl();
+        final TileIOService tService = new TileIOServiceImpl();
         final List<Tile> tiles = tService.loadAll();
         LOG.info(tiles.size() + " tiles loaded :");
         for (Tile tile : tiles) {

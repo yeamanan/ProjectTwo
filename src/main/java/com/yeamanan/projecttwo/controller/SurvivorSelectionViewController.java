@@ -5,8 +5,8 @@ import com.yeamanan.projecttwo.model.Element;
 import com.yeamanan.projecttwo.model.character.Survivor;
 import com.yeamanan.projecttwo.model.mission.Zone;
 import com.yeamanan.projecttwo.model.token.Start;
-import com.yeamanan.projecttwo.service.character.SurvivorService;
-import com.yeamanan.projecttwo.service.character.SurvivorServiceImpl;
+import com.yeamanan.projecttwo.service.character.SurvivorIOService;
+import com.yeamanan.projecttwo.service.character.SurvivorIOServiceImpl;
 import com.yeamanan.projecttwo.view.ViewType;
 import java.net.URL;
 import java.util.List;
@@ -58,15 +58,15 @@ public class SurvivorSelectionViewController implements Initializable {
             public final void handle(final MouseEvent argEvent) {
                 final Pane pane = (Pane) argEvent.getSource();
                 if (pane.getStyleClass().contains("selected")) {
-                    final SurvivorService service = new SurvivorServiceImpl();
+                    final SurvivorIOService service = new SurvivorIOServiceImpl();
                     pane.getStyleClass().remove("selected");
                     startZone.getElements().remove(service.load(pane.getId()));
                 } else {
 //                    final int nbSurvivors =
 //                        instance.getContext().getGame().getSurvivors().size();
 //                    if (nbSurvivors < 6) {
-                        final SurvivorService service =
-                                new SurvivorServiceImpl();
+                        final SurvivorIOService service =
+                                new SurvivorIOServiceImpl();
                         pane.getStyleClass().add("selected");
                         final Survivor survivor = service.load(pane.getId());
                         startZone.getElements().add(survivor);
@@ -112,7 +112,7 @@ public class SurvivorSelectionViewController implements Initializable {
     @Override
     public final void initialize(final URL location,
                                 final ResourceBundle resources) {
-        final SurvivorService service = new SurvivorServiceImpl();
+        final SurvivorIOService service = new SurvivorIOServiceImpl();
         final List<String> sNames = service.getFileNames();
         for (String sName : sNames) {
             final Pane pane = new Pane();
@@ -130,9 +130,9 @@ public class SurvivorSelectionViewController implements Initializable {
 //        description.setStyle("-fx-background-image: url(\"" + sPath + "\")");
 //        description.getStyleClass().add("survivorDescription");
         final ProjectTwo instance = ProjectTwo.getInstance();
-        final List<Zone> board =
-                instance.getContext().getMission().getBoard();
-        for (Zone zone : board) {
+        final List<Zone> zones =
+                instance.getContext().getMission().getZones();
+        for (Zone zone : zones) {
             for (Element element : zone.getElements()) {
                 if (element.getClass().equals(Start.class)) {
                     this.startZone = zone;

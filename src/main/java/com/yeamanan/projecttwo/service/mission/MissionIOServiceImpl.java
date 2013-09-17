@@ -1,8 +1,8 @@
 package com.yeamanan.projecttwo.service.mission;
 
 import com.yeamanan.projecttwo.model.mission.Mission;
-import com.yeamanan.projecttwo.service.GenericService;
-import com.yeamanan.projecttwo.service.GenericServiceImpl;
+import com.yeamanan.projecttwo.service.GenericIOService;
+import com.yeamanan.projecttwo.service.GenericIOServiceImpl;
 import java.util.List;
 //import org.apache.log4j.Logger;
 
@@ -11,7 +11,7 @@ import java.util.List;
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
-public class MissionServiceImpl implements MissionService {
+public class MissionIOServiceImpl implements MissionIOService {
 
     /**
      * Logger.
@@ -32,14 +32,14 @@ public class MissionServiceImpl implements MissionService {
     /**
      * Generic service.
      */
-    private final transient GenericService<Mission> service;
+    private final transient GenericIOService<Mission> service;
 
     /**
      * Constructor.
      */
-    public MissionServiceImpl() {
+    public MissionIOServiceImpl() {
         this.service =
-                new GenericServiceImpl(FOLDER, EXTENSION, Mission.class);
+                new GenericIOServiceImpl(FOLDER, EXTENSION, Mission.class);
     }
 
     /**

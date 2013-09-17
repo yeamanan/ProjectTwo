@@ -1,8 +1,8 @@
 package com.yeamanan.projecttwo.service.card;
 
 import com.yeamanan.projecttwo.model.card.Invasion;
-import com.yeamanan.projecttwo.service.GenericService;
-import com.yeamanan.projecttwo.service.GenericServiceImpl;
+import com.yeamanan.projecttwo.service.GenericIOService;
+import com.yeamanan.projecttwo.service.GenericIOServiceImpl;
 import java.util.List;
 //import org.apache.log4j.Logger;
 
@@ -11,7 +11,7 @@ import java.util.List;
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
-public class InvasionServiceImpl implements InvasionService {
+public class InvasionIOServiceImpl implements InvasionIOService {
 
     /**
      * Logger.
@@ -32,14 +32,14 @@ public class InvasionServiceImpl implements InvasionService {
     /**
      * Generic service.
      */
-    private final transient GenericService<Invasion> service;
+    private final transient GenericIOService<Invasion> service;
 
     /**
      * Constructor.
      */
-    public InvasionServiceImpl() {
+    public InvasionIOServiceImpl() {
         this.service =
-                new GenericServiceImpl(FOLDER, EXTENSION, Invasion.class);
+                new GenericIOServiceImpl(FOLDER, EXTENSION, Invasion.class);
     }
 
     /**

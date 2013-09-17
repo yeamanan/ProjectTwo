@@ -8,7 +8,7 @@ import java.util.List;
  * @param <T> class of the object
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
-public interface GenericService<T> {
+public interface GenericIOService<T> {
 
     /**
      * getFileNames() method.

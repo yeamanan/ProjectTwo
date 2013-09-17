@@ -18,13 +18,13 @@ import org.apache.log4j.Logger;
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  * @param <T> a type of object for the service
  */
-public class GenericServiceImpl<T> implements GenericService<T> {
+public class GenericIOServiceImpl<T> implements GenericIOService<T> {
 
     /**
      * Logger.
      */
     private static final Logger LOG =
-            Logger.getLogger(GenericServiceImpl.class);
+            Logger.getLogger(GenericIOServiceImpl.class);
 
     /**
      * Object folder in jar.
@@ -48,7 +48,7 @@ public class GenericServiceImpl<T> implements GenericService<T> {
      * @param argExtension the extension of the xml file
      * @param argClass a class
      */
-    public GenericServiceImpl(final String argFolder, final String argExtension,
+    public GenericIOServiceImpl(final String argFolder, final String argExtension,
             final Class argClass) {
         this.folder = argFolder;
         this.extension = argExtension;

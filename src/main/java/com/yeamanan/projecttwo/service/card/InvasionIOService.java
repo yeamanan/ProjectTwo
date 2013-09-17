@@ -8,7 +8,7 @@ import java.util.List;
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
-public interface InvasionService {
+public interface InvasionIOService {
 
     /**
      * getFileNames() method.

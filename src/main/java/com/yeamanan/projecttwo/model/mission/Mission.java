@@ -35,18 +35,22 @@ public class Mission {
     /**
      * Tiles of the mission.
      */
-    @XmlElement(name = "Tiles", required = true)
-    private Tiles tiles;
+    @XmlElementWrapper(name = "Tiles", required = false)
+    @XmlElements({
+        @XmlElement(name = "Tile", type = Tile.class)
+    })
+    private List<Tile> tiles;
 
     /**
      * Board of the mission.
      */
-    @XmlElementWrapper(name = "Board", required = false)
+    @XmlElementWrapper(name = "Zones", required = false)
     @XmlElements({
-        @XmlElement(name = "Street", type = Street.class),
-        @XmlElement(name = "Building", type = Building.class)
+        @XmlElement(name = "Zone", type = Zone.class),
+        @XmlElement(name = "Building", type = Building.class),
+        @XmlElement(name = "Street", type = Street.class)
     })
-    private List<Zone> board;
+    private List<Zone> zones;
 
     /**
      * Constructor.
@@ -54,8 +58,8 @@ public class Mission {
     public Mission() {
         this.id = "";
         this.name = "";
-        this.tiles = new Tiles();
-        this.board = new ArrayList();
+        this.tiles = new ArrayList();
+        this.zones = new ArrayList();
     }
 
     /**
@@ -97,37 +101,37 @@ public class Mission {
     /**
      * getTiles() method.
      *
-     * @return the tiles of the mission
+     * @return the list of tiles of the mission
      */
-    public final Tiles getTiles() {
+    public final List<Tile> getTiles() {
         return this.tiles;
     }
 
     /**
      * setTiles() method.
      *
-     * @param argTiles the new tiles of the mission
+     * @param argTiles the new list of tiles of the mission
      */
-    public final void setTiles(final Tiles argTiles) {
+    public final void setTiles(final List<Tile> argTiles) {
         this.tiles = argTiles;
     }
 
     /**
-     * getBoard() method.
+     * getZones() method.
      *
      * @return a list of zone representing the board
      */
-    public final List<Zone> getBoard() {
-        return board;
+    public final List<Zone> getZones() {
+        return zones;
     }
 
     /**
-     * setBoard() method.
+     * setZones() method.
      *
-     * @param argBoard a new list of zone representing the board
+     * @param argZones a new list of zone representing the board
      */
-    public final void setBoard(final List<Zone> argBoard) {
-        this.board = argBoard;
+    public final void setBoard(final List<Zone> argZones) {
+        this.zones = argZones;
     }
 
     /**
@@ -139,12 +143,8 @@ public class Mission {
     public final String toString() {
         String str = "Mission{" + "id=" + this.id + ", name=" + this.name;
         str += ", board=[";
-        for (TileRow row : tiles.getRows()) {
-            str += "[";
-            for (Tile tile : row.getTiles()) {
-                str += tile.toString();
-            }
-            str += "]";
+        for (Tile tile : tiles) {
+            str += tile.toString();
         }
         return str + "]}";
     }

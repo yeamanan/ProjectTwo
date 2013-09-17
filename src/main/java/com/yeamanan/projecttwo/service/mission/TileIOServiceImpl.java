@@ -1,8 +1,8 @@
 package com.yeamanan.projecttwo.service.mission;
 
 import com.yeamanan.projecttwo.model.mission.Tile;
-import com.yeamanan.projecttwo.service.GenericService;
-import com.yeamanan.projecttwo.service.GenericServiceImpl;
+import com.yeamanan.projecttwo.service.GenericIOService;
+import com.yeamanan.projecttwo.service.GenericIOServiceImpl;
 import java.util.List;
 //import org.apache.log4j.Logger;
 
@@ -11,7 +11,7 @@ import java.util.List;
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
-public class TileServiceImpl implements TileService {
+public class TileIOServiceImpl implements TileIOService {
 
     /**
      * Logger.
@@ -31,13 +31,13 @@ public class TileServiceImpl implements TileService {
     /**
      * Generic service.
      */
-    private final transient GenericService<Tile> service;
+    private final transient GenericIOService<Tile> service;
 
     /**
      * Constructor.
      */
-    public TileServiceImpl() {
-        this.service = new GenericServiceImpl(FOLDER, EXTENSION, Tile.class);
+    public TileIOServiceImpl() {
+        this.service = new GenericIOServiceImpl(FOLDER, EXTENSION, Tile.class);
     }
 
     /**
