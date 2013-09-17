@@ -1,4 +1,6 @@
-package com.yeamanan.projecttwo.model;
+package com.yeamanan.projecttwo.model.character;
+
+import com.yeamanan.projecttwo.model.Constants;
 
 /**
  * Level enumeration.

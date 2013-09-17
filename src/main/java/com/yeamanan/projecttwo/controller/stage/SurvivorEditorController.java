@@ -1,6 +1,6 @@
 package com.yeamanan.projecttwo.controller.stage;
 
-import com.yeamanan.projecttwo.model.Skill;
+import com.yeamanan.projecttwo.model.character.Skill;
 import com.yeamanan.projecttwo.model.character.Survivor;
 import com.yeamanan.projecttwo.service.character.SurvivorIOService;
 import com.yeamanan.projecttwo.service.character.SurvivorIOServiceImpl;

@@ -1,6 +1,5 @@
 package com.yeamanan.projecttwo.model.mission;
 
-import com.yeamanan.projecttwo.model.Axe;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -39,7 +38,7 @@ public class Tile {
      * Axe of a tile.
      */
     @XmlAttribute(name = "direction", required = false)
-    private Axe axe;
+    private Direction axe;
 
     /**
      * Constructor.
@@ -48,7 +47,7 @@ public class Tile {
         this.name = "";
         this.x = 0;
         this.y = 0;
-        this.axe = Axe.NORTH;
+        this.axe = Direction.NORTH;
     }
 
     /**
@@ -88,7 +87,7 @@ public class Tile {
      *
      * @return the axe of the tile
      */
-    public final Axe getAxe() {
+    public final Direction getAxe() {
         return this.axe;
     }
 
@@ -97,7 +96,7 @@ public class Tile {
      *
      * @param argAxe the new axe of the tile
      */
-    public final void setAxe(final Axe argAxe) {
+    public final void setAxe(final Direction argAxe) {
         this.axe = argAxe;
     }
 

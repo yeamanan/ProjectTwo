@@ -1,8 +1,6 @@
 package com.yeamanan.projecttwo.model.character;
 
 import com.yeamanan.projecttwo.model.Constants;
-import com.yeamanan.projecttwo.model.Level;
-import com.yeamanan.projecttwo.model.Skill;
 import com.yeamanan.projecttwo.model.card.InventoryElement;
 import java.util.ArrayList;
 import java.util.List;

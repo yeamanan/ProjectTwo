@@ -11,15 +11,15 @@
                 <ZombieSpawn/>
             </Elements>
         </Street>
-        <Building id="2" x="75.0" y="0.0" width="87.5" height="87.5"/>
-        <Building id="3" x="162.5" y="0.0" width="87.5" height="87.5"/>
-        <Street id="4"  x="0" y="75.0" width="75.0" height="100.0">
+        <Building id="2" x="75.0" y="0.0" width="87.0" height="87.0"/>
+        <Building id="3" x="162.0" y="0.0" width="88.0" height="87.0"/>
+        <Street id="4" x="0" y="75.0" width="75.0" height="100.0">
             <Elements>
                 <Walker/>
             </Elements>
         </Street>
-        <Building id="5" x="75.0" y="87.5" width="87.5" height="87.5"/>
-        <Building id="6" x="162.5" y="87.5" width="87.5" height="87.5"/>
+        <Building id="5" x="75.0" y="87.0" width="87.0" height="88.0"/>
+        <Building id="6" x="162.0" y="87.0" width="88.0" height="88.0"/>
         <Street id="7" x="0.0" y="175.0" width="75.0" height="150.0"/>
         <Street id="8" x="75.0" y="175.0" width="100.0" height="150.0">
             <Elements>
@@ -27,18 +27,18 @@
             </Elements>
         </Street>
         <Street id="9" x="175.0" y="175.0" width="75.0" height="150.0"/>
-        <Building id="10" x="0.0" y="325.0" width="175.0" height="87.5"/>
+        <Building id="10" x="0.0" y="325.0" width="175.0" height="87.0"/>
         <Street id="11" x="175.0" y="325.0" width="75.0" height="100.0">
             <Elements>
                 <Walker/>
             </Elements>
         </Street>
-        <Building id="12" x="0.0" y="412.5" width="87.5" height="87.5">
+        <Building id="12" x="0.0" y="412.0" width="87.0" height="88.0">
             <Elements>
                 <Start/>
             </Elements>
         </Building>
-        <Building id="13" x="87.5" y="412.5" width="87.5" height="87.5"/>
+        <Building id="13" x="87.0" y="412.0" width="88.0" height="88.0"/>
         <Street id="14" x="175.0" y="425.0" width="75.0" height="75.0">
             <Elements>
                 <Door toZone="13" open="false"/>
