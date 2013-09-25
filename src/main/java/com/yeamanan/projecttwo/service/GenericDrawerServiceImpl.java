@@ -41,12 +41,10 @@ public class GenericDrawerServiceImpl<T> implements GenericDrawerService<T> {
         }
         final String sPath = "images/" + fileName + ".jpg";
         final ImageView image = new ImageView(sPath);
-        image.autosize();
         final double x = (argWidth - image.getBoundsInLocal().getWidth()) / 2;
         final double y = (argHeight - image.getBoundsInLocal().getHeight()) / 2;
         image.setLayoutX(x);
         image.setLayoutY(y);
-        LOG.info(x + " " + y);
         return image;
     }
 
