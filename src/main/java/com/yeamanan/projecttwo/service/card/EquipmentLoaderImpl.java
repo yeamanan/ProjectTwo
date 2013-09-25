@@ -1,23 +1,23 @@
 package com.yeamanan.projecttwo.service.card;
 
 import com.yeamanan.projecttwo.model.card.Equipment;
-import com.yeamanan.projecttwo.service.GenericIOService;
-import com.yeamanan.projecttwo.service.GenericIOServiceImpl;
+import com.yeamanan.projecttwo.service.GenericLoader;
+import com.yeamanan.projecttwo.service.GenericLoaderImpl;
 import java.util.List;
 //import org.apache.log4j.Logger;
 
 /**
- * EquipmentServiceImpl class.
+ * EquipmentLoaderImpl class.
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
-public class EquipmentIOServiceImpl implements EquipmentIOService {
+public class EquipmentLoaderImpl implements EquipmentLoader {
 
     /**
      * Logger.
      */
 //    private static final Logger LOG =
-//            Logger.getLogger(EquipmentServiceImpl.class);
+//            Logger.getLogger(EquipmentLoaderImpl.class);
 
     /**
      * Equipment cards folder in jar.
@@ -32,14 +32,14 @@ public class EquipmentIOServiceImpl implements EquipmentIOService {
     /**
      * Generic service.
      */
-    private final transient GenericIOService<Equipment> service;
+    private final transient GenericLoader<Equipment> service;
 
     /**
      * Constructor.
      */
-    public EquipmentIOServiceImpl() {
+    public EquipmentLoaderImpl() {
         this.service =
-                new GenericIOServiceImpl(FOLDER, EXTENSION, Equipment.class);
+                new GenericLoaderImpl(FOLDER, EXTENSION, Equipment.class);
     }
 
     /**
@@ -78,9 +78,9 @@ public class EquipmentIOServiceImpl implements EquipmentIOService {
      *
      * @param argCard an equipment card object to save
      */
-    @Override
-    public final void save(final Equipment argCard) {
-        this.service.save(argCard, argCard.getName());
-    }
+//    @Override
+//    public final void save(final Equipment argCard) {
+//        this.service.save(argCard, argCard.getName());
+//    }
 
 }

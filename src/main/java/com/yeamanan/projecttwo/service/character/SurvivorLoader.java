@@ -4,11 +4,11 @@ import com.yeamanan.projecttwo.model.character.Survivor;
 import java.util.List;
 
 /**
- * SurvivorService interface.
+ * SurvivorLoader interface.
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
-public interface SurvivorIOService {
+public interface SurvivorLoader {
 
     /**
      * getFileNames() method.
@@ -37,6 +37,6 @@ public interface SurvivorIOService {
      *
      * @param argSurvivor a survivor object to save
      */
-    void save(final Survivor argSurvivor);
+//    void save(final Survivor argSurvivor);
 
 }

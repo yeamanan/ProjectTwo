@@ -3,8 +3,8 @@ package com.yeamanan.projecttwo.controller;
 import com.yeamanan.projecttwo.Context;
 import com.yeamanan.projecttwo.ProjectTwo;
 import com.yeamanan.projecttwo.model.mission.Mission;
-import com.yeamanan.projecttwo.service.mission.MissionIOService;
-import com.yeamanan.projecttwo.service.mission.MissionIOServiceImpl;
+import com.yeamanan.projecttwo.service.mission.MissionLoader;
+import com.yeamanan.projecttwo.service.mission.MissionLoaderImpl;
 import com.yeamanan.projecttwo.view.ViewType;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -50,7 +50,7 @@ public class MissionSelectionViewController implements Initializable {
             public final void handle(final ActionEvent argEvent) {
                 final Button button = (Button) argEvent.getSource();
                 final String missionName = button.getText();
-                final MissionIOService service = new MissionIOServiceImpl();
+                final MissionLoader service = new MissionLoaderImpl();
                 final Mission mission =
                         service.load(missionName);
                 final ProjectTwo instance = ProjectTwo.getInstance();
@@ -71,7 +71,7 @@ public class MissionSelectionViewController implements Initializable {
     public final void initialize(final URL argLocation,
                                 final ResourceBundle argBundle) {
         double xPos = START_X, yPos = START_Y;
-        final MissionIOService service = new MissionIOServiceImpl();
+        final MissionLoader service = new MissionLoaderImpl();
         for (String name : service.getFileNames()) {
             final Button button = new Button(name);
             button.setLayoutX(xPos);

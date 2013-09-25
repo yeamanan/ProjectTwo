@@ -3,12 +3,12 @@ package com.yeamanan.projecttwo.service;
 import javafx.scene.Node;
 
 /**
- * GenericReaderService interface.
+ * GenericDrawer interface.
  *
- * @param <T> class of the object
+ * @param <T> class of the object to draw
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
-public interface GenericDrawerService<T> {
+public interface GenericDrawer<T> {
 
     /**
      * draw() method.

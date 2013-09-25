@@ -4,11 +4,11 @@ import com.yeamanan.projecttwo.model.card.Weapon;
 import java.util.List;
 
 /**
- * WeaponService interface.
+ * WeaponLoader interface.
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
-public interface WeaponIOService {
+public interface WeaponLoader {
 
     /**
      * getFileNames() method.
@@ -37,6 +37,6 @@ public interface WeaponIOService {
      *
      * @param argCard a weapon card object to save
      */
-    void save(Weapon argCard);
+//    void save(Weapon argCard);
 
 }

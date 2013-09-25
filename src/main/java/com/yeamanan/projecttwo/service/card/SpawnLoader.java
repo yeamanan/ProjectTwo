@@ -4,11 +4,11 @@ import com.yeamanan.projecttwo.model.card.Spawn;
 import java.util.List;
 
 /**
- * SpawnIOService interface.
+ * SpawnLoader interface.
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
-public interface SpawnIOService {
+public interface SpawnLoader {
 
     /**
      * getFileNames() method.
@@ -37,6 +37,6 @@ public interface SpawnIOService {
      *
      * @param argSpawnCard an spawn card object to save
      */
-    void save(final Spawn argSpawnCard);
+//    void save(final Spawn argSpawnCard);
 
 }

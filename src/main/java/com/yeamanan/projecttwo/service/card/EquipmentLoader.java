@@ -4,11 +4,11 @@ import com.yeamanan.projecttwo.model.card.Equipment;
 import java.util.List;
 
 /**
- * EquipmentService interface.
+ * EquipmentLoader interface.
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
-public interface EquipmentIOService {
+public interface EquipmentLoader {
 
     /**
      * getFileNames() method.
@@ -37,6 +37,6 @@ public interface EquipmentIOService {
      *
      * @param argCard an equipment card object to save
      */
-    void save(Equipment argCard);
+//    void save(Equipment argCard);
 
 }

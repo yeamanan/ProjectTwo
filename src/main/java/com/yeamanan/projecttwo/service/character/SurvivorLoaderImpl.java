@@ -1,23 +1,23 @@
 package com.yeamanan.projecttwo.service.character;
 
 import com.yeamanan.projecttwo.model.character.Survivor;
-import com.yeamanan.projecttwo.service.GenericIOService;
-import com.yeamanan.projecttwo.service.GenericIOServiceImpl;
+import com.yeamanan.projecttwo.service.GenericLoader;
+import com.yeamanan.projecttwo.service.GenericLoaderImpl;
 import java.util.List;
 //import org.apache.log4j.Logger;
 
 /**
- * SurvivorServiceImpl class.
+ * SurvivorLoaderImpl class.
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
-public class SurvivorIOServiceImpl implements SurvivorIOService {
+public class SurvivorLoaderImpl implements SurvivorLoader {
 
     /**
      * Logger.
      */
 //    private static final Logger LOG =
-//            Logger.getLogger(SurvivorServiceImpl.class);
+//            Logger.getLogger(SurvivorLoaderImpl.class);
 
     /**
      * Survivor file folder in jar.
@@ -32,14 +32,14 @@ public class SurvivorIOServiceImpl implements SurvivorIOService {
     /**
      * Generic service.
      */
-    private final transient GenericIOService<Survivor> service;
+    private final transient GenericLoader<Survivor> service;
 
     /**
      * Constructor.
      */
-    public SurvivorIOServiceImpl() {
+    public SurvivorLoaderImpl() {
         this.service =
-                new GenericIOServiceImpl(FOLDER, EXTENSION, Survivor.class);
+                new GenericLoaderImpl(FOLDER, EXTENSION, Survivor.class);
     }
 
     /**
@@ -78,9 +78,9 @@ public class SurvivorIOServiceImpl implements SurvivorIOService {
      *
      * @param argSurvivor a survivor object to save
      */
-    @Override
-    public final void save(final Survivor argSurvivor) {
-        service.save(argSurvivor, argSurvivor.getName());
-    }
+//    @Override
+//    public final void save(final Survivor argSurvivor) {
+//        service.save(argSurvivor, argSurvivor.getName());
+//    }
 
 }

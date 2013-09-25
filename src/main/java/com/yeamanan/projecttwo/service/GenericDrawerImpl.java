@@ -7,23 +7,22 @@ import javafx.scene.image.ImageView;
 import org.apache.log4j.Logger;
 
 /**
- * GenericReaderServiceImpl class.
+ * GenericDrawerImpl class.
  *
+ * @param <T> class of the object to draw
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
- * @param <T> a type of object for the service
  */
-public class GenericDrawerServiceImpl<T> implements GenericDrawerService<T> {
+public class GenericDrawerImpl<T> implements GenericDrawer<T> {
 
     /**
      * Logger.
      */
-    private static final Logger LOG =
-            Logger.getLogger(GenericDrawerServiceImpl.class);
+    private static final Logger LOG = Logger.getLogger(GenericDrawerImpl.class);
 
     /**
      * draw() method.
      *
-     * @param argMission the mission to draw
+     * @param argObject the object to draw
      * @return the node representing the mission
      */
     @Override

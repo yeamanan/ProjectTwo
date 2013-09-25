@@ -1,23 +1,23 @@
 package com.yeamanan.projecttwo.service.card;
 
 import com.yeamanan.projecttwo.model.card.Weapon;
-import com.yeamanan.projecttwo.service.GenericIOService;
-import com.yeamanan.projecttwo.service.GenericIOServiceImpl;
+import com.yeamanan.projecttwo.service.GenericLoader;
+import com.yeamanan.projecttwo.service.GenericLoaderImpl;
 import java.util.List;
 //import org.apache.log4j.Logger;
 
 /**
- * WeaponServiceImpl class.
+ * WeaponLoaderImpl class.
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
-public class WeaponIOServiceImpl implements WeaponIOService {
+public class WeaponLoaderImpl implements WeaponLoader {
 
     /**
      * Logger.
      */
 //    private static final Logger LOG =
-//            Logger.getLogger(WeaponServiceImpl.class);
+//            Logger.getLogger(WeaponLoaderImpl.class);
 
     /**
      * Equipment cards folder in jar.
@@ -32,17 +32,17 @@ public class WeaponIOServiceImpl implements WeaponIOService {
     /**
      * Generic service.
      */
-    private final transient GenericIOService<Weapon> service;
+    private final transient GenericLoader<Weapon> service;
 
     /**
      * Constructor.
      */
-    public WeaponIOServiceImpl() {
-        this.service = new GenericIOServiceImpl(FOLDER, EXTENSION, Weapon.class);
+    public WeaponLoaderImpl() {
+        this.service = new GenericLoaderImpl(FOLDER, EXTENSION, Weapon.class);
     }
 
     /**
-     * getNames() method.
+     * getFileNames() method.
      *
      * @return a list of weapon card file names
      */
@@ -77,9 +77,9 @@ public class WeaponIOServiceImpl implements WeaponIOService {
      *
      * @param argCard a weapon card object to save
      */
-    @Override
-    public final void save(final Weapon argCard) {
-        this.service.save(argCard, argCard.getName());
-    }
+//    @Override
+//    public final void save(final Weapon argCard) {
+//        this.service.save(argCard, argCard.getName());
+//    }
 
 }

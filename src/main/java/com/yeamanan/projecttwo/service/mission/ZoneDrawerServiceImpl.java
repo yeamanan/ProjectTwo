@@ -4,8 +4,8 @@ import com.yeamanan.projecttwo.model.Element;
 import com.yeamanan.projecttwo.model.mission.Zone;
 import com.yeamanan.projecttwo.model.token.Door;
 import com.yeamanan.projecttwo.model.token.Start;
-import com.yeamanan.projecttwo.service.GenericDrawerService;
-import com.yeamanan.projecttwo.service.GenericDrawerServiceImpl;
+import com.yeamanan.projecttwo.service.GenericDrawer;
+import com.yeamanan.projecttwo.service.GenericDrawerImpl;
 import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.layout.Pane;
@@ -40,8 +40,8 @@ public class ZoneDrawerServiceImpl implements ZoneDrawerService {
         for (Element element : argZone.getElements()) {
             if (element.getClass().equals(Start.class) ||
                     element.getClass().equals(Door.class)) {
-                final GenericDrawerService<Element> service =
-                        new GenericDrawerServiceImpl();
+                final GenericDrawer<Element> service =
+                        new GenericDrawerImpl();
                 pane.getChildren().add(service.draw(element, argZone.getWidth(), argZone.getHeight()));
             }
         }

@@ -4,11 +4,11 @@ import com.yeamanan.projecttwo.model.mission.Mission;
 import java.util.List;
 
 /**
- * MissionService interface.
+ * MissionLoader interface.
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
-public interface MissionIOService {
+public interface MissionLoader {
 
     /**
      * getFileNames() method.
@@ -37,6 +37,6 @@ public interface MissionIOService {
      *
      * @param argMission a mission object to save
      */
-    void save(final Mission argMission);
+//    void save(final Mission argMission);
 
 }

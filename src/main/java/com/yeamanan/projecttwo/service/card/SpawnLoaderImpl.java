@@ -1,23 +1,23 @@
 package com.yeamanan.projecttwo.service.card;
 
 import com.yeamanan.projecttwo.model.card.Spawn;
-import com.yeamanan.projecttwo.service.GenericIOService;
-import com.yeamanan.projecttwo.service.GenericIOServiceImpl;
+import com.yeamanan.projecttwo.service.GenericLoader;
+import com.yeamanan.projecttwo.service.GenericLoaderImpl;
 import java.util.List;
 //import org.apache.log4j.Logger;
 
 /**
- * SpawnIOServiceImpl class.
+ * SpawnLoaderImpl class.
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
-public class SpawnIOServiceImpl implements SpawnIOService {
+public class SpawnLoaderImpl implements SpawnLoader {
 
     /**
      * Logger.
      */
 //    private static final Logger LOG =
-//            Logger.getLogger(SpawnIOServiceImpl.class);
+//            Logger.getLogger(SpawnLoaderImpl.class);
 
     /**
      * Spawn cards file folder in jar.
@@ -32,14 +32,13 @@ public class SpawnIOServiceImpl implements SpawnIOService {
     /**
      * Generic service.
      */
-    private final transient GenericIOService<Spawn> service;
+    private final transient GenericLoader<Spawn> service;
 
     /**
      * Constructor.
      */
-    public SpawnIOServiceImpl() {
-        this.service =
-                new GenericIOServiceImpl(FOLDER, EXTENSION, Spawn.class);
+    public SpawnLoaderImpl() {
+        this.service = new GenericLoaderImpl(FOLDER, EXTENSION, Spawn.class);
     }
 
     /**
@@ -78,9 +77,9 @@ public class SpawnIOServiceImpl implements SpawnIOService {
      *
      * @param argSpawnCard an spawn card object to save
      */
-    @Override
-    public final void save(final Spawn argSpawnCard) {
-        this.service.save(argSpawnCard, argSpawnCard.getName());
-    }
+//    @Override
+//    public final void save(final Spawn argSpawnCard) {
+//        this.service.save(argSpawnCard, argSpawnCard.getName());
+//    }
 
 }

@@ -2,8 +2,8 @@ package com.yeamanan.projecttwo.controller.stage;
 
 import com.yeamanan.projecttwo.model.character.Skill;
 import com.yeamanan.projecttwo.model.character.Survivor;
-import com.yeamanan.projecttwo.service.character.SurvivorIOService;
-import com.yeamanan.projecttwo.service.character.SurvivorIOServiceImpl;
+import com.yeamanan.projecttwo.service.character.SurvivorLoader;
+import com.yeamanan.projecttwo.service.character.SurvivorLoaderImpl;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -99,7 +99,7 @@ public class SurvivorEditorController implements Initializable {
     @Override
     public final void initialize(final URL argUrl,
             final ResourceBundle argBundle) {
-        final SurvivorIOService sService = new SurvivorIOServiceImpl();
+        final SurvivorLoader sService = new SurvivorLoaderImpl();
         survivors = sService.loadAll();
         for (Survivor survivor : survivors) {
             cbSurvivors.getItems().add(survivor.getName());

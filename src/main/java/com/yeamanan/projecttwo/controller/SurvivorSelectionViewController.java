@@ -5,8 +5,8 @@ import com.yeamanan.projecttwo.model.Element;
 import com.yeamanan.projecttwo.model.character.Survivor;
 import com.yeamanan.projecttwo.model.mission.Zone;
 import com.yeamanan.projecttwo.model.token.Start;
-import com.yeamanan.projecttwo.service.character.SurvivorIOService;
-import com.yeamanan.projecttwo.service.character.SurvivorIOServiceImpl;
+import com.yeamanan.projecttwo.service.character.SurvivorLoader;
+import com.yeamanan.projecttwo.service.character.SurvivorLoaderImpl;
 import com.yeamanan.projecttwo.view.ViewType;
 import java.net.URL;
 import java.util.List;
@@ -58,15 +58,15 @@ public class SurvivorSelectionViewController implements Initializable {
             public final void handle(final MouseEvent argEvent) {
                 final Pane pane = (Pane) argEvent.getSource();
                 if (pane.getStyleClass().contains("selected")) {
-                    final SurvivorIOService service = new SurvivorIOServiceImpl();
+                    final SurvivorLoader service = new SurvivorLoaderImpl();
                     pane.getStyleClass().remove("selected");
                     startZone.getElements().remove(service.load(pane.getId()));
                 } else {
 //                    final int nbSurvivors =
 //                        instance.getContext().getGame().getSurvivors().size();
 //                    if (nbSurvivors < 6) {
-                        final SurvivorIOService service =
-                                new SurvivorIOServiceImpl();
+                        final SurvivorLoader service =
+                                new SurvivorLoaderImpl();
                         pane.getStyleClass().add("selected");
                         final Survivor survivor = service.load(pane.getId());
                         startZone.getElements().add(survivor);
@@ -112,7 +112,7 @@ public class SurvivorSelectionViewController implements Initializable {
     @Override
     public final void initialize(final URL location,
                                 final ResourceBundle resources) {
-        final SurvivorIOService service = new SurvivorIOServiceImpl();
+        final SurvivorLoader service = new SurvivorLoaderImpl();
         final List<String> sNames = service.getFileNames();
         for (String sName : sNames) {
             final Pane pane = new Pane();
