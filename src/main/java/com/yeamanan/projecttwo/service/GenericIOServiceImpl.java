@@ -13,7 +13,7 @@ import javax.xml.bind.Unmarshaller;
 import org.apache.log4j.Logger;
 
 /**
- * GenericServiceImpl class.
+ * GenericIOServiceImpl class.
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  * @param <T> a type of object for the service
@@ -54,6 +54,7 @@ public class GenericIOServiceImpl<T> implements GenericIOService<T> {
         this.extension = argExtension;
         this.gClass = argClass;
     }
+
     /**
      * getFileNames() method.
      *

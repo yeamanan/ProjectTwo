@@ -3,7 +3,7 @@ package com.yeamanan.projecttwo.service;
 import java.util.List;
 
 /**
- * GenericService interface.
+ * GenericIOService interface.
  *
  * @param <T> class of the object
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)

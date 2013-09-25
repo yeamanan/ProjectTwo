@@ -1,51 +1,51 @@
 package com.yeamanan.projecttwo.service.card;
 
-import com.yeamanan.projecttwo.model.card.Invasion;
+import com.yeamanan.projecttwo.model.card.Spawn;
 import com.yeamanan.projecttwo.service.GenericIOService;
 import com.yeamanan.projecttwo.service.GenericIOServiceImpl;
 import java.util.List;
 //import org.apache.log4j.Logger;
 
 /**
- * InvasionServiceImpl class.
+ * SpawnIOServiceImpl class.
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
-public class InvasionIOServiceImpl implements InvasionIOService {
+public class SpawnIOServiceImpl implements SpawnIOService {
 
     /**
      * Logger.
      */
 //    private static final Logger LOG =
-//            Logger.getLogger(InvasionServiceImpl.class);
+//            Logger.getLogger(SpawnIOServiceImpl.class);
 
     /**
-     * Zombie cards file folder in jar.
+     * Spawn cards file folder in jar.
      */
     private static final String FOLDER = "cards/invasions/";
 
     /**
-     * Zombie cards file's extension.
+     * Spawn cards file's extension.
      */
     private static final String EXTENSION = ".ixml";
 
     /**
      * Generic service.
      */
-    private final transient GenericIOService<Invasion> service;
+    private final transient GenericIOService<Spawn> service;
 
     /**
      * Constructor.
      */
-    public InvasionIOServiceImpl() {
+    public SpawnIOServiceImpl() {
         this.service =
-                new GenericIOServiceImpl(FOLDER, EXTENSION, Invasion.class);
+                new GenericIOServiceImpl(FOLDER, EXTENSION, Spawn.class);
     }
 
     /**
      * getFileNames() method.
      *
-     * @return a list of zombie card file names
+     * @return a list of spawn card file names
      */
     @Override
     public final List<String> getFileNames() {
@@ -55,32 +55,32 @@ public class InvasionIOServiceImpl implements InvasionIOService {
     /**
      * load() method.
      *
-     * @param argFileName the file name of a zombie card to load
-     * @return a zombie card object
+     * @param argFileName the file name of a spawn card to load
+     * @return a spawn card object
      */
     @Override
-    public final Invasion load(final String argFileName) {
+    public final Spawn load(final String argFileName) {
         return this.service.load(argFileName);
     }
 
     /**
      * loadAll() method.
      *
-     * @return a list of invasion card objects
+     * @return a list of spawn card objects
      */
     @Override
-    public final List<Invasion> loadAll() {
+    public final List<Spawn> loadAll() {
         return this.service.loadAll();
     }
 
     /**
      * save() method.
      *
-     * @param argInvasion an invasion card object to save
+     * @param argSpawnCard an spawn card object to save
      */
     @Override
-    public final void save(final Invasion argInvasion) {
-        this.service.save(argInvasion, argInvasion.getName());
+    public final void save(final Spawn argSpawnCard) {
+        this.service.save(argSpawnCard, argSpawnCard.getName());
     }
 
 }

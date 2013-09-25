@@ -10,16 +10,26 @@ public enum Color {
     /**
      * Red color.
      */
-    RED,
+    RED("Red"),
 
     /**
      * Blue color.
      */
-    BLUE,
+    BLUE("Blue"),
 
     /**
      * Green color.
      */
-    GREEN
+    GREEN("Green");
+    
+    private String name;
+    
+    private Color(final String argName) {
+        this.name = argName;
+    }
+    
+    public final String getName() {
+        return this.name;
+    }
 
 }

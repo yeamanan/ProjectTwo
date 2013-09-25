@@ -1,26 +1,23 @@
 package com.yeamanan.projecttwo;
 
-import com.yeamanan.projecttwo.model.character.Survivor;
-import com.yeamanan.projecttwo.model.card.Equipment;
-import com.yeamanan.projecttwo.model.card.Invasion;
-import com.yeamanan.projecttwo.model.card.Weapon;
-import com.yeamanan.projecttwo.model.mission.Mission;
-import com.yeamanan.projecttwo.model.mission.Tile;
-import com.yeamanan.projecttwo.service.card.EquipmentIOService;
-import com.yeamanan.projecttwo.service.card.EquipmentIOServiceImpl;
-import com.yeamanan.projecttwo.service.character.SurvivorIOService;
-import com.yeamanan.projecttwo.service.character.SurvivorIOServiceImpl;
-import com.yeamanan.projecttwo.service.card.InvasionIOService;
-import com.yeamanan.projecttwo.service.card.InvasionIOServiceImpl;
-import com.yeamanan.projecttwo.service.card.WeaponIOService;
-import com.yeamanan.projecttwo.service.card.WeaponIOServiceImpl;
-import com.yeamanan.projecttwo.service.mission.MissionIOService;
-import com.yeamanan.projecttwo.service.mission.MissionIOServiceImpl;
-import com.yeamanan.projecttwo.service.mission.TileIOService;
-import com.yeamanan.projecttwo.service.mission.TileIOServiceImpl;
+//import com.yeamanan.projecttwo.model.character.Survivor;
+//import com.yeamanan.projecttwo.model.card.Equipment;
+//import com.yeamanan.projecttwo.model.card.Spawn;
+//import com.yeamanan.projecttwo.model.card.Weapon;
+//import com.yeamanan.projecttwo.model.mission.Mission;
+//import com.yeamanan.projecttwo.service.card.EquipmentIOService;
+//import com.yeamanan.projecttwo.service.card.EquipmentIOServiceImpl;
+//import com.yeamanan.projecttwo.service.character.SurvivorIOService;
+//import com.yeamanan.projecttwo.service.character.SurvivorIOServiceImpl;
+//import com.yeamanan.projecttwo.service.card.SpawnIOService;
+//import com.yeamanan.projecttwo.service.card.SpawnIOServiceImpl;
+//import com.yeamanan.projecttwo.service.card.WeaponIOService;
+//import com.yeamanan.projecttwo.service.card.WeaponIOServiceImpl;
+//import com.yeamanan.projecttwo.service.mission.MissionIOService;
+//import com.yeamanan.projecttwo.service.mission.MissionIOServiceImpl;
 import com.yeamanan.projecttwo.util.PropertiesUtil;
 import com.yeamanan.projecttwo.view.ViewFactory;
-import java.util.List;
+//import java.util.List;
 import javafx.application.Application;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -135,50 +132,44 @@ public class ProjectTwo extends Application {
      * @param args arguments
      */
     public static void main(final String[] args) {
-        check();
+//        check();
         launch(args);
     }
 
     /**
      * Check.
      */
-    public static void check() {
-        final SurvivorIOService sService = new SurvivorIOServiceImpl();
-        final List<Survivor> survivors = sService.loadAll();
-        LOG.info(survivors.size() + " survivors loaded :");
-        for (Survivor survivor : survivors) {
-            LOG.info("\t" + survivor);
-        }
-        final InvasionIOService iService = new InvasionIOServiceImpl();
-        final List<Invasion> iCards = iService.loadAll();
-        LOG.info(iCards.size() + " zombie cards loaded :");
-        for (Invasion iCard : iCards) {
-            LOG.info("\t" + iCard.getName());
-        }
-        final EquipmentIOService eService = new EquipmentIOServiceImpl();
-        final List<Equipment> eCards = eService.loadAll();
-        LOG.info(eCards.size() + " equipment cards loaded :");
-        for (Equipment eCard : eCards) {
-            LOG.info("\t" + eCard.getName());
-        }
-        final WeaponIOService wService = new WeaponIOServiceImpl();
-        final List<Weapon> wCards = wService.loadAll();
-        LOG.info(wCards.size() + " weapon cards loaded :");
-        for (Weapon wCard : wCards) {
-            LOG.info("\t" + wCard.getName());
-        }
-        final MissionIOService mService = new MissionIOServiceImpl();
-        final List<Mission> missions = mService.loadAll();
-        LOG.info(missions.size() + " missions loaded :");
-        for (Mission mission : missions) {
-            LOG.info("\t" + mission.getName());
-        }
-        final TileIOService tService = new TileIOServiceImpl();
-        final List<Tile> tiles = tService.loadAll();
-        LOG.info(tiles.size() + " tiles loaded :");
-        for (Tile tile : tiles) {
-            LOG.info("\t" + tile.getName());
-        }
-    }
+//    public static void check() {
+//        final SurvivorIOService sService = new SurvivorIOServiceImpl();
+//        final List<Survivor> survivors = sService.loadAll();
+//        LOG.info(survivors.size() + " survivors loaded :");
+//        for (Survivor survivor : survivors) {
+//            LOG.info("\t" + survivor);
+//        }
+//        final SpawnIOService iService = new SpawnIOServiceImpl();
+//        final List<Spawn> iCards = iService.loadAll();
+//        LOG.info(iCards.size() + " zombie cards loaded :");
+//        for (Spawn iCard : iCards) {
+//            LOG.info("\t" + iCard.getName());
+//        }
+//        final EquipmentIOService eService = new EquipmentIOServiceImpl();
+//        final List<Equipment> eCards = eService.loadAll();
+//        LOG.info(eCards.size() + " equipment cards loaded :");
+//        for (Equipment eCard : eCards) {
+//            LOG.info("\t" + eCard.getName());
+//        }
+//        final WeaponIOService wService = new WeaponIOServiceImpl();
+//        final List<Weapon> wCards = wService.loadAll();
+//        LOG.info(wCards.size() + " weapon cards loaded :");
+//        for (Weapon wCard : wCards) {
+//            LOG.info("\t" + wCard.getName());
+//        }
+//        final MissionIOService mService = new MissionIOServiceImpl();
+//        final List<Mission> missions = mService.loadAll();
+//        LOG.info(missions.size() + " missions loaded :");
+//        for (Mission mission : missions) {
+//            LOG.info("\t" + mission.getName());
+//        }
+//    }
 
 }

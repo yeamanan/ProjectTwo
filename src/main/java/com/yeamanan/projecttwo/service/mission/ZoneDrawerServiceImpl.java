@@ -2,9 +2,13 @@ package com.yeamanan.projecttwo.service.mission;
 
 import com.yeamanan.projecttwo.model.Element;
 import com.yeamanan.projecttwo.model.mission.Zone;
+import com.yeamanan.projecttwo.model.token.Door;
+import com.yeamanan.projecttwo.model.token.Start;
+import com.yeamanan.projecttwo.service.GenericDrawerService;
+import com.yeamanan.projecttwo.service.GenericDrawerServiceImpl;
 import javafx.scene.Group;
 import javafx.scene.Node;
-import javafx.scene.layout.TilePane;
+import javafx.scene.layout.Pane;
 import org.apache.log4j.Logger;
 
 /**
@@ -29,13 +33,18 @@ public class ZoneDrawerServiceImpl implements ZoneDrawerService {
     @Override
     public final Node draw(final Zone argZone) {
         final Group group = new Group();
-        final TilePane pane = new TilePane();
+        final Pane pane = new Pane();
         pane.setLayoutX(argZone.getX());
         pane.setLayoutY(argZone.getY());
         pane.setPrefSize(argZone.getWidth(), argZone.getHeight());
-//        for (Element element : argZone.getElements()) {
-//            
-//        }
+        for (Element element : argZone.getElements()) {
+            if (element.getClass().equals(Start.class) ||
+                    element.getClass().equals(Door.class)) {
+                final GenericDrawerService<Element> service =
+                        new GenericDrawerServiceImpl();
+                pane.getChildren().add(service.draw(element, argZone.getWidth(), argZone.getHeight()));
+            }
+        }
         group.getChildren().add(pane);
         return group;
     }
