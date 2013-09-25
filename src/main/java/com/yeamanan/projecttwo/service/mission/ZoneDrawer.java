@@ -4,11 +4,11 @@ import com.yeamanan.projecttwo.model.mission.Zone;
 import javafx.scene.Node;
 
 /**
- * ZoneDrawerService interface.
+ * ZoneDrawer interface.
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
-public interface ZoneDrawerService {
+public interface ZoneDrawer {
 
     /**
      * draw() method.

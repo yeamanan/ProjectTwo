@@ -9,17 +9,17 @@ import javafx.scene.Node;
 //import org.apache.log4j.Logger;
 
 /**
- * MissionDrawerServiceImpl class.
+ * MissionDrawerImpl class.
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
-public class MissionDrawerServiceImpl implements MissionDrawerService {
+public class MissionDrawerImpl implements MissionDrawer {
 
     /**
      * Logger.
      */
-//    private static final Logger LOG =
-//            Logger.getLogger(MissionDrawerServiceImpl.class);
+//    private static final Logger LOG = 
+//            Logger.getLogger(MissionDrawerImpl.class);
 
     /**
      * draw() method.
@@ -31,12 +31,12 @@ public class MissionDrawerServiceImpl implements MissionDrawerService {
     public final Node draw(final Mission argMission) {
         final Group group = new Group();
         final List<Tile> tiles = argMission.getTiles();
-        final TileDrawerService tService = new TileDrawerServiceImpl();
+        final TileDrawer tService = new TileDrawerImpl();
         for (Tile tile : tiles) {
             group.getChildren().add(tService.draw(tile));
         }
         final List<Zone> zones = argMission.getZones();
-        final ZoneDrawerService zService = new ZoneDrawerServiceImpl();
+        final ZoneDrawer zService = new ZoneDrawerImpl();
         for (Zone zone : zones) {
             group.getChildren().add(zService.draw(zone));
         }

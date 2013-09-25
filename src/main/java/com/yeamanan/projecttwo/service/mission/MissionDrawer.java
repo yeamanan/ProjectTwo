@@ -4,11 +4,11 @@ import com.yeamanan.projecttwo.model.mission.Mission;
 import javafx.scene.Node;
 
 /**
- * MissionDrawerService interface.
+ * MissionDrawer interface.
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
-public interface MissionDrawerService {
+public interface MissionDrawer {
 
     /**
      * draw() method.

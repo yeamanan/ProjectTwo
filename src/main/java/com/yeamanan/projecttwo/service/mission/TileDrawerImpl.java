@@ -6,17 +6,17 @@ import javafx.scene.layout.Pane;
 //import org.apache.log4j.Logger;
 
 /**
- * TileDrawerServiceImpl class.
+ * TileDrawerImpl class.
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
-public class TileDrawerServiceImpl implements TileDrawerService {
+public class TileDrawerImpl implements TileDrawer {
 
     /**
      * Logger.
      */
 //    private static final Logger LOG =
-//            Logger.getLogger(TileDrawerServiceImpl.class);
+//            Logger.getLogger(TileDrawerImpl.class);
 
     /**
      * Width and height of a tile.

@@ -12,17 +12,17 @@ import javafx.scene.layout.Pane;
 import org.apache.log4j.Logger;
 
 /**
- * ZoneDrawerServiceImpl class.
+ * ZoneDrawerImpl class.
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
-public class ZoneDrawerServiceImpl implements ZoneDrawerService {
+public class ZoneDrawerImpl implements ZoneDrawer {
 
     /**
      * Logger.
      */
     private static final Logger LOG =
-            Logger.getLogger(MissionDrawerServiceImpl.class);
+            Logger.getLogger(MissionDrawerImpl.class);
 
     /**
      * draw() method.

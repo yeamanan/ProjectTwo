@@ -4,11 +4,11 @@ import com.yeamanan.projecttwo.model.mission.Tile;
 import javafx.scene.Node;
 
 /**
- * TileDrawerService interface.
+ * TileDrawer interface.
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
-public interface TileDrawerService {
+public interface TileDrawer {
 
     /**
      * draw() method.
