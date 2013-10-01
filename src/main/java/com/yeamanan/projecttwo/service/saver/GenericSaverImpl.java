@@ -1,5 +1,6 @@
-package com.yeamanan.projecttwo.service;
+package com.yeamanan.projecttwo.service.saver;
 
+import com.yeamanan.projecttwo.service.GenericService;
 import java.io.File;
 import java.io.IOException;
 import javax.xml.bind.JAXBContext;

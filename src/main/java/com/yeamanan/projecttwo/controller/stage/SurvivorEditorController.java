@@ -2,8 +2,8 @@ package com.yeamanan.projecttwo.controller.stage;
 
 import com.yeamanan.projecttwo.model.character.Skill;
 import com.yeamanan.projecttwo.model.character.Survivor;
-import com.yeamanan.projecttwo.service.character.SurvivorLoader;
-import com.yeamanan.projecttwo.service.character.SurvivorLoaderImpl;
+import com.yeamanan.projecttwo.service.loader.SurvivorLoader;
+import com.yeamanan.projecttwo.service.loader.SurvivorLoaderImpl;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;

@@ -1,4 +1,4 @@
-package com.yeamanan.projecttwo.service.mission;
+package com.yeamanan.projecttwo.service.drawer;
 
 import com.yeamanan.projecttwo.model.mission.Mission;
 import com.yeamanan.projecttwo.model.mission.Tile;
@@ -31,14 +31,14 @@ public class MissionDrawerImpl implements MissionDrawer {
     public final Node draw(final Mission argMission) {
         final Group group = new Group();
         final List<Tile> tiles = argMission.getTiles();
-        final TileDrawer tService = new TileDrawerImpl();
+        final TileDrawer tDrawer = new TileDrawerImpl();
         for (Tile tile : tiles) {
-            group.getChildren().add(tService.draw(tile));
+            group.getChildren().add(tDrawer.draw(tile));
         }
         final List<Zone> zones = argMission.getZones();
-        final ZoneDrawer zService = new ZoneDrawerImpl();
+        final ZoneDrawer zDrawer = new ZoneDrawerImpl();
         for (Zone zone : zones) {
-            group.getChildren().add(zService.draw(zone));
+            group.getChildren().add(zDrawer.draw(zone));
         }
         group.setUserData(argMission);
         return group;

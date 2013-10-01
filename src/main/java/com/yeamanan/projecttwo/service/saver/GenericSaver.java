@@ -1,4 +1,4 @@
-package com.yeamanan.projecttwo.service;
+package com.yeamanan.projecttwo.service.saver;
 
 /**
  * GenericWriter interface.

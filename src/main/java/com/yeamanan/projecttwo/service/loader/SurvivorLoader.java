@@ -1,4 +1,4 @@
-package com.yeamanan.projecttwo.service.character;
+package com.yeamanan.projecttwo.service.loader;
 
 import com.yeamanan.projecttwo.model.character.Survivor;
 import java.util.List;

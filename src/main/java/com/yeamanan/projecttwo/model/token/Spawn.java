@@ -4,10 +4,10 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * ZombieSpawn class.
+ * Spawn class.
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
-@XmlType(name = "ZombieSpawn")
-@XmlRootElement(name = "ZombieSpawn")
-public class ZombieSpawn extends ColoredToken { }
+@XmlType(name = "Spawn")
+@XmlRootElement(name = "Spawn")
+public class Spawn extends ColoredToken { }

@@ -1,8 +1,8 @@
-package com.yeamanan.projecttwo.service.card;
+package com.yeamanan.projecttwo.service.loader;
 
 import com.yeamanan.projecttwo.model.card.Spawn;
-import com.yeamanan.projecttwo.service.GenericLoader;
-import com.yeamanan.projecttwo.service.GenericLoaderImpl;
+import com.yeamanan.projecttwo.service.loader.GenericLoader;
+import com.yeamanan.projecttwo.service.loader.GenericLoaderImpl;
 import java.util.List;
 //import org.apache.log4j.Logger;
 

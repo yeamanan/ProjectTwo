@@ -12,7 +12,7 @@ import com.yeamanan.projecttwo.model.token.Objective;
 import com.yeamanan.projecttwo.model.token.Pimpmobile;
 import com.yeamanan.projecttwo.model.token.PoliceCar;
 import com.yeamanan.projecttwo.model.token.Start;
-import com.yeamanan.projecttwo.model.token.ZombieSpawn;
+import com.yeamanan.projecttwo.model.token.Spawn;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -80,7 +80,7 @@ public class Zone {
         @XmlElement(name = "Pimpmobile", type = Pimpmobile.class),
         @XmlElement(name = "PoliceCar", type = PoliceCar.class),
         @XmlElement(name = "Start", type = Start.class),
-        @XmlElement(name = "ZombieSpawn", type = ZombieSpawn.class)
+        @XmlElement(name = "Spawn", type = Spawn.class)
     })
     private List<Element> elements;
 

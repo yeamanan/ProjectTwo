@@ -1,11 +1,8 @@
-package com.yeamanan.projecttwo.service.mission;
+package com.yeamanan.projecttwo.service.drawer;
 
 import com.yeamanan.projecttwo.model.Element;
+import com.yeamanan.projecttwo.model.character.Survivor;
 import com.yeamanan.projecttwo.model.mission.Zone;
-import com.yeamanan.projecttwo.model.token.Door;
-import com.yeamanan.projecttwo.model.token.Start;
-import com.yeamanan.projecttwo.service.GenericDrawer;
-import com.yeamanan.projecttwo.service.GenericDrawerImpl;
 import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.layout.Pane;
@@ -37,13 +34,13 @@ public class ZoneDrawerImpl implements ZoneDrawer {
         pane.setLayoutX(argZone.getX());
         pane.setLayoutY(argZone.getY());
         pane.setPrefSize(argZone.getWidth(), argZone.getHeight());
+        final Drawer drawer = new DrawerFactoryImpl();
         for (Element element : argZone.getElements()) {
-            if (element.getClass().equals(Start.class) ||
-                    element.getClass().equals(Door.class)) {
-                final GenericDrawer<Element> service =
-                        new GenericDrawerImpl();
-                pane.getChildren().add(service.draw(element, argZone.getWidth(), argZone.getHeight()));
+            LOG.info(element.getClass().getSimpleName());
+            if (element.getClass().equals(Survivor.class)) {
+                continue;
             }
+            pane.getChildren().add(drawer.draw(element, pane));
         }
         group.getChildren().add(pane);
         return group;

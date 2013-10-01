@@ -1,5 +1,6 @@
-package com.yeamanan.projecttwo.service;
+package com.yeamanan.projecttwo.service.loader;
 
+import com.yeamanan.projecttwo.service.GenericService;
 import com.yeamanan.projecttwo.util.JarUtil;
 import java.io.InputStream;
 import java.util.ArrayList;

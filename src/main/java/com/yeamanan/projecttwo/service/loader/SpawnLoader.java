@@ -1,4 +1,4 @@
-package com.yeamanan.projecttwo.service.card;
+package com.yeamanan.projecttwo.service.loader;
 
 import com.yeamanan.projecttwo.model.card.Spawn;
 import java.util.List;
