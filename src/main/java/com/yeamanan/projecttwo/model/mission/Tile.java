@@ -1,5 +1,6 @@
 package com.yeamanan.projecttwo.model.mission;
 
+import com.yeamanan.projecttwo.model.Element;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -14,7 +15,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "Tile")
 @XmlRootElement(name = "Tile")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Tile {
+public class Tile extends Element {
 
     /**
      * Name of a tile.
@@ -35,19 +36,12 @@ public class Tile {
     private int y;
 
     /**
-     * Axe of a tile.
-     */
-    @XmlAttribute(name = "direction", required = false)
-    private Direction axe;
-
-    /**
      * Constructor.
      */
     public Tile() {
         this.name = "";
         this.x = 0;
         this.y = 0;
-        this.axe = Direction.NORTH;
     }
 
     /**
@@ -83,31 +77,13 @@ public class Tile {
     }
 
     /**
-     * getAxe() method.
-     *
-     * @return the axe of the tile
-     */
-    public final Direction getAxe() {
-        return this.axe;
-    }
-
-    /**
-     * setAxe() method.
-     *
-     * @param argAxe the new axe of the tile
-     */
-    public final void setAxe(final Direction argAxe) {
-        this.axe = argAxe;
-    }
-
-    /**
      * toString() method.
      *
      * @return the tile in String format
      */
     @Override
     public final String toString() {
-        return "Tile{" + "name=" + this.name + ", axe=" + this.axe + '}';
+        return "Tile{" + "name=" + this.name + ", axe=" + getDirection() + '}';
     }
 
 }

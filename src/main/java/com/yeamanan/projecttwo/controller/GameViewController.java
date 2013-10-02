@@ -3,7 +3,7 @@ package com.yeamanan.projecttwo.controller;
 import com.yeamanan.projecttwo.Context;
 import com.yeamanan.projecttwo.ProjectTwo;
 import com.yeamanan.projecttwo.model.mission.Mission;
-import com.yeamanan.projecttwo.service.drawer.MissionDrawer;
+import com.yeamanan.projecttwo.service.drawer.Drawer;
 import com.yeamanan.projecttwo.service.drawer.MissionDrawerImpl;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -43,8 +43,8 @@ public class GameViewController  implements Initializable {
         final ProjectTwo instance = ProjectTwo.getInstance();
         final Context context = instance.getContext();
         final Mission mission = context.getMission();
-        final MissionDrawer service = new MissionDrawerImpl();
-        board.getChildren().add(service.draw(mission));
+        final Drawer service = new MissionDrawerImpl();
+        board.getChildren().add(service.draw(mission, board));
     }
 
 }

@@ -1,7 +1,8 @@
 package com.yeamanan.projecttwo.service.drawer;
 
+import com.yeamanan.projecttwo.model.Element;
 import com.yeamanan.projecttwo.model.mission.Tile;
-import javafx.scene.Node;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 //import org.apache.log4j.Logger;
 
@@ -10,7 +11,7 @@ import javafx.scene.layout.Pane;
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
-public class TileDrawerImpl implements TileDrawer {
+public class TileDrawerImpl extends ImageDrawerImpl {
 
     /**
      * Logger.
@@ -19,27 +20,33 @@ public class TileDrawerImpl implements TileDrawer {
 //            Logger.getLogger(TileDrawerImpl.class);
 
     /**
-     * Width and height of a tile.
-     */
-    private final static double WIDTH = 250.0d, HEIGHT = 250.0d;
-
-    /**
-     * draw() method.
+     * buildFileName() method.
      *
-     * @param argTile the tile to draw
-     * @return the node representing the mission
+     * @param argElement the element to draw
+     * @return the file name of the image to load
      */
     @Override
-    public final Node draw(final Tile argTile) {
-        final String tPath = "images/" + argTile.getName() + ".jpg";
-        final Pane pane = new Pane();
-        pane.setLayoutX(argTile.getX() * WIDTH);
-        pane.setLayoutY(argTile.getY() * HEIGHT);
-        pane.setPrefSize(WIDTH, HEIGHT);
-        pane.setStyle("-fx-background-image: url(\"" + tPath + "\")");
-        pane.setId(argTile.getName());
-        pane.setRotate(argTile.getAxe().getAngle());
-        return pane;
+    public String buildFileName(final Element argElement) {
+        final Tile tile = (Tile) argElement;
+        return tile.getName();
+    }
+
+    /**
+     * calculPositionAndRotation() method.
+     *
+     * @param argElement the element to draw
+     * @param argImage the image loaded
+     * @param argParent the parent of the element to draw in
+     */
+    @Override
+    public final void calculPositionAndRotation(final Element argElement,
+            final ImageView argImage, final Pane argParent) {
+        final Tile tile = (Tile) argElement;
+        final double width = argImage.getBoundsInLocal().getWidth();
+        final double height = argImage.getBoundsInLocal().getHeight();
+        argImage.setLayoutX(tile.getX() * width);
+        argImage.setLayoutY(tile.getY() * height);
+        argImage.setRotate(tile.getDirection().getAngle());
     }
 
 }

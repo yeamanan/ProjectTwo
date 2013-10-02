@@ -32,7 +32,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "Zone")
 @XmlRootElement(name = "Zone")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Zone {
+public class Zone extends Element {
 
     /**
      * Id.

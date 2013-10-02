@@ -1,11 +1,12 @@
 package com.yeamanan.projecttwo.service.drawer;
 
+import com.yeamanan.projecttwo.model.Element;
 import com.yeamanan.projecttwo.model.mission.Mission;
 import com.yeamanan.projecttwo.model.mission.Tile;
 import com.yeamanan.projecttwo.model.mission.Zone;
-import java.util.List;
 import javafx.scene.Group;
 import javafx.scene.Node;
+import javafx.scene.layout.Pane;
 //import org.apache.log4j.Logger;
 
 /**
@@ -13,7 +14,7 @@ import javafx.scene.Node;
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
-public class MissionDrawerImpl implements MissionDrawer {
+public class MissionDrawerImpl implements Drawer {
 
     /**
      * Logger.
@@ -28,19 +29,18 @@ public class MissionDrawerImpl implements MissionDrawer {
      * @return the node representing the mission
      */
     @Override
-    public final Node draw(final Mission argMission) {
+    public final Node draw(final Element argElement, final Pane argParent) {
+        final Mission mission = (Mission) argElement;
         final Group group = new Group();
-        final List<Tile> tiles = argMission.getTiles();
-        final TileDrawer tDrawer = new TileDrawerImpl();
-        for (Tile tile : tiles) {
-            group.getChildren().add(tDrawer.draw(tile));
+        final Drawer tDrawer = new TileDrawerImpl();
+        for (Tile tile : mission.getTiles()) {
+            argParent.getChildren().add(tDrawer.draw(tile, argParent));
         }
-        final List<Zone> zones = argMission.getZones();
-        final ZoneDrawer zDrawer = new ZoneDrawerImpl();
-        for (Zone zone : zones) {
-            group.getChildren().add(zDrawer.draw(zone));
+        final Drawer zDrawer = new ZoneDrawerImpl();
+        for (Zone zone : mission.getZones()) {
+            group.getChildren().add(zDrawer.draw(zone, argParent));
         }
-        group.setUserData(argMission);
+//        group.setUserData(mission);
         return group;
     }
 

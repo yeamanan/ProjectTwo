@@ -6,6 +6,7 @@ import com.yeamanan.projecttwo.model.character.Walker;
 //import com.yeamanan.projecttwo.model.mission.Tile;
 //import com.yeamanan.projecttwo.model.mission.Zone;
 import com.yeamanan.projecttwo.model.token.Door;
+import com.yeamanan.projecttwo.model.token.Objective;
 import com.yeamanan.projecttwo.model.token.Start;
 import com.yeamanan.projecttwo.model.token.Spawn;
 import java.util.HashMap;
@@ -30,10 +31,11 @@ public class DrawerFactoryImpl implements Drawer {
 //        drawers.put(Mission.class, new MissionDrawerImpl());
 //        drawers.put(Tile.class, new TileDrawerImpl());
 //        drawers.put(Zone.class, new ZoneDrawerImpl());
-        drawers.put(Start.class, new GenericDrawerImpl());
+        drawers.put(Start.class, new ImageDrawerImpl());
         drawers.put(Door.class, new DoorDrawerImpl());
+        drawers.put(Objective.class, new ObjectiveDrawerImpl());
         drawers.put(Spawn.class, new SpawnDrawerImpl());
-        drawers.put(Walker.class, new GenericDrawerImpl());
+        drawers.put(Walker.class, new ImageDrawerImpl());
     }
 
     /**
@@ -42,6 +44,7 @@ public class DrawerFactoryImpl implements Drawer {
      * @param argDoor the door to draw
      * @return the node representing the T object
      */
+    @Override
     public final Node draw(final Element argElement, final Pane argParent) {
         final Class aClass = argElement.getClass();
         return drawers.get(aClass).draw(argElement, argParent);

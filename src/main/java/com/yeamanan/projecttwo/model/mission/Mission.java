@@ -1,5 +1,6 @@
 package com.yeamanan.projecttwo.model.mission;
 
+import com.yeamanan.projecttwo.model.Element;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -18,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "Mission")
 @XmlRootElement(name = "Mission")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Mission {
+public class Mission extends Element {
 
     /**
      * Id of the mission.
