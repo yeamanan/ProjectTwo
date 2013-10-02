@@ -35,9 +35,6 @@ public class ZoneDrawerImpl implements Drawer {
         pane.setPrefSize(zone.getWidth(), zone.getHeight());
         final Drawer drawer = new DrawerFactoryImpl();
         for (Element element : zone.getElements()) {
-            if (element.getClass().equals(Survivor.class)) {
-                continue;
-            }
             pane.getChildren().add(drawer.draw(element, pane));
         }
         return pane;
