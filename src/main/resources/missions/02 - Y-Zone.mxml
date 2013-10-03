@@ -2,20 +2,14 @@
     <Id>02</Id>
     <Name>Y-Zone</Name>
     <Tiles>
-        <Row>
-            <Tile name="4B" direction="EAST"/>
-            <Tile name="4E" direction="EAST"/>
-            <Tile name="1B" direction="EAST"/>
-        </Row>
-        <Row>
-            <Tile name="7B" direction="NORTH"/>
-            <Tile name="5D" direction="EAST"/>
-            <Tile name="6B" direction="WEST"/>
-        </Row>
-        <Row>
-            <Tile name="3C" direction="WEST"/>
-            <Tile name="4C" direction="EAST"/>
-            <Tile name="2C" direction="NORTH"/>
-        </Row>
+        <Tile name="4B" x="0" y="0" direction="EAST"/>
+        <Tile name="4E" x="1" y="0" direction="EAST"/>
+        <Tile name="1B" x="2" y="0" direction="EAST"/>
+        <Tile name="7B" x="0" y="1" direction="NORTH"/>
+        <Tile name="5D" x="1" y="1" direction="EAST"/>
+        <Tile name="6B" x="2" y="1" direction="WEST"/>
+        <Tile name="3C" x="0" y="2" direction="WEST"/>
+        <Tile name="4C" x="1" y="2" direction="EAST"/>
+        <Tile name="2C" x="2" y="2" direction="NORTH"/>
     </Tiles>
 </Mission>

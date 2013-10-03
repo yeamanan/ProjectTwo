@@ -2,15 +2,11 @@
     <Id>08</Id>
     <Name>Zombie Police</Name>
     <Tiles>
-        <Row>
-            <Tile name="2C" direction="EAST"/>
-            <Tile name="7B" direction="NORTH"/>
-            <Tile name="4B" direction="SOUTH"/>
-        </Row>
-        <Row>
-            <Tile name="1B" direction="NORTH"/>
-            <Tile name="5C" direction="SOUTH"/>
-            <Tile name="3C" direction="SOUTH"/>
-        </Row>
+        <Tile name="2C" x="0" y="0" direction="EAST"/>
+        <Tile name="7B" x="1" y="0" direction="NORTH"/>
+        <Tile name="4B" x="2" y="0" direction="SOUTH"/>
+        <Tile name="1B" x="0" y="1" direction="NORTH"/>
+        <Tile name="5C" x="1" y="1" direction="SOUTH"/>
+        <Tile name="3C" x="2" y="1" direction="SOUTH"/>
     </Tiles>
 </Mission>

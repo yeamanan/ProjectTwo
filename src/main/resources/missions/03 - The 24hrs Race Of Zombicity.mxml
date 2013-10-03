@@ -2,20 +2,14 @@
     <Id>03</Id>
     <Name>The 24hrs Race Of Zombicity</Name>
     <Tiles>
-        <Row>
-            <Tile name="2C" direction="SOUTH"/>
-            <Tile name="4D" direction="EAST"/>
-            <Tile name="4B" direction="EAST"/>
-        </Row>
-        <Row>
-            <Tile name="5C" direction="EAST"/>
-            <Tile name="6B" direction="WEST"/>
-            <Tile name="5F" direction="EAST"/>
-        </Row>
-        <Row>
-            <Tile name="1B" direction="WEST"/>
-            <Tile name="3C" direction="WEST"/>
-            <Tile name="4E" direction="WEST"/>
-        </Row>
+        <Tile name="2C" x="0" y="0" direction="SOUTH"/>
+        <Tile name="4D" x="1" y="0" direction="EAST"/>
+        <Tile name="4B" x="2" y="0" direction="EAST"/>
+        <Tile name="5C" x="0" y="1" direction="EAST"/>
+        <Tile name="6B" x="1" y="1" direction="WEST"/>
+        <Tile name="5F" x="2" y="1" direction="EAST"/>
+        <Tile name="1B" x="0" y="2" direction="WEST"/>
+        <Tile name="3C" x="1" y="2" direction="WEST"/>
+        <Tile name="4E" x="2" y="2" direction="WEST"/>
     </Tiles>
 </Mission>

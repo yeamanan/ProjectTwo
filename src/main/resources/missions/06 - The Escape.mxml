@@ -2,15 +2,11 @@
     <Id>06</Id>
     <Name>The Escape</Name>
     <Tiles>
-        <Row>
-            <Tile name="4C" direction="EAST"/>
-            <Tile name="2C" direction="NORTH"/>
-            <Tile name="7B" direction="NORTH"/>
-        </Row>
-        <Row>
-            <Tile name="3C" direction="EAST"/>
-            <Tile name="1B" direction="EAST"/>
-            <Tile name="5D" direction="SOUTH"/>
-        </Row>
+        <Tile name="4C" x="0" y="0" direction="EAST"/>
+        <Tile name="2C" x="1" y="0" direction="NORTH"/>
+        <Tile name="7B" x="2" y="0" direction="NORTH"/>
+        <Tile name="3C" x="0" y="1" direction="EAST"/>
+        <Tile name="1B" x="1" y="1" direction="EAST"/>
+        <Tile name="5D" x="2" y="1" direction="SOUTH"/>
     </Tiles>
 </Mission>

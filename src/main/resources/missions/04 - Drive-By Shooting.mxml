@@ -2,17 +2,13 @@
     <Id>04</Id>
     <Name>Drive-By Shooting</Name>
     <Tiles>
-        <Row>
-            <Tile name="3C" direction="EAST"/>
-            <Tile name="4D" direction="EAST"/>
-            <Tile name="2C" direction="EAST"/>
-            <Tile name="5F" direction="SOUTH"/>
-        </Row>
-        <Row>
-            <Tile name="4E" direction="WEST"/>
-            <Tile name="4B" direction="WEST"/>
-            <Tile name="2B" direction="WEST"/>
-            <Tile name="5C" direction="SOUTH"/>
-        </Row>
+        <Tile name="3C" x="0" y="0" direction="EAST"/>
+        <Tile name="4D" x="1" y="0" direction="EAST"/>
+        <Tile name="2C" x="2" y="0" direction="EAST"/>
+        <Tile name="5F" x="3" y="0" direction="SOUTH"/>
+        <Tile name="4E" x="0" y="1" direction="WEST"/>
+        <Tile name="4B" x="1" y="1" direction="WEST"/>
+        <Tile name="2B" x="2" y="1" direction="WEST"/>
+        <Tile name="5C" x="3" y="1" direction="SOUTH"/>
     </Tiles>
 </Mission>

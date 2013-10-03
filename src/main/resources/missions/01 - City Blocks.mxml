@@ -2,20 +2,14 @@
     <Id>01</Id>
     <Name>City Blocks</Name>
     <Tiles>
-        <Row>
-            <Tile name="2C" direction="EAST"/>
-            <Tile name="1C" direction="SOUTH"/>
-            <Tile name="4B" direction="EAST"/>
-        </Row>
-        <Row>
-            <Tile name="5C" direction="WEST"/>
-            <Tile name="7B" direction="NORTH"/>
-            <Tile name="5D" direction="EAST"/>
-        </Row>
-        <Row>
-            <Tile name="6B" direction="EAST"/>
-            <Tile name="5E" direction="NORTH"/>
-            <Tile name="1B" direction="WEST"/>
-        </Row>
+        <Tile name="2C" x="0" y="0" direction="EAST"/>
+        <Tile name="1C" x="1" y="0" direction="SOUTH"/>
+        <Tile name="4B" x="2" y="0" direction="EAST"/>
+        <Tile name="5C" x="0" y="1" direction="WEST"/>
+        <Tile name="7B" x="1" y="1" direction="NORTH"/>
+        <Tile name="5D" x="2" y="1" direction="EAST"/>
+        <Tile name="6B" x="0" y="2" direction="EAST"/>
+        <Tile name="5E" x="1" y="2" direction="NORTH"/>
+        <Tile name="1B" x="2" y="2" direction="WEST"/>
     </Tiles>
 </Mission>

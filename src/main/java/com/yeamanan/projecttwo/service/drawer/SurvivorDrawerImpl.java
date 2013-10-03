@@ -28,7 +28,6 @@ public class SurvivorDrawerImpl extends ImageDrawerImpl {
     public String buildFileName(final Element argElement) {
         final Survivor survivor = (Survivor) argElement;
         String fileName = survivor.getName();
-        fileName += "_p";
         return  fileName;
     }
 
@@ -48,8 +47,6 @@ public class SurvivorDrawerImpl extends ImageDrawerImpl {
 //        final double y = (height - argImage.getBoundsInLocal().getHeight()) / 2;
         argImage.setLayoutX(0.0d);
         argImage.setLayoutY(0.0d);
-        argImage.setFitWidth(14.0d);
-        argImage.setFitHeight(14.0d);
     }
 
 }
