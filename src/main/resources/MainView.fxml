@@ -11,14 +11,14 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
 
-<AnchorPane fx:id="mainPane" prefHeight="768.0" prefWidth="1024.0" styleClass="menuPane" xmlns:fx="http://javafx.com/fxml" fx:controller="com.yeamanan.projecttwo.controller.MainViewController">
+<AnchorPane fx:id="mainPane" prefHeight="768.0" prefWidth="1024.0" styleClass="backgroundPane" xmlns:fx="http://javafx.com/fxml" fx:controller="com.yeamanan.projecttwo.controller.MainViewController">
   <children>
-    <fx:include source="LanguageChoiceBox.fxml"/>
-    <Button layoutX="437.0" layoutY="384.0" mnemonicParsing="false" onMouseClicked="#handleStartAction" prefHeight="50.0" prefWidth="150.0" text="%main.button.start"/>
-    <Button layoutX="437.0" layoutY="459.0" mnemonicParsing="false" onMouseClicked="#handleOptionsAction" prefHeight="50.0" prefWidth="150.0" text="%main.button.options"/>
-    <Button layoutX="437.0" layoutY="538.0" mnemonicParsing="false" onMouseClicked="#handleSurvivorEditorAction" prefHeight="50.0" prefWidth="150.0" text="%main.button.survivorEditor"/>
+    <fx:include source="LanguageChoiceBox.fxml" />
+    <Button layoutX="437.0" layoutY="384.0" mnemonicParsing="false" onMouseClicked="#handleStartAction" prefHeight="50.0" prefWidth="150.0" text="%main.button.start" />
+    <Button layoutX="437.0" layoutY="459.0" mnemonicParsing="false" onMouseClicked="#handleOptionsAction" prefHeight="50.0" prefWidth="150.0" text="%main.button.options" />
+    <Button layoutX="437.0" layoutY="538.0" mnemonicParsing="false" onMouseClicked="#handleSurvivorEditorAction" prefHeight="50.0" prefWidth="150.0" text="%main.button.survivorEditor" />
   </children>
   <stylesheets>
-    <URL value="@styles/Style.css"/>
+    <URL value="@styles/Style.css" />
   </stylesheets>
 </AnchorPane>

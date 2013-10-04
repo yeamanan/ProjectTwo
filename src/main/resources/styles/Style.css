@@ -1,8 +1,8 @@
-AnchorPane {
-    -fx-background-color: #fff;
+.blackPane {
+    -fx-background-color: black;
 }
 
-.menuPane {
+.backgroundPane {
     -fx-background-image: url("../images/bg0.jpg");
     -fx-background-position: center;
     -fx-background-repeat: no-repeat;
@@ -42,17 +42,17 @@ AnchorPane {
 }
 
 #previousButton {
-    -fx-image: url("../images/previous.png");
+    -fx-image: url("../images/Previous.png");
 }
 
 #previousButton:hover {
-    -fx-image: url("../images/previous-hover.png");
+    -fx-image: url("../images/Previous_Hover.png");
 }
 
 #nextButton {
-    -fx-image: url("../images/next.png");
+    -fx-image: url("../images/Next.png");
 }
 
 #nextButton:hover {
-    -fx-image: url("../images/next-hover.png");
+    -fx-image: url("../images/Next_Hover.png");
 }

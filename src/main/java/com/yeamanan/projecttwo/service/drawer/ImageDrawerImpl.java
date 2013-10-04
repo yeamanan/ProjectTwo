@@ -53,13 +53,13 @@ public class ImageDrawerImpl implements Drawer {
      * @return the path of the image to load
      */
     public final String buildPath(final String argFileName) {
-        String path = "images/" + argFileName + ".jpg";
-        List<String> images =
-                JarUtil.getJarFolderFileList(this.getClass(), "images/");
-        if (!images.contains(path)) {
-            path = "images/" + argFileName + ".png";
-        }
-        return path;
+//        String path = "images/" + argFileName + ".jpg";
+//        List<String> images =
+//                JarUtil.getJarFolderFileList(this.getClass(), "images/");
+//        if (!images.contains(path)) {
+//            path = "images/" + argFileName + ".png";
+//        }
+        return "images/" + argFileName + ".png";
     }
 
     /**

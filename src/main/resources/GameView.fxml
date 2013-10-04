@@ -10,11 +10,11 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
 
-<AnchorPane fx:id="GamePane" prefHeight="768.0" prefWidth="1024.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.yeamanan.projecttwo.controller.GameViewController">
-    <children>
-        <AnchorPane fx:id="board" layoutX="14.0" layoutY="14.0"/>
-    </children>
-    <stylesheets>
-        <URL value="@styles/Style.css"/>
-    </stylesheets>
+<AnchorPane fx:id="GamePane" prefHeight="768.0" prefWidth="1024.0" styleClass="blackPane" xmlns:fx="http://javafx.com/fxml" fx:controller="com.yeamanan.projecttwo.controller.GameViewController">
+  <children>
+    <AnchorPane fx:id="board" layoutX="14.0" layoutY="14.0" prefHeight="100.0" prefWidth="100.0" />
+  </children>
+  <stylesheets>
+    <URL value="@styles/Style.css" />
+  </stylesheets>
 </AnchorPane>

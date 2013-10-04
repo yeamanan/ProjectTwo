@@ -1,6 +1,9 @@
 package com.yeamanan.projecttwo.service.drawer;
 
 import com.yeamanan.projecttwo.model.Element;
+import com.yeamanan.projecttwo.model.character.Abomination;
+import com.yeamanan.projecttwo.model.character.Fatty;
+import com.yeamanan.projecttwo.model.character.Runner;
 import com.yeamanan.projecttwo.model.character.Survivor;
 import com.yeamanan.projecttwo.model.character.Walker;
 //import com.yeamanan.projecttwo.model.mission.Mission;
@@ -37,7 +40,10 @@ public class DrawerFactoryImpl implements Drawer {
         drawers.put(Objective.class, new ObjectiveDrawerImpl());
         drawers.put(Spawn.class, new SpawnDrawerImpl());
         drawers.put(Survivor.class, new SurvivorDrawerImpl());
-        drawers.put(Walker.class, new ImageDrawerImpl());
+        drawers.put(Walker.class, new ZombieDrawerImpl());
+        drawers.put(Fatty.class, new ZombieDrawerImpl());
+        drawers.put(Runner.class, new ZombieDrawerImpl());
+        drawers.put(Abomination.class, new ZombieDrawerImpl());
     }
 
     /**

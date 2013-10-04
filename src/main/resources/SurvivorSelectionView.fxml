@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
 
-<AnchorPane fx:id="survivorsSelection" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: black;" styleClass="menuPane" xmlns:fx="http://javafx.com/fxml" fx:controller="com.yeamanan.projecttwo.controller.SurvivorSelectionViewController">
+<AnchorPane fx:id="survivorsSelection" prefHeight="768.0" prefWidth="1024.0" styleClass="backgroundPane" xmlns:fx="http://javafx.com/fxml" fx:controller="com.yeamanan.projecttwo.controller.SurvivorSelectionViewController">
   <children>
     <ScrollPane fx:id="survivorsScrollPane" hbarPolicy="NEVER" layoutX="14.0" layoutY="232.0" pannable="true" prefHeight="94.0" prefWidth="997.0" vbarPolicy="NEVER">
       <content>

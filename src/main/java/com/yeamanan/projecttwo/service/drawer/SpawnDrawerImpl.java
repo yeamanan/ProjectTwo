@@ -2,9 +2,7 @@ package com.yeamanan.projecttwo.service.drawer;
 
 import com.yeamanan.projecttwo.model.Element;
 import com.yeamanan.projecttwo.model.mission.Direction;
-import com.yeamanan.projecttwo.model.token.Door;
 import com.yeamanan.projecttwo.model.token.Spawn;
-import javafx.scene.Node;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import org.apache.log4j.Logger;

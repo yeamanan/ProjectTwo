@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
 
-<AnchorPane fx:id="mainPane" prefHeight="768.0" prefWidth="1024.0" styleClass="menuPane" xmlns:fx="http://javafx.com/fxml" fx:controller="com.yeamanan.projecttwo.controller.MissionSelectionViewController">
+<AnchorPane fx:id="mainPane" prefHeight="768.0" prefWidth="1024.0" styleClass="backgroundPane" xmlns:fx="http://javafx.com/fxml" fx:controller="com.yeamanan.projecttwo.controller.MissionSelectionViewController">
   <children>
     <ImageView id="previousButton" fitHeight="36.0" fitWidth="48.0" layoutX="14.0" layoutY="366.0" onMouseClicked="#handlePreviousAction" pickOnBounds="true" preserveRatio="true" />
     <ImageView id="nextButton" fitHeight="36.0" fitWidth="48.0" layoutX="994.0" layoutY="366.0" onMouseClicked="#handleNextAction" pickOnBounds="true" preserveRatio="true" />
