@@ -14,23 +14,45 @@ AnchorPane {
     -fx-background-repeat: no-repeat;
     -fx-background-size: 80 80;
     -fx-background-radius: 100;
-    -fx-border-width: 2 2 2 2;
+    -fx-border-width: 2;
     -fx-border-color: white;
     /*-fx-image: url("../images/Amy_p.jpg");*/
-    /*-fx-image: url("../images/Amy_pz.jpg");*/
 }
+
+/*.survivorPortrait:hover {
+    -fx-image: url("../images/Amy_pz.jpg");
+}*/
 
 .selected {
     -fx-border-color: red;
 }
 
-/*#survivors {
+#survivorsScrollPane {
+    -fx-background-color: transparent;
     -fx-border-width: 1;
-    -fx-border-color: blue;
-}*/
+    -fx-border-color: grey;
+}
 
-/*.survivorDescription {
+#survivorDescription {
     -fx-background-position: center;
     -fx-background-repeat: no-repeat;
     -fx-background-size: stretch;
-}*/
+    -fx-border-width: 1;
+    -fx-border-color: grey;
+}
+
+#previousButton {
+    -fx-image: url("../images/previous.png");
+}
+
+#previousButton:hover {
+    -fx-image: url("../images/previous-hover.png");
+}
+
+#nextButton {
+    -fx-image: url("../images/next.png");
+}
+
+#nextButton:hover {
+    -fx-image: url("../images/next-hover.png");
+}

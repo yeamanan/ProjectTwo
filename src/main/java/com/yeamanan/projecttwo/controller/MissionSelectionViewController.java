@@ -13,6 +13,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 //import org.apache.log4j.Logger;
 
@@ -39,7 +40,7 @@ public class MissionSelectionViewController implements Initializable {
      * Main Anchor Pane.
      */
     @FXML
-    private transient AnchorPane mainPane;
+    private transient AnchorPane missions;
 
     /**
      * Event handler of all mission button.
@@ -50,14 +51,11 @@ public class MissionSelectionViewController implements Initializable {
             public final void handle(final ActionEvent argEvent) {
                 final Button button = (Button) argEvent.getSource();
                 final String missionName = button.getText();
-                final MissionLoader service = new MissionLoaderImpl();
-                final Mission mission =
-                        service.load(missionName);
+                final MissionLoader loader = new MissionLoaderImpl();
+                final Mission mission = loader.load(missionName);
                 final ProjectTwo instance = ProjectTwo.getInstance();
                 final Context context = instance.getContext();
                 context.setMission(mission);
-                context.setCurrentView(ViewType.SurvivorSelectionView);
-                instance.reloadView();
             }
         };
 
@@ -71,19 +69,43 @@ public class MissionSelectionViewController implements Initializable {
     public final void initialize(final URL argLocation,
                                 final ResourceBundle argBundle) {
         double xPos = START_X, yPos = START_Y;
-        final MissionLoader service = new MissionLoaderImpl();
-        for (String name : service.getFileNames()) {
+        final MissionLoader loader = new MissionLoaderImpl();
+        for (String name : loader.getFileNames()) {
             final Button button = new Button(name);
             button.setLayoutX(xPos);
             button.setLayoutY(yPos);
             button.setOnAction(handler);
-            mainPane.getChildren().add(button);
+            missions.getChildren().add(button);
             yPos += Y_PADDING;
-            if (yPos > mainPane.getPrefHeight()) {
+            if (yPos > missions.getPrefHeight()) {
                 xPos += X_PADDING;
                 yPos = START_Y;
             }
         }
+    }
+
+    /**
+     * handlePreviousAction() method.
+     *
+     * @param argEvent the event handled
+     */
+    @FXML
+    protected final void handlePreviousAction(final MouseEvent argEvent) {
+        final ProjectTwo instance = ProjectTwo.getInstance();
+        instance.getContext().setCurrentView(ViewType.MainView);
+        instance.reloadView();
+    }
+
+    /**
+     * handleNextAction() method.
+     *
+     * @param argEvent the event handled
+     */
+    @FXML
+    protected final void handleNextAction(final MouseEvent argEvent) {
+        final ProjectTwo instance = ProjectTwo.getInstance();
+        instance.getContext().setCurrentView(ViewType.SurvivorSelectionView);
+        instance.reloadView();
     }
 
 }

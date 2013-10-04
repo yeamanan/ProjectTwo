@@ -1,0 +1,22 @@
+﻿Zombicide
+Zombicide : Walk of The Dead
+Zombicide : Game Tiles
+Zombicide Foam Tray Kit
+Zombicide : Toxic City Mall
+Zombicide : Toxic City Mall Game Tiles
+Zombicide : Prison Outbreak
+Zombicide : Prison Outbreak Game Tiles
+Zombicide : Toxic Crowd
+Zombicide : Angry Zombies
+Zombicide : Walk of the Dead 2
+Zombicide : Zombie Dogz
+Zombicide : Dog Companions
+Zombicide : Set de Dés Rouge
+Zombicide : Set de Dés Orange
+Zombicide : Pointeurs Crâne
+
+SURVIVOR1_MINIATURES = 1, SURVIVOR2_MINIATURES = 1,
+SURVIVOR3_MINIATURES = 1, SURVIVOR4_MINIATURES = 1,
+SURVIVOR5_MINIATURES = 1, SURVIVOR6_MINIATURES = 1,
+WALKERS_MINIATURES = 40, FATTIES_MINIATURES = 8,
+RUNNERS_MINIATURES = 16, ABOMINATIONS_MINIATURES = 1;

@@ -36,13 +36,13 @@ public class SurvivorSelectionViewController implements Initializable {
      * Survivors Tile Pane.
      */
     @FXML
-    private transient TilePane survivorsPane;
+    private transient TilePane survivorsTilePane;
 
     /**
      * Description Tile Pane.
      */
-//    @FXML
-//    private Pane description;
+    @FXML
+    private transient Pane survivorDescription;
 
     /**
      * The start zone of the game.
@@ -62,15 +62,11 @@ public class SurvivorSelectionViewController implements Initializable {
                     pane.getStyleClass().remove("selected");
                     startZone.getElements().remove(service.load(pane.getId()));
                 } else {
-//                    final int nbSurvivors =
-//                        instance.getContext().getGame().getSurvivors().size();
-//                    if (nbSurvivors < 6) {
-                        final SurvivorLoader service =
-                                new SurvivorLoaderImpl();
-                        pane.getStyleClass().add("selected");
-                        final Survivor survivor = service.load(pane.getId());
-                        startZone.getElements().add(survivor);
-//                    }
+                    final SurvivorLoader service =
+                            new SurvivorLoaderImpl();
+                    pane.getStyleClass().add("selected");
+                    final Survivor survivor = service.load(pane.getId());
+                    startZone.getElements().add(survivor);
                 }
             }
         };
@@ -78,30 +74,63 @@ public class SurvivorSelectionViewController implements Initializable {
     /**
      * Enter event handler of all character image.
      */
-//    private final EventHandler<MouseEvent> enterHandler =
-//        new EventHandler<MouseEvent>() {
-//            @Override
-//            public final void handle(final MouseEvent argEvent) {
-//                final Pane pane = (Pane) argEvent.getSource();
-//                final String sName = pane.getId();
-//                final String sPath = "images/" + sName + "_pz.jpg";
-//                pane.setStyle("-fx-background-image: url(\"" + sPath + "\")");
-//            }
-//        };
+    private final transient EventHandler<MouseEvent> enterHandler =
+        new EventHandler<MouseEvent>() {
+            @Override
+            public final void handle(final MouseEvent argEvent) {
+                final Pane pane = (Pane) argEvent.getSource();
+                final String sName = pane.getId();
+                String sPath = "images/" + sName + "_pz.jpg";
+                pane.setStyle("-fx-background-image: url(\"" + sPath + "\")");
+                sPath = "images/" + sName + "_sic.jpg";
+                survivorDescription.setStyle("-fx-background-image: url(\"" + sPath + "\")");
+                survivorDescription.setUserData(sName);
+                survivorDescription.setOnMouseEntered(descriptionEnterHandler);
+                survivorDescription.setOnMouseExited(descriptionExitHandler);
+            }
+        };
 
     /**
      * Exit event handler of all character image.
      */
-//    private final EventHandler<MouseEvent> exitHandler =
-//        new EventHandler<MouseEvent>() {
-//            @Override
-//            public final void handle(final MouseEvent argEvent) {
-//                final Pane pane = (Pane) argEvent.getSource();
-//                final String sName = pane.getId();
-//                final String sPath = "images/" + sName + "_p.jpg";
-//                pane.setStyle("-fx-background-image: url(\"" + sPath + "\")");
-//            }
-//        };
+    private final transient EventHandler<MouseEvent> exitHandler =
+        new EventHandler<MouseEvent>() {
+            @Override
+            public final void handle(final MouseEvent argEvent) {
+                final Pane pane = (Pane) argEvent.getSource();
+                final String sName = pane.getId();
+                final String sPath = "images/" + sName + "_p.jpg";
+                pane.setStyle("-fx-background-image: url(\"" + sPath + "\")");
+            }
+        };
+
+    /**
+     * Click event handler of the description image.
+     */
+    private final transient EventHandler<MouseEvent> descriptionEnterHandler =
+        new EventHandler<MouseEvent>() {
+            @Override
+            public final void handle(final MouseEvent argEvent) {
+                final String sName = (String) survivorDescription.getUserData();
+                final String sPath = "images/" + sName + "_sicz.jpg";
+                survivorDescription.setStyle("-fx-background-image: url(\"" + sPath + "\")");
+                
+            }
+        };
+
+    /**
+     * Click event handler of the description image.
+     */
+    private final transient EventHandler<MouseEvent> descriptionExitHandler =
+        new EventHandler<MouseEvent>() {
+            @Override
+            public final void handle(final MouseEvent argEvent) {
+                final String sName = (String) survivorDescription.getUserData();
+                final String sPath = "images/" + sName + "_sic.jpg";
+                survivorDescription.setStyle("-fx-background-image: url(\"" + sPath + "\")");
+                
+            }
+        };
 
     /**
      * initialize() method.
@@ -122,13 +151,10 @@ public class SurvivorSelectionViewController implements Initializable {
             pane.setStyle("-fx-background-image: url(\"" + sPath + "\")");
             pane.getStyleClass().add("survivorPortrait");
             pane.setOnMouseClicked(clickHandler);
-//            pane.setOnMouseEntered(enterHandler);
-//            pane.setOnMouseExited(exitHandler);
-            survivorsPane.getChildren().add(pane);
+            pane.setOnMouseEntered(enterHandler);
+            pane.setOnMouseExited(exitHandler);
+            survivorsTilePane.getChildren().add(pane);
         }
-//        final String sPath = "images/" + sNames.get(0) + "_f.jpg";
-//        description.setStyle("-fx-background-image: url(\"" + sPath + "\")");
-//        description.getStyleClass().add("survivorDescription");
         final ProjectTwo instance = ProjectTwo.getInstance();
         final List<Zone> zones =
                 instance.getContext().getMission().getZones();
@@ -142,12 +168,24 @@ public class SurvivorSelectionViewController implements Initializable {
     }
 
     /**
-     * handleGoAction() method.
+     * handlePreviousAction() method.
      *
      * @param argEvent the event handled
      */
     @FXML
-    protected final void handleGoAction(final MouseEvent argEvent) {
+    protected final void handlePreviousAction(final MouseEvent argEvent) {
+        final ProjectTwo instance = ProjectTwo.getInstance();
+        instance.getContext().setCurrentView(ViewType.MissionSelectionView);
+        instance.reloadView();
+    }
+
+    /**
+     * handleNextAction() method.
+     *
+     * @param argEvent the event handled
+     */
+    @FXML
+    protected final void handleNextAction(final MouseEvent argEvent) {
         final ProjectTwo instance = ProjectTwo.getInstance();
         instance.getContext().setCurrentView(ViewType.GameView);
         instance.reloadView();

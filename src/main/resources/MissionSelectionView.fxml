@@ -5,11 +5,17 @@
 <?import java.util.*?>
 <?import javafx.collections.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
 
 <AnchorPane fx:id="mainPane" prefHeight="768.0" prefWidth="1024.0" styleClass="menuPane" xmlns:fx="http://javafx.com/fxml" fx:controller="com.yeamanan.projecttwo.controller.MissionSelectionViewController">
-    <stylesheets>
-        <URL value="@styles/Style.css"/>
-    </stylesheets>
+  <children>
+    <ImageView id="previousButton" fitHeight="36.0" fitWidth="48.0" layoutX="14.0" layoutY="366.0" onMouseClicked="#handlePreviousAction" pickOnBounds="true" preserveRatio="true" />
+    <ImageView id="nextButton" fitHeight="36.0" fitWidth="48.0" layoutX="994.0" layoutY="366.0" onMouseClicked="#handleNextAction" pickOnBounds="true" preserveRatio="true" />
+    <AnchorPane fx:id="missions" layoutX="166.0" layoutY="236.0" prefHeight="505.0" prefWidth="729.0" />
+  </children>
+  <stylesheets>
+    <URL value="@styles/Style.css" />
+  </stylesheets>
 </AnchorPane>
