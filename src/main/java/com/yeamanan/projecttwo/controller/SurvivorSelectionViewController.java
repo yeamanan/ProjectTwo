@@ -9,15 +9,17 @@ import com.yeamanan.projecttwo.service.loader.SurvivorLoader;
 import com.yeamanan.projecttwo.service.loader.SurvivorLoaderImpl;
 import com.yeamanan.projecttwo.view.ViewType;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.TilePane;
-//import org.apache.log4j.Logger;
+import org.apache.log4j.Logger;
 
 /**
  * CharacterSelectionViewController class.
@@ -36,6 +38,12 @@ public class SurvivorSelectionViewController implements Initializable {
      * Survivors Tile Pane.
      */
     @FXML
+    private transient ScrollPane survivorsScrollPane;
+
+    /**
+     * Survivors Tile Pane.
+     */
+    @FXML
     private transient TilePane survivorsTilePane;
 
     /**
@@ -45,9 +53,9 @@ public class SurvivorSelectionViewController implements Initializable {
     private transient Pane survivorDescription;
 
     /**
-     * The start zone of the game.
+     * List of selected survivors.
      */
-    private transient Zone startZone;
+    private transient List<Survivor> selectedSurvivors;
 
     /**
      * Click event handler of all character image.
@@ -60,13 +68,13 @@ public class SurvivorSelectionViewController implements Initializable {
                 if (pane.getStyleClass().contains("selected")) {
                     final SurvivorLoader service = new SurvivorLoaderImpl();
                     pane.getStyleClass().remove("selected");
-                    startZone.getElements().remove(service.load(pane.getId()));
+                    selectedSurvivors.remove(service.load(pane.getId()));
                 } else {
                     final SurvivorLoader service =
                             new SurvivorLoaderImpl();
                     pane.getStyleClass().add("selected");
                     final Survivor survivor = service.load(pane.getId());
-                    startZone.getElements().add(survivor);
+                    selectedSurvivors.add(survivor);
                 }
             }
         };
@@ -141,6 +149,7 @@ public class SurvivorSelectionViewController implements Initializable {
     @Override
     public final void initialize(final URL location,
                                 final ResourceBundle resources) {
+        this.selectedSurvivors = new ArrayList<>();
         final SurvivorLoader service = new SurvivorLoaderImpl();
         final List<String> sNames = service.getFileNames();
         for (String sName : sNames) {
@@ -155,16 +164,16 @@ public class SurvivorSelectionViewController implements Initializable {
             pane.setOnMouseExited(exitHandler);
             survivorsTilePane.getChildren().add(pane);
         }
-        final ProjectTwo instance = ProjectTwo.getInstance();
-        final List<Zone> zones =
-                instance.getContext().getMission().getZones();
-        for (Zone zone : zones) {
-            for (Element element : zone.getElements()) {
-                if (element.getClass().equals(Start.class)) {
-                    this.startZone = zone;
-                }
-            }
-        }
+//        final ProjectTwo instance = ProjectTwo.getInstance();
+//        final List<Zone> zones =
+//                instance.getContext().getMission().getZones();
+//        for (Zone zone : zones) {
+//            for (Element element : zone.getElements()) {
+//                if (element.getClass().equals(Start.class)) {
+//                    this.startZone = zone;
+//                }
+//            }
+//        }
     }
 
     /**

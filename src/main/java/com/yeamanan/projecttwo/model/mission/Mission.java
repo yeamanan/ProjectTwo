@@ -59,8 +59,8 @@ public class Mission extends Element {
     public Mission() {
         this.id = "";
         this.name = "";
-        this.tiles = new ArrayList();
-        this.zones = new ArrayList();
+        this.tiles = new ArrayList<>();
+        this.zones = new ArrayList<>();
     }
 
     /**

@@ -67,7 +67,7 @@ public class LanguageChoiceBoxController implements Initializable {
     @Override
     public final void initialize(final URL argLocation,
             final ResourceBundle argBundle) {
-        locales = new HashMap();
+        locales = new HashMap<>();
         final List<ResourceBundle> languages =
                 LanguagesUtil.loadLanguages(this.getClass());
         for (ResourceBundle language : languages) {

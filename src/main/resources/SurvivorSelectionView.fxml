@@ -11,12 +11,12 @@
 
 <AnchorPane fx:id="survivorsSelection" prefHeight="768.0" prefWidth="1024.0" styleClass="backgroundPane" xmlns:fx="http://javafx.com/fxml" fx:controller="com.yeamanan.projecttwo.controller.SurvivorSelectionViewController">
   <children>
-    <ScrollPane fx:id="survivorsScrollPane" hbarPolicy="NEVER" layoutX="14.0" layoutY="232.0" pannable="true" prefHeight="94.0" prefWidth="997.0" vbarPolicy="NEVER">
+    <ScrollPane fx:id="survivorsScrollPane" layoutX="14.0" layoutY="232.0" prefHeight="106.0" prefWidth="997.0" vbarPolicy="NEVER">
       <content>
         <TilePane fx:id="survivorsTilePane" orientation="VERTICAL" prefHeight="80.0" prefWidth="80.0" />
       </content>
     </ScrollPane>
-    <Pane fx:id="survivorDescription" layoutX="151.0" layoutY="340.0" prefHeight="414.0" prefWidth="723.0" />
+    <Pane fx:id="survivorDescription" layoutX="151.0" layoutY="353.0" prefHeight="414.0" prefWidth="723.0" />
     <ImageView fx:id="nextButton" fitHeight="36.0" fitWidth="48.0" layoutX="994.0" layoutY="366.0" onMouseClicked="#handleNextAction" pickOnBounds="true" preserveRatio="true" />
     <ImageView fx:id="previousButton" fitHeight="36.0" fitWidth="48.0" layoutX="14.0" layoutY="366.0" onMouseClicked="#handlePreviousAction" pickOnBounds="true" preserveRatio="true" />
   </children>

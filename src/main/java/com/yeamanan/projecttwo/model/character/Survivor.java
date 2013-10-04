@@ -104,13 +104,13 @@ public class Survivor extends Character {
         this.name = argName;
         this.experience = 0;
         this.level = Level.BLUE;
-        this.blueSkills = new ArrayList();
-        this.yellowSkills = new ArrayList();
-        this.orangeSkills = new ArrayList();
-        this.redSkills = new ArrayList();
-        this.skills = new ArrayList();
-        this.inventory = new ArrayList();
-        this.hands = new ArrayList();
+        this.blueSkills = new ArrayList<>();
+        this.yellowSkills = new ArrayList<>();
+        this.orangeSkills = new ArrayList<>();
+        this.redSkills = new ArrayList<>();
+        this.skills = new ArrayList<>();
+        this.inventory = new ArrayList<>();
+        this.hands = new ArrayList<>();
     }
 
     /**

@@ -31,7 +31,7 @@ public class DrawerFactoryImpl implements Drawer {
      * Constructor.
      */
     public DrawerFactoryImpl() {
-        drawers = new HashMap();
+        drawers = new HashMap<>();
 //        drawers.put(Mission.class, new MissionDrawerImpl());
 //        drawers.put(Tile.class, new TileDrawerImpl());
 //        drawers.put(Zone.class, new ZoneDrawerImpl());

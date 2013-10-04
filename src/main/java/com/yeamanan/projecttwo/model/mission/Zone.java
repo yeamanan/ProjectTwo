@@ -93,7 +93,7 @@ public class Zone extends Element {
         this.y = 0.0d;
         this.width = 0.0d;
         this.height = 0.0d;
-        this.elements = new ArrayList();
+        this.elements = new ArrayList<>();
     }
 
     /**

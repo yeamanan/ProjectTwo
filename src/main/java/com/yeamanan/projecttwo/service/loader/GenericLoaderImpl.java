@@ -42,7 +42,7 @@ public class GenericLoaderImpl<T> extends GenericService implements GenericLoade
      */
     @Override
     public final List<String> getFileNames() {
-        final List<String> sFileNames = new ArrayList();
+        final List<String> sFileNames = new ArrayList<>();
         final Class aClass = this.getClass();
         final List<String> sPaths =
                 JarUtil.getJarFolderFileList(aClass, this.folder);
@@ -84,7 +84,7 @@ public class GenericLoaderImpl<T> extends GenericService implements GenericLoade
      */
     @Override
     public final List<T> loadAll() {
-        final List<T> objects = new ArrayList();
+        final List<T> objects = new ArrayList<>();
         for (String sName : getFileNames()) {
             objects.add(load(sName));
         }

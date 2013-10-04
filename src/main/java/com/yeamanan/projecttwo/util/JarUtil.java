@@ -37,7 +37,7 @@ public final class JarUtil {
      */
     public static List<String> getJarFolderFileList(final Class aClass,
             final String pathFolder) {
-        final List<String> filePaths = new ArrayList();
+        final List<String> filePaths = new ArrayList<>();
         final URL url = aClass.getClassLoader().getResource(pathFolder);
         final String jarPath =
                 url.getPath().substring(5, url.getPath().indexOf("!"));

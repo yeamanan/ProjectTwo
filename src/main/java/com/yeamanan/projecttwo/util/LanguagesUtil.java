@@ -55,7 +55,7 @@ public final class LanguagesUtil {
      * @return a list of language resource bundles
      */
     public static List<ResourceBundle> loadLanguages(final Class aClass) {
-        final List<ResourceBundle> languages = new ArrayList();
+        final List<ResourceBundle> languages = new ArrayList<>();
         final List<String> files =
             JarUtil.getJarFolderFileList(aClass, BUNDLES_FOLDER);
         for (String file : files) {
