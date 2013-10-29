@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Spawn>
-    <Name>#29</Name>
+<Spawn name="#29">
     <Turn>false</Turn>
     <Sewer>false</Sewer>
-    <Red>6W</Red>
-    <Orange>1A</Orange>
-    <Yellow>4W</Yellow>
-    <Blue>1W</Blue>
+    <Red>
+        <Walker/>
+        <Walker/>
+        <Walker/>
+        <Walker/>
+        <Walker/>
+        <Walker/>
+    </Red>
+    <Orange>
+        <Abomination/>
+    </Orange>
+    <Yellow>
+        <Walker/>
+        <Walker/>
+        <Walker/>
+        <Walker/>
+    </Yellow>
+    <Blue>
+        <Walker/>
+    </Blue>
 </Spawn>

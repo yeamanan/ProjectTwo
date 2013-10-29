@@ -1,22 +1,47 @@
-﻿Zombicide
-Zombicide : Walk of The Dead
-Zombicide : Game Tiles
-Zombicide Foam Tray Kit
-Zombicide : Toxic City Mall
-Zombicide : Toxic City Mall Game Tiles
-Zombicide : Prison Outbreak
-Zombicide : Prison Outbreak Game Tiles
-Zombicide : Toxic Crowd
-Zombicide : Angry Zombies
-Zombicide : Walk of the Dead 2
-Zombicide : Zombie Dogz
-Zombicide : Dog Companions
-Zombicide : Set de Dés Rouge
-Zombicide : Set de Dés Orange
-Zombicide : Pointeurs Crâne
-
-SURVIVOR1_MINIATURES = 1, SURVIVOR2_MINIATURES = 1,
-SURVIVOR3_MINIATURES = 1, SURVIVOR4_MINIATURES = 1,
-SURVIVOR5_MINIATURES = 1, SURVIVOR6_MINIATURES = 1,
-WALKERS_MINIATURES = 40, FATTIES_MINIATURES = 8,
-RUNNERS_MINIATURES = 16, ABOMINATIONS_MINIATURES = 1;
+<?xml version="1.0" encoding="UTF-8"?>
+<Box name="Zombicide">
+    <Spawns>
+        <Spawn name="#1"/>
+        <Spawn name="#2"/>
+        <Spawn name="#3"/>
+        <Spawn name="#4"/>
+        <Spawn name="#5"/>
+        <Spawn name="#6"/>
+        <Spawn name="#7"/>
+        <Spawn name="#8"/>
+        <Spawn name="#9"/>
+        <Spawn name="#10"/>
+        <Spawn name="#11"/>
+        <Spawn name="#12"/>
+        <Spawn name="#13"/>
+        <Spawn name="#14"/>
+        <Spawn name="#15"/>
+        <Spawn name="#16"/>
+        <Spawn name="#17"/>
+        <Spawn name="#18"/>
+        <Spawn name="#19"/>
+        <Spawn name="#20"/>
+        <Spawn name="#21"/>
+        <Spawn name="#22"/>
+        <Spawn name="#23"/>
+        <Spawn name="#24"/>
+        <Spawn name="#25"/>
+        <Spawn name="#26"/>
+        <Spawn name="#27"/>
+        <Spawn name="#28"/>
+        <Spawn name="#29"/>
+        <Spawn name="#30"/>
+        <Spawn name="#31"/>
+        <Spawn name="#32"/>
+        <Spawn name="#33"/>
+        <Spawn name="#34"/>
+        <Spawn name="#35"/>
+        <Spawn name="#36"/>
+        <Spawn name="#37"/>
+        <Spawn name="#38"/>
+        <Spawn name="#39"/>
+        <Spawn name="#40"/>
+        <Spawn name="#41"/>
+        <Spawn name="#42"/>
+    </Spawns>
+</Box>
