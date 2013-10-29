@@ -1,8 +1,6 @@
 package com.yeamanan.projecttwo.service.loader;
 
 import com.yeamanan.projecttwo.model.card.Spawn;
-import com.yeamanan.projecttwo.service.loader.GenericLoader;
-import com.yeamanan.projecttwo.service.loader.GenericLoaderImpl;
 import java.util.List;
 //import org.apache.log4j.Logger;
 
@@ -22,12 +20,12 @@ public class SpawnLoaderImpl implements SpawnLoader {
     /**
      * Spawn cards file folder in jar.
      */
-    private static final String FOLDER = "cards/invasions/";
+    private static final String FOLDER = "cards/spawns/";
 
     /**
      * Spawn cards file's extension.
      */
-    private static final String EXTENSION = ".ixml";
+    private static final String EXTENSION = ".spxml";
 
     /**
      * Generic service.

@@ -11,8 +11,8 @@ import javax.xml.bind.annotation.XmlType;
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
-@XmlType(name = "Invasion")
-@XmlRootElement(name = "Invasion")
+@XmlType(name = "Spawn")
+@XmlRootElement(name = "Spawn")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Spawn extends Card {
 
@@ -145,7 +145,7 @@ public class Spawn extends Card {
     /**
      * getBlueLevel() method.
      *
-     * @return the blue level invasion
+     * @return the blue level spawn
      */
     public final String getBlueLevel() {
         return this.blueLevel;

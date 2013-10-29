@@ -21,7 +21,7 @@ public interface SpawnLoader {
      * load() method.
      *
      * @param argFileName the file name of an spawn card to load
-     * @return an invasion card object
+     * @return a spawn card object
      */
     Spawn load(final String argFileName);
 

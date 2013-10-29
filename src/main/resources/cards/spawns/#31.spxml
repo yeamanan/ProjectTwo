@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Spawn>
+    <Name>#31</Name>
+    <Turn>false</Turn>
+    <Sewer>false</Sewer>
+    <Red>8W</Red>
+    <Orange>3W</Orange>
+    <Yellow>1R</Yellow>
+    <Blue>1R</Blue>
+</Spawn>
