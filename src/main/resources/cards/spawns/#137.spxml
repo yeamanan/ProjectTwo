@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Spawn name="#137">
+    <Red>
+        <Walker toxic="true"/>
+        <Walker toxic="true"/>
+        <Walker toxic="true"/>
+        <Walker toxic="true"/>
+        <Walker toxic="true"/>
+        <Walker toxic="true"/>
+        <Walker toxic="true"/>
+    </Red>
+    <Orange>
+        <Runner toxic="true"/>
+        <Runner toxic="true"/>
+        <Runner toxic="true"/>
+    </Orange>
+    <Yellow>
+        <Fatty toxic="true"/>
+    </Yellow>
+    <Blue>
+        <Walker toxic="true"/>
+    </Blue>
+</Spawn>

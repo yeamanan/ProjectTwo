@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Box name="Box of Zombies - Set #2 - Toxic Crowd">
+    <Spawns>
+        <Spawn name="#133"/>
+        <Spawn name="#134"/>
+        <Spawn name="#135"/>
+        <Spawn name="#136"/>
+        <Spawn name="#137"/>
+        <Spawn name="#138"/>
+    </Spawns>
+</Box>

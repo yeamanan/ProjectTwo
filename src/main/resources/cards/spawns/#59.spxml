@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Spawn name="#59">
+    <Red>
+        <Walker/>
+        <Walker/>
+        <Walker/>
+        <Walker/>
+        <Walker/>
+    </Red>
+    <Orange>
+        <ZombieDog/>
+        <ZombieDog/>
+        <ZombieDog/>
+        <ZombieDog/>
+    </Orange>
+    <Yellow>
+        <Walker/>
+        <Walker/>
+        <Walker/>
+        <Walker/>
+    </Yellow>
+    <Blue>
+        <ZombieDog/>
+    </Blue>
+</Spawn>

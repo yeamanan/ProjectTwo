@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Spawn name="#39">
     <Turn>true</Turn>
-    <Sewer>false</Sewer>
     <Red>
         <Fatty/>
     </Red>

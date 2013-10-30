@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Box name="Box of Zombies - Set #5 - Zombie Dogz">
+    <Spawns>
+        <Spawn name="#55"/>
+        <Spawn name="#56"/>
+        <Spawn name="#57"/>
+        <Spawn name="#58"/>
+        <Spawn name="#59"/>
+        <Spawn name="#60"/>
+        <Spawn name="#61"/>
+        <Spawn name="#62"/>
+        <Spawn name="#63"/>
+        <Spawn name="#64"/>
+        <Spawn name="#65"/>
+        <Spawn name="#66"/>
+    </Spawns>
+</Box>
