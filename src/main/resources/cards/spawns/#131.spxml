@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Spawn name="#131">
+    <Sewer>true</Sewer>
+    <Red>
+        <Runner/>
+    </Red>
+    <Orange>
+        <Fatty/>
+    </Orange>
+    <Yellow>
+        <Walker/>
+        <Walker/>
+    </Yellow>
+    <Blue>
+        <Walker/>
+    </Blue>
+</Spawn>

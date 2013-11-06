@@ -1,6 +1,6 @@
 package com.yeamanan.projecttwo.model.card;
 
-import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlTransient;
 
 /**
@@ -14,7 +14,7 @@ public class Card {
     /**
      * Name of the card.
      */
-    @XmlElement(name = "Name", required = true)
+    @XmlAttribute(name = "name", required = true)
     private String name;
 
     /**

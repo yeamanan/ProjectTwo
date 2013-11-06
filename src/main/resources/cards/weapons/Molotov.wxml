@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Weapon>
-    <Name>Molotov</Name>
+<Weapon name="Molotov">
     <NoisyAttacker>true</NoisyAttacker>
     <MinimumRange>0</MinimumRange>
     <MaximumRange>1</MaximumRange>

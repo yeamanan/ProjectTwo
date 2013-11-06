@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Box name="Box of Zombies - Set #5 - Zombie Dogz">
-    <Spawns>
+    <Cards>
         <Spawn name="#55"/>
         <Spawn name="#56"/>
         <Spawn name="#57"/>
@@ -13,5 +13,5 @@
         <Spawn name="#64"/>
         <Spawn name="#65"/>
         <Spawn name="#66"/>
-    </Spawns>
+    </Cards>
 </Box>

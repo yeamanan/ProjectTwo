@@ -1,4 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Equipment>
-    <Name>Plenty Of Ammo 1</Name>
-</Equipment>
+<Equipment name="Plenty Of Ammo 1"/>

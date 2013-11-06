@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Weapon>
-    <Name>Crowbar</Name>
+<Weapon name="Crowbar">
     <DoorOpener>true</DoorOpener>
     <MinimumRange>0</MinimumRange>
     <MaximumRange>0</MaximumRange>

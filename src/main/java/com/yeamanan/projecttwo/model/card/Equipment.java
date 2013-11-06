@@ -13,13 +13,13 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "Equipment")
 @XmlRootElement(name = "Equipment")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Equipment extends InventoryElement {
+public class Equipment extends Card {
 
     /**
      * Constructor.
      */
     public Equipment() {
-        this("");
+        super("");
     }
 
     /**

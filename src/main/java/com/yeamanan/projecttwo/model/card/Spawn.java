@@ -1,8 +1,17 @@
 package com.yeamanan.projecttwo.model.card;
 
+import com.yeamanan.projecttwo.model.Element;
+import com.yeamanan.projecttwo.model.character.Abomination;
+import com.yeamanan.projecttwo.model.character.Fatty;
+import com.yeamanan.projecttwo.model.character.Runner;
+import com.yeamanan.projecttwo.model.character.Walker;
+import com.yeamanan.projecttwo.model.character.ZombieDog;
+import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlElements;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
@@ -19,38 +28,66 @@ public class Spawn extends Card {
     /**
      * Is the card a turn spawn card.
      */
-    @XmlElement(name = "Turn", required = true)
+    @XmlElement(name = "Turn", required = false)
     private boolean turnCard;
 
     /**
      * Is the case a sewer spawn card.
      */
-    @XmlElement(name = "Sewer", required = true)
+    @XmlElement(name = "Sewer", required = false)
     private boolean sewerCard;
 
     /**
      * Red level spawn.
      */
-    @XmlElement(name = "Red", required = true)
-    private String redLevel;
+    @XmlElementWrapper(name = "Red", required = false)
+    @XmlElements({
+        @XmlElement(name = "Walker", type = Walker.class),
+        @XmlElement(name = "Fatty", type = Fatty.class),
+        @XmlElement(name = "Runner", type = Runner.class),
+        @XmlElement(name = "Abomination", type = Abomination.class),
+        @XmlElement(name = "ZombieDog", type = ZombieDog.class)
+    })
+    private List<Element> redLevel;
 
     /**
      * Orange level spawn.
      */
-    @XmlElement(name = "Orange", required = true)
-    private String orangeLevel;
+    @XmlElementWrapper(name = "Orange", required = false)
+    @XmlElements({
+        @XmlElement(name = "Walker", type = Walker.class),
+        @XmlElement(name = "Fatty", type = Fatty.class),
+        @XmlElement(name = "Runner", type = Runner.class),
+        @XmlElement(name = "Abomination", type = Abomination.class),
+        @XmlElement(name = "ZombieDog", type = ZombieDog.class)
+    })
+    private List<Element> orangeLevel;
 
     /**
      * Yellow level spawn.
      */
-    @XmlElement(name = "Yellow", required = true)
-    private String yellowLevel;
+    @XmlElementWrapper(name = "Yellow", required = false)
+    @XmlElements({
+        @XmlElement(name = "Walker", type = Walker.class),
+        @XmlElement(name = "Fatty", type = Fatty.class),
+        @XmlElement(name = "Runner", type = Runner.class),
+        @XmlElement(name = "Abomination", type = Abomination.class),
+        @XmlElement(name = "ZombieDog", type = ZombieDog.class)
+    })
+    private List<Element> yellowLevel;
 
     /**
      * Blue level spawn.
      */
-    @XmlElement(name = "Blue", required = true)
-    private String blueLevel;
+    @XmlElementWrapper(name = "Blue", required = false)
+    @XmlElements({
+        @XmlElement(name = "Walker", type = Walker.class),
+        @XmlElement(name = "Fatty", type = Fatty.class),
+        @XmlElement(name = "Runner", type = Runner.class),
+        @XmlElement(name = "Abomination", type = Abomination.class),
+        @XmlElement(name = "ZombieDog", type = ZombieDog.class)
+    })
+    private List<Element> blueLevel;
 
     /**
      * isTurnCard() method.
@@ -93,7 +130,7 @@ public class Spawn extends Card {
      *
      * @return the red level spawn
      */
-    public final String getRedLevel() {
+    public final List<Element> getRedLevel() {
         return this.redLevel;
     }
 
@@ -102,7 +139,7 @@ public class Spawn extends Card {
      *
      * @param argRedLevel the new red level spawn
      */
-    public final void setRedLevel(final String argRedLevel) {
+    public final void setRedLevel(final List<Element> argRedLevel) {
         this.redLevel = argRedLevel;
     }
 
@@ -111,7 +148,7 @@ public class Spawn extends Card {
      *
      * @return the orange level spawn
      */
-    public final String getOrangeLevel() {
+    public final List<Element> getOrangeLevel() {
         return this.orangeLevel;
     }
 
@@ -120,7 +157,7 @@ public class Spawn extends Card {
      *
      * @param argOrangeLevel the new orange level spawn
      */
-    public final void setOrangeLevel(final String argOrangeLevel) {
+    public final void setOrangeLevel(final List<Element> argOrangeLevel) {
         this.orangeLevel = argOrangeLevel;
     }
 
@@ -129,7 +166,7 @@ public class Spawn extends Card {
      *
      * @return the yellow level spawn
      */
-    public final String getYellowLevel() {
+    public final List<Element> getYellowLevel() {
         return this.yellowLevel;
     }
 
@@ -138,7 +175,7 @@ public class Spawn extends Card {
      *
      * @param argYellowLevel the new yellow level spawn
      */
-    public final void setYellowLevel(final String argYellowLevel) {
+    public final void setYellowLevel(final List<Element> argYellowLevel) {
         this.yellowLevel = argYellowLevel;
     }
 
@@ -147,7 +184,7 @@ public class Spawn extends Card {
      *
      * @return the blue level spawn
      */
-    public final String getBlueLevel() {
+    public final List<Element> getBlueLevel() {
         return this.blueLevel;
     }
 
@@ -156,7 +193,7 @@ public class Spawn extends Card {
      *
      * @param argBlueLevel the new blue level spawn
      */
-    public final void setBlueLevel(final String argBlueLevel) {
+    public final void setBlueLevel(final List<Element> argBlueLevel) {
         this.blueLevel = argBlueLevel;
     }
 

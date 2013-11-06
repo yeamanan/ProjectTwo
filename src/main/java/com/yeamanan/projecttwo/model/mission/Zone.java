@@ -5,6 +5,7 @@ import com.yeamanan.projecttwo.model.character.Abomination;
 import com.yeamanan.projecttwo.model.character.Fatty;
 import com.yeamanan.projecttwo.model.character.Runner;
 import com.yeamanan.projecttwo.model.character.Walker;
+import com.yeamanan.projecttwo.model.character.ZombieDog;
 import com.yeamanan.projecttwo.model.token.Door;
 import com.yeamanan.projecttwo.model.token.Exit;
 import com.yeamanan.projecttwo.model.token.Noise;
@@ -73,6 +74,7 @@ public class Zone extends Element {
         @XmlElement(name = "Fatty", type = Fatty.class),
         @XmlElement(name = "Runner", type = Runner.class),
         @XmlElement(name = "Abomination", type = Abomination.class),
+        @XmlElement(name = "ZombieDog", type = ZombieDog.class),
         @XmlElement(name = "Door", type = Door.class),
         @XmlElement(name = "Exit", type = Exit.class),
         @XmlElement(name = "Noise", type = Noise.class),

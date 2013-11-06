@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Spawn name="#130">
+    <Turn>true</Turn>
+    <Red>
+        <Runner/>
+    </Red>
+    <Orange>
+        <Runner/>
+    </Orange>
+    <Yellow>
+        <Runner/>
+    </Yellow>
+    <Blue></Blue>
+</Spawn>

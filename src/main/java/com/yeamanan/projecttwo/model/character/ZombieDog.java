@@ -1,20 +1,29 @@
 package com.yeamanan.projecttwo.model.character;
 
+import com.yeamanan.projecttwo.model.Constants;
+
 /**
- * Abomination class.
+ * ZombieDog class.
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
 public class ZombieDog extends Zombie {
 
     /**
+     * Constructor.
+     */
+    public ZombieDog() {
+        super(Constants.ZOMBIE_DOG_ACTION);
+    }
+
+    /**
      * toString() method.
      *
-     * @return the walker in string format
+     * @return the zombie dog in string format
      */
     @Override
     public final String toString() {
-        return "Abomination{" + "nbAction=" + this.getNbAction() + '}';
+        return "ZombieDog{" + "nbAction=" + this.getNbAction() + '}';
     }
 
 }

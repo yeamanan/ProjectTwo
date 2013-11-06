@@ -17,7 +17,7 @@ import javafx.scene.layout.AnchorPane;
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
-public class GameViewController  implements Initializable {
+public class GameViewController implements Initializable {
 
     /**
      * Logger.

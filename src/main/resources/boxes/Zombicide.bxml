@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Box name="Zombicide">
-    <Spawns>
+    <Cards>
+        <Equipment name="Cans"/>
+        <Equipment name="Cans"/>
+        <Equipment name="Cans"/>
+        <Equipment name="Rice Bag"/>
+        <Equipment name="Rice Bag"/>
+        <Equipment name="Rice Bag"/>
+        <Equipment name="Water"/>
+        <Equipment name="Water"/>
+        <Equipment name="Water"/>
+        <Equipment name="Plenty Of Ammo 1"/>
+        <Equipment name="Plenty Of Ammo 1"/>
+        <Equipment name="Plenty Of Ammo 1"/>
+        <Equipment name="Plenty Of Ammo 2"/>
+        <Equipment name="Plenty Of Ammo 2"/>
+        <Equipment name="Plenty Of Ammo 2"/>
+        <Equipment name="AAAHH!"/>
+        <Equipment name="AAAHH!"/>
+        <Equipment name="AAAHH!"/>
+        <Equipment name="AAAHH!"/>
+        <Equipment name="Scope"/>
+        <Equipment name="Scope"/>
+        <Equipment name="Bottle"/>
+        <Equipment name="Bottle"/>
+        <Equipment name="Gasoline"/>
+        <Equipment name="Gasoline"/>
+        <Equipment name="Goalie Mask"/>
+        <Equipment name="Flashlight"/>
+        <Equipment name="Flashlight"/>
         <Spawn name="#1"/>
         <Spawn name="#2"/>
         <Spawn name="#3"/>
@@ -43,5 +71,45 @@
         <Spawn name="#40"/>
         <Spawn name="#41"/>
         <Spawn name="#42"/>
-    </Spawns>
+        <Weapon name="Sub MG"/>
+        <Weapon name="Sub MG"/>
+        <Weapon name="Rifle"/>
+        <Weapon name="Rifle"/>
+        <Weapon name="Katana"/>
+        <Weapon name="Katana"/>
+        <Weapon name="Evil Twins"/>
+        <Weapon name="Ma's Shotgun"/>
+        <Weapon name="Chainsaw"/>
+        <Weapon name="Chainsaw"/>
+        <Weapon name="Machete"/>
+        <Weapon name="Machete"/>
+        <Weapon name="Machete"/>
+        <Weapon name="Machete"/>
+        <Weapon name="Baseball Bat"/>
+        <Weapon name="Baseball Bat"/>
+        <Weapon name="Crowbar"/>
+        <Weapon name="Crowbar"/>
+        <Weapon name="Gun"/>
+        <Weapon name="Gun"/>
+        <Weapon name="Gun"/>
+        <Weapon name="Fire Axe"/>
+        <Weapon name="Fire Axe"/>
+        <Weapon name="Shotgun"/>
+        <Weapon name="Shotgun"/>
+        <Weapon name="Sawed Off"/>
+        <Weapon name="Sawed Off"/>
+        <Weapon name="Sawed Off"/>
+        <Weapon name="Sawed Off"/>
+        <Weapon name="Molotov"/>
+        <Weapon name="Molotov"/>
+        <Weapon name="Pan"/>
+        <Weapon name="Pan"/>
+        <Weapon name="Pan"/>
+        <Wounded/>
+        <Wounded/>
+        <Wounded/>
+        <Wounded/>
+        <Wounded/>
+        <Wounded/>
+    </Cards>
 </Box>

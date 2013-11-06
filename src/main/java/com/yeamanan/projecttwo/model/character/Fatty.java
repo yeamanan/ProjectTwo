@@ -10,7 +10,7 @@ public class Fatty extends Zombie {
     /**
      * toString() method.
      *
-     * @return the walker in string format
+     * @return the fatty in string format
      */
     @Override
     public final String toString() {

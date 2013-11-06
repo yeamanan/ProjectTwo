@@ -14,7 +14,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "Weapon")
 @XmlRootElement(name = "Weapon")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Weapon extends InventoryElement {
+public class Weapon extends Equipment {
 
     /**
      * Can this weapon open door ?

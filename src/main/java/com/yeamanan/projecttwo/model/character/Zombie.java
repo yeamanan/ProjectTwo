@@ -10,10 +10,20 @@ import com.yeamanan.projecttwo.model.Constants;
 public class Zombie extends Character {
 
     /**
+     * Toxic boolean.
+     */
+    private final boolean toxic;
+
+    /**
+     * Berserker boolean.
+     */
+    private final boolean berserker;
+
+    /**
      * Constructor.
      */
     public Zombie() {
-        super(Constants.ZOMBIE_ACTION);
+        this(Constants.ZOMBIE_ACTION);
     }
 
     /**
@@ -23,6 +33,8 @@ public class Zombie extends Character {
      */
     public Zombie(final int argNbAction) {
         super(argNbAction);
+        this.toxic = false;
+        this.berserker = false;
     }
 
     /**

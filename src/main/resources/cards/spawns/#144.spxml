@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Spawn name="#144">
+    <Red>
+        <Walker berserker="true"/>
+        <Walker berserker="true"/>
+        <Walker berserker="true"/>
+        <Walker berserker="true"/>
+        <Walker berserker="true"/>
+        <Walker berserker="true"/>
+        <Walker berserker="true"/>
+        <Walker berserker="true"/>
+    </Red>
+    <Orange>
+        <Fatty berserker="true"/>
+    </Orange>
+    <Yellow>
+        <Walker berserker="true"/>
+        <Walker berserker="true"/>
+        <Walker berserker="true"/>
+    </Yellow>
+    <Blue>
+        <Runner berserker="true"/>
+    </Blue>
+</Spawn>
