@@ -4,6 +4,9 @@ import com.yeamanan.projecttwo.model.card.Card;
 import com.yeamanan.projecttwo.model.card.Equipment;
 import com.yeamanan.projecttwo.model.card.Weapon;
 import com.yeamanan.projecttwo.model.card.Wounded;
+import com.yeamanan.projecttwo.model.character.Fatty;
+import com.yeamanan.projecttwo.model.character.Runner;
+import com.yeamanan.projecttwo.model.character.Walker;
 import com.yeamanan.projecttwo.model.token.Spawn;
 import java.util.ArrayList;
 import java.util.List;
@@ -45,11 +48,23 @@ public class Box {
     private List<Card> cards;
 
     /**
+     * Elements of the box.
+     */
+    @XmlElementWrapper(name = "Elements", required = false)
+    @XmlElements({
+        @XmlElement(name = "Walker", type = Walker.class),
+        @XmlElement(name = "Runner", type = Runner.class),
+        @XmlElement(name = "Fatty", type = Fatty.class)
+    })
+    private List<Element> elements;
+
+    /**
      * Constructor.
      */
     public Box() {
         this.name = "";
         this.cards = new ArrayList<>();
+        this.elements = new ArrayList<>();
     }
 
     /**
@@ -71,11 +86,19 @@ public class Box {
     }
 
     public final List<Card> getCards() {
-        return cards;
+        return this.cards;
     }
 
     public final void setCards(final List<Card> argCards) {
         this.cards = argCards;
+    }
+
+    public final List<Element> getElements() {
+        return this.elements;
+    }
+
+    public final void setElements(final List<Element> argElements) {
+        this.elements = argElements;
     }
 
 }

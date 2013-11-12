@@ -8,4 +8,24 @@
         <Spawn name="#137"/>
         <Spawn name="#138"/>
     </Cards>
+    <Elements>
+        <Fatty toxic="true"/>
+        <Fatty toxic="true"/>
+        <Fatty toxic="true"/>
+        <Runner toxic="true"/>
+        <Runner toxic="true"/>
+        <Runner toxic="true"/>
+        <Runner toxic="true"/>
+        <Runner toxic="true"/>
+        <Runner toxic="true"/>
+        <Walker toxic="true"/>
+        <Walker toxic="true"/>
+        <Walker toxic="true"/>
+        <Walker toxic="true"/>
+        <Walker toxic="true"/>
+        <Walker toxic="true"/>
+        <Walker toxic="true"/>
+        <Walker toxic="true"/>
+        <Walker toxic="true"/>
+    </Elements>
 </Box>

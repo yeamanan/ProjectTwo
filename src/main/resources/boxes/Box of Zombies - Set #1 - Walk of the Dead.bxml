@@ -14,4 +14,24 @@
         <Spawn name="#53"/>
         <Spawn name="#54"/>
     </Cards>
+    <Elements>
+        <Fatty/>
+        <Fatty/>
+        <Fatty/>
+        <Runner/>
+        <Runner/>
+        <Runner/>
+        <Runner/>
+        <Runner/>
+        <Runner/>
+        <Walker/>
+        <Walker/>
+        <Walker/>
+        <Walker/>
+        <Walker/>
+        <Walker/>
+        <Walker/>
+        <Walker/>
+        <Walker/>
+    </Elements>
 </Box>

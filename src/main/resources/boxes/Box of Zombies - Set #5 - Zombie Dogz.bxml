@@ -14,4 +14,22 @@
         <Spawn name="#65"/>
         <Spawn name="#66"/>
     </Cards>
+    <Elements>
+        <ZombieDog/>
+        <ZombieDog/>
+        <ZombieDog/>
+        <ZombieDog/>
+        <ZombieDog/>
+        <ZombieDog/>
+        <ZombieDog/>
+        <ZombieDog/>
+        <ZombieDog/>
+        <ZombieDog/>
+        <ZombieDog/>
+        <ZombieDog/>
+        <ZombieDog/>
+        <ZombieDog/>
+        <ZombieDog/>
+        <ZombieDog/>
+    </Elements>
 </Box>
