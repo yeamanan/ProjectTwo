@@ -1,10 +1,10 @@
 package com.yeamanan.projecttwo.controller;
 
 import com.yeamanan.projecttwo.ProjectTwo;
-import com.yeamanan.projecttwo.model.Element;
+//import com.yeamanan.projecttwo.model.Element;
 import com.yeamanan.projecttwo.model.character.Survivor;
-import com.yeamanan.projecttwo.model.mission.Zone;
-import com.yeamanan.projecttwo.model.token.Start;
+//import com.yeamanan.projecttwo.model.mission.Zone;
+//import com.yeamanan.projecttwo.model.token.Start;
 import com.yeamanan.projecttwo.service.loader.SurvivorLoader;
 import com.yeamanan.projecttwo.service.loader.SurvivorLoaderImpl;
 import com.yeamanan.projecttwo.view.ViewType;
@@ -15,11 +15,11 @@ import java.util.ResourceBundle;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.ScrollPane;
+//import javafx.scene.control.ScrollPane;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.TilePane;
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 
 /**
  * CharacterSelectionViewController class.
@@ -37,8 +37,8 @@ public class SurvivorSelectionViewController implements Initializable {
     /**
      * Survivors Tile Pane.
      */
-    @FXML
-    private transient ScrollPane survivorsScrollPane;
+//    @FXML
+//    private transient ScrollPane survivorsScrollPane;
 
     /**
      * Survivors Tile Pane.

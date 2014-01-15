@@ -1,7 +1,6 @@
 package com.yeamanan.projecttwo.service.drawer;
 
 import com.yeamanan.projecttwo.model.Element;
-import com.yeamanan.projecttwo.model.character.Survivor;
 import com.yeamanan.projecttwo.model.mission.Zone;
 import javafx.scene.Node;
 import javafx.scene.layout.Pane;

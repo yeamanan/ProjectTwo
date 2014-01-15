@@ -11,8 +11,12 @@ build/
 # Lib Folder #
 lib/
 
-# Netbeans Folder #
+# Netbeans Folder & Files #
 nbproject/
+
+# IDEA Folder & Files #
+.idea/
+*.iml
 
 # Mac files #
 *.DS_Store

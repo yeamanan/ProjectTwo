@@ -1,8 +1,6 @@
 package com.yeamanan.projecttwo.service.drawer;
 
 import com.yeamanan.projecttwo.model.Element;
-import com.yeamanan.projecttwo.util.JarUtil;
-import java.util.List;
 import javafx.scene.Node;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;

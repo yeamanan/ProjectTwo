@@ -12,12 +12,12 @@ public class Zombie extends Character {
     /**
      * Toxic boolean.
      */
-    private final boolean toxic;
+    private boolean toxic;
 
     /**
      * Berserker boolean.
      */
-    private final boolean berserker;
+    private boolean berserker;
 
     /**
      * Constructor.
@@ -35,6 +35,22 @@ public class Zombie extends Character {
         super(argNbAction);
         this.toxic = false;
         this.berserker = false;
+    }
+
+    public boolean isToxic() {
+        return this.toxic;
+    }
+
+    public void setToxic(final boolean argToxic) {
+        this.toxic = argToxic;
+    }
+
+    public boolean isBerserker() {
+        return this.berserker;
+    }
+
+    public void setBerseker(final boolean argBerserker) {
+        this.berserker = argBerserker;
     }
 
     /**

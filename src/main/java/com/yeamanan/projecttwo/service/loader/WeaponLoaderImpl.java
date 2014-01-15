@@ -1,8 +1,6 @@
 package com.yeamanan.projecttwo.service.loader;
 
 import com.yeamanan.projecttwo.model.card.Weapon;
-import com.yeamanan.projecttwo.service.loader.GenericLoader;
-import com.yeamanan.projecttwo.service.loader.GenericLoaderImpl;
 import java.util.List;
 //import org.apache.log4j.Logger;
 
