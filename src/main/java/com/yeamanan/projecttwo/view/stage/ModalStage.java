@@ -16,7 +16,7 @@ import org.apache.log4j.Logger;
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
-public class ModalStage extends Stage {
+class ModalStage extends Stage {
 
     /**
      * Log.
@@ -36,8 +36,8 @@ public class ModalStage extends Stage {
      * @param argHeight the height of the modal stage
      * @param argBundle the resource bundle to load the stage
      */
-    public ModalStage(final Window argWindow, final int argWidth,
-            final int argHeight, final ResourceBundle argBundle) {
+    ModalStage(final Window argWindow, final int argWidth,
+               final int argHeight, final ResourceBundle argBundle) {
         super();
         this.initOwner(argWindow);
         this.initModality(Modality.APPLICATION_MODAL);

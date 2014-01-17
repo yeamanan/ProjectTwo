@@ -10,10 +10,15 @@ import com.yeamanan.projecttwo.model.Constants;
 public class Runner extends Zombie {
 
     /**
+     * Number of actions.
+     */
+    private static final int NB_ACTION = 2;
+
+    /**
      * Constructor.
      */
     public Runner() {
-        super(Constants.RUNNER_ACTION);
+        super(NB_ACTION);
     }
 
     /**

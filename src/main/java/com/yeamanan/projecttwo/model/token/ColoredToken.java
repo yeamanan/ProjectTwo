@@ -14,6 +14,8 @@ import javax.xml.bind.annotation.XmlTransient;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ColoredToken extends Token {
 
+    private static final Color DEFAULT_COLOR = Color.RED;
+
     /**
      * Color of token.
      */
@@ -23,8 +25,8 @@ public class ColoredToken extends Token {
     /**
      * Constructor.
      */
-    public ColoredToken() {
-        this(Color.RED);
+    ColoredToken() {
+        this(DEFAULT_COLOR);
     }
 
     /**
@@ -32,7 +34,7 @@ public class ColoredToken extends Token {
      *
      * @param argColor the new color of the token
      */
-    public ColoredToken(final Color argColor) {
+    private ColoredToken(final Color argColor) {
         super();
         this.color = argColor;
     }

@@ -15,7 +15,7 @@ public class ProjectTwoTest {
      */
     @Test
     public final void test() {
-        assertEquals("This is ok", "",
-                "This is a sample project");
+        assertEquals("This is ok", "", "This is a sample project");
     }
+    
 }

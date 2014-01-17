@@ -16,6 +16,7 @@ nbproject/
 
 # IDEA Folder & Files #
 .idea/
+out/
 *.iml
 
 # Mac files #

@@ -24,7 +24,7 @@ public class Element {
     /**
      * Constructor.
      */
-    public Element() {
+    protected Element() {
         this.direction = Direction.NORTH;
     }
 

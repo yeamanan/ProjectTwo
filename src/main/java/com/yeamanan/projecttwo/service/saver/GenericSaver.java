@@ -13,7 +13,8 @@ public interface GenericSaver<T> {
      *
      * @param argObject an object to save
      * @param argFileName the file name of the xml to save
+     * @return a boolean
      */
-    void save(T argObject, final String argFileName);
+    boolean save(T argObject, final String argFileName);
 
 }

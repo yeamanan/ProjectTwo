@@ -1,7 +1,6 @@
 package com.yeamanan.projecttwo.model.card;
 
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlTransient;
+import javax.xml.bind.annotation.*;
 
 /**
  * Card class.
@@ -20,8 +19,8 @@ public class Card {
     /**
      * Constructor.
      */
-    public Card() {
-        this.name = "";
+    Card() {
+        name = "";
     }
 
     /**
@@ -29,8 +28,8 @@ public class Card {
      *
      * @param argName the new name of the card
      */
-    public Card(final String argName) {
-        this.name = argName;
+    Card(final String argName) {
+        name = argName;
     }
 
     /**
@@ -48,7 +47,7 @@ public class Card {
      * @param argName the new name of the card
      */
     public final void setName(final String argName) {
-        this.name = argName;
+        name = argName;
     }
 
 }

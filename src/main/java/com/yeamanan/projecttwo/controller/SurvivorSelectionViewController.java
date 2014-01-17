@@ -28,6 +28,12 @@ import javafx.scene.layout.TilePane;
  */
 public class SurvivorSelectionViewController implements Initializable {
 
+    public static final String IMAGES_FOLDER = "images/";
+    public static final String PORTRAIT_IMAGE_SUFFIX = "_pz.jpg";
+    public static final String FICHE_IAMGE_SUFFIX = "_sic.jpg";
+    public static final String FX_BACKGROUND_IMAGE_URL = "-fx-background-image: url(\"";
+    public static final String STRING = "\")";
+
     /**
      * Logger.
      */
@@ -88,10 +94,10 @@ public class SurvivorSelectionViewController implements Initializable {
             public final void handle(final MouseEvent argEvent) {
                 final Pane pane = (Pane) argEvent.getSource();
                 final String sName = pane.getId();
-                String sPath = "images/" + sName + "_pz.jpg";
-                pane.setStyle("-fx-background-image: url(\"" + sPath + "\")");
-                sPath = "images/" + sName + "_sic.jpg";
-                survivorDescription.setStyle("-fx-background-image: url(\"" + sPath + "\")");
+                String sPath = IMAGES_FOLDER + sName + PORTRAIT_IMAGE_SUFFIX;
+                pane.setStyle(FX_BACKGROUND_IMAGE_URL + sPath + STRING);
+                sPath = IMAGES_FOLDER + sName + FICHE_IAMGE_SUFFIX;
+                survivorDescription.setStyle(FX_BACKGROUND_IMAGE_URL + sPath + STRING);
                 survivorDescription.setUserData(sName);
                 survivorDescription.setOnMouseEntered(descriptionEnterHandler);
                 survivorDescription.setOnMouseExited(descriptionExitHandler);
@@ -107,8 +113,8 @@ public class SurvivorSelectionViewController implements Initializable {
             public final void handle(final MouseEvent argEvent) {
                 final Pane pane = (Pane) argEvent.getSource();
                 final String sName = pane.getId();
-                final String sPath = "images/" + sName + "_p.jpg";
-                pane.setStyle("-fx-background-image: url(\"" + sPath + "\")");
+                final String sPath = IMAGES_FOLDER + sName + "_p.jpg";
+                pane.setStyle(FX_BACKGROUND_IMAGE_URL + sPath + STRING);
             }
         };
 
@@ -120,8 +126,8 @@ public class SurvivorSelectionViewController implements Initializable {
             @Override
             public final void handle(final MouseEvent argEvent) {
                 final String sName = (String) survivorDescription.getUserData();
-                final String sPath = "images/" + sName + "_sicz.jpg";
-                survivorDescription.setStyle("-fx-background-image: url(\"" + sPath + "\")");
+                final String sPath = IMAGES_FOLDER + sName + "_sicz.jpg";
+                survivorDescription.setStyle(FX_BACKGROUND_IMAGE_URL + sPath + STRING);
                 
             }
         };
@@ -134,8 +140,8 @@ public class SurvivorSelectionViewController implements Initializable {
             @Override
             public final void handle(final MouseEvent argEvent) {
                 final String sName = (String) survivorDescription.getUserData();
-                final String sPath = "images/" + sName + "_sic.jpg";
-                survivorDescription.setStyle("-fx-background-image: url(\"" + sPath + "\")");
+                final String sPath = IMAGES_FOLDER + sName + FICHE_IAMGE_SUFFIX;
+                survivorDescription.setStyle(FX_BACKGROUND_IMAGE_URL + sPath + STRING);
                 
             }
         };
@@ -156,8 +162,8 @@ public class SurvivorSelectionViewController implements Initializable {
             final Pane pane = new Pane();
             pane.setId(sName);
             pane.setPrefSize(90, 90);
-            final String sPath = "images/" + sName + "_p.jpg";
-            pane.setStyle("-fx-background-image: url(\"" + sPath + "\")");
+            final String sPath = IMAGES_FOLDER + sName + "_p.jpg";
+            pane.setStyle(FX_BACKGROUND_IMAGE_URL + sPath + STRING);
             pane.getStyleClass().add("survivorPortrait");
             pane.setOnMouseClicked(clickHandler);
             pane.setOnMouseEntered(enterHandler);

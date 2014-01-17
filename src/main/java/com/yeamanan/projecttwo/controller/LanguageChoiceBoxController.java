@@ -72,11 +72,13 @@ public class LanguageChoiceBoxController implements Initializable {
                 LanguagesUtil.loadLanguages(this.getClass());
         for (ResourceBundle language : languages) {
             final String sLanguage = language.getString("language");
+            //noinspection unchecked
             languageBox.getItems().add(sLanguage);
             locales.put(sLanguage, language.getString("locale"));
         }
         final ProjectTwo instance = ProjectTwo.getInstance();
         final ResourceBundle language = instance.getContext().getLanguage();
+        //noinspection unchecked
         languageBox.setValue(language.getString("language"));
         languageBox.getSelectionModel().selectedIndexProperty()
                 .addListener(listener);

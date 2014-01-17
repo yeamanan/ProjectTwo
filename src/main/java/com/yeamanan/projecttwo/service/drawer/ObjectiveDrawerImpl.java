@@ -2,7 +2,7 @@ package com.yeamanan.projecttwo.service.drawer;
 
 import com.yeamanan.projecttwo.model.Element;
 import com.yeamanan.projecttwo.model.token.Objective;
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 
 /**
  * ObjectiveDrawerImpl class.
@@ -14,10 +14,10 @@ public class ObjectiveDrawerImpl extends ImageDrawerImpl {
     /**
      * Logger.
      */
-    private static final Logger LOG = Logger.getLogger(ObjectiveDrawerImpl.class);
+//    private static final Logger LOG = Logger.getLogger(ObjectiveDrawerImpl.class);
 
     @Override
-    public String buildFileName(final Element argElement) {
+    protected final String buildFileName(final Element argElement) {
         final Objective objective = (Objective) argElement;
         String fileName = objective.getClass().getSimpleName();
         fileName += "_" + objective.getColor().getName();

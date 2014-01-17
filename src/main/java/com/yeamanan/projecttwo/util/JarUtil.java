@@ -39,11 +39,8 @@ public final class JarUtil {
             final String pathFolder) {
         final List<String> filePaths = new ArrayList<>();
         final URL url = aClass.getClassLoader().getResource(pathFolder);
-        final String jarPath =
-                url.getPath().substring(5, url.getPath().indexOf("!"));
-        try {
-            final JarFile jar =
-                    new JarFile(URLDecoder.decode(jarPath, "UTF-8"));
+        final String jarPath = url.getPath().substring(5, url.getPath().indexOf("!"));
+        try (final JarFile jar = new JarFile(URLDecoder.decode(jarPath, "UTF-8"))) {
             final Enumeration<JarEntry> entries = jar.entries();
             while (entries.hasMoreElements()) {
                 final JarEntry entry = entries.nextElement();

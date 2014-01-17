@@ -10,16 +10,18 @@ import javax.xml.bind.annotation.XmlType;
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
-@XmlType(name = "Equipment")
-@XmlRootElement(name = "Equipment")
+@XmlType(name = Equipment.NAME)
+@XmlRootElement(name = Equipment.NAME)
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Equipment extends Card {
+
+    protected static final String NAME = "Equipment";
 
     /**
      * Constructor.
      */
     public Equipment() {
-        super("");
+        super(NAME);
     }
 
     /**

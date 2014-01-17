@@ -26,20 +26,20 @@ public class TileDrawerImpl extends ImageDrawerImpl {
      * @return the file name of the image to load
      */
     @Override
-    public String buildFileName(final Element argElement) {
+    protected final String buildFileName(final Element argElement) {
         final Tile tile = (Tile) argElement;
         return tile.getName();
     }
 
     /**
-     * calculPositionAndRotation() method.
+     * calculatePositionAndRotation() method.
      *
      * @param argElement the element to draw
      * @param argImage the image loaded
      * @param argParent the parent of the element to draw in
      */
     @Override
-    public final void calculPositionAndRotation(final Element argElement,
+    protected final void calculatePositionAndRotation(final Element argElement,
             final ImageView argImage, final Pane argParent) {
         final Tile tile = (Tile) argElement;
         final double width = argImage.getBoundsInLocal().getWidth();

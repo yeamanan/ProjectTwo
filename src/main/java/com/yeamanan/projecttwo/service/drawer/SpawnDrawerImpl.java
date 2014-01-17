@@ -5,7 +5,7 @@ import com.yeamanan.projecttwo.model.mission.Direction;
 import com.yeamanan.projecttwo.model.token.Spawn;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 
 /**
  * SpawnDrawerImpl class.
@@ -17,10 +17,10 @@ public class SpawnDrawerImpl extends ImageDrawerImpl {
     /**
      * Logger.
      */
-    private static final Logger LOG = Logger.getLogger(SpawnDrawerImpl.class);
+//    private static final Logger LOG = Logger.getLogger(SpawnDrawerImpl.class);
 
     @Override
-    public String buildFileName(final Element argElement) {
+    protected final String buildFileName(final Element argElement) {
         final Spawn spawn = (Spawn) argElement;
         String fileName = spawn.getClass().getSimpleName();
         fileName += "_" + spawn.getColor().getName();
@@ -28,14 +28,14 @@ public class SpawnDrawerImpl extends ImageDrawerImpl {
     }
 
     /**
-     * calculPositionAndRotation() method.
+     * calculatePositionAndRotation() method.
      *
      * @param argElement the element to draw
      * @param argImage the image loaded
      * @param argParent the parent of the element to draw in
      */
     @Override
-    public void calculPositionAndRotation(final Element argElement,
+    protected final void calculatePositionAndRotation(final Element argElement,
             final ImageView argImage, final Pane argParent) {
         final Spawn spawn = (Spawn) argElement;
         final double width = argParent.getPrefWidth();

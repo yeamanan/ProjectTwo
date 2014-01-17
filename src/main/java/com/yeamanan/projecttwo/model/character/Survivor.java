@@ -18,10 +18,20 @@ import javax.xml.bind.annotation.XmlType;
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
-@XmlType(name = "Survivor")
-@XmlRootElement(name = "Survivor")
+@XmlType(name = Survivor.NAME)
+@XmlRootElement(name = Survivor.NAME)
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Survivor extends Character {
+
+    /**
+     * Number of action.
+     */
+    private static final int NB_ACTION = 3;
+
+    /**
+     * .
+     */
+    protected static final String NAME = "Survivor";
 
     /**
      * Name of the character.
@@ -91,7 +101,7 @@ public class Survivor extends Character {
      * Constructor.
      */
     public Survivor() {
-        this("");
+        this(NAME);
     }
 
     /**
@@ -100,7 +110,7 @@ public class Survivor extends Character {
      * @param argName the new name of the survivor
      */
     public Survivor(final String argName) {
-        super(Constants.SURVIVOR_ACTION);
+        super(NB_ACTION);
         this.name = argName;
         this.experience = 0;
         this.level = Level.BLUE;
@@ -301,23 +311,12 @@ public class Survivor extends Character {
      */
     @Override
     public final boolean equals(final Object obj) {
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
         final Survivor other = (Survivor) obj;
-        if (!Objects.equals(this.name, other.name)) {
-            return false;
-        }
-        if (this.experience != other.experience) {
-            return false;
-        }
-        if (this.level != other.level) {
-            return false;
-        }
-        return true;
+        return obj != null &&
+                getClass() == obj.getClass() &&
+                Objects.equals(this.name, other.name) &&
+                this.experience == other.experience &&
+                this.level == other.level;
     }
 
     /**

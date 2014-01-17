@@ -37,7 +37,7 @@ public class EquipmentLoaderImpl implements EquipmentLoader {
      */
     public EquipmentLoaderImpl() {
         this.service =
-                new GenericLoaderImpl(FOLDER, EXTENSION, Equipment.class);
+                new GenericLoaderImpl<>(FOLDER, EXTENSION, Equipment.class);
     }
 
     /**

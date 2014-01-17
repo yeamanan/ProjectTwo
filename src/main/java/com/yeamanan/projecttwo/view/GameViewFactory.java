@@ -7,7 +7,7 @@ package com.yeamanan.projecttwo.view;
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
-public class GameViewFactory extends ViewFactoryImpl {
+class GameViewFactory extends ViewFactoryImpl {
 
     /**
      * Logger.

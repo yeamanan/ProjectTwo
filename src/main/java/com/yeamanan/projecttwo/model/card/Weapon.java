@@ -11,10 +11,12 @@ import javax.xml.bind.annotation.XmlType;
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
-@XmlType(name = "Weapon")
-@XmlRootElement(name = "Weapon")
+@XmlType(name = Weapon.NAME)
+@XmlRootElement(name = Weapon.NAME)
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Weapon extends Equipment {
+
+    protected static final String NAME = "Weapon";
 
     /**
      * Can this weapon open door ?
@@ -80,7 +82,7 @@ public class Weapon extends Equipment {
      * Constructor.
      */
     public Weapon() {
-        this("");
+        this(NAME);
     }
 
     /**
@@ -204,7 +206,7 @@ public class Weapon extends Equipment {
     /**
      * setMinRange() method.
      *
-     * @param argMinRange the new mininum range of the weapon
+     * @param argMinRange the new minimum range of the weapon
      */
     public final void setMinRange(final int argMinRange) {
         this.minRange = argMinRange;

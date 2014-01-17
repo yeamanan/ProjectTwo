@@ -30,7 +30,7 @@ public enum Direction {
     /**
      * Angle of the axe.
      */
-    private double angle;
+    private final double angle;
 
     /**
      * Constructor.

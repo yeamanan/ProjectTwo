@@ -75,7 +75,7 @@ public enum Skill {
     /**
      * .
      */
-    ONE_REROLL_PER_TURN,
+    ONE_RE_ROLL_PER_TURN,
 
     /**
      * .
@@ -90,7 +90,7 @@ public enum Skill {
     /**
      * .
      */
-    AMBIDEXSTROUS,
+    AMBIDEXTROUS,
 
     /**
      * .
@@ -120,7 +120,7 @@ public enum Skill {
     /**
      * .
      */
-    IS_THAT_ALL_YOUVE_GOT,
+    IS_THAT_ALL_YOU_VE_GOT,
 
     /**
      * .
@@ -170,7 +170,7 @@ public enum Skill {
     /**
      * .
      */
-    SWORDMASTER,
+    SWORD_MASTER,
 
     /**
      * .
@@ -180,6 +180,6 @@ public enum Skill {
     /**
      * .
      */
-    TRICK_SHOT;
+    TRICK_SHOT
 
 }

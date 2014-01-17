@@ -25,6 +25,12 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Spawn extends Card {
 
+    public static final String WALKER = "Walker";
+    public static final String FATTY = "Fatty";
+    public static final String RUNNER = "Runner";
+    public static final String ABOMINATION = "Abomination";
+    public static final String ZOMBIE_DOG = "ZombieDog";
+
     /**
      * Is the card a turn spawn card.
      */
@@ -42,11 +48,11 @@ public class Spawn extends Card {
      */
     @XmlElementWrapper(name = "Red", required = false)
     @XmlElements({
-        @XmlElement(name = "Walker", type = Walker.class),
-        @XmlElement(name = "Fatty", type = Fatty.class),
-        @XmlElement(name = "Runner", type = Runner.class),
-        @XmlElement(name = "Abomination", type = Abomination.class),
-        @XmlElement(name = "ZombieDog", type = ZombieDog.class)
+        @XmlElement(name = WALKER, type = Walker.class),
+        @XmlElement(name = FATTY, type = Fatty.class),
+        @XmlElement(name = RUNNER, type = Runner.class),
+        @XmlElement(name = ABOMINATION, type = Abomination.class),
+        @XmlElement(name = ZOMBIE_DOG, type = ZombieDog.class)
     })
     private List<Element> redLevel;
 
@@ -55,11 +61,11 @@ public class Spawn extends Card {
      */
     @XmlElementWrapper(name = "Orange", required = false)
     @XmlElements({
-        @XmlElement(name = "Walker", type = Walker.class),
-        @XmlElement(name = "Fatty", type = Fatty.class),
-        @XmlElement(name = "Runner", type = Runner.class),
-        @XmlElement(name = "Abomination", type = Abomination.class),
-        @XmlElement(name = "ZombieDog", type = ZombieDog.class)
+        @XmlElement(name = WALKER, type = Walker.class),
+        @XmlElement(name = FATTY, type = Fatty.class),
+        @XmlElement(name = RUNNER, type = Runner.class),
+        @XmlElement(name = ABOMINATION, type = Abomination.class),
+        @XmlElement(name = ZOMBIE_DOG, type = ZombieDog.class)
     })
     private List<Element> orangeLevel;
 
@@ -68,11 +74,11 @@ public class Spawn extends Card {
      */
     @XmlElementWrapper(name = "Yellow", required = false)
     @XmlElements({
-        @XmlElement(name = "Walker", type = Walker.class),
-        @XmlElement(name = "Fatty", type = Fatty.class),
-        @XmlElement(name = "Runner", type = Runner.class),
-        @XmlElement(name = "Abomination", type = Abomination.class),
-        @XmlElement(name = "ZombieDog", type = ZombieDog.class)
+        @XmlElement(name = WALKER, type = Walker.class),
+        @XmlElement(name = FATTY, type = Fatty.class),
+        @XmlElement(name = RUNNER, type = Runner.class),
+        @XmlElement(name = ABOMINATION, type = Abomination.class),
+        @XmlElement(name = ZOMBIE_DOG, type = ZombieDog.class)
     })
     private List<Element> yellowLevel;
 
@@ -81,11 +87,11 @@ public class Spawn extends Card {
      */
     @XmlElementWrapper(name = "Blue", required = false)
     @XmlElements({
-        @XmlElement(name = "Walker", type = Walker.class),
-        @XmlElement(name = "Fatty", type = Fatty.class),
-        @XmlElement(name = "Runner", type = Runner.class),
-        @XmlElement(name = "Abomination", type = Abomination.class),
-        @XmlElement(name = "ZombieDog", type = ZombieDog.class)
+        @XmlElement(name = WALKER, type = Walker.class),
+        @XmlElement(name = FATTY, type = Fatty.class),
+        @XmlElement(name = RUNNER, type = Runner.class),
+        @XmlElement(name = ABOMINATION, type = Abomination.class),
+        @XmlElement(name = ZOMBIE_DOG, type = ZombieDog.class)
     })
     private List<Element> blueLevel;
 

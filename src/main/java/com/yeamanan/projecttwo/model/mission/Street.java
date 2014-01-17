@@ -10,4 +10,4 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlType(name = "Street")
 @XmlRootElement(name = "Street")
-public class Street extends Zone { }
+class Street extends Zone { }

@@ -2,7 +2,7 @@ package com.yeamanan.projecttwo.service.drawer;
 
 import com.yeamanan.projecttwo.model.Element;
 import com.yeamanan.projecttwo.model.character.Zombie;
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 
 /**
  * ZombieDrawerImpl class.
@@ -14,10 +14,10 @@ public class ZombieDrawerImpl extends ImageDrawerImpl {
     /**
      * Logger.
      */
-    private static final Logger LOG = Logger.getLogger(ZombieDrawerImpl.class);
+//    private static final Logger LOG = Logger.getLogger(ZombieDrawerImpl.class);
 
     @Override
-    public String buildFileName(final Element argElement) {
+    protected String buildFileName(final Element argElement) {
         final Zombie zombie = (Zombie) argElement;
         String fileName = "Zombie";
         fileName += "_" + zombie.getClass().getSimpleName();

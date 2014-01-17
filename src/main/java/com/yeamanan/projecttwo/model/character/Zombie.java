@@ -1,13 +1,32 @@
 package com.yeamanan.projecttwo.model.character;
 
-import com.yeamanan.projecttwo.model.Constants;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Zombie class.
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
+
+@XmlType(name = Zombie.NAME)
+@XmlRootElement(name = Zombie.NAME)
 public class Zombie extends Character {
+
+    /**
+     * Name.
+     */
+    protected static final String NAME = "Zombie";
+
+    /**
+     * Number of action.
+     */
+    private static final int NB_ACTION = 1;
+
+    /**
+     * Experience given when killed.
+     */
+    private static final int EXPERIENCE_GIVEN = 1;
 
     /**
      * Toxic boolean.
@@ -15,15 +34,15 @@ public class Zombie extends Character {
     private boolean toxic;
 
     /**
-     * Berserker boolean.
+     * Berserk boolean.
      */
-    private boolean berserker;
+    private boolean berserk;
 
     /**
      * Constructor.
      */
-    public Zombie() {
-        this(Constants.ZOMBIE_ACTION);
+    Zombie() {
+        this(NB_ACTION);
     }
 
     /**
@@ -31,36 +50,56 @@ public class Zombie extends Character {
      *
      * @param argNbAction the new number of action that can do the character
      */
-    public Zombie(final int argNbAction) {
+    Zombie(final int argNbAction) {
         super(argNbAction);
-        this.toxic = false;
-        this.berserker = false;
+        toxic = false;
+        berserk = false;
     }
 
-    public boolean isToxic() {
-        return this.toxic;
+    /**
+     * isToxic() method.
+     *
+     * @return
+     */
+    public final boolean isToxic() {
+        return toxic;
     }
 
-    public void setToxic(final boolean argToxic) {
-        this.toxic = argToxic;
+    /**
+     * setToxic() method.
+     *
+     * @param argToxic
+     */
+    public final void setToxic(final boolean argToxic) {
+        toxic = argToxic;
     }
 
-    public boolean isBerserker() {
-        return this.berserker;
+    /**
+     * isBerserk() method.
+     *
+     * @return
+     */
+    public final boolean isBerserk() {
+        return berserk;
     }
 
-    public void setBerseker(final boolean argBerserker) {
-        this.berserker = argBerserker;
+    /**
+     * setBerserk() method.
+     *
+     * @param argBerserk
+     */
+    public final void setBerserk(final boolean argBerserk) {
+        berserk = argBerserk;
     }
 
     /**
      * toString() method.
      *
-     * @return the zombie in string format
+     * @return the character in string format
      */
     @Override
     public String toString() {
-        return "Zombie{" + "nbAction=" + this.getNbAction() + '}';
+        return super.toString() + "\n{" + "toxic=" + toxic + "}\n{" + "berserk=" + berserk + "}";
     }
 
 }

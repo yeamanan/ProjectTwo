@@ -37,7 +37,7 @@ public class MissionLoaderImpl implements MissionLoader {
      */
     public MissionLoaderImpl() {
         this.service =
-                new GenericLoaderImpl(FOLDER, EXTENSION, Mission.class);
+                new GenericLoaderImpl<>(FOLDER, EXTENSION, Mission.class);
     }
 
     /**

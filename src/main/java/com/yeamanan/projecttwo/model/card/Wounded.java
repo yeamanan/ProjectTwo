@@ -10,15 +10,15 @@ import javax.xml.bind.annotation.XmlType;
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
-@XmlType(name = "Wounded")
-@XmlRootElement(name = "Wounded")
+@XmlType(name = Wounded.NAME)
+@XmlRootElement(name = Wounded.NAME)
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Wounded extends Card {
 
     /**
      * Name of a wounded card.
      */
-    private static final String NAME = "Wounded";
+    protected static final String NAME = "Wounded";
 
     /**
      * Constructor.

@@ -4,7 +4,7 @@ import com.yeamanan.projecttwo.model.Element;
 import com.yeamanan.projecttwo.model.character.Survivor;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 
 /**
  * SurvivorDrawerImpl class.
@@ -16,7 +16,7 @@ public class SurvivorDrawerImpl extends ImageDrawerImpl {
     /**
      * Logger.
      */
-    private static final Logger LOG = Logger.getLogger(SurvivorDrawerImpl.class);
+//    private static final Logger LOG = Logger.getLogger(SurvivorDrawerImpl.class);
 
     /**
      * buildFileName() method.
@@ -25,21 +25,20 @@ public class SurvivorDrawerImpl extends ImageDrawerImpl {
      * @return the file name of the image to load
      */
     @Override
-    public String buildFileName(final Element argElement) {
+    protected final String buildFileName(final Element argElement) {
         final Survivor survivor = (Survivor) argElement;
-        String fileName = survivor.getName();
-        return  fileName;
+        return survivor.getName();
     }
 
     /**
-     * calculPositionAndRotation() method.
+     * calculatePositionAndRotation() method.
      *
      * @param argElement the element to draw
      * @param argImage the image loaded
-     * @param argParent the parent of the element to draw in
+//     * @param argParent the parent of the element to draw in
      */
     @Override
-    public void calculPositionAndRotation(final Element argElement,
+    protected final void calculatePositionAndRotation(final Element argElement,
             final ImageView argImage, final Pane argParent) {
 //        final double width = argParent.getPrefWidth();
 //        final double height = argParent.getPrefHeight();

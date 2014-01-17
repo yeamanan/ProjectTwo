@@ -166,7 +166,7 @@ public class Zone extends Element {
      *
      * @param argWidth the new width of the zone
      */
-    public void setWidth(final double argWidth) {
+    public final void setWidth(final double argWidth) {
         this.width = argWidth;
     }
 
@@ -184,7 +184,7 @@ public class Zone extends Element {
      *
      * @param argHeight the new height of the zone
      */
-    public void setHeight(final double argHeight) {
+    public final void setHeight(final double argHeight) {
         this.height = argHeight;
     }
 

@@ -70,6 +70,7 @@ public class GenericLoaderImpl<T> extends GenericService implements GenericLoade
         try {
             final JAXBContext context = JAXBContext.newInstance(this.gClass);
             final Unmarshaller unmarshaller = context.createUnmarshaller();
+            //noinspection unchecked
             object = (T) unmarshaller.unmarshal(stream);
         } catch (JAXBException ex) {
             LOG.error("Error loading " + this.gClass + " file", ex);

@@ -32,8 +32,7 @@ public class SurvivorEditorController implements Initializable {
     /**
      * Log.
      */
-    private static final Logger LOG =
-           Logger.getLogger(SurvivorEditorController.class);
+    private static final Logger LOG = Logger.getLogger(SurvivorEditorController.class);
 
     /**
      * Survivors available.
@@ -102,13 +101,16 @@ public class SurvivorEditorController implements Initializable {
         final SurvivorLoader sService = new SurvivorLoaderImpl();
         survivors = sService.loadAll();
         for (Survivor survivor : survivors) {
+            //noinspection unchecked,unchecked
             cbSurvivors.getItems().add(survivor.getName());
         }
+        //noinspection unchecked
         cbSurvivors.valueProperty().addListener(changeListener);
 
         for (int i = 1; i < Skill.values().length; i++) {
-            final TreeItem<String> tiSkill =
+            @SuppressWarnings("unchecked") final TreeItem<String> tiSkill =
                     new TreeItem(Skill.values()[i].name());
+            //noinspection unchecked
             tiSkills.getChildren().add(tiSkill);
         }
     }
@@ -121,7 +123,7 @@ public class SurvivorEditorController implements Initializable {
     @FXML
     protected final void handleDragDetectedAction(final MouseEvent argEvent) {
         final TreeView source = (TreeView) argEvent.getSource();
-        final TreeItem<String> item =
+        @SuppressWarnings("unchecked") final TreeItem<String> item =
                 (TreeItem<String>) source.getSelectionModel().getSelectedItem();
         if (item != null) {
             final Dragboard board = source.startDragAndDrop(TransferMode.ANY);
@@ -160,7 +162,8 @@ public class SurvivorEditorController implements Initializable {
         boolean success = false;
         if (board.hasString()) {
             final TreeView target = (TreeView) argEvent.getSource();
-            final TreeItem<String> tmp = new TreeItem(board.getString());
+            @SuppressWarnings("unchecked") final TreeItem<String> tmp = new TreeItem(board.getString());
+            //noinspection unchecked
             target.getRoot().getChildren().add(tmp);
             success = true;
         }

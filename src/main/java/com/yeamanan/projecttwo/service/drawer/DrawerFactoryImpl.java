@@ -25,7 +25,7 @@ import javafx.scene.layout.Pane;
  */
 public class DrawerFactoryImpl implements Drawer {
 
-    private transient final Map<Class, Drawer> drawers;
+    private final transient Map<Class, Drawer> drawers;
 
     /**
      * Constructor.
@@ -49,7 +49,8 @@ public class DrawerFactoryImpl implements Drawer {
     /**
      * draw() method.
      *
-     * @param argDoor the door to draw
+     * @param argElement the element to draw
+     * @param argParent the parent to set for the returning node
      * @return the node representing the T object
      */
     @Override

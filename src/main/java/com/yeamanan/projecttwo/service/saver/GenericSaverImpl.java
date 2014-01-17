@@ -14,7 +14,7 @@ import org.apache.log4j.Logger;
  * @param <T> class of the object to save
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
-public class GenericSaverImpl<T> extends GenericService implements GenericSaver<T> {
+public final class GenericSaverImpl<T> extends GenericService implements GenericSaver<T> {
 
     /**
      * Logger.
@@ -29,7 +29,7 @@ public class GenericSaverImpl<T> extends GenericService implements GenericSaver<
      * @param argClass the class of the object to save
      */
     public GenericSaverImpl(final String argFolder, final String argExtension,
-            final Class argClass) {
+                             final Class argClass) {
         super(argFolder, argExtension, argClass);
     }
 
@@ -40,13 +40,15 @@ public class GenericSaverImpl<T> extends GenericService implements GenericSaver<
      * @param argFileName the file name of the xml to save
      */
     @Override
-    public final void save(final T argObject, final String argFileName) {
+    public boolean save(final T argObject, final String argFileName) {
         final String sPath = System.getProperty("user.home") + "/"
                 + argFileName + this.extension;
         final File file = new File(sPath);
         if (!file.exists()) {
             try {
-                file.createNewFile();
+                if(!file.createNewFile()) {
+                    return false;
+                }
             } catch (IOException ex) {
                 LOG.error("Error saving " + this.gClass + " file", ex);
             }
@@ -59,6 +61,7 @@ public class GenericSaverImpl<T> extends GenericService implements GenericSaver<
         } catch (JAXBException ex) {
             LOG.error("Error saving " + this.gClass + " file", ex);
         }
+        return true;
     }
 
 }

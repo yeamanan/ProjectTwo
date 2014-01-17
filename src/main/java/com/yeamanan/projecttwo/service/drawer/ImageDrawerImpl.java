@@ -4,7 +4,7 @@ import com.yeamanan.projecttwo.model.Element;
 import javafx.scene.Node;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 
 /**
  * ImageDrawerImpl class.
@@ -16,7 +16,7 @@ public class ImageDrawerImpl implements Drawer {
     /**
      * Logger.
      */
-    private static final Logger LOG = Logger.getLogger(ImageDrawerImpl.class);
+//    private static final Logger LOG = Logger.getLogger(ImageDrawerImpl.class);
 
     /**
      * draw() method.
@@ -30,7 +30,7 @@ public class ImageDrawerImpl implements Drawer {
         final String fileName = buildFileName(argElement);
         final String path = buildPath(fileName);
         final ImageView image = new ImageView(path);
-        calculPositionAndRotation(argElement, image, argParent);
+        calculatePositionAndRotation(argElement, image, argParent);
         return image;
     }
 
@@ -40,7 +40,7 @@ public class ImageDrawerImpl implements Drawer {
      * @param argElement the element to draw
      * @return the file name of the image to load
      */
-    public String buildFileName(final Element argElement) {
+    protected String buildFileName(final Element argElement) {
         return  argElement.getClass().getSimpleName();
     }
 
@@ -50,7 +50,7 @@ public class ImageDrawerImpl implements Drawer {
      * @param argFileName the file name of the image to load
      * @return the path of the image to load
      */
-    public final String buildPath(final String argFileName) {
+    protected final String buildPath(final String argFileName) {
 //        String path = "images/" + argFileName + ".jpg";
 //        List<String> images =
 //                JarUtil.getJarFolderFileList(this.getClass(), "images/");
@@ -61,14 +61,14 @@ public class ImageDrawerImpl implements Drawer {
     }
 
     /**
-     * calculPositionAndRotation() method.
+     * calculatePositionAndRotation() method.
      *
      * @param argElement the element to draw
      * @param argImage the image loaded
      * @param argParent the parent of the element to draw in
      */
-    public void calculPositionAndRotation(final Element argElement,
-            final ImageView argImage, final Pane argParent) {
+    protected void calculatePositionAndRotation(final Element argElement,
+                                      final ImageView argImage, final Pane argParent) {
         final double width = argParent.getPrefWidth();
         final double height = argParent.getPrefHeight();
         final double x = (width - argImage.getBoundsInLocal().getWidth()) / 2;

@@ -37,7 +37,7 @@ public class SurvivorLoaderImpl implements SurvivorLoader {
      */
     public SurvivorLoaderImpl() {
         this.service =
-                new GenericLoaderImpl(FOLDER, EXTENSION, Survivor.class);
+                new GenericLoaderImpl<>(FOLDER, EXTENSION, Survivor.class);
     }
 
     /**

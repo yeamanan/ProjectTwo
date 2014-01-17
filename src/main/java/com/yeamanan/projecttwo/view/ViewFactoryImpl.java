@@ -47,9 +47,9 @@ public class ViewFactoryImpl implements ViewFactory {
         loader.setResources(bundle);
         Parent root = null;
         try {
-            root = (Parent) loader.load();
+            root = loader.load();
         } catch (IOException ex) {
-            LOG.error("Error loadind fxml file", ex);
+            LOG.error("Error loading fxml file", ex);
         }
         return root;
     }

@@ -10,10 +10,15 @@ import com.yeamanan.projecttwo.model.Constants;
 public class ZombieDog extends Zombie {
 
     /**
+     * Number of actions.
+     */
+    private static final int NB_ACTION = 3;
+    
+    /**
      * Constructor.
      */
     public ZombieDog() {
-        super(Constants.ZOMBIE_DOG_ACTION);
+        super(NB_ACTION);
     }
 
     /**

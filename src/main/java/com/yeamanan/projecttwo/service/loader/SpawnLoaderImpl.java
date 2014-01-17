@@ -36,7 +36,7 @@ public class SpawnLoaderImpl implements SpawnLoader {
      * Constructor.
      */
     public SpawnLoaderImpl() {
-        this.service = new GenericLoaderImpl(FOLDER, EXTENSION, Spawn.class);
+        this.service = new GenericLoaderImpl<>(FOLDER, EXTENSION, Spawn.class);
     }
 
     /**

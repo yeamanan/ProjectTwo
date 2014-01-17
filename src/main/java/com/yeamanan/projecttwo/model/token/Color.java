@@ -22,7 +22,7 @@ public enum Color {
      */
     GREEN("Green");
     
-    private String name;
+    private final String name;
     
     private Color(final String argName) {
         this.name = argName;

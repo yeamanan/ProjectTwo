@@ -7,7 +7,7 @@ import com.yeamanan.projecttwo.model.mission.Mission;
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
-public class Game {
+class Game {
 
     /**
      * Mission of the game.

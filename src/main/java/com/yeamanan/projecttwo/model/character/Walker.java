@@ -7,14 +7,4 @@ package com.yeamanan.projecttwo.model.character;
  */
 public class Walker extends Zombie {
 
-    /**
-     * toString() method.
-     *
-     * @return the walker in string format
-     */
-    @Override
-    public final String toString() {
-        return "Walker{" + "nbAction=" + this.getNbAction() + '}';
-    }
-
 }

@@ -14,7 +14,8 @@ public interface Drawer {
     /**
      * draw() method.
      *
-     * @param argFileName the file name of the image to load
+     * @param argElement the element to draw
+     * @param argParent the parent to set for the returning node
      * @return the node representing the T object
      */
     Node draw(Element argElement, Pane argParent);

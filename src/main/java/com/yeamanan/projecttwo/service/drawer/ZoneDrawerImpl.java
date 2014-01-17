@@ -4,7 +4,7 @@ import com.yeamanan.projecttwo.model.Element;
 import com.yeamanan.projecttwo.model.mission.Zone;
 import javafx.scene.Node;
 import javafx.scene.layout.Pane;
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 
 /**
  * ZoneDrawerImpl class.
@@ -16,13 +16,14 @@ public class ZoneDrawerImpl implements Drawer {
     /**
      * Logger.
      */
-    private static final Logger LOG =
-            Logger.getLogger(MissionDrawerImpl.class);
+//    private static final Logger LOG =
+//            Logger.getLogger(MissionDrawerImpl.class);
 
     /**
      * draw() method.
      *
-     * @param argZone the zone to draw
+     * @param argElement the element to draw
+     * @param argParent the parent to set for the returning node
      * @return the node representing the zone
      */
     @Override

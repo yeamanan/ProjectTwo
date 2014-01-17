@@ -25,7 +25,8 @@ public class MissionDrawerImpl implements Drawer {
     /**
      * draw() method.
      *
-     * @param argMission the mission to draw
+     * @param argElement the element to draw
+     * @param argParent the parent to set for the returning node
      * @return the node representing the mission
      */
     @Override

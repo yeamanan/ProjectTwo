@@ -1,7 +1,5 @@
 package com.yeamanan.projecttwo.model.character;
 
-import com.yeamanan.projecttwo.model.Constants;
-
 /**
  * Level enumeration.
  *
@@ -12,22 +10,42 @@ public enum Level {
     /**
      * Blue level.
      */
-    BLUE(Constants.MIN_XP_BLUE),
+    BLUE(Level.MIN_XP_FOR_BLUE_LEVEL),
 
     /**
      * Yellow level.
      */
-    YELLOW(Constants.MIN_XP_YELLOW),
+    YELLOW(Level.MIN_XP_FOR_YELLOW_LEVEL),
 
     /**
      * Orange level.
      */
-    ORANGE(Constants.MIN_XP_ORANGE),
+    ORANGE(Level.MIN_XP_FOR_ORANGE_LEVEL),
 
     /**
      * Red level.
      */
-    RED(Constants.MIN_XP_RED);
+    RED(Level.MIN_XP_FOR_RED_LEVEL);
+
+    /**
+     * Minimum experience to access the blue level.
+     */
+    private static final int MIN_XP_FOR_BLUE_LEVEL = 0;
+
+    /**
+     * Minimum experience to access the yellow level.
+     */
+    private static final int MIN_XP_FOR_YELLOW_LEVEL = 7;
+
+    /**
+     * Minimum experience to access the orange level.
+     */
+    private static final int MIN_XP_FOR_ORANGE_LEVEL = 19;
+
+    /**
+     * Minimum experience to access the red level.
+     */
+    private static final int MIN_XP_FOR_RED_LEVEL = 43;
 
     /**
      * Minimum experience.
@@ -40,7 +58,7 @@ public enum Level {
      * @param argMinXp the minimum experience to reach the level
      */
     Level(final int argMinXp) {
-        this.minXp = argMinXp;
+        minXp = argMinXp;
     }
 
     /**

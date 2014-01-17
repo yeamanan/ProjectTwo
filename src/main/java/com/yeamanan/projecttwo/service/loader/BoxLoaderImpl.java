@@ -36,7 +36,7 @@ public class BoxLoaderImpl implements BoxLoader {
      * Constructor.
      */
     public BoxLoaderImpl() {
-        this.service = new GenericLoaderImpl(FOLDER, EXTENSION, Box.class);
+        this.service = new GenericLoaderImpl<>(FOLDER, EXTENSION, Box.class);
     }
 
     /**

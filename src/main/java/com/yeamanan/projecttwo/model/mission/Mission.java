@@ -142,12 +142,17 @@ public class Mission extends Element {
      */
     @Override
     public final String toString() {
-        String str = "Mission{" + "id=" + this.id + ", name=" + this.name;
-        str += ", board=[";
+        StringBuilder builder = new StringBuilder();
+        builder.append("Mission{id=");
+        builder.append(this.id);
+        builder.append(", name=");
+        builder.append(this.name);
+        builder.append(", board=[");
         for (Tile tile : tiles) {
-            str += tile.toString();
+            builder.append(tile.toString());
         }
-        return str + "]}";
+        builder.append("]}");
+        return builder.toString();
     }
 
 }

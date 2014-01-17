@@ -1,6 +1,6 @@
 package com.yeamanan.projecttwo.service;
 
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 
 /**
  * GenericService class.
@@ -12,7 +12,7 @@ public class GenericService {
     /**
      * Logger.
      */
-    private static final Logger LOG = Logger.getLogger(GenericService.class);
+//    private static final Logger LOG = Logger.getLogger(GenericService.class);
     
     /**
      * Object folder in jar.
@@ -36,8 +36,8 @@ public class GenericService {
      * @param argExtension the extension of the xml file
      * @param argClass a class
      */
-    public GenericService(final String argFolder, final String argExtension,
-            final Class argClass) {
+    protected GenericService(final String argFolder, final String argExtension,
+                             final Class argClass) {
         this.folder = argFolder;
         this.extension = argExtension;
         this.gClass = argClass;

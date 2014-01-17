@@ -7,7 +7,7 @@ package com.yeamanan.projecttwo.view;
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
-public class LanguageSelectionViewFactory extends ViewFactoryImpl {
+class LanguageSelectionViewFactory extends ViewFactoryImpl {
 
     /**
      * Logger.

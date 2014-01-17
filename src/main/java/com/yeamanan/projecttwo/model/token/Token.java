@@ -9,4 +9,4 @@ import javax.xml.bind.annotation.XmlTransient;
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
 @XmlTransient
-public class Token extends Element { }
+class Token extends Element { }

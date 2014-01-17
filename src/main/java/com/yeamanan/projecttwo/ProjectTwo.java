@@ -105,7 +105,9 @@ public class ProjectTwo extends Application {
      */
     @Override
     public final void stop() {
-        if (!PropertiesUtil.saveProperties(this.context.getProperties())) {
+        if (PropertiesUtil.saveProperties(this.context.getProperties())) {
+            LOG.info("Config file saved");
+        } else {
             LOG.error("Error saving config file");
         }
     }
@@ -142,7 +144,7 @@ public class ProjectTwo extends Application {
     /**
      * Check.
      */
-    public static void check() {
+    private static void check() {
         final SurvivorLoader sService = new SurvivorLoaderImpl();
         final List<Survivor> survivors = sService.loadAll();
         LOG.info(survivors.size() + " survivors loaded :");

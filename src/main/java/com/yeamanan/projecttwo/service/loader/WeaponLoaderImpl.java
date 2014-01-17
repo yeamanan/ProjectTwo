@@ -36,7 +36,7 @@ public class WeaponLoaderImpl implements WeaponLoader {
      * Constructor.
      */
     public WeaponLoaderImpl() {
-        this.service = new GenericLoaderImpl(FOLDER, EXTENSION, Weapon.class);
+        this.service = new GenericLoaderImpl<>(FOLDER, EXTENSION, Weapon.class);
     }
 
     /**

@@ -22,36 +22,36 @@ public final class PropertiesUtil {
     /**
      * Folder name.
      */
-    private static final String folderName = ".zombicide";
+    private static final String FOLDER_NAME = ".zombicide";
 
     /**
      * File name.
      */
-    private static final String fileName = "config.cfg";
+    private static final String FILE_NAME = "config.cfg";
 
     /**
      * Folder path.
      */
-    private static final String folderPath;
+    private static final String FOLDER_PATH;
 
     /**
      * File path.
      */
-    private static final String filePath;
+    private static final String FILE_PATH;
 
     /**
      * Static initialization
      */
     static {
         final String userHome = System.getProperty("user.home");
-        folderPath = userHome + File.separator + folderName + File.separator;
-        filePath = folderPath + fileName;
+        FOLDER_PATH = userHome + File.separator + FOLDER_NAME + File.separator;
+        FILE_PATH = FOLDER_PATH + FILE_NAME;
     }
 
     /**
      * Constructor.
      */
-    public PropertiesUtil() { }
+    private PropertiesUtil() { }
 
     /**
      * loadProperties() method.
@@ -60,11 +60,9 @@ public final class PropertiesUtil {
      */
     public static Properties loadProperties() {
         final Properties properties = new Properties();
-        if (pathExists(filePath)) {
-            try (final FileInputStream stream = new FileInputStream(filePath)) {
-                if (stream != null) {
-                    properties.load(stream);
-                }
+        if (pathExists(FILE_PATH)) {
+            try (final FileInputStream stream = new FileInputStream(FILE_PATH)) {
+                properties.load(stream);
             } catch (IOException ex) {
                 LOG.error("Error reading config file", ex);
             }
@@ -78,31 +76,33 @@ public final class PropertiesUtil {
      * @param properties the properties to save
      */
     public static boolean saveProperties(final Properties properties) {
-        if (!createFile()) {
-            return false;
+        if (createFile()) {
+            try (final FileOutputStream stream = new FileOutputStream(FILE_PATH)) {
+                properties.store(stream, null);
+            } catch (IOException ex) {
+                LOG.error("Error writing config file", ex);
+            }
+            return true;
         }
-        try (final FileOutputStream stream = new FileOutputStream(filePath)) {
-            properties.store(stream, null);
-        } catch (IOException ex) {
-            LOG.error("Error writing config file", ex);
-        }
-        return true;
+        return false;
     }
 
     /**
      * createFile() method.
      */
     private static boolean createFile() {
-        if(!pathExists(folderPath)) {
-            File file = new File(folderPath);
+        if(!pathExists(FOLDER_PATH)) {
+            File file = new File(FOLDER_PATH);
             if (!file.mkdirs()) {
                 return false;
             }
         }
-        if(!pathExists(filePath)) {
-            File file = new File(filePath);
+        if(!pathExists(FILE_PATH)) {
+            File file = new File(FILE_PATH);
             try {
-                file.createNewFile();
+                if(!file.createNewFile()) {
+                    return false;
+                }
             } catch (IOException ex) {
                 LOG.error("Error creating config file", ex);
             }
