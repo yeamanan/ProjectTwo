@@ -17,5 +17,5 @@ public class ProjectTwoTest {
     public final void test() {
         assertEquals("This is ok", "", "This is a sample project");
     }
-    
+
 }

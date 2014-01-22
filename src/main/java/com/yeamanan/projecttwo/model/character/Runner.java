@@ -1,34 +1,27 @@
 package com.yeamanan.projecttwo.model.character;
 
-import com.yeamanan.projecttwo.model.Constants;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Runner class.
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
+@XmlType(name = Runner.XML_NAME)
+@XmlRootElement(name = Runner.XML_NAME)
 public class Runner extends Zombie {
 
     /**
-     * Number of actions.
+     * XML name.
      */
-    private static final int NB_ACTION = 2;
+    protected static final String XML_NAME = "Runner";
 
     /**
      * Constructor.
      */
     public Runner() {
-        super(NB_ACTION);
-    }
-
-    /**
-     * toString() method.
-     *
-     * @return the runner in string format
-     */
-    @Override
-    public final String toString() {
-        return "Runner{" + "nbAction=" + this.getNbAction() + '}';
+        super(ZombieType.RUNNER);
     }
 
 }

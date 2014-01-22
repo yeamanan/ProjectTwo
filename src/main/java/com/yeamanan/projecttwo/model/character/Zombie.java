@@ -8,25 +8,19 @@ import javax.xml.bind.annotation.XmlType;
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
-
-@XmlType(name = Zombie.NAME)
-@XmlRootElement(name = Zombie.NAME)
+@XmlType(name = Zombie.XML_NAME)
+@XmlRootElement(name = Zombie.XML_NAME)
 public class Zombie extends Character {
 
     /**
-     * Name.
+     * XML name.
      */
-    protected static final String NAME = "Zombie";
+    protected static final String XML_NAME = "Zombie";
 
     /**
-     * Number of action.
+     * Type of zombie.
      */
-    private static final int NB_ACTION = 1;
-
-    /**
-     * Experience given when killed.
-     */
-    private static final int EXPERIENCE_GIVEN = 1;
+    private ZombieType type;
 
     /**
      * Toxic boolean.
@@ -41,19 +35,25 @@ public class Zombie extends Character {
     /**
      * Constructor.
      */
-    Zombie() {
-        this(NB_ACTION);
+    public Zombie() {
+        this(ZombieType.WALKER);
     }
 
     /**
      * Constructor.
-     *
-     * @param argNbAction the new number of action that can do the character
      */
-    Zombie(final int argNbAction) {
-        super(argNbAction);
+    public Zombie(final ZombieType argType) {
+        type = argType;
         toxic = false;
         berserk = false;
+    }
+
+    public ZombieType getType() {
+        return type;
+    }
+
+    public void setType(ZombieType type) {
+        this.type = type;
     }
 
     /**
@@ -90,16 +90,6 @@ public class Zombie extends Character {
      */
     public final void setBerserk(final boolean argBerserk) {
         berserk = argBerserk;
-    }
-
-    /**
-     * toString() method.
-     *
-     * @return the character in string format
-     */
-    @Override
-    public String toString() {
-        return super.toString() + "\n{" + "toxic=" + toxic + "}\n{" + "berserk=" + berserk + "}";
     }
 
 }

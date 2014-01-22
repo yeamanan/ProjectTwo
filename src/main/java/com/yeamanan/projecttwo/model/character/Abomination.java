@@ -8,18 +8,20 @@ import javax.xml.bind.annotation.XmlType;
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
-@XmlType(name = Abomination.NAME)
-@XmlRootElement(name = Abomination.NAME)
+@XmlType(name = Abomination.XML_NAME)
+@XmlRootElement(name = Abomination.XML_NAME)
 public class Abomination extends Zombie {
 
     /**
-     * Name.
+     * XML name.
      */
-    protected static final String NAME = "Abomination";
+    protected static final String XML_NAME = "Abomination";
 
     /**
-     * Experience given.
+     * Constructor.
      */
-    private static final int EXPERIENCE_GIVEN = 5;
+    public Abomination() {
+        super(ZombieType.ABOMINATION);
+    }
 
 }

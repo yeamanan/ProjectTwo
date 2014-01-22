@@ -50,15 +50,15 @@ public enum Level {
     /**
      * Minimum experience.
      */
-    private final int minXp;
+    private final int minimumExperience;
 
     /**
      * Constructor.
      *
      * @param argMinXp the minimum experience to reach the level
      */
-    Level(final int argMinXp) {
-        minXp = argMinXp;
+    Level(final int argMinimumExperience) {
+        minimumExperience = argMinimumExperience;
     }
 
     /**
@@ -66,8 +66,8 @@ public enum Level {
      *
      * @return the minimum experience to reach the level
      */
-    public final int getMinXp() {
-        return this.minXp;
+    public final int getMinimumExperience() {
+        return this.minimumExperience;
     }
 
 }

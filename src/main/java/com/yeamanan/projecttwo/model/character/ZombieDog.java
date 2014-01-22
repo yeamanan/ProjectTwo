@@ -1,34 +1,27 @@
 package com.yeamanan.projecttwo.model.character;
 
-import com.yeamanan.projecttwo.model.Constants;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * ZombieDog class.
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
+@XmlType(name = ZombieDog.XML_NAME)
+@XmlRootElement(name = ZombieDog.XML_NAME)
 public class ZombieDog extends Zombie {
 
     /**
-     * Number of actions.
+     * XML name.
      */
-    private static final int NB_ACTION = 3;
-    
+    protected static final String XML_NAME = "ZombieDog";
+
     /**
      * Constructor.
      */
     public ZombieDog() {
-        super(NB_ACTION);
-    }
-
-    /**
-     * toString() method.
-     *
-     * @return the zombie dog in string format
-     */
-    @Override
-    public final String toString() {
-        return "ZombieDog{" + "nbAction=" + this.getNbAction() + '}';
+        super(ZombieType.ZOMBIE_DOG);
     }
 
 }

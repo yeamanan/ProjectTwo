@@ -8,10 +8,20 @@ import javax.xml.bind.annotation.XmlType;
  *
  * @author Yeam Anan (<yeamanan|at|gmail|dot|com>)
  */
-@XmlType(name = Fatty.NAME)
-@XmlRootElement(name = Fatty.NAME)
+@XmlType(name = Fatty.XML_NAME)
+@XmlRootElement(name = Fatty.XML_NAME)
 public class Fatty extends Zombie {
 
-    protected static final String NAME = "Fatty";
+    /**
+     * XML name.
+     */
+    protected static final String XML_NAME = "Fatty";
+
+    /**
+     * Constructor.
+     */
+    public Fatty() {
+        super(ZombieType.FATTY);
+    }
 
 }
